@@ -13,3 +13,16 @@ document.querySelectorAll('.desktop-nav a').forEach((link) => {
     nav?.classList.remove('mobile-open');
   });
 });
+
+const inquiryForm = document.querySelector('#inquiry-form');
+inquiryForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const data = new FormData(inquiryForm);
+  const subject = encodeURIComponent('New project enquiry from ' + data.get('name'));
+  const body = encodeURIComponent(
+    'Name: ' + data.get('name') + '\n' +
+    'Email or phone: ' + data.get('contact') + '\n\n' +
+    'Project details:\n' + (data.get('brief') || 'Not provided')
+  );
+  window.location.href = 'mailto:hello@bombaystudio.in?subject=' + subject + '&body=' + body;
+});
