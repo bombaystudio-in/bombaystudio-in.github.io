@@ -60,4 +60,4 @@ img{max-width:100%;height:auto}
 .article-contact{display:inline-block;background:var(--accent);border:0;padding:15px 18px;margin-top:22px}
 @media(max-width:700px){.article-page{padding-top:48px;padding-bottom:70px}.article-page>h1{font-size:54px;margin:24px 0 35px}.article-hero{max-height:55vh;margin-bottom:35px}.article-copy{font-size:16px}.article-copy .lead{font-size:22px}}
 .footer-updated{color:#a9b6aa;font:10px var(--mono);margin:20px 0 0}
-.footer-bottom a,.footer-updated a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.footer-bottom a,.footer-updated a{color:inherit;text-decoration:underline;text-underline-offset:3px}.site-logo{display:block;width:190px;height:auto}.site-header .wordmark{display:flex;align-items:center}@media(max-width:700px){.site-logo{width:165px}}
