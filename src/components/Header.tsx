@@ -20,9 +20,9 @@ export default function Header() {
     <>
       {/* Announcement Bar */}
       <div className="bg-[#121212] text-[#D4AF37] text-xs py-2 px-4 text-center font-medium tracking-wide border-b border-white/10 flex items-center justify-center gap-2">
-        <Sparkles className="w-3.5 h-3.5 animate-pulse shrink-0" />
+        <Sparkles className="w-3.5 h-3.5 animate-pulse shrink-0 text-[#FCF6BA]" />
         <span className="truncate">Now booking select luxury projects for 2026–27 · Mumbai &amp; Alibaug</span>
-        <Link href="/#contact" className="underline hover:text-white transition-colors ml-1 shrink-0">
+        <Link href="/#contact" className="underline hover:text-white transition-colors ml-1 shrink-0 font-semibold">
           Enquire Now ↗
         </Link>
       </div>
@@ -31,7 +31,7 @@ export default function Header() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#050505]/95 backdrop-blur-md py-3 border-b border-white/10 shadow-2xl"
+            ? "bg-[#050505]/95 backdrop-blur-md py-3.5 border-b border-white/10 shadow-2xl"
             : "bg-[#050505]/50 backdrop-blur-sm py-5"
         }`}
       >
@@ -41,7 +41,7 @@ export default function Header() {
             <img
               src="/logo.svg"
               alt="Bombay Studio"
-              className="h-7 sm:h-8 w-auto group-hover:opacity-90 transition-opacity"
+              className="h-8 sm:h-9 w-auto group-hover:opacity-90 transition-opacity"
             />
           </Link>
 
@@ -68,16 +68,16 @@ export default function Header() {
               rel="noopener noreferrer"
               className="text-[#D4AF37] hover:underline flex items-center gap-1 font-semibold"
             >
-              <FileText className="w-3.5 h-3.5" />
+              <FileText className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>Brochure PDF</span>
             </a>
           </nav>
 
-          {/* Header Action CTA: Single Contact Us Link */}
+          {/* Header Action CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/#contact"
-              className="group flex items-center gap-2 bg-[#D4AF37] hover:bg-[#F3E5AB] text-[#050505] text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full transition-all transform hover:-translate-y-0.5 shadow-lg shadow-[#D4AF37]/10"
+              className="group flex items-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider px-6 py-2.5 rounded-full"
             >
               <span>Contact Us</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -114,7 +114,7 @@ export default function Header() {
                 FAQ
               </Link>
               <a href="/bombay-studio-portfolio.pdf" target="_blank" rel="noopener noreferrer" className="py-1 border-b border-white/5 text-[#D4AF37] flex items-center gap-1.5 font-semibold">
-                <FileText className="w-4 h-4" />
+                <FileText className="w-4 h-4 text-[#D4AF37]" />
                 <span>Presentation E-Brochure PDF ↗</span>
               </a>
             </div>
@@ -123,7 +123,7 @@ export default function Header() {
               <Link
                 href="/#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center bg-[#D4AF37] text-[#050505] font-bold text-sm uppercase py-3 rounded-full"
+                className="w-full text-center btn-gold-shiny text-sm uppercase py-3 rounded-full"
               >
                 Contact Us
               </Link>

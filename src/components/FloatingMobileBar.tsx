@@ -30,7 +30,7 @@ export default function FloatingMobileBar() {
 
         <Link
           href="/#contact"
-          className="flex flex-col items-center justify-center gap-1 py-2 px-2 rounded-xl bg-[#D4AF37] text-[#050505] font-bold active:scale-95 transition-transform shadow-lg shadow-[#D4AF37]/20 text-center"
+          className="flex flex-col items-center justify-center gap-1 py-2 px-2 rounded-xl btn-gold-shiny active:scale-95 transition-transform text-center"
         >
           <Calendar className="w-4 h-4" />
           <span className="text-[10px] font-extrabold uppercase tracking-tight">Book Free</span>

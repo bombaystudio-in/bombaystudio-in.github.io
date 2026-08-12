@@ -58,13 +58,13 @@ export default function CostCalculatorSection() {
   return (
     <section id="calculator" className="py-24 bg-[#050505] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl glass-panel p-8 sm:p-14 border border-white/10 shadow-2xl">
+        <div className="rounded-3xl glass-panel p-8 sm:p-14 gold-border-glow">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Controls */}
             <div className="lg:col-span-7 space-y-8">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1C1C1C] text-[#D4AF37] text-xs font-semibold uppercase tracking-wider mb-3 border border-white/10">
-                  <Calculator className="w-3.5 h-3.5" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1C1C1C] text-[#FCF6BA] text-xs font-semibold uppercase tracking-wider mb-3 border border-white/10">
+                  <Calculator className="w-3.5 h-3.5 text-[#D4AF37]" />
                   <span>Instant Lead Calculator</span>
                 </div>
                 <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
@@ -93,7 +93,7 @@ export default function CostCalculatorSection() {
                       }}
                       className={`py-3 rounded-xl text-xs font-bold transition-all ${
                         bhk === type
-                          ? "bg-[#D4AF37] text-[#050505] shadow-lg scale-105"
+                          ? "btn-gold-shiny scale-105"
                           : "bg-[#121212] text-[#A1A1AA] hover:text-white border border-white/10"
                       }`}
                     >
@@ -107,7 +107,7 @@ export default function CostCalculatorSection() {
               <div>
                 <div className="flex justify-between text-xs font-bold text-white mb-2">
                   <span className="uppercase tracking-wider">2. Carpet Area (sq.ft.)</span>
-                  <span className="text-[#D4AF37] text-base">{area} sq.ft.</span>
+                  <span className="text-[#FCF6BA] text-base">{area} sq.ft.</span>
                 </div>
                 <input
                   type="range"
@@ -136,7 +136,7 @@ export default function CostCalculatorSection() {
                       onClick={() => setTier(t.id as any)}
                       className={`p-4 rounded-xl text-left text-xs transition-all ${
                         tier === t.id
-                          ? "bg-[#1C1C1C] border-2 border-[#D4AF37] text-white shadow-lg"
+                          ? "bg-[#1C1C1C] border-2 border-[#D4AF37] text-white gold-border-glow"
                           : "bg-[#121212] text-[#A1A1AA] border border-white/10 hover:text-white"
                       }`}
                     >
@@ -202,7 +202,7 @@ export default function CostCalculatorSection() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#F3E5AB] text-[#050505] font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all shadow-lg disabled:opacity-50"
+                    className="w-full flex items-center justify-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all disabled:opacity-50"
                   >
                     {loading ? (
                       <Loader2 className="w-4 h-4 animate-spin" />

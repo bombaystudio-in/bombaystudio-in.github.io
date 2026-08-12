@@ -11,7 +11,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] backdrop-blur-md border border-white/15 text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] backdrop-blur-md border border-white/15 text-[#FCF6BA] text-xs font-semibold uppercase tracking-widest gold-border-glow">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-ping" />
               Mumbai's Premier Architectural &amp; Interior Design Practice
             </div>
@@ -28,7 +28,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/#contact"
-                className="group flex items-center gap-3 bg-[#D4AF37] hover:bg-[#F3E5AB] text-[#050505] text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-full shadow-2xl shadow-[#D4AF37]/20 transition-all transform hover:-translate-y-1"
+                className="group flex items-center gap-3 btn-gold-shiny text-sm uppercase tracking-wider px-8 py-4 rounded-full"
               >
                 <span>Book Consultation</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -46,7 +46,7 @@ export default function HeroSection() {
 
           {/* Right Main Image Showcase */}
           <div className="lg:col-span-5 relative">
-            <div className="relative h-[420px] sm:h-[500px] w-full rounded-3xl overflow-hidden border border-white/15 shadow-2xl group">
+            <div className="relative h-[420px] sm:h-[500px] w-full rounded-3xl overflow-hidden gold-border-glow group">
               <img
                 src="/portfolio/akhir-chaudhary-founder-portrait.jpg"
                 alt="Akhir Chaudhary - Principal Architect & Founder of Bombay Studio"
@@ -81,7 +81,7 @@ export default function HeroSection() {
 
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37]">
-              <Award className="w-5 h-5" />
+              <Award className="w-5 h-5 text-[#D4AF37]" />
             </div>
             <div>
               <p className="text-white font-bold text-sm">50+ Projects</p>
@@ -91,7 +91,7 @@ export default function HeroSection() {
 
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37]">
-              <Clock className="w-5 h-5" />
+              <Clock className="w-5 h-5 text-[#D4AF37]" />
             </div>
             <div>
               <p className="text-white font-bold text-sm">On-Time Delivery</p>
@@ -101,7 +101,7 @@ export default function HeroSection() {
 
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37]">
-              <ShieldCheck className="w-5 h-5" />
+              <ShieldCheck className="w-5 h-5 text-[#D4AF37]" />
             </div>
             <div>
               <p className="text-white font-bold text-sm">Quality Assured</p>

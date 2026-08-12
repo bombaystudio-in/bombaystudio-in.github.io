@@ -1,19 +1,51 @@
+function requireEnv(name: string): string {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`CRITICAL: Required environment variable '${name}' is not set.`);
+  }
+  return value;
+}
+
+function getOptionalEnv(name: string): string | undefined {
+  return process.env[name];
+}
+
 export const config = {
   smtp: {
-    host: process.env.SMTP_HOST || "mailv1.nordible.co",
-    port: parseInt(process.env.SMTP_PORT || "465", 10),
-    user: process.env.SMTP_USER || "mail@nordible.co",
-    pass: process.env.SMTP_PASS || "C@nb3rra",
-    secure: process.env.SMTP_SECURE !== "false",
-    fromName: process.env.SMTP_FROM_NAME || "Bombay Studio",
-    fromEmail: process.env.SMTP_FROM_EMAIL || "mail@nordible.co",
-    toEmail: process.env.SMTP_TO_EMAIL || "hello@bombaystudio.in",
+    get host() {
+      return requireEnv("SMTP_HOST");
+    },
+    get port() {
+      return parseInt(requireEnv("SMTP_PORT"), 10);
+    },
+    get user() {
+      return requireEnv("SMTP_USER");
+    },
+    get pass() {
+      return requireEnv("SMTP_PASS");
+    },
+    get secure() {
+      return process.env.SMTP_SECURE !== "false";
+    },
+    get fromName() {
+      return requireEnv("SMTP_FROM_NAME");
+    },
+    get fromEmail() {
+      return requireEnv("SMTP_FROM_EMAIL");
+    },
+    get toEmail() {
+      return requireEnv("SMTP_TO_EMAIL");
+    },
   },
   site: {
     name: "Bombay Studio",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://bombaystudio.in",
+    get url() {
+      return requireEnv("NEXT_PUBLIC_SITE_URL");
+    },
   },
   analytics: {
-    gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-CH0CS2VB7S",
+    get gaMeasurementId() {
+      return getOptionalEnv("NEXT_PUBLIC_GA_MEASUREMENT_ID");
+    },
   },
 };

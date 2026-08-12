@@ -17,7 +17,7 @@ export default function Footer() {
               <img
                 src="/logo.svg"
                 alt="Bombay Studio"
-                className="h-10 w-auto filter brightness-110"
+                className="h-10 w-auto"
               />
             </Link>
             <p className="text-xs font-light leading-relaxed max-w-sm text-[#A1A1AA]">

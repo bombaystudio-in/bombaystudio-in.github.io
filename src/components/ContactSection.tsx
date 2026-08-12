@@ -62,7 +62,7 @@ export default function ContactSection() {
             <div className="space-y-6 text-sm">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
-                  <MapPin className="w-5 h-5" />
+                  <MapPin className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div>
                   <p className="font-bold text-white">Office Address</p>
@@ -74,11 +74,11 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div>
                   <p className="font-bold text-white">Phone &amp; WhatsApp</p>
-                  <a href="tel:+919664384181" className="text-[#D4AF37] text-xs hover:underline">
+                  <a href="tel:+919664384181" className="text-[#FCF6BA] text-xs hover:underline font-medium">
                     +91 96643 84181
                   </a>
                 </div>
@@ -86,11 +86,11 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div>
                   <p className="font-bold text-white">Email</p>
-                  <a href="mailto:hello@bombaystudio.in" className="text-[#D4AF37] text-xs hover:underline">
+                  <a href="mailto:hello@bombaystudio.in" className="text-[#FCF6BA] text-xs hover:underline font-medium">
                     hello@bombaystudio.in
                   </a>
                 </div>
@@ -98,7 +98,7 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
-                  <Clock className="w-5 h-5" />
+                  <Clock className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div>
                   <p className="font-bold text-white">Working Hours</p>
@@ -111,7 +111,7 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Lead Form */}
-          <div className="lg:col-span-7 rounded-3xl glass-panel p-8 sm:p-12 border border-white/10 shadow-2xl">
+          <div className="lg:col-span-7 rounded-3xl glass-panel p-8 sm:p-12 gold-border-glow shadow-2xl">
             <h3 className="font-serif text-2xl font-bold text-white mb-2">
               Book Your Free Consultation
             </h3>
@@ -202,7 +202,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#F3E5AB] text-[#050505] font-bold text-xs uppercase tracking-wider py-4 rounded-xl transition-all shadow-xl shadow-[#D4AF37]/20 transform hover:-translate-y-0.5 disabled:opacity-50"
+                  className="w-full flex items-center justify-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider py-4 rounded-xl transition-all disabled:opacity-50"
                 >
                   {loading ? (
                     <Loader2 className="w-4 h-4 animate-spin" />

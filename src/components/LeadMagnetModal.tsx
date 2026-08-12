@@ -50,7 +50,7 @@ export default function LeadMagnetModal() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-md rounded-3xl glass-panel p-8 border border-white/15 shadow-2xl text-center space-y-6">
+      <div className="relative w-full max-w-md rounded-3xl glass-panel p-8 gold-border-glow shadow-2xl text-center space-y-6">
         <button
           onClick={() => setIsOpen(false)}
           className="absolute top-4 right-4 p-2 rounded-full text-[#A1A1AA] hover:text-white hover:bg-[#1C1C1C] transition-colors"
@@ -59,7 +59,7 @@ export default function LeadMagnetModal() {
         </button>
 
         <div className="w-16 h-16 rounded-2xl bg-[#1C1C1C] text-[#D4AF37] mx-auto flex items-center justify-center border border-white/10">
-          <FileText className="w-8 h-8" />
+          <FileText className="w-8 h-8 text-[#D4AF37]" />
         </div>
 
         <div>
@@ -90,7 +90,7 @@ export default function LeadMagnetModal() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#F3E5AB] text-[#050505] font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all shadow-lg disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all disabled:opacity-50"
             >
               {loading ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
