@@ -134,7 +134,7 @@ export default function RootLayout({
                 addressCountry: "IN",
               },
               telephone: "+919664384181",
-              email: "hello@bombaystudio.in",
+              email: "info@bombaystudio.in",
               priceRange: "₹₹₹₹",
               aggregateRating: {
                 "@type": "AggregateRating",

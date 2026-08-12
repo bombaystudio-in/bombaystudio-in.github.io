@@ -90,8 +90,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-bold text-white">Email</p>
-                  <a href="mailto:hello@bombaystudio.in" className="text-[#FCF6BA] text-xs hover:underline font-medium">
-                    hello@bombaystudio.in
+                  <a href="mailto:info@bombaystudio.in" className="text-[#FCF6BA] text-xs hover:underline font-medium">
+                    info@bombaystudio.in
                   </a>
                 </div>
               </div>
