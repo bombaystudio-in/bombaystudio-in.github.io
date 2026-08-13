@@ -133,8 +133,13 @@ export default function RootLayout({
                 addressRegion: "Maharashtra",
                 addressCountry: "IN",
               },
-              telephone: "+919664384181",
-              email: "info@bombaystudio.in",
+              telephone: ["+919664384181", "+917070704181"],
+              email: ["info@bombaystudio.in", "aakhir@bombaystudio.in"],
+              founder: {
+                "@type": "Person",
+                name: "Ar. Aakhir Choudhary",
+                jobTitle: "Principal Architect & Founder",
+              },
               priceRange: "₹₹₹₹",
               aggregateRating: {
                 "@type": "AggregateRating",

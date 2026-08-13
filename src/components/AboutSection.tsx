@@ -32,7 +32,7 @@ export default function AboutSection() {
     {
       icon: UserCheck,
       title: "Dedicated Founder Oversight",
-      desc: "Direct oversight by Akhir Chaudhary on site with daily WhatsApp progress photo updates & quality reports.",
+      desc: "Direct oversight by Ar. Aakhir Choudhary on site with daily WhatsApp progress photo updates & quality reports.",
     },
   ];
 
@@ -82,13 +82,13 @@ export default function AboutSection() {
             <div className="lg:col-span-5 relative h-80 lg:h-96 rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
               <img
                 src="/portfolio/akhir-chaudhary-founder-portrait.jpg"
-                alt="Akhir Chaudhary - Founder & Principal Designer of Bombay Studio"
+                alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
                 className="w-full h-full object-cover object-top filter contrast-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#050505]/80 backdrop-blur-md border border-white/10">
-                <p className="text-white font-bold text-sm">Akhir Chaudhary</p>
-                <p className="text-[#D4AF37] text-xs font-medium">Founder &amp; Principal Designer</p>
+                <p className="text-white font-bold text-sm">AR. AAKHIR CHOUDHARY</p>
+                <p className="text-[#D4AF37] text-xs font-medium">Principal Architect &amp; Founder</p>
               </div>
             </div>
 
@@ -101,7 +101,7 @@ export default function AboutSection() {
                 "A home should feel like an exhale—tactile, warm, and entirely your own."
               </h3>
               <p className="text-[#A1A1AA] text-sm leading-relaxed font-light">
-                Founded by Akhir Chaudhary in Mumbai, Bombay Studio was born out of a desire to eliminate the chaos from interior execution. With over 12+ years of architectural experience across Mumbai's iconic high-rises and luxury residences, Akhir brings structured engineering rigor and single-point accountability to interior aesthetics.
+                Founded by Ar. Aakhir Choudhary in Mumbai, Bombay Studio was born out of a desire to eliminate the chaos from interior execution. With over 12+ years of architectural experience across Mumbai's iconic high-rises and luxury residences, Ar. Aakhir Choudhary brings structured engineering rigor and single-point accountability to interior aesthetics.
               </p>
               <div className="grid grid-cols-2 gap-4 py-4 border-y border-white/10 text-sm">
                 <div>

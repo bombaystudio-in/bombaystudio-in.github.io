@@ -19,7 +19,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     category: "Consultation",
     location: "Studio HQ",
     image: "/portfolio/client-consultation-material-selection.jpg",
-    caption: "Akhir Chaudhary guiding clients through stone, veneer & wood shade samples.",
+    caption: "Ar. Aakhir Choudhary guiding clients through stone, veneer & wood shade samples.",
   },
   {
     id: "2",
@@ -107,7 +107,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     category: "Site Execution",
     location: "Santacruz Home",
     image: "/portfolio/painting-crew-site-handover.jpg",
-    caption: "Akhir with the site finishing team after white-glove cleaning.",
+    caption: "Ar. Aakhir Choudhary with the site finishing team after white-glove cleaning.",
   },
 ];
 
@@ -140,7 +140,7 @@ export default function PortfolioGallery() {
             Site <span className="gold-gradient-text">Work &amp; Handovers</span>
           </h2>
           <p className="text-[#A1A1AA] text-sm font-light">
-            Authentic photographs of Akhir Chaudhary, our craftsmen, material consultations, and live site executions across Mumbai.
+            Authentic photographs of Ar. Aakhir Choudhary, our craftsmen, material consultations, and live site executions across Mumbai.
           </p>
         </div>
 

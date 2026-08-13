@@ -11,7 +11,7 @@ export default function FloatingMobileBar() {
     >
       <div className="grid grid-cols-3 gap-2">
         <a
-          href="https://wa.me/919664384181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
+          href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center gap-1 py-2 px-2 rounded-xl bg-[#1C1C1C] text-white border border-white/10 active:scale-95 transition-transform"

@@ -13,7 +13,7 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] backdrop-blur-md border border-white/15 text-[#FCF6BA] text-xs font-semibold uppercase tracking-widest gold-border-glow">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-ping" />
-              Mumbai's Premier Architectural &amp; Interior Design Practice
+              Mumbai&apos;s Premier Architectural &amp; Interior Design Practice
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
@@ -22,7 +22,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-lg text-[#A1A1AA] font-light leading-relaxed max-w-2xl">
-              Designing Timeless Spaces Across Mumbai. Led by Principal Architect Akhir Chaudhary, we craft bespoke residential and commercial spaces from concept to turnkey handover.
+              Designing Timeless Spaces Across Mumbai. Led by Principal Architect Ar. Aakhir Choudhary, we craft bespoke residential and commercial spaces from concept to turnkey handover.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -49,16 +49,16 @@ export default function HeroSection() {
             <div className="relative h-[420px] sm:h-[500px] w-full rounded-3xl overflow-hidden gold-border-glow group">
               <img
                 src="/portfolio/akhir-chaudhary-founder-portrait.jpg"
-                alt="Akhir Chaudhary - Principal Architect & Founder of Bombay Studio"
+                alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
 
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#050505]/85 backdrop-blur-md border border-white/15 space-y-1">
-                <p className="text-white font-bold text-base">Akhir Chaudhary</p>
-                <p className="text-[#D4AF37] text-xs font-semibold">Founder &amp; Principal Designer</p>
+                <p className="text-white font-bold text-base tracking-wide">AR. AAKHIR CHOUDHARY</p>
+                <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Principal Architect &amp; Founder</p>
                 <p className="text-[#A1A1AA] text-[11px] font-light">
-                  50+ Turnkey Luxury Projects Completed Across Mumbai
+                  100+ Turnkey Luxury Projects Completed Across Mumbai
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function HeroSection() {
             </div>
             <div>
               <p className="text-white font-bold text-sm">⭐⭐⭐⭐⭐ 4.9/5</p>
-              <p className="text-[#A1A1AA] text-xs">Rated by 50+ Clients</p>
+              <p className="text-[#A1A1AA] text-xs">Rated by 100+ Clients</p>
             </div>
           </div>
 
@@ -84,7 +84,7 @@ export default function HeroSection() {
               <Award className="w-5 h-5 text-[#D4AF37]" />
             </div>
             <div>
-              <p className="text-white font-bold text-sm">50+ Projects</p>
+              <p className="text-white font-bold text-sm">100+ Projects</p>
               <p className="text-[#A1A1AA] text-xs">Completed in Mumbai</p>
             </div>
           </div>

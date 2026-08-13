@@ -55,7 +55,7 @@ export default function ContactSection() {
                 Let’s Discuss Your <span className="gold-gradient-text">Space</span>
               </h2>
               <p className="text-[#A1A1AA] text-sm font-light mt-3">
-                Visit our experience center in Mumbai or schedule a free site consultation with principal designer Akhir Chaudhary.
+                Visit our experience center in Mumbai or schedule a free site consultation with Principal Architect Ar. Aakhir Choudhary.
               </p>
             </div>
 
@@ -72,27 +72,47 @@ export default function ContactSection() {
                 </div>
               </div>
 
+              {/* Personal Contact */}
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
                   <Phone className="w-5 h-5 text-[#D4AF37]" />
                 </div>
-                <div>
-                  <p className="font-bold text-white">Phone &amp; WhatsApp</p>
-                  <a href="tel:+919664384181" className="text-[#FCF6BA] text-xs hover:underline font-medium">
-                    +91 96643 84181
-                  </a>
+                <div className="space-y-1">
+                  <p className="font-bold text-white text-xs uppercase tracking-wider">Personal Direct Line</p>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                    <a href="tel:+919664384181" className="text-[#FCF6BA] text-xs hover:underline font-semibold">
+                      +91 966438 4181
+                    </a>
+                    <span className="hidden sm:inline text-white/30">•</span>
+                    <a href="mailto:aakhir@bombaystudio.in" className="text-[#A1A1AA] text-xs hover:text-white transition-colors">
+                      aakhir@bombaystudio.in
+                    </a>
+                  </div>
                 </div>
               </div>
 
+              {/* Office Contact (WhatsApp Direct) */}
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
                   <Mail className="w-5 h-5 text-[#D4AF37]" />
                 </div>
-                <div>
-                  <p className="font-bold text-white">Email</p>
-                  <a href="mailto:info@bombaystudio.in" className="text-[#FCF6BA] text-xs hover:underline font-medium">
-                    info@bombaystudio.in
-                  </a>
+                <div className="space-y-1">
+                  <p className="font-bold text-white text-xs uppercase tracking-wider">Studio Office &amp; WhatsApp</p>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                    <a
+                      href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#FCF6BA] text-xs hover:underline font-semibold flex items-center gap-1"
+                    >
+                      <span>+91 707070 4181</span>
+                      <span className="text-[10px] bg-[#D4AF37]/20 text-[#D4AF37] px-1.5 py-0.5 rounded font-mono">(WhatsApp)</span>
+                    </a>
+                    <span className="hidden sm:inline text-white/30">•</span>
+                    <a href="mailto:info@bombaystudio.in" className="text-[#A1A1AA] text-xs hover:text-white transition-colors">
+                      info@bombaystudio.in
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -116,7 +136,7 @@ export default function ContactSection() {
               Book Your Free Consultation
             </h3>
             <p className="text-xs text-[#A1A1AA] font-light mb-8">
-              Fill out the form below and Akhir Chaudhary will reach out within 2 working hours.
+              Fill out the form below and Ar. Aakhir Choudhary will reach out within 2 working hours.
             </p>
 
             {!formSubmitted ? (
@@ -219,7 +239,7 @@ export default function ContactSection() {
                   Consultation Request Received!
                 </h4>
                 <p className="text-xs text-[#A1A1AA] font-light max-w-md mx-auto">
-                  Thank you! Akhir Chaudhary will reach out to you within 2 working hours.
+                  Thank you! Ar. Aakhir Choudhary will reach out to you within 2 working hours.
                 </p>
               </div>
             )}

@@ -65,7 +65,7 @@ export default async function SeoPage({ params }: Props) {
                 Book Free Consultation ↗
               </Link>
               <a
-                href="https://wa.me/919664384181"
+                href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#121212] hover:bg-[#1C1C1C] text-white font-semibold text-xs px-6 py-3.5 rounded-full border border-white/15 transition-all flex items-center gap-2"

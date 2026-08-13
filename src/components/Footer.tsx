@@ -21,7 +21,10 @@ export default function Footer() {
               />
             </Link>
             <p className="text-xs font-light leading-relaxed max-w-sm text-[#A1A1AA]">
-              Bombay Studio is a premier architectural and interior design firm in Mumbai, led by Akhir Chaudhary. Specialized in high-end residential apartments, villas, turnkey interiors &amp; boutique commercial spaces.
+              Bombay Studio is a premier architectural and interior design firm in Mumbai, led by Principal Architect Ar. Aakhir Choudhary. Specialized in high-end residential apartments, villas, turnkey interiors &amp; boutique commercial spaces.
+            </p>
+            <p className="text-[11px] font-serif tracking-widest text-[#D4AF37] uppercase">
+              &quot;Design. Detail. Delivered.&quot;
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a

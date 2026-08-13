@@ -42,7 +42,7 @@ export default function Home() {
       {/* 9. Before After Interactive Slider */}
       <BeforeAfterSlider />
 
-      {/* 10. Meet The Founder (Akhir Chaudhary) */}
+      {/* 10. Meet The Founder (Ar. Aakhir Choudhary) */}
       <MeetFounderSection />
 
       {/* 11. Interior Cost Calculator & Lead Capture */}
