@@ -11,9 +11,9 @@ export default function MeetFounderSection() {
             {/* Real Image */}
             <div className="lg:col-span-5 relative h-[400px] sm:h-[480px] rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
               <img
-                src="/portfolio/akhir-chaudhary-studio-vision.jpg"
+                src="/portfolio/akhir-chaudhary-founder-portrait.jpg"
                 alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-top filter contrast-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#050505]/90 backdrop-blur-md border border-white/15 space-y-1">
