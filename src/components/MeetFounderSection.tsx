@@ -52,18 +52,26 @@ export default function MeetFounderSection() {
                 </p>
               </div>
 
-              <p className="text-[#A1A1AA] text-sm leading-relaxed font-light">
-                With over 12+ years of hands-on architectural design and turnkey project execution across Mumbai, Ar. Aakhir Choudhary personally leads every project from conceptual space planning to site handover with an obsession for spatial proportions, tactile materials, and honest craftsmanship.
-              </p>
+              <div className="space-y-3 text-[#A1A1AA] text-sm leading-relaxed font-light">
+                <p>
+                  With <strong className="text-white">200+ completed turnkey luxury projects</strong> across Mumbai, Ar. Aakhir Choudhary leads Bombay Studio with a design philosophy rooted in architectural proportion, bespoke materiality, and timeless execution.
+                </p>
+                <p>
+                  Growing up in a family with a construction pedigree dating back to 1992 (Noor Engineering Company), he developed a tactile understanding of engineering, materials, and joinery on active job sites from an early age.
+                </p>
+                <p>
+                  His professional journey evolved through NEC Studio into Bombay Studio—uniting visionary interior aesthetics with three decades of civil construction rigor to deliver spaces that are enduring and deeply personal.
+                </p>
+              </div>
 
               <div className="space-y-3 text-xs text-white">
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-[#121212] border border-white/10">
                   <Award className="w-5 h-5 text-[#D4AF37] shrink-0" />
-                  <span>Personal leadership on 100+ luxury handovers across Bandra, Worli, Juhu &amp; South Mumbai</span>
+                  <span>200+ Turnkey Luxury Handovers across Bandra, Worli, Juhu, South Mumbai &amp; Alibaug</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-[#121212] border border-white/10">
                   <ShieldCheck className="w-5 h-5 text-[#D4AF37] shrink-0" />
-                  <span>Direct founder involvement with zero subcontracting &amp; penalty-backed completion dates</span>
+                  <span>Backed by 30+ years of family construction mastery with single-point founder oversight</span>
                 </div>
               </div>
             </div>

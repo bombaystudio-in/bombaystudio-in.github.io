@@ -98,26 +98,26 @@ export default function AboutSection() {
                 Founder's Vision
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
-                "A home should feel like an exhale—tactile, warm, and entirely your own."
+                &quot;A home should feel like an exhale—tactile, warm, and entirely your own.&quot;
               </h3>
               <p className="text-[#A1A1AA] text-sm leading-relaxed font-light">
-                Founded by Ar. Aakhir Choudhary in Mumbai, Bombay Studio was born out of a desire to eliminate the chaos from interior execution. With over 12+ years of architectural experience across Mumbai's iconic high-rises and luxury residences, Ar. Aakhir Choudhary brings structured engineering rigor and single-point accountability to interior aesthetics.
+                Led by Ar. Aakhir Choudhary and backed by a 30+ year family construction legacy established in 1992, Bombay Studio unites generational structural engineering rigor with contemporary luxury architecture and single-point turnkey accountability across Mumbai.
               </p>
               <div className="grid grid-cols-2 gap-4 py-4 border-y border-white/10 text-sm">
                 <div>
-                  <p className="text-[#D4AF37] font-bold text-2xl font-serif">12+ Years</p>
-                  <p className="text-[#A1A1AA] text-xs">Design Leadership</p>
+                  <p className="text-[#D4AF37] font-bold text-2xl font-serif">30+ Years</p>
+                  <p className="text-[#A1A1AA] text-xs">Construction Heritage (1992)</p>
                 </div>
                 <div>
-                  <p className="text-[#D4AF37] font-bold text-2xl font-serif">100%</p>
-                  <p className="text-[#A1A1AA] text-xs">Direct Founder Commitment</p>
+                  <p className="text-[#D4AF37] font-bold text-2xl font-serif">200+</p>
+                  <p className="text-[#A1A1AA] text-xs">Turnkey Luxury Deliveries</p>
                 </div>
               </div>
               <a
-                href="/#contact"
+                href="/#legacy"
                 className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D4AF37] hover:text-white transition-colors"
               >
-                <span>Read Full Story &amp; Philosophy</span>
+                <span>Read Our 30-Year Heritage Story</span>
                 <span>→</span>
               </a>
             </div>

@@ -13,16 +13,16 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] backdrop-blur-md border border-white/15 text-[#FCF6BA] text-xs font-semibold uppercase tracking-widest gold-border-glow">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-ping" />
-              Mumbai&apos;s Premier Architectural &amp; Interior Design Practice
+              30+ Years of Construction Legacy · Building Trust Since 1992
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
-              Luxury Architecture &amp; <br />
-              <span className="gold-gradient-text italic font-normal">Interior Design</span> for Modern Living
+              Three Decades of <br />
+              <span className="gold-gradient-text italic font-normal">Building Spaces</span> That Last
             </h1>
 
             <p className="text-base sm:text-lg text-[#A1A1AA] font-light leading-relaxed max-w-2xl">
-              Designing Timeless Spaces Across Mumbai. Led by Principal Architect Ar. Aakhir Choudhary, we craft bespoke residential and commercial spaces from concept to turnkey handover.
+              From a construction foundation established in 1992 to a premier architecture and turnkey interior design practice, Bombay Studio unites generational craftsmanship with modern luxury across Mumbai. Led by Ar. Aakhir Choudhary.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -58,7 +58,7 @@ export default function HeroSection() {
                 <p className="text-white font-bold text-base tracking-wide">AR. AAKHIR CHOUDHARY</p>
                 <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Principal Architect &amp; Founder</p>
                 <p className="text-[#A1A1AA] text-[11px] font-light">
-                  100+ Turnkey Luxury Projects Completed Across Mumbai
+                  200+ Turnkey Luxury Projects Completed Across Mumbai
                 </p>
               </div>
             </div>
@@ -71,21 +71,21 @@ export default function HeroSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl glass-panel border border-white/10">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37]">
-              <Star className="w-5 h-5 fill-[#D4AF37]" />
+              <Award className="w-5 h-5 text-[#D4AF37]" />
             </div>
             <div>
-              <p className="text-white font-bold text-sm">⭐⭐⭐⭐⭐ 4.9/5</p>
-              <p className="text-[#A1A1AA] text-xs">Rated by 100+ Clients</p>
+              <p className="text-white font-bold text-sm">30+ Years</p>
+              <p className="text-[#A1A1AA] text-xs">Legacy Since 1992</p>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37]">
-              <Award className="w-5 h-5 text-[#D4AF37]" />
+              <Star className="w-5 h-5 fill-[#D4AF37]" />
             </div>
             <div>
-              <p className="text-white font-bold text-sm">100+ Projects</p>
-              <p className="text-[#A1A1AA] text-xs">Completed in Mumbai</p>
+              <p className="text-white font-bold text-sm">200+ Projects</p>
+              <p className="text-[#A1A1AA] text-xs">Delivered in Mumbai</p>
             </div>
           </div>
 
@@ -104,7 +104,7 @@ export default function HeroSection() {
               <ShieldCheck className="w-5 h-5 text-[#D4AF37]" />
             </div>
             <div>
-              <p className="text-white font-bold text-sm">Quality Assured</p>
+              <p className="text-white font-bold text-sm">Turnkey Master</p>
               <p className="text-[#A1A1AA] text-xs">10-Year Warranty</p>
             </div>
           </div>

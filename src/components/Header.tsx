@@ -37,11 +37,11 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="group shrink-0 flex items-center" aria-label="Bombay Studio Home">
+          <Link href="/" className="group shrink-0 flex items-center py-1" aria-label="Bombay Studio Home">
             <img
-              src="/logo.svg"
+              src="/logo.png"
               alt="Bombay Studio"
-              className="h-8 sm:h-9 w-auto group-hover:opacity-90 transition-opacity"
+              className="h-11 sm:h-12 md:h-14 w-auto object-contain group-hover:opacity-90 transition-opacity"
             />
           </Link>
 

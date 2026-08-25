@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import LegacySection from "@/components/LegacySection";
 import ServicesSection from "@/components/ServicesSection";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import ProjectCategories from "@/components/ProjectCategories";
@@ -21,7 +22,10 @@ export default function Home() {
       {/* 2. About Bombay Studio */}
       <AboutSection />
 
-      {/* 3. Our Services */}
+      {/* 3. The 30-Year Legacy & Story (1992 - Today) */}
+      <LegacySection />
+
+      {/* 4. Our Services */}
       <ServicesSection />
 
       {/* 4. Featured Projects Case Studies */}

@@ -67,6 +67,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://bombaystudio.in/",
   },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -82,7 +87,8 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable} scroll-smooth`}
     >
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
 
         {/* Google Analytics 4 Tag (gtag.js) */}
         {gaId && (
@@ -114,7 +120,7 @@ export default function RootLayout({
               "@type": "InteriorDesignFirm",
               name: "Bombay Studio",
               url: "https://bombaystudio.in/",
-              logo: "https://bombaystudio.in/logo.svg",
+              logo: "https://bombaystudio.in/logo.png",
               description:
                 "Premier luxury interior design and turnkey architecture studio in Mumbai.",
               areaServed: [

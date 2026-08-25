@@ -15,9 +15,9 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block" aria-label="Bombay Studio Home">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Bombay Studio"
-                className="h-10 w-auto"
+                className="h-14 sm:h-16 w-auto object-contain"
               />
             </Link>
             <p className="text-xs font-light leading-relaxed max-w-sm text-[#A1A1AA]">
@@ -48,7 +48,7 @@ export default function Footer() {
                 <span>YouTube</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/bombay-studio-in/about/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-[#121212] hover:text-[#D4AF37] border border-white/10 transition-colors flex items-center gap-1.5 text-[11px]"
@@ -109,7 +109,7 @@ export default function Footer() {
             <Link href="/#contact" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/#contact" className="hover:text-white transition-colors">Terms of Service</Link>
             <a href="https://nordible.co/" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">
-              Developed by Nordible ↗
+              Developed in Germany by Nordible ↗
             </a>
           </div>
         </div>
