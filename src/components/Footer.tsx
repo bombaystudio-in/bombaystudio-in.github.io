@@ -17,7 +17,7 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt="Bombay Studio"
-                className="h-14 sm:h-16 w-auto object-contain"
+                className="h-16 sm:h-20 w-auto object-contain"
               />
             </Link>
             <p className="text-xs font-light leading-relaxed max-w-sm text-[#A1A1AA]">

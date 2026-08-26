@@ -133,7 +133,7 @@ export default function CostCalculatorSection() {
                   ].map((t) => (
                     <button
                       key={t.id}
-                      onClick={() => setTier(t.id as any)}
+                      onClick={() => setTier(t.id as "standard" | "premium" | "luxury")}
                       className={`p-4 rounded-xl text-left text-xs transition-all ${
                         tier === t.id
                           ? "bg-[#1C1C1C] border-2 border-[#D4AF37] text-white gold-border-glow"

@@ -56,10 +56,11 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true, message: "Lead captured and email dispatched successfully." });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Lead Magnet API Error:", err);
+    const errorMessage = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { error: "Failed to send email via SMTP.", details: err?.message || String(err) },
+      { error: "Failed to send email via SMTP.", details: errorMessage },
       { status: 500 }
     );
   }

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Sparkles, ArrowRight, Building, Home, Store, Utensils, Stethoscope, Scissors, Briefcase } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Building, Home, Store, Utensils, Stethoscope, Scissors, Briefcase } from "lucide-react";
 
 export default function ProjectCategories() {
   const categories = [
@@ -56,13 +56,13 @@ export default function ProjectCategories() {
                   {cat.desc}
                 </p>
 
-                <a
+                <Link
                   href="/#contact"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4AF37] group-hover:text-white transition-colors"
                 >
                   <span>Explore Portfolio</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             );
           })}

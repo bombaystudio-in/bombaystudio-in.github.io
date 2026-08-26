@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { SERVICES_DATA } from "@/data/services";
 import {
   Building2,
@@ -102,13 +103,13 @@ export default function ServicesSection() {
                   ))}
                 </div>
 
-                <a
+                <Link
                   href="/#contact"
                   className="inline-flex items-center gap-1 text-xs font-semibold text-[#D4AF37] group-hover:text-white transition-colors"
                 >
                   <span>Enquire</span>
                   <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
+                </Link>
               </div>
             </div>
           ))}

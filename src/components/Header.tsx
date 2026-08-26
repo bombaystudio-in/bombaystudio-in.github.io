@@ -41,7 +41,7 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="Bombay Studio"
-              className="h-11 sm:h-12 md:h-14 w-auto object-contain group-hover:opacity-90 transition-opacity"
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain group-hover:opacity-90 transition-opacity"
             />
           </Link>
 

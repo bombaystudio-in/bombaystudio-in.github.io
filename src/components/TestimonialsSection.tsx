@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
               <Quote className="w-10 h-10 text-[#D4AF37]/30" />
 
               <p className="text-base sm:text-lg text-white font-light leading-relaxed italic">
-                "{testimonials[currentIndex].text}"
+                &quot;{testimonials[currentIndex].text}&quot;
               </p>
 
               <div>

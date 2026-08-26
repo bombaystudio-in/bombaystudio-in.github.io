@@ -147,7 +147,7 @@ export default function FeaturedProjects() {
                     <Star key={i} className="w-3.5 h-3.5 fill-[#D4AF37]" />
                   ))}
                 </div>
-                <p>"{selectedProject.clientReview.quote}"</p>
+                <p>&quot;{selectedProject.clientReview.quote}&quot;</p>
                 <p className="mt-2 text-[#D4AF37] font-semibold not-italic">
                   — {selectedProject.clientReview.name} ({selectedProject.clientReview.role})
                 </p>

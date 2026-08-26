@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Sparkles, ShieldCheck, DollarSign, Clock, Key, UserCheck } from "lucide-react";
 
 export default function AboutSection() {
@@ -48,7 +49,7 @@ export default function AboutSection() {
             Why Choose <span className="gold-gradient-text">Bombay Studio?</span>
           </h2>
           <p className="text-[#A1A1AA] text-base font-light">
-            We don't just design interiors; we architect living experiences. Here is why Mumbai's most discerning homeowners trust us.
+            We don&apos;t just design interiors; we architect living experiences. Here is why Mumbai&apos;s most discerning homeowners trust us.
           </p>
         </div>
 
@@ -95,7 +96,7 @@ export default function AboutSection() {
             {/* Founder Story & Philosophy */}
             <div className="lg:col-span-7 space-y-6">
               <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-                Founder's Vision
+                Founder&apos;s Vision
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
                 &quot;A home should feel like an exhale—tactile, warm, and entirely your own.&quot;
@@ -113,13 +114,13 @@ export default function AboutSection() {
                   <p className="text-[#A1A1AA] text-xs">Turnkey Luxury Deliveries</p>
                 </div>
               </div>
-              <a
+              <Link
                 href="/#legacy"
                 className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D4AF37] hover:text-white transition-colors"
               >
                 <span>Read Our 30-Year Heritage Story</span>
                 <span>→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

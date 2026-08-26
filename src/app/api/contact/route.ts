@@ -73,10 +73,11 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true, message: "Inquiry transmitted successfully." });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Contact API Error:", err);
+    const errorMessage = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { error: "Failed to process inquiry.", details: err?.message || String(err) },
+      { error: "Failed to process inquiry.", details: errorMessage },
       { status: 500 }
     );
   }
