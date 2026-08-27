@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Globe, Video, Share2 } from "lucide-react";
+import { Globe, Share2 } from "lucide-react";
 import { SEO_KEYWORD_PAGES } from "@/data/seoKeywords";
 
 export default function Footer() {
@@ -36,16 +36,6 @@ export default function Footer() {
               >
                 <Globe className="w-3.5 h-3.5 text-[#D4AF37]" />
                 <span>Instagram</span>
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-[#121212] hover:text-[#D4AF37] border border-white/10 transition-colors flex items-center gap-1.5 text-[11px]"
-                aria-label="YouTube"
-              >
-                <Video className="w-3.5 h-3.5 text-[#D4AF37]" />
-                <span>YouTube</span>
               </a>
               <a
                 href="https://www.linkedin.com/company/bombay-studio-in/about/?viewAsMember=true"
@@ -101,6 +91,17 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Large Full-Width Brand Logo */}
+        <div className="pt-12 pb-16 border-t border-white/10 flex justify-center items-center">
+          <Link href="/" className="w-full block group" aria-label="Bombay Studio Home">
+            <img
+              src="/logo.png"
+              alt="Bombay Studio"
+              className="w-full max-h-48 sm:max-h-64 md:max-h-80 lg:max-h-96 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 mx-auto drop-shadow-2xl"
+            />
+          </Link>
         </div>
 
         {/* Footer Bottom Bar */}
