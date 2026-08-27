@@ -164,10 +164,10 @@ export default async function SeoPage({ params }: Props) {
                 </Link>
 
                 <a
-                  href="tel:+919664384181"
-                  className="w-full text-center block bg-[#1C1C1C] text-white font-semibold text-xs py-3.5 rounded-xl border border-white/10 hover:bg-[#262626]"
+                  href="tel:+917070704181"
+                  className="w-full text-center block bg-[#1C1C1C] text-white font-semibold text-xs py-3.5 rounded-xl border border-[#D4AF37]/40 hover:bg-[#262626]"
                 >
-                  Call +91 96643 84181
+                  Direct Studio Line: <span className="text-[#FCF6BA] font-mono font-bold">+91 707070 4181</span>
                 </a>
               </div>
             </div>

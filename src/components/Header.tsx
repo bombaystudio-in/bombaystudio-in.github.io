@@ -53,8 +53,11 @@ export default function Header() {
             <Link href="/#services" className="hover:text-white transition-colors">
               Services
             </Link>
-            <Link href="/#projects" className="hover:text-white transition-colors">
+            <Link href="/projects" className="hover:text-white transition-colors">
               Projects
+            </Link>
+            <Link href="/portfolio" className="hover:text-white transition-colors">
+              Site Work
             </Link>
             <Link href="/#calculator" className="hover:text-white transition-colors">
               Cost Calculator
@@ -104,8 +107,11 @@ export default function Header() {
               <Link href="/#services" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
                 Services
               </Link>
-              <Link href="/#projects" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
-                Projects
+              <Link href="/projects" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
+                Projects &amp; Case Studies
+              </Link>
+              <Link href="/portfolio" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
+                Site Work &amp; Gallery
               </Link>
               <Link href="/#calculator" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
                 Cost Calculator
@@ -128,11 +134,11 @@ export default function Header() {
                 Contact Us
               </Link>
               <a
-                href="tel:+919664384181"
-                className="w-full text-center flex items-center justify-center gap-2 bg-[#121212] text-white font-semibold text-sm py-3 rounded-full border border-white/15"
+                href="tel:+917070704181"
+                className="w-full text-center flex items-center justify-center gap-2 bg-[#121212] text-white font-semibold text-sm py-3 rounded-full border border-[#D4AF37]/50 shadow-lg shadow-[#D4AF37]/10"
               >
                 <Phone className="w-4 h-4 text-[#D4AF37]" />
-                <span>Call +91 96643 84181</span>
+                <span>Direct Studio Line: +91 707070 4181</span>
               </a>
             </div>
           </div>

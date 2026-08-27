@@ -22,6 +22,15 @@ export default function CostCalculatorSection() {
   const estimatedTotal = area * ratePerSqft[tier];
   const formattedEstimate = (estimatedTotal / 100000).toFixed(2);
 
+  const triggerPdfDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/mumbai-interior-budget-planner-2026.pdf";
+    link.download = "mumbai-interior-budget-planner-2026.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -45,10 +54,11 @@ export default function CostCalculatorSection() {
       const data = await res.json();
       if (res.ok && data.success) {
         setLeadSubmitted(true);
+        triggerPdfDownload();
       } else {
         setErrorMessage(data.error || "Failed to request BOQ quote. Please try again.");
       }
-    } catch (err) {
+    } catch {
       setErrorMessage("Network error. Please check your connection.");
     } finally {
       setLoading(false);
@@ -213,9 +223,22 @@ export default function CostCalculatorSection() {
                   </button>
                 </form>
               ) : (
-                <div className="p-4 rounded-xl bg-[#1C1C1C] text-white text-xs space-y-2 border border-[#D4AF37]">
-                  <p className="font-bold text-[#D4AF37] text-sm">Thank You!</p>
-                  <p>Our senior architect will WhatsApp your itemized BOQ within 15 minutes.</p>
+                <div className="p-5 rounded-xl bg-[#1C1C1C] text-white text-xs space-y-3 border border-[#D4AF37] shadow-xl">
+                  <div className="flex items-center justify-center gap-2 text-[#D4AF37]">
+                    <CheckCircle2 className="w-5 h-5" />
+                    <p className="font-bold text-sm">Quote &amp; Planner Downloaded!</p>
+                  </div>
+                  <p className="text-[#A1A1AA] text-center">
+                    Your 2026 Mumbai Interior Budget Planner &amp; Checklist PDF has been downloaded. Our team will also WhatsApp your custom BOQ breakdown shortly.
+                  </p>
+                  <a
+                    href="/mumbai-interior-budget-planner-2026.pdf"
+                    download="mumbai-interior-budget-planner-2026.pdf"
+                    className="inline-flex items-center justify-center gap-2 w-full btn-gold-shiny py-3 rounded-lg font-bold text-xs uppercase tracking-wider"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>Download PDF Again</span>
+                  </a>
                 </div>
               )}
             </div>

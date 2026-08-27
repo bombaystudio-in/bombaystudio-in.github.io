@@ -5,7 +5,6 @@ import ServicesSection from "@/components/ServicesSection";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import ProjectCategories from "@/components/ProjectCategories";
 import PortfolioGallery from "@/components/PortfolioGallery";
-import WhyChooseUs from "@/components/WhyChooseUs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import MeetFounderSection from "@/components/MeetFounderSection";
@@ -37,10 +36,7 @@ export default function Home() {
       {/* 6. Portfolio Gallery */}
       <PortfolioGallery />
 
-      {/* 7. Why Choose Us */}
-      <WhyChooseUs />
-
-      {/* 8. Testimonials & Google Reviews */}
+      {/* 7. Testimonials & Google Reviews */}
       <TestimonialsSection />
 
       {/* 9. Before After Interactive Slider */}

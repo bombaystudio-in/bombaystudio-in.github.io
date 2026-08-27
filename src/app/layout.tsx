@@ -85,6 +85,7 @@ export default function RootLayout({
     <html
       lang="en-IN"
       className={`${playfair.variable} ${dmSans.variable} scroll-smooth`}
+      suppressHydrationWarning
     >
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" sizes="any" />
@@ -129,34 +130,27 @@ export default function RootLayout({
                 "Bandra",
                 "Juhu",
                 "Worli",
-                "Thane",
-                "Navi Mumbai",
+                "Lower Parel",
                 "Alibaug",
               ],
+              telephone: ["+917070704181", "+919664384181"],
+              priceRange: "₹₹₹₹",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "Trade World B, BKC & Lower Parel",
                 addressLocality: "Mumbai",
                 addressRegion: "Maharashtra",
+                postalCode: "400013",
                 addressCountry: "IN",
-              },
-              telephone: ["+919664384181", "+917070704181"],
-              email: ["info@bombaystudio.in", "aakhir@bombaystudio.in"],
-              founder: {
-                "@type": "Person",
-                name: "Ar. Aakhir Choudhary",
-                jobTitle: "Principal Architect & Founder",
-              },
-              priceRange: "₹₹₹₹",
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.9",
-                reviewCount: "52",
               },
             }),
           }}
         />
       </head>
-      <body className="min-h-screen bg-[#050505] text-white antialiased selection:bg-[#D4AF37] selection:text-[#050505]">
+      <body
+        className="min-h-screen bg-[#050505] text-white antialiased selection:bg-[#D4AF37] selection:text-[#050505]"
+        suppressHydrationWarning
+      >
         <Header />
         <main>{children}</main>
         <Footer />

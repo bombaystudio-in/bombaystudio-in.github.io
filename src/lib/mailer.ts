@@ -1,16 +1,22 @@
 import nodemailer from "nodemailer";
 import { config } from "./config";
 
-// Create reusable transporter object using SMTP transport
-export const transporter = nodemailer.createTransport({
-  host: config.smtp.host,
-  port: config.smtp.port,
-  secure: config.smtp.secure, // true for 465 SSL, false for other ports
-  auth: {
-    user: config.smtp.user,
-    pass: config.smtp.pass,
-  },
-});
+let transporterInstance: nodemailer.Transporter | null = null;
+
+export function getTransporter() {
+  if (!transporterInstance) {
+    transporterInstance = nodemailer.createTransport({
+      host: config.smtp.host,
+      port: config.smtp.port,
+      secure: config.smtp.secure, // true for 465 SSL, false for other ports
+      auth: {
+        user: config.smtp.user,
+        pass: config.smtp.pass,
+      },
+    });
+  }
+  return transporterInstance;
+}
 
 export interface SendMailOptions {
   to?: string;
@@ -21,6 +27,7 @@ export interface SendMailOptions {
 }
 
 export async function sendEmail({ to, subject, html, text, replyTo }: SendMailOptions) {
+  const transporter = getTransporter();
   const mailOptions = {
     from: `"${config.smtp.fromName}" <${config.smtp.fromEmail}>`,
     to: to || config.smtp.toEmail,

@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Star, ShieldCheck, Clock, Award, ArrowRight, Play } from "lucide-react";
+import { Star, ShieldCheck, Clock, Award, ArrowRight } from "lucide-react";
+import DirectStudioLineCard from "./DirectStudioLineCard";
 
 export default function HeroSection() {
   return (
@@ -13,7 +14,7 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] backdrop-blur-md border border-white/15 text-[#FCF6BA] text-xs font-semibold uppercase tracking-widest gold-border-glow">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-ping" />
-              30+ Years of Construction Legacy · Building Trust Since 1992
+              30+ YEARS OF ARCHITECTURE, INTERIORS & CONSTRUCTION · Building Trust Since 1992
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
@@ -35,29 +36,34 @@ export default function HeroSection() {
               </Link>
 
               <Link
-                href="/#projects"
-                className="flex items-center gap-3 bg-[#121212] hover:bg-[#1C1C1C] text-white text-sm font-semibold tracking-wider px-7 py-4 rounded-full border border-white/20 transition-all transform hover:-translate-y-1"
+                href="/portfolio"
+                className="flex items-center gap-2 bg-[#121212] hover:bg-[#1C1C1C] text-white text-sm font-semibold tracking-wider px-7 py-4 rounded-full border border-white/15 hover:border-[#D4AF37] transition-all transform hover:-translate-y-1 group"
               >
-                <Play className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
-                <span>View Portfolio</span>
+                <span>View Our Work</span>
+                <span className="text-[#D4AF37] group-hover:translate-x-0.5 transition-transform">→</span>
               </Link>
+            </div>
+
+            {/* Direct Studio Line Feature Card (Replicated from Reference Design) */}
+            <div className="pt-4 sm:pt-6">
+              <DirectStudioLineCard />
             </div>
           </div>
 
           {/* Right Main Image Showcase */}
           <div className="lg:col-span-5 relative">
-            <div className="relative h-[420px] sm:h-[500px] w-full rounded-3xl overflow-hidden gold-border-glow group">
+            <div className="relative h-[480px] sm:h-[540px] w-full rounded-3xl overflow-hidden gold-border-glow group">
               <img
-                src="/portfolio/akhir-chaudhary-founder-portrait.jpg"
+                src="/team/akhir-chaudhary-founder-portrait.png"
                 alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent opacity-90" />
 
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#050505]/85 backdrop-blur-md border border-white/15 space-y-1">
-                <p className="text-white font-bold text-base tracking-wide">AR. AAKHIR CHOUDHARY</p>
+              <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-[#050505]/85 backdrop-blur-md border border-white/15 space-y-1 text-center shadow-2xl">
+                <p className="text-white font-bold text-base tracking-wide uppercase">AR. AAKHIR CHOUDHARY</p>
                 <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Principal Architect &amp; Founder</p>
-                <p className="text-[#A1A1AA] text-[11px] font-light">
+                <p className="text-[#A1A1AA] text-xs font-light">
                   200+ Turnkey Luxury Projects Completed Across Mumbai
                 </p>
               </div>

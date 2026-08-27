@@ -116,25 +116,24 @@ export default function LegacySection() {
                 </div>
                 <div className="p-3 rounded-xl bg-[#121212] border border-white/5">
                   <p className="font-serif text-xl sm:text-2xl font-bold gold-gradient-text">30+ Yrs</p>
-                  <p className="text-[10px] sm:text-xs text-[#A1A1AA] uppercase tracking-wider">Civil Pedigree</p>
+                  <p className="text-[10px] sm:text-xs text-[#A1A1AA] uppercase tracking-wider">Architectural Legacy</p>
                 </div>
               </div>
             </div>
 
             {/* Mr. Kalamuddin Choudhary Portrait */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative h-[380px] sm:h-[440px] w-full rounded-2xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow">
+            <div className="lg:col-span-5 relative flex flex-col items-center">
+              <div className="relative w-full h-[460px] sm:h-[520px] rounded-3xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow bg-gradient-to-b from-[#181818] via-[#121212] to-[#0A0A0A] flex items-center justify-center p-2">
                 <img
-                  src="/kalamuddin-choudhary.png"
+                  src="/team/kalamuddin-choudhary.png"
                   alt="Mr. Kalamuddin Choudhary - Founder of Noor Engineering Company (Est. 1992)"
-                  className="w-full h-full object-cover object-top filter contrast-105"
+                  className="w-full h-full object-contain object-center filter contrast-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent opacity-90" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#050505]/90 backdrop-blur-md border border-white/15 space-y-1">
-                  <p className="text-white font-bold text-sm tracking-wide uppercase">MR. KALAMUDDIN CHOUDHARY</p>
-                  <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Founder · Noor Engineering Company (1992)</p>
-                  <p className="text-[#A1A1AA] text-[11px] font-light italic">&quot;Built on Integrity, Grit &amp; Structural Mastery&quot;</p>
-                </div>
+              </div>
+              <div className="w-full mt-4 p-4 rounded-2xl bg-[#121212] border border-white/10 space-y-1 text-center">
+                <p className="text-white font-bold text-sm tracking-wide uppercase">MR. KALAMUDDIN CHOUDHARY</p>
+                <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Founder · Noor Engineering Company (1992)</p>
+                <p className="text-[#A1A1AA] text-[11px] font-light italic">&quot;Built on Integrity, Grit &amp; Structural Mastery&quot;</p>
               </div>
             </div>
           </div>

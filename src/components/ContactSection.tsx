@@ -72,13 +72,49 @@ export default function ContactSection() {
                 </div>
               </div>
 
+              {/* Direct Studio Line (Highlight Primary) */}
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#121212] border border-[#D4AF37]/40 shadow-lg shadow-[#D4AF37]/10">
+                <div className="p-3 rounded-xl bg-[#D4AF37] text-[#050505] shrink-0 font-bold">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <p className="font-bold text-[#D4AF37] text-xs uppercase tracking-wider">
+                      DIRECT STUDIO LINE
+                    </p>
+                    <span className="text-[10px] bg-[#25D366]/20 text-[#25D366] px-2 py-0.5 rounded-full font-bold">
+                      Available Now
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 pt-0.5">
+                    <a
+                      href="tel:+917070704181"
+                      className="text-white text-base hover:text-[#FCF6BA] font-serif font-bold whitespace-nowrap shrink-0 tracking-wide"
+                    >
+                      +91 707070 4181
+                    </a>
+                    <a
+                      href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[11px] bg-[#25D366] text-black font-bold px-2.5 py-1 rounded-md hover:bg-[#1EBE5D] transition-colors inline-flex items-center gap-1 shrink-0"
+                    >
+                      <span>WhatsApp Chat ↗</span>
+                    </a>
+                  </div>
+                  <p className="text-[#A1A1AA] text-[11px] font-light">
+                    Direct line for quick inquiries, site estimates &amp; architect consultation.
+                  </p>
+                </div>
+              </div>
+
               {/* Personal Contact */}
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
                   <Phone className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div className="space-y-1">
-                  <p className="font-bold text-white text-xs uppercase tracking-wider">Personal Direct Line</p>
+                  <p className="font-bold text-white text-xs uppercase tracking-wider">Principal Architect Personal Line</p>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                     <a
                       href="tel:+919664384181"
@@ -97,24 +133,14 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Office Contact (WhatsApp Direct) */}
+              {/* Studio Email Contact */}
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
                   <Mail className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div className="space-y-1">
-                  <p className="font-bold text-white text-xs uppercase tracking-wider">Studio Office &amp; WhatsApp</p>
+                  <p className="font-bold text-white text-xs uppercase tracking-wider">Studio General Email</p>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                    <a
-                      href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#FCF6BA] text-xs hover:underline font-semibold inline-flex items-center gap-1.5 whitespace-nowrap shrink-0"
-                    >
-                      <span>+91 707070 4181</span>
-                      <span className="text-[10px] bg-[#D4AF37]/20 text-[#D4AF37] px-1.5 py-0.5 rounded font-mono">(WhatsApp)</span>
-                    </a>
-                    <span className="hidden sm:inline text-white/30">•</span>
                     <a
                       href="mailto:info@bombaystudio.in"
                       className="text-[#A1A1AA] text-xs hover:text-white transition-colors break-all sm:break-normal"

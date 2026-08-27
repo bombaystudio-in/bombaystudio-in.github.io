@@ -9,17 +9,19 @@ export default function MeetFounderSection() {
         <div className="rounded-3xl glass-panel p-8 sm:p-14 border border-white/10 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Real Image */}
-            <div className="lg:col-span-5 relative h-[400px] sm:h-[480px] rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
-              <img
-                src="/portfolio/akhir-chaudhary-founder-portrait.jpg"
-                alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
-                className="w-full h-full object-cover object-top filter contrast-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#050505]/90 backdrop-blur-md border border-white/15 space-y-1">
-                <p className="text-white font-bold text-sm tracking-wide">AR. AAKHIR CHOUDHARY</p>
-                <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Principal Architect &amp; Founder</p>
-                <p className="text-[#A1A1AA] text-[11px] font-light italic">&quot;Design. Detail. Delivered.&quot;</p>
+            <div className="lg:col-span-5 relative">
+              <div className="relative h-[480px] sm:h-[540px] w-full rounded-3xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow">
+                <img
+                  src="/team/akhir-chaudhary-founder-portrait.png"
+                  alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
+                  className="w-full h-full object-cover object-top filter contrast-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/25 to-transparent opacity-90" />
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#050505]/85 backdrop-blur-md border border-white/15 space-y-1 text-center shadow-xl">
+                  <p className="text-white font-bold text-sm tracking-wide uppercase">AR. AAKHIR CHOUDHARY</p>
+                  <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Principal Architect &amp; Founder</p>
+                  <p className="text-[#A1A1AA] text-[11px] font-light italic">&quot;Design. Detail. Delivered.&quot;</p>
+                </div>
               </div>
             </div>
 
