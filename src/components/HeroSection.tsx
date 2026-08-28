@@ -6,9 +6,9 @@ import DirectStudioLineCard from "./DirectStudioLineCard";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#050505] pt-10 pb-16">
+    <section className="relative min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#050505] pt-2 sm:pt-4 pb-12 sm:pb-16">
       {/* Hero Content Grid */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-16 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 lg:pt-4 flex-1 flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">
