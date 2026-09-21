@@ -62,6 +62,9 @@ export default function Header() {
             <Link href="/#calculator" className="hover:text-white transition-colors">
               Cost Calculator
             </Link>
+            <Link href="/team" className="hover:text-white transition-colors">
+              Team
+            </Link>
             <Link href="/#faq" className="hover:text-white transition-colors">
               FAQ
             </Link>
@@ -115,6 +118,9 @@ export default function Header() {
               </Link>
               <Link href="/#calculator" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
                 Cost Calculator
+              </Link>
+              <Link href="/team" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
+                Studio Team
               </Link>
               <Link href="/#faq" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
                 FAQ

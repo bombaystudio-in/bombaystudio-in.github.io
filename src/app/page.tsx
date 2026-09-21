@@ -7,7 +7,7 @@ import ProjectCategories from "@/components/ProjectCategories";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import MeetFounderSection from "@/components/MeetFounderSection";
+import TeamPreviewSection from "@/components/TeamPreviewSection";
 import FaqSection from "@/components/FaqSection";
 import CostCalculatorSection from "@/components/CostCalculatorSection";
 import ContactSection from "@/components/ContactSection";
@@ -42,8 +42,8 @@ export default function Home() {
       {/* 9. Before After Interactive Slider */}
       <BeforeAfterSlider />
 
-      {/* 10. Meet The Founder (Ar. Aakhir Choudhary) */}
-      <MeetFounderSection />
+      {/* 10. Studio Hierarchy & Team Preview */}
+      <TeamPreviewSection />
 
       {/* 11. Interior Cost Calculator & Lead Capture */}
       <CostCalculatorSection />

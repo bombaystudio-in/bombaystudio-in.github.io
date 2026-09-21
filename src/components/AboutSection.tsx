@@ -87,7 +87,7 @@ export default function AboutSection() {
               Why Choose <span className="gold-gradient-text">Bombay Studio?</span>
             </h2>
             <p className="text-[#A1A1AA] text-sm font-light mt-2 max-w-xl">
-              We don&apos;t just design interiors; we architect living experiences. Here is why Mumbai&apos;s most discerning homeowners trust us.
+              Architectural rigor, certified materials, and fixed BOQ budgets for Mumbai&apos;s most discerning homeowners.
             </p>
           </div>
 
@@ -202,7 +202,7 @@ export default function AboutSection() {
                 &quot;A home should feel like an exhale—tactile, warm, and entirely your own.&quot;
               </h3>
               <p className="text-[#A1A1AA] text-sm leading-relaxed font-light">
-                Led by Ar. Aakhir Choudhary and backed by a 30+ year family construction legacy established in 1992, Bombay Studio unites generational structural engineering rigor with contemporary luxury architecture and single-point turnkey accountability across Mumbai.
+                Backed by 30+ years of construction pedigree dating to 1992, Ar. Aakhir Choudhary leads Bombay Studio with single-point founder oversight and uncompromising turnkey precision.
               </p>
               <div className="grid grid-cols-2 gap-4 py-4 border-y border-white/10 text-sm">
                 <div>

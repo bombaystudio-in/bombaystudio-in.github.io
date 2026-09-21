@@ -1,6 +1,6 @@
 "use client";
 
-import { History, Hammer, Compass, Award, ShieldCheck, CheckCircle2, ArrowRight, Sparkles, ChevronRight } from "lucide-react";
+import { Hammer, Compass, Award, ShieldCheck, CheckCircle2, ArrowRight, Sparkles, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function LegacySection() {
@@ -68,10 +68,9 @@ export default function LegacySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-4">
-            <History className="w-3.5 h-3.5" />
-            <span>Our 30-Year Heritage · Building Trust Since 1992</span>
-          </div>
+          <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-3">
+            Heritage &amp; Lineage · Est. 1992
+          </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             From Humble Beginnings to <br />
             <span className="gold-gradient-text">Next-Generation Luxury Living</span>
@@ -92,15 +91,12 @@ export default function LegacySection() {
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
                 &quot;He arrived in Bombay with empty pockets—and built a legacy on his word.&quot;
               </h3>
-              <div className="space-y-4 text-sm font-light leading-relaxed">
+              <div className="space-y-3 text-sm font-light leading-relaxed">
                 <p className="text-[#A1A1AA]">
-                  In 1992, <span className="text-white font-medium">Mr. Kalamuddin Choudhary</span> stepped into the relentless city of Bombay with nothing except sheer grit and an unyielding commitment to honest work. On dusty job sites, learning every grain of sand, brick, and beam with his own hands, he founded <strong className="text-white">Noor Engineering Company (NEC)</strong>.
+                  In 1992, <span className="text-white font-medium">Mr. Kalamuddin Choudhary</span> founded <strong className="text-white">Noor Engineering Company (NEC)</strong> on uncompromising site precision, civil integrity, and structural mastery across Mumbai.
                 </p>
                 <p className="text-[#A1A1AA]">
-                  Decades of delivering honest civil construction earned NEC a revered reputation for precision and reliability across Mumbai. Growing up beside his father on active project sites, <span className="text-white font-medium">Ar. Aakhir Choudhary</span> absorbed the unvarnished reality of construction before studying formal architecture.
-                </p>
-                <p className="text-[#A1A1AA]">
-                  In 2012, this pedigree evolved into <strong className="text-white">NEC Studio</strong>, introducing architectural space planning and turnkey interior design. Today, <strong className="text-[#FCF6BA]">Bombay Studio</strong> stands as the modern spin-off crafted for the next generation—uniting three decades of structural mastery with contemporary, bespoke luxury living.
+                  Trained on active job sites before studying formal architecture, <span className="text-white font-medium">Ar. Aakhir Choudhary</span> expanded this foundation into <strong className="text-[#FCF6BA]">Bombay Studio</strong>—uniting three decades of civil engineering rigor with bespoke turnkey luxury.
                 </p>
               </div>
 

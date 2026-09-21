@@ -12,10 +12,9 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] backdrop-blur-md border border-white/15 text-[#FCF6BA] text-xs font-semibold uppercase tracking-widest gold-border-glow">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-ping" />
-              30+ YEARS OF ARCHITECTURE, INTERIORS & CONSTRUCTION · Building Trust Since 1992
-            </div>
+            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
+              Est. 1992 · 30+ Years Architectural &amp; Civil Pedigree · Mumbai
+            </p>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
               Three Decades of <br />
@@ -23,7 +22,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-lg text-[#A1A1AA] font-light leading-relaxed max-w-2xl">
-              From a construction foundation established in 1992 to a premier architecture and turnkey interior design practice, Bombay Studio unites generational craftsmanship with modern luxury across Mumbai. Led by Ar. Aakhir Choudhary.
+              Uniting 30+ years of civil pedigree with bespoke turnkey interior luxury across Mumbai. Guided by Principal Architect Ar. Aakhir Choudhary.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">

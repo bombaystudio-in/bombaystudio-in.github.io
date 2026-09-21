@@ -73,10 +73,9 @@ export default function CostCalculatorSection() {
             {/* Left Controls */}
             <div className="lg:col-span-7 space-y-8">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1C1C1C] text-[#FCF6BA] text-xs font-semibold uppercase tracking-wider mb-3 border border-white/10">
-                  <Calculator className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>Instant Lead Calculator</span>
-                </div>
+                <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
+                  Budget Estimator
+                </p>
                 <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
                   Estimate Your <span className="gold-gradient-text">Interior Cost</span>
                 </h2>

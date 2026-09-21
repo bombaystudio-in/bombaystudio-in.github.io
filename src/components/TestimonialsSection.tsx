@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Star, Quote, Play, Pause, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { Star, Quote, Play, Pause, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -83,10 +83,9 @@ export default function TestimonialsSection() {
         {/* Header with Play/Pause & Arrow Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1C1C1C] text-[#FCF6BA] text-xs font-semibold uppercase tracking-wider mb-3 border border-white/10">
-              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span>Verified Homeowner Experiences</span>
-            </div>
+            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
+              Client Experiences
+            </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
               What Our <span className="gold-gradient-text">Clients Say</span>
             </h2>

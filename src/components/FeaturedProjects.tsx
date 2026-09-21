@@ -57,10 +57,9 @@ export default function FeaturedProjects() {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-12 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1C1C1C] text-[#FCF6BA] text-xs font-semibold uppercase tracking-wider mb-3 border border-white/10">
-              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span>Live Case Studies &amp; Execution Proof</span>
-            </div>
+            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
+              Turnkey Portfolio
+            </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
               Featured <span className="gold-gradient-text">Projects</span>
             </h2>
