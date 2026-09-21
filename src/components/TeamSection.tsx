@@ -107,7 +107,7 @@ export default function TeamSection() {
         {/* ========================================================================= */}
         {/* 01 — LEGACY & LEADERSHIP */}
         {/* ========================================================================= */}
-        <div className="mb-6">
+        <div id="level-01" className="mb-6 scroll-mt-24">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[#D4AF37] font-mono text-xs font-bold tracking-widest uppercase">
               {level01.level} — {level01.title}
@@ -153,7 +153,7 @@ export default function TeamSection() {
         {/* ========================================================================= */}
         {/* 02 — DESIGN LEADERSHIP */}
         {/* ========================================================================= */}
-        <div className="mb-14">
+        <div id="level-02" className="mb-14 scroll-mt-24">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[#D4AF37] font-mono text-xs font-bold tracking-widest uppercase">
               {level02.level} — {level02.title}
@@ -196,7 +196,7 @@ export default function TeamSection() {
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
           {/* Level 03 */}
-          <div>
+          <div id="level-03" className="scroll-mt-24">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-[#D4AF37] font-mono text-xs font-bold tracking-wider uppercase">
                 03 — ASSOCIATE / DESIGN LEADERSHIP
@@ -221,7 +221,7 @@ export default function TeamSection() {
           </div>
 
           {/* Level 04 */}
-          <div>
+          <div id="level-04" className="scroll-mt-24">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-[#D4AF37] font-mono text-xs font-bold tracking-wider uppercase">
                 04 — SENIOR DESIGN TEAM
@@ -249,7 +249,7 @@ export default function TeamSection() {
         {/* ========================================================================= */}
         {/* 05 — DESIGN & VISUALIZATION */}
         {/* ========================================================================= */}
-        <div className="mb-14">
+        <div id="level-05" className="mb-14 scroll-mt-24">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[#D4AF37] font-mono text-xs font-bold tracking-wider uppercase">
               05 — DESIGN &amp; VISUALIZATION
@@ -284,7 +284,7 @@ export default function TeamSection() {
         {/* ========================================================================= */}
         {/* 06 — TECHNICAL & PROJECT EXECUTION */}
         {/* ========================================================================= */}
-        <div>
+        <div id="level-06" className="scroll-mt-24">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-[#D4AF37] font-mono text-xs font-bold tracking-wider uppercase">
               06 — TECHNICAL &amp; PROJECT EXECUTION

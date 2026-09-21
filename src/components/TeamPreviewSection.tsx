@@ -2,54 +2,57 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function TeamPreviewSection() {
-  const teamSpotlight = [
-    { name: "Mr. Kalamuddin Choudhary", role: "Founder Emeritus", img: "/team/kalamuddin-choudhary.png" },
-    { name: "Ar. Aakhir Choudhary", role: "Principal Architect", img: "/team/akhir-chaudhary-founder-portrait.png" },
-    { name: "Razzak Khan", role: "Associate Partner", img: "/team/razzak-khan.png" },
-    { name: "Arpita Kanojia", role: "Senior Designer", img: "/team/arpita-kanojia.png" },
-    { name: "Varsha Dongre", role: "Interior Designer", img: "/team/varsha-dongre.png" },
-    { name: "Sunil Jaiswal", role: "Project Head", img: "/team/sunil-jaiswal.png" },
+  const teamPhotos = [
+    { name: "Kalamuddin Choudhary", img: "/team/kalamuddin-choudhary.png" },
+    { name: "Ar. Aakhir Choudhary", img: "/team/akhir-chaudhary-founder-portrait.png" },
+    { name: "Razzak Khan", img: "/team/razzak-khan.png" },
+    { name: "Arpita Kanojia", img: "/team/arpita-kanojia.png" },
+    { name: "Arshiya Shaikh", img: "/team/arshiya-shaikh.png" },
+    { name: "Varsha Dongre", img: "/team/varsha-dongre.png" },
+    { name: "Azhar Akram", img: "/team/azhar-akram.png" },
+    { name: "Sunil Jaiswal", img: "/team/sunil-jaiswal.png" },
+    { name: "Rajesh Vishwakarma", img: "/team/rajesh-vishwakarma.png" },
+    { name: "Meraj Usmani", img: "/team/meraj-usmani.png" },
+    { name: "Sarfaraz Athar", img: "/team/sarfaraz-athar.png" },
+    { name: "Kalpesh Bhagwat", img: "/team/kalpesh-bhagwat.png" },
   ];
 
   return (
-    <section id="team" className="py-16 sm:py-20 bg-[#050505] border-t border-white/10">
+    <section id="team" className="py-10 sm:py-12 bg-[#050505] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl glass-panel p-8 sm:p-10 border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-8">
-          {/* Left: Clean, Minimal Editorial Statement */}
-          <div className="max-w-xl space-y-2">
-            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-              Studio Leadership
-            </p>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
-              A 12-Member Multidisciplinary Practice
-            </h2>
-            <p className="text-[#A1A1AA] text-sm font-light leading-relaxed">
-              Governed across 6 disciplined tiers—from architectural concept and 3D CGI to turnkey on-site engineering.
-            </p>
-            <div className="pt-2">
-              <Link
-                href="/team"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#D4AF37] hover:text-white transition-colors"
-              >
-                <span>View Complete 6-Tier Hierarchy</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+        <div className="rounded-2xl glass-panel p-6 sm:p-8 border border-white/10 space-y-5">
+          {/* Subtle Header: Minimal Editorial Note and Dedicated Link */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
+                Studio Practice
+              </p>
+              <h2 className="font-serif text-lg sm:text-xl font-bold text-white mt-0.5">
+                Multidisciplinary Team &amp; Execution
+              </h2>
             </div>
+
+            <Link
+              href="/team"
+              className="inline-flex items-center gap-1.5 text-xs text-[#D4AF37] hover:text-white transition-colors self-start sm:self-auto font-medium"
+            >
+              <span>View Full Hierarchy &amp; Team Details</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
 
-          {/* Right: Clean, synchronized photo row with zero text overlays */}
-          <div className="flex items-center gap-3 overflow-x-auto pb-2 md:pb-0">
-            {teamSpotlight.map((member) => (
-              <div key={member.name} className="w-20 sm:w-24 shrink-0 text-center">
-                <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-[#141414] border border-white/10 mb-1.5">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <p className="text-white text-[11px] font-medium truncate">{member.name.split(" ")[0]}</p>
-                <p className="text-[#A1A1AA] text-[9px] uppercase tracking-wider truncate">{member.role}</p>
+          {/* Single Row of All 12 Portraits - Subtle, Non-interactive, No Numbers */}
+          <div className="flex items-center gap-2 sm:gap-2.5 overflow-x-auto pb-1 scrollbar-none">
+            {teamPhotos.map((member, idx) => (
+              <div
+                key={idx}
+                className="shrink-0 w-14 sm:w-auto sm:flex-1 aspect-[3/4] rounded-lg overflow-hidden bg-[#141414] border border-white/10"
+              >
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top grayscale opacity-75 contrast-105"
+                />
               </div>
             ))}
           </div>
@@ -58,3 +61,4 @@ export default function TeamPreviewSection() {
     </section>
   );
 }
+
