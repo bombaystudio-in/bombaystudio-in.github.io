@@ -68,9 +68,6 @@ export default function LegacySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-3">
-            Heritage &amp; Lineage · Est. 1992
-          </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             From Humble Beginnings to <br />
             <span className="gold-gradient-text">Next-Generation Luxury Living</span>
@@ -85,9 +82,6 @@ export default function LegacySection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Story & History */}
             <div className="lg:col-span-7 space-y-5">
-              <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-                The Heritage Story
-              </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
                 &quot;He arrived in Bombay with empty pockets—and built a legacy on his word.&quot;
               </h3>
@@ -138,10 +132,7 @@ export default function LegacySection() {
         {/* Connected & Continued Evolutionary Timeline */}
         <div className="mb-20">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-              Continuous Lineage &amp; Evolution
-            </span>
-            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mt-2 mb-3">
+            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
               A Connected Legacy Built Over Three Decades
             </h3>
             <p className="text-xs sm:text-sm text-[#A1A1AA] font-light">
@@ -247,11 +238,8 @@ export default function LegacySection() {
 
         {/* Why Our Legacy Matters Section */}
         <div className="rounded-3xl bg-[#121212] border border-white/10 p-8 sm:p-12">
-          <div className="max-w-3xl mb-10">
-            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-              The Bombay Studio Difference
-            </span>
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-2 mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">
               Why Our Construction Legacy Matters To You
             </h3>
             <p className="text-sm text-[#A1A1AA] font-light leading-relaxed">

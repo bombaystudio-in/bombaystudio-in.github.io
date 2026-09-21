@@ -53,9 +53,6 @@ export default function FaqSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-3">
-            Clear Answers
-          </p>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
             Frequently Asked <span className="gold-gradient-text">Questions</span>
           </h2>

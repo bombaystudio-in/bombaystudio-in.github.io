@@ -28,10 +28,7 @@ export default function MeetFounderSection() {
             {/* Narrative */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-                  Leadership &amp; Founder
-                </span>
-                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
                   Ar. Aakhir Choudhary
                 </h2>
                 <div className="mt-2 space-y-1">

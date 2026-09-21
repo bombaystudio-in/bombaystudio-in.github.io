@@ -15,9 +15,6 @@ export default function BeforeAfterSlider() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-3">
-            Interactive Visual Proof
-          </p>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
             Before &amp; After <span className="gold-gradient-text">Transformation</span>
           </h2>

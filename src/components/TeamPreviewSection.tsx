@@ -22,23 +22,19 @@ export default function TeamPreviewSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl glass-panel p-6 sm:p-8 border border-white/10 space-y-5">
           {/* Subtle Header: Minimal Editorial Note and Dedicated Link */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="text-center space-y-1.5 mb-2">
+            <h2 className="font-serif text-lg sm:text-xl font-bold text-white">
+              Multidisciplinary Team &amp; Execution
+            </h2>
             <div>
-              <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-                Studio Practice
-              </p>
-              <h2 className="font-serif text-lg sm:text-xl font-bold text-white mt-0.5">
-                Multidisciplinary Team &amp; Execution
-              </h2>
+              <Link
+                href="/team"
+                className="inline-flex items-center gap-1.5 text-xs text-[#D4AF37] hover:text-white transition-colors font-medium mt-1"
+              >
+                <span>View Full Hierarchy &amp; Team Details</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
-
-            <Link
-              href="/team"
-              className="inline-flex items-center gap-1.5 text-xs text-[#D4AF37] hover:text-white transition-colors self-start sm:self-auto font-medium"
-            >
-              <span>View Full Hierarchy &amp; Team Details</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
           </div>
 
           {/* Single Row of All 12 Portraits - Subtle, Non-interactive, No Numbers */}

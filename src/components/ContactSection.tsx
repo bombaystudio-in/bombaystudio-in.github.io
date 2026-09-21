@@ -44,21 +44,19 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-24 bg-[#050505] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Centered Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Let’s Discuss Your <span className="gold-gradient-text">Space</span>
+          </h2>
+          <p className="text-[#A1A1AA] text-sm font-light mt-3 max-w-xl mx-auto">
+            Visit our experience center in Mumbai or schedule a free site consultation with Principal Architect Ar. Aakhir Choudhary.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Contact Information & Map */}
           <div className="lg:col-span-5 space-y-8">
-            <div>
-              <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
-                Get In Touch
-              </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-                Let’s Discuss Your <span className="gold-gradient-text">Space</span>
-              </h2>
-              <p className="text-[#A1A1AA] text-sm font-light mt-3">
-                Visit our experience center in Mumbai or schedule a free site consultation with Principal Architect Ar. Aakhir Choudhary.
-              </p>
-            </div>
-
             <div className="space-y-6 text-sm">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">

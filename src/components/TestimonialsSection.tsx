@@ -81,21 +81,16 @@ export default function TestimonialsSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Play/Pause & Arrow Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
-          <div>
-            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
-              Client Experiences
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-              What Our <span className="gold-gradient-text">Clients Say</span>
-            </h2>
-            <p className="text-[#A1A1AA] text-sm max-w-xl font-light mt-2">
-              Unfiltered feedback from high-net-worth homeowners and enterprise clients across Mumbai.
-            </p>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+            What Our <span className="gold-gradient-text">Clients Say</span>
+          </h2>
+          <p className="text-[#A1A1AA] text-sm max-w-xl font-light mt-2 mx-auto">
+            Unfiltered feedback from high-net-worth homeowners and enterprise clients across Mumbai.
+          </p>
 
           {/* Controls Bar */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center justify-center gap-3 mt-6 flex-wrap">
             {/* Play/Pause Toggle */}
             <button
               onClick={() => setIsPaused((prev) => !prev)}

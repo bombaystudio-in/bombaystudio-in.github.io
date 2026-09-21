@@ -29,22 +29,17 @@ export default function PortfolioGallery() {
   return (
     <section className="py-16 sm:py-20 bg-[#050505] relative overflow-hidden border-y border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          {/* Section Header */}
-          <div>
-            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
-              On-Site Execution
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-              Site <span className="gold-gradient-text">Work &amp; Handovers</span>
-            </h2>
-            <p className="text-[#A1A1AA] text-sm font-light mt-2 max-w-2xl">
-              Authentic on-site moments: Ar. Aakhir Choudhary conducting material consultations, structural audits, and quality handovers across Mumbai.
-            </p>
-          </div>
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Site <span className="gold-gradient-text">Work &amp; Handovers</span>
+          </h2>
+          <p className="text-[#A1A1AA] text-sm font-light mt-2 max-w-2xl mx-auto">
+            Authentic on-site moments: Ar. Aakhir Choudhary conducting material consultations, structural audits, and quality handovers across Mumbai.
+          </p>
 
           {/* Action & Manual Controls */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center justify-center gap-3 mt-6 flex-wrap">
             {/* Play/Pause Toggle */}
             <button
               onClick={() => setIsPaused((prev) => !prev)}

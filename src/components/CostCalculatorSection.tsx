@@ -69,20 +69,19 @@ export default function CostCalculatorSection() {
     <section id="calculator" className="py-24 bg-[#050505] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl glass-panel p-8 sm:p-14 gold-border-glow">
+          {/* Centered Calculator Header */}
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+              Estimate Your <span className="gold-gradient-text">Interior Cost</span>
+            </h2>
+            <p className="text-[#A1A1AA] text-sm font-light mt-2">
+              Select your home layout, carpet area, and desired finish tier to get an instant cost estimate for Mumbai.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Controls */}
             <div className="lg:col-span-7 space-y-8">
-              <div>
-                <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
-                  Budget Estimator
-                </p>
-                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-                  Estimate Your <span className="gold-gradient-text">Interior Cost</span>
-                </h2>
-                <p className="text-[#A1A1AA] text-sm font-light mt-2">
-                  Select your home layout, carpet area, and desired finish tier to get an instant cost estimate for Mumbai.
-                </p>
-              </div>
 
               {/* BHK Selector */}
               <div>

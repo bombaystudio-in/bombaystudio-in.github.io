@@ -26,9 +26,6 @@ export default function TeamPage() {
 
         {/* Hero Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 space-y-4">
-          <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-            Studio Hierarchy · 6 Disciplined Levels
-          </p>
           <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
             Leadership &amp; <br />
             <span className="gold-gradient-text">Architectural Team</span>
@@ -46,9 +43,6 @@ export default function TeamPage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
         <div className="rounded-3xl glass-panel p-8 sm:p-12 border border-[#D4AF37]/30 text-center space-y-6 relative overflow-hidden">
           <div className="space-y-2">
-            <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-              Direct Founder Accountability
-            </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
               Work Directly With Bombay Studio&apos;s Senior Architects
             </h2>

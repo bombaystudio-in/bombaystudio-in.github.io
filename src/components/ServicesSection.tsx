@@ -69,21 +69,16 @@ export default function ServicesSection() {
     <section id="services" className="py-20 sm:py-24 bg-[#050505] relative overflow-hidden border-y border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         {/* Section Header with Manual Scroll Buttons */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div>
-            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
-              Architectural Capabilities
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-              Our Specialized <span className="gold-gradient-text">Services</span>
-            </h2>
-            <p className="text-[#A1A1AA] text-sm max-w-xl font-light mt-2">
-              From Vastu-compliant architectural planning to full turnkey interior master builds across Mumbai and Alibaug.
-            </p>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Our Specialized <span className="gold-gradient-text">Services</span>
+          </h2>
+          <p className="text-[#A1A1AA] text-sm max-w-xl font-light mt-2 mx-auto">
+            From Vastu-compliant architectural planning to full turnkey interior master builds across Mumbai and Alibaug.
+          </p>
 
           {/* Desktop Arrow Controls & CTA */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center justify-center gap-3 mt-6">
             {/* Play/Pause Toggle */}
             <button
               onClick={() => setIsPaused((prev) => !prev)}

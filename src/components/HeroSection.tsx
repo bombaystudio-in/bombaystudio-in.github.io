@@ -12,10 +12,6 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">
-            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-              Est. 1992 · 30+ Years Architectural &amp; Civil Pedigree · Mumbai
-            </p>
-
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
               Three Decades of <br />
               <span className="gold-gradient-text italic font-normal">Building Spaces</span> That Last

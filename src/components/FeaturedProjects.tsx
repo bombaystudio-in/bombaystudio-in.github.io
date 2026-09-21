@@ -55,21 +55,16 @@ export default function FeaturedProjects() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-12 gap-6">
-          <div>
-            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
-              Turnkey Portfolio
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-              Featured <span className="gold-gradient-text">Projects</span>
-            </h2>
-            <p className="text-[#A1A1AA] text-sm max-w-xl font-light mt-2">
-              Explore real site transformations with full transparency on budgets, square footage, timelines, materials, and client reviews.
-            </p>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Featured <span className="gold-gradient-text">Projects</span>
+          </h2>
+          <p className="text-[#A1A1AA] text-sm max-w-xl font-light mt-2 mx-auto">
+            Explore real site transformations with full transparency on budgets, square footage, timelines, materials, and client reviews.
+          </p>
 
           {/* Action CTAs & Controls */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
             {/* Auto-cycle indicators and pause toggle */}
             <button
               onClick={() => setIsPaused((prev) => !prev)}

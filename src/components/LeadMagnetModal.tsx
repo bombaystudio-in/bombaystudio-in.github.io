@@ -63,10 +63,7 @@ export default function LeadMagnetModal() {
         </div>
 
         <div>
-          <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-            Free Download
-          </span>
-          <h3 className="font-serif text-2xl font-bold text-white mt-1">
+          <h3 className="font-serif text-2xl font-bold text-white">
             2026 Mumbai Interior Budget Planner &amp; Checklist PDF
           </h3>
           <p className="text-xs text-[#A1A1AA] font-light mt-2">

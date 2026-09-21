@@ -10,7 +10,6 @@ import {
   IndianRupee,
   Clock,
   Star,
-  Sparkles,
   ArrowUpRight,
   Phone,
   Layers,
@@ -55,10 +54,6 @@ export default function ProjectsPage() {
 
         {/* Hero Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1C1C1C] text-[#FCF6BA] text-xs font-semibold uppercase tracking-wider border border-white/10">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span>Complete Architectural Case Studies</span>
-          </div>
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white">
             Our Completed <span className="gold-gradient-text">Projects &amp; Handovers</span>
           </h1>
@@ -281,9 +276,6 @@ export default function ProjectsPage() {
 
         {/* Bottom Consultation CTA Banner */}
         <div className="mt-20 rounded-3xl glass-panel p-8 sm:p-12 gold-border-glow text-center space-y-6">
-          <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-            Fixed Budget Guarantee &amp; Penalty-Backed Handover
-          </span>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold text-white">
             Have A Project In Mind in Mumbai or Alibaug?
           </h2>

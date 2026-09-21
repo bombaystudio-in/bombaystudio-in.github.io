@@ -78,21 +78,16 @@ export default function AboutSection() {
     <section id="about" className="py-20 sm:py-24 bg-[#050505] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header with Horizontal Scroll Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-          <div>
-            <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest mb-2">
-              About Bombay Studio
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-              Why Choose <span className="gold-gradient-text">Bombay Studio?</span>
-            </h2>
-            <p className="text-[#A1A1AA] text-sm font-light mt-2 max-w-xl">
-              Architectural rigor, certified materials, and fixed BOQ budgets for Mumbai&apos;s most discerning homeowners.
-            </p>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Why Choose <span className="gold-gradient-text">Bombay Studio?</span>
+          </h2>
+          <p className="text-[#A1A1AA] text-sm font-light mt-2 max-w-xl mx-auto">
+            Architectural rigor, certified materials, and fixed BOQ budgets for Mumbai&apos;s most discerning homeowners.
+          </p>
 
           {/* Desktop Arrow Controls & Pause Toggle */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center justify-center gap-2 mt-6">
             {/* Play/Pause Toggle */}
             <button
               onClick={() => setIsPaused((prev) => !prev)}
