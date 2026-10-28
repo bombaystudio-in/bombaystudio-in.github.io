@@ -16,11 +16,8 @@ import {
   BarChart3,
   Sun,
   ArrowUpRight,
-  ChevronLeft,
-  ChevronRight,
-  Pause,
-  Play,
 } from "lucide-react";
+import CarouselControls from "./CarouselControls";
 
 export default function ServicesSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -144,46 +141,16 @@ export default function ServicesSection() {
       </div>
 
       {/* Carousel Controls Below Section */}
-      <div className="flex items-center justify-center gap-2.5 mt-4 sm:mt-5 flex-wrap">
-        {/* Play/Pause Toggle */}
-        <button
-          onClick={() => setIsPaused((prev) => !prev)}
-          className={`p-2 rounded-full border transition-all ${
-            isPaused
-              ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
-              : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
-          }`}
-          title={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
-          aria-label={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
-        >
-          {isPaused ? <Play className="w-3.5 h-3.5 fill-black" /> : <Pause className="w-3.5 h-3.5" />}
-        </button>
-
-        <div className="flex items-center gap-1.5">
-          <button
-            onClick={() => scroll("left")}
-            className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => scroll("right")}
-            className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
-
-        <Link
-          href="/#contact"
-          className="group inline-flex items-center gap-1.5 btn-gold-shiny text-xs uppercase tracking-wider px-4 py-2 rounded-full"
-        >
-          <span>Consult On Your Project</span>
-          <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-        </Link>
-      </div>
+      <CarouselControls
+        isPaused={isPaused}
+        onTogglePause={() => setIsPaused((prev) => !prev)}
+        onPrev={() => scroll("left")}
+        onNext={() => scroll("right")}
+        prevLabel="Scroll Left"
+        nextLabel="Scroll Right"
+        ctaText="Consult On Your Project"
+        ctaHref="/#contact"
+      />
     </section>
   );
 }

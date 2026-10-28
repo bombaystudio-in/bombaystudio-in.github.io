@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Quote, Play, Pause, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote } from "lucide-react";
+import CarouselControls from "./CarouselControls";
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -194,37 +195,14 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Carousel Controls Below Section */}
-        <div className="flex items-center justify-center gap-2.5 mt-4 sm:mt-5 flex-wrap">
-          <button
-            onClick={() => setIsPaused((prev) => !prev)}
-            className={`p-2 rounded-full border transition-all ${
-              isPaused
-                ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
-                : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
-            }`}
-            title={isPaused ? "Resume Auto-Play" : "Pause Auto-Play"}
-            aria-label={isPaused ? "Resume Auto-Play" : "Pause Auto-Play"}
-          >
-            {isPaused ? <Play className="w-3.5 h-3.5 fill-black" /> : <Pause className="w-3.5 h-3.5" />}
-          </button>
-
-          <div className="flex items-center gap-1.5">
-            <button
-              onClick={prevTestimonial}
-              className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-              aria-label="Previous Review"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-              aria-label="Next Review"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
+        <CarouselControls
+          isPaused={isPaused}
+          onTogglePause={() => setIsPaused((prev) => !prev)}
+          onPrev={prevTestimonial}
+          onNext={nextTestimonial}
+          prevLabel="Previous Review"
+          nextLabel="Next Review"
+        />
       </div>
     </section>
   );

@@ -8,12 +8,9 @@ import {
   Home,
   Images,
   ArrowUpRight,
-  ChevronLeft,
-  ChevronRight,
-  Pause,
-  Play,
   Quote,
 } from "lucide-react";
+import CarouselControls from "./CarouselControls";
 
 export default function FeaturedProjects() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -232,45 +229,16 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Carousel Controls Below Section */}
-        <div className="flex items-center justify-center gap-2.5 mt-4 sm:mt-5 flex-wrap">
-          <button
-            onClick={() => setIsPaused((prev) => !prev)}
-            className={`p-2 rounded-full border transition-all ${
-              isPaused
-                ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
-                : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
-            }`}
-            title={isPaused ? "Resume Auto-Play" : "Pause Auto-Play"}
-            aria-label={isPaused ? "Resume Auto-Play" : "Pause Auto-Play"}
-          >
-            {isPaused ? <Play className="w-3.5 h-3.5 fill-black" /> : <Pause className="w-3.5 h-3.5" />}
-          </button>
-
-          <div className="flex items-center gap-1.5">
-            <button
-              onClick={prevProject}
-              className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-              aria-label="Previous Residence"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={nextProject}
-              className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-              aria-label="Next Residence"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-
-          <Link
-            href="/projects"
-            className="group inline-flex items-center gap-1.5 btn-gold-shiny text-xs uppercase tracking-wider px-4 py-2 rounded-full"
-          >
-            <span>View All 12 Residences</span>
-            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </Link>
-        </div>
+        <CarouselControls
+          isPaused={isPaused}
+          onTogglePause={() => setIsPaused((prev) => !prev)}
+          onPrev={prevProject}
+          onNext={nextProject}
+          prevLabel="Previous Residence"
+          nextLabel="Next Residence"
+          ctaText="View All 12 Residences"
+          ctaHref="/projects"
+        />
       </div>
     </section>
   );
