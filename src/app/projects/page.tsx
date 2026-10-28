@@ -17,12 +17,8 @@ import {
 
 const CATEGORIES = [
   "All",
-  "Apartments",
-  "Villas",
   "Luxury Homes",
-  "Office",
-  "Restaurants",
-  "Clinic",
+  "Apartments",
 ] as const;
 
 export default function ProjectsPage() {
@@ -121,7 +117,7 @@ export default function ProjectsPage() {
                       />
                       <div className="absolute top-4 left-4 flex gap-2">
                         <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md text-[#D4AF37] text-xs font-semibold uppercase tracking-wider border border-white/15">
-                          {currentView === "after" ? "Completed Interior Handover" : "Raw Site Condition"}
+                          {currentView === "after" ? "Primary Living & Dining" : "Master Suite & Joinery Detail"}
                         </span>
                         <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md text-[#FCF6BA] text-xs font-semibold border border-white/15">
                           {project.category}
@@ -139,7 +135,7 @@ export default function ProjectsPage() {
                             : "text-[#A1A1AA] hover:text-white"
                         }`}
                       >
-                        After Handover (Completed)
+                        Living &amp; Lounge Area
                       </button>
                       <button
                         onClick={() => toggleProjectView(project.id, "before")}
@@ -149,7 +145,7 @@ export default function ProjectsPage() {
                             : "text-[#A1A1AA] hover:text-white"
                         }`}
                       >
-                        Before Demolition / Raw Site
+                        Master Suite &amp; Joinery
                       </button>
                     </div>
                   </div>

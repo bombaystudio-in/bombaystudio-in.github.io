@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85",
+        url: "/projects/ajinkya-kamble-4bhk-kandivali/photo-01.jpg",
         width: 1200,
         height: 630,
         alt: "Bombay Studio Luxury Interiors",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Bombay Studio | Luxury Interior Architecture Mumbai",
     description: "Designing timeless spaces across Mumbai.",
     images: [
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85",
+      "/projects/ajinkya-kamble-4bhk-kandivali/photo-01.jpg",
     ],
   },
   alternates: {

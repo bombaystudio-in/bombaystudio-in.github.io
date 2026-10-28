@@ -6,44 +6,132 @@ import { Star, Quote, Play, Pause, ChevronLeft, ChevronRight } from "lucide-reac
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Dr. Vikram & Neha Singhania",
-      role: "3BHK Kalpataru Magnus, Bandra East",
-      tag: "Handover in 82 Days · Zero Cost Overrun",
-      text: "Bombay Studio executed our 1,550 sq.ft home with absolute military precision. They delivered in exactly 82 days with zero budget slippage. The fluted veneer paneling, concealed doors, and Italian marble joinery look extraordinary.",
+      name: "Actress Isha & Vikas Talwar",
+      role: "Homeowners, Mumbai",
+      tag: "Turnkey Luxury · Stress-Free Handover",
+      text: "Honestly, the whole experience with Bombay Studio was quite smooth. We had a lot of things to manage, but the team took care of most of the details, from selecting materials to getting the work done. We didn’t have to keep chasing people for updates, which made things much easier for us. We’re really happy with our home and the way everything came together!",
       rating: 5,
-      videoThumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      image: "/testimonials/actress-isha-vikas-talwar.jpg",
     },
     {
-      name: "Rajesh & Sunita Agarwal",
-      role: "Sea Face Penthouse, Worli",
-      tag: "Turnkey Luxury · 3,200 Sq. Ft",
-      text: "Their transparency on BOQ pricing blew us away. Every piece of Italian Statuario marble and Blum hardware was verified on site before installation. Ar. Aakhir and his site engineers are genuinely world-class.",
+      name: "Adrija Sinha",
+      role: "Actress & Homeowner, Mumbai",
+      tag: "Flawless Execution · Patient Guidance",
+      text: "Bombay Studio made our home look beautiful and comfortable, just the way we wanted. The team was patient with our suggestions and helped us make the right choices. The overall experience was smooth, and we are really happy with the final outcome!",
       rating: 5,
-      videoThumbnail: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+      image: "/testimonials/actress-adrija-sinha.jpg",
     },
     {
-      name: "Siddharth & Rhea Mehta",
-      role: "Private Seaside Estate, Alibaug",
-      tag: "Bespoke Architecture · 5,500 Sq. Ft Villa",
-      text: "Building an estate from the ground up outside Mumbai can be stressful, but Bombay Studio's turnkey oversight made it seamless. Ar. Aakhir provided daily WhatsApp video audits and delivered a masterpiece on time.",
+      name: "Adv. Mitesh Pabari",
+      role: "Advocate & Homeowner, Mumbai",
+      tag: "Guided Process · Architect Oversight",
+      text: "Choosing Bombay Studio for our interior work was a good decision. The team understood our requirements and made the whole process smooth. Architect Aakhir Choudhary was helpful and guided us whenever we needed support. We are happy with how everything turned out!",
       rating: 5,
-      videoThumbnail: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80",
+      image: "/testimonials/adv-mitesh-pabari.jpg",
     },
     {
-      name: "Priya & Sameer Merchant",
-      role: "4BHK Oberoi Sky City, Borivali East",
-      tag: "Vastu Compliant · High-End Finishes",
-      text: "We wanted full Vastu compliance without compromising on modern Italian aesthetics. Ar. Aakhir aligned the spatial flow perfectly, and the custom PU-lacquered wardrobes and false ceilings are flawless.",
+      name: "Adv. Praveen Singh",
+      role: "Advocate, High Court",
+      tag: "Well-Planned · Complete Transparency",
+      text: "Bombay Studio did a wonderful job understanding our needs and turning our ideas into reality. The team was helpful, and everything was explained clearly at every stage. Architect Aakhir Choudhary made sure the work was planned well. Overall, a smooth and satisfying experience!",
       rating: 5,
-      videoThumbnail: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+      image: "/testimonials/adv-praveen-singh.jpg",
     },
     {
-      name: "Anuj Kapadia",
-      role: "Corporate HQ, Trade World BKC",
-      tag: "Commercial Turnkey · 2,800 Sq. Ft",
-      text: "Strict deadlines were critical for our office inauguration. Bombay Studio handled the complete civil, acoustic panelling, and HVAC integration 5 days ahead of schedule. Truly dependable professionals.",
+      name: "Ajinkya Kamble",
+      role: "4BHK Homeowner, Kandivali",
+      tag: "4BHK Turnkey · High-End Finishes",
+      text: "Bombay Studio did a great job with our home interiors. The team was helpful, listened to our ideas, and made sure everything was done properly. Architect Aakhir Choudhary guided us well throughout the process. Really happy with the final result!",
       rating: 5,
-      videoThumbnail: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+      image: "/testimonials/ajinkya-kamble.jpg",
+    },
+    {
+      name: "Anchor Mayuri Malandkar",
+      role: "Anchor & Presenter",
+      tag: "Punctual Delivery · On-Time Milestones",
+      text: "Working with Bombay Studio was a very smooth experience. We didn’t have to follow up on every small thing, whether it was material selection, design decisions, or work updates. The team managed everything well and kept things moving on time. It made the entire process stress-free for us, and we’re really happy with the final result!",
+      rating: 5,
+      image: "/testimonials/anchor-mayuri-malandkar.jpg",
+    },
+    {
+      name: "Swaraj Singh",
+      role: "Producer & Homeowner",
+      tag: "Creative Vision · Precision Detail",
+      text: "Bombay Studio did a great job with our interiors. The team was friendly, understood our requirements, and was always ready to help with our suggestions. The work was done with good attention to detail, and we are really happy with how our space has turned out!",
+      rating: 5,
+      image: "/testimonials/swaraj-singh-producer.jpg",
+    },
+    {
+      name: "Jayant Joshi",
+      role: "2BHK Homeowner, Vile Parle",
+      tag: "Exceeded Expectations · 2BHK Handover",
+      text: "Had a really good experience with Bombay Studio. The team understood what we wanted and helped us at every step. The work was completed nicely, and the final result looks even better than we expected. Happy with the overall experience!",
+      rating: 5,
+      image: "/testimonials/jayant-joshi.jpg",
+    },
+    {
+      name: "Dharmesh Dixit",
+      role: "Homeowner, Mumbai",
+      tag: "Timely Handover · Zero Delays",
+      text: "One thing we really liked about working with Bombay Studio was the timely handover. The team planned the work properly and kept things moving without unnecessary delays. Whenever we had any questions, they were available to help. The entire process was well managed, and we’re happy with the quality of the work!",
+      rating: 5,
+      image: "/testimonials/dharmesh-dixit.jpg",
+    },
+    {
+      name: "Hardit Malhi",
+      role: "Homeowner, Mumbai",
+      tag: "Great Communication · Beautiful Space",
+      text: "Really happy with the work done by Bombay Studio. The team was supportive, easy to communicate with, and always ready to help with our ideas. They paid attention to the small details and made the space look beautiful. Overall, a very good experience!",
+      rating: 5,
+      image: "/testimonials/hardit-malhi.jpg",
+    },
+    {
+      name: "Chintan Shah",
+      role: "Homeowner, Mumbai",
+      tag: "Well-Organised · Complete Peace of Mind",
+      text: "Bombay Studio made the entire interior work much easier for us. From planning and material selection to the final finishing, everything was handled in a well-organised way. We didn’t have to get involved in every small detail, and the team kept things moving smoothly. Overall, it was a great experience working with them!",
+      rating: 5,
+      image: "/testimonials/chintan-shah.jpg",
+    },
+    {
+      name: "Paulomi Sarkar",
+      role: "Homeowner, Mumbai",
+      tag: "Architect Supported · Attention to Detail",
+      text: "Had a lovely experience with Bombay Studio. The team understood my ideas and helped me make the right choices for my home. Architect Aakhir Choudhary was supportive throughout the process, and the team paid attention to the little details. Really happy with the final outcome!",
+      rating: 5,
+      image: "/testimonials/paulomi-sarkar.jpg",
+    },
+    {
+      name: "Prakash Desai",
+      role: "Homeowner, Mumbai",
+      tag: "Budget Adherence · Regular Updates",
+      text: "Right from the beginning, the team at Bombay Studio was easy to work with. They understood our requirements, suggested good options, and helped us stay within our budget. We were kept informed about the progress, and whenever we needed anything, the team was there to help. Overall, a very satisfying experience!",
+      rating: 5,
+      image: "/testimonials/prakash-desai.jpg",
+    },
+    {
+      name: "Rohit Pathak",
+      role: "Homeowner, Mumbai",
+      tag: "Clear Guidance · Fine Finishing",
+      text: "What I liked most about Bombay Studio was the way they handled the entire project. We got proper guidance at every stage, and the team helped us make decisions without any confusion. The work was well coordinated, and the finishing was done nicely. Overall, a smooth experience and a result we’re happy with!",
+      rating: 5,
+      image: "/testimonials/rohit-pathak.jpg",
+    },
+    {
+      name: "Kirti Sakhpara",
+      role: "Homeowner, Mumbai",
+      tag: "Comfortable Journey · Practical Advice",
+      text: "What we liked most about Bombay Studio was how they helped us at every stage. From choosing materials to finalising the small details, the team made things simple for us. They understood our preferences, gave useful suggestions, and kept us updated about the progress. It was a comfortable experience, and we’re really happy with the final outcome!",
+      rating: 5,
+      image: "/testimonials/kirti-sakhpara.jpg",
+    },
+    {
+      name: "Kishore Vichare",
+      role: "Homeowner, Mumbai",
+      tag: "Smooth Execution · Organized Team",
+      text: "What I liked about Bombay Studio was that the team took care of things without making us run around for every small detail. They helped us with material choices, gave practical suggestions, and kept the work organised. Communication was good, and the overall experience was smooth. Happy with the work done by the team!",
+      rating: 5,
+      image: "/testimonials/kishore-vichare.jpg",
     },
   ];
 
@@ -86,7 +174,7 @@ export default function TestimonialsSection() {
             What Our <span className="gold-gradient-text">Clients Say</span>
           </h2>
           <p className="text-[#A1A1AA] text-sm max-w-xl font-light mt-2 mx-auto">
-            Unfiltered feedback from high-net-worth homeowners and enterprise clients across Mumbai.
+            Authentic, unfiltered feedback from homeowners and prominent clients across Mumbai.
           </p>
 
           {/* Controls Bar */}
@@ -140,18 +228,21 @@ export default function TestimonialsSection() {
           )}
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Visual Showcase */}
-            <div className="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden border border-white/15 group shadow-xl">
+            {/* Visual Showcase - Authentic Client Portrait */}
+            <div className="lg:col-span-5 relative h-72 sm:h-96 rounded-2xl overflow-hidden border border-white/15 group shadow-xl bg-black">
               <img
-                src={current.videoThumbnail}
+                src={current.image}
                 alt={current.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent opacity-85" />
 
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-[#050505]/85 backdrop-blur-md border border-white/15 text-[#D4AF37] text-[11px] font-semibold">
+                <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md border border-white/15 text-[#D4AF37] text-[11px] font-semibold">
                   {current.tag}
+                </span>
+                <span className="text-[10px] text-[#A1A1AA] bg-black/60 px-2 py-0.5 rounded border border-white/10">
+                  Verified Client
                 </span>
               </div>
             </div>
@@ -165,7 +256,7 @@ export default function TestimonialsSection() {
                   ))}
                 </div>
                 <span className="text-xs font-mono text-[#A1A1AA]">
-                  0{currentIndex + 1} / 0{testimonials.length}
+                  {String(currentIndex + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
                 </span>
               </div>
 
@@ -186,15 +277,15 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Dot navigation indicators */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5 flex-wrap max-w-xs">
                   {testimonials.map((_, idx) => (
                     <button
                       key={idx}
                       onClick={() => setCurrentIndex(idx)}
                       className={`h-2 rounded-full transition-all ${
                         currentIndex === idx
-                          ? "w-8 bg-[#D4AF37]"
-                          : "w-2 bg-white/20 hover:bg-white/40"
+                          ? "w-6 bg-[#D4AF37]"
+                          : "w-1.5 bg-white/20 hover:bg-white/40"
                       }`}
                       aria-label={`Jump to review ${idx + 1}`}
                     />

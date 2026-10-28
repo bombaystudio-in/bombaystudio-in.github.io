@@ -27,7 +27,7 @@ export default function BeforeAfterSlider() {
         <div className="relative max-w-5xl mx-auto h-[350px] sm:h-[500px] rounded-3xl overflow-hidden border border-white/15 shadow-2xl select-none">
           {/* AFTER Image (Background Base) */}
           <img
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85"
+            src="/projects/ajinkya-kamble-4bhk-kandivali/photo-01.jpg"
             alt="Completed Luxury Living Room Handover"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -41,7 +41,7 @@ export default function BeforeAfterSlider() {
             style={{ width: `${sliderPosition}%` }}
           >
             <img
-              src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1600&q=85"
+              src="/portfolio/site-walkthrough-client-brief.jpg"
               alt="Raw Builder Condition Before Demolition"
               className="absolute inset-0 w-full h-full object-cover max-w-none"
               style={{ width: "100%", height: "100%" }}
