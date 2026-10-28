@@ -45,7 +45,10 @@ export const config = {
   },
   analytics: {
     get gaMeasurementId() {
-      return getOptionalEnv("NEXT_PUBLIC_GA_MEASUREMENT_ID");
+      const raw = getOptionalEnv("NEXT_PUBLIC_GA_MEASUREMENT_ID");
+      if (!raw || raw.trim() === "") return undefined;
+      const clean = raw.trim();
+      return clean.startsWith("G-") ? clean : `G-${clean}`;
     },
   },
 };
