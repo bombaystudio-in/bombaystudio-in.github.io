@@ -176,8 +176,8 @@ export default function FeaturedProjects() {
                   <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
                     Featured Case Study #{currentIndex + 1} of {PROJECTS_DATA.length}
                   </span>
-                  <span className="text-xs text-[#A1A1AA] font-mono">
-                    {selectedProject.timeline}
+                  <span className="text-xs text-[#D4AF37] font-semibold bg-[#D4AF37]/10 px-2.5 py-0.5 rounded-full border border-[#D4AF37]/20">
+                    {selectedProject.typology}
                   </span>
                 </div>
                 <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">

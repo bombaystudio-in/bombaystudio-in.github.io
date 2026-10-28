@@ -12,7 +12,10 @@ import {
   Star,
   ArrowUpRight,
   Phone,
-  Layers,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Images,
 } from "lucide-react";
 
 const CATEGORIES = [
@@ -23,15 +26,33 @@ const CATEGORIES = [
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
-  const [activeViews, setActiveViews] = useState<Record<string, "after" | "before">>({});
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<Record<string, number>>({});
+  const [showingVideo, setShowingVideo] = useState<Record<string, boolean>>({});
 
   const filteredProjects =
     activeCategory === "All"
       ? PROJECTS_DATA
       : PROJECTS_DATA.filter((p) => p.category === activeCategory);
 
-  const toggleProjectView = (id: string, view: "after" | "before") => {
-    setActiveViews((prev) => ({ ...prev, [id]: view }));
+  const setPhoto = (projectId: string, index: number) => {
+    setShowingVideo((prev) => ({ ...prev, [projectId]: false }));
+    setSelectedPhotoIndex((prev) => ({ ...prev, [projectId]: index }));
+  };
+
+  const nextPhoto = (project: Project) => {
+    const current = selectedPhotoIndex[project.id] || 0;
+    const nextIdx = (current + 1) % project.images.length;
+    setPhoto(project.id, nextIdx);
+  };
+
+  const prevPhoto = (project: Project) => {
+    const current = selectedPhotoIndex[project.id] || 0;
+    const prevIdx = (current - 1 + project.images.length) % project.images.length;
+    setPhoto(project.id, prevIdx);
+  };
+
+  const toggleVideo = (projectId: string) => {
+    setShowingVideo((prev) => ({ ...prev, [projectId]: !prev[projectId] }));
   };
 
   return (
@@ -48,31 +69,34 @@ export default function ProjectsPage() {
           </Link>
         </div>
 
-        {/* Hero Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white">
-            Our Completed <span className="gold-gradient-text">Projects &amp; Handovers</span>
+        {/* Page Hero Header */}
+        <div className="max-w-3xl mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121212] border border-white/10 text-[#D4AF37] text-xs font-semibold uppercase tracking-wider mb-4">
+            <Images className="w-3.5 h-3.5" />
+            <span>Complete Work Portfolio</span>
+          </div>
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+            Delivered <span className="gold-gradient-text">Masterpieces</span>
           </h1>
-          <p className="text-[#A1A1AA] text-sm sm:text-base font-light leading-relaxed">
-            Transparent case studies of completed luxury apartments, bespoke seafront villas, commercial headquarters, and hospitality fitouts across Mumbai.
+          <p className="text-[#A1A1AA] text-base sm:text-lg font-light mt-4 leading-relaxed">
+            Explore authentic completed residences across Mumbai designed &amp; executed by Ar. Aakhir Choudhary and the Bombay Studio execution team.
           </p>
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center gap-2.5 mb-12">
           {CATEGORIES.map((category) => {
+            const isActive = activeCategory === category;
             const count =
               category === "All"
                 ? PROJECTS_DATA.length
                 : PROJECTS_DATA.filter((p) => p.category === category).length;
 
-            const isActive = activeCategory === category;
-
             return (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 flex items-center gap-2 ${
+                className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 flex items-center gap-2 cursor-pointer ${
                   isActive
                     ? "bg-[#D4AF37] text-[#050505] shadow-lg shadow-[#D4AF37]/20 scale-105 font-bold"
                     : "bg-[#121212] text-[#A1A1AA] hover:text-white border border-white/10 hover:border-white/25"
@@ -92,61 +116,131 @@ export default function ProjectsPage() {
         </div>
 
         {/* Projects Detailed List */}
-        <div className="space-y-12">
+        <div className="space-y-14">
           {filteredProjects.map((project, idx) => {
-            const currentView = activeViews[project.id] || "after";
+            const currentPhotoIdx = selectedPhotoIndex[project.id] || 0;
+            const isVideoActive = showingVideo[project.id] || false;
+            const activeImageSrc = project.images[currentPhotoIdx] || project.afterImage;
 
             return (
               <div
                 key={project.id}
-                className="rounded-3xl glass-panel p-6 sm:p-10 border border-white/15 shadow-2xl hover:border-[#D4AF37]/50 transition-all duration-500"
+                className="rounded-3xl glass-panel p-6 sm:p-10 border border-white/15 shadow-2xl hover:border-[#D4AF37]/40 transition-all duration-500"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                  {/* Left: Interactive Image Visualizer */}
-                  <div className="lg:col-span-7 space-y-4">
-                    <div className="relative h-[300px] sm:h-[420px] rounded-2xl overflow-hidden border border-white/15 bg-black">
-                      <img
-                        src={
-                          currentView === "after"
-                            ? project.afterImage
-                            : project.beforeImage
-                        }
-                        alt={project.name}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-all duration-700 filter contrast-105"
-                      />
-                      <div className="absolute top-4 left-4 flex gap-2">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  {/* Left: Interactive Multi-Photo Visualizer */}
+                  <div className="lg:col-span-7 space-y-3.5">
+                    {/* Main Active Viewer */}
+                    <div className="relative h-[320px] sm:h-[440px] rounded-2xl overflow-hidden border border-white/15 bg-black group select-none">
+                      {isVideoActive && project.walkthroughVideo ? (
+                        <video
+                          src={project.walkthroughVideo}
+                          controls
+                          autoPlay
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <>
+                          <img
+                            src={activeImageSrc}
+                            alt={`${project.name} - Photo ${currentPhotoIdx + 1}`}
+                            loading="lazy"
+                            className="w-full h-full object-cover transition-all duration-500 filter contrast-105"
+                          />
+
+                          {/* Navigation Chevrons on Main Image */}
+                          {project.images.length > 1 && (
+                            <div className="absolute inset-y-0 inset-x-2 flex items-center justify-between pointer-events-none">
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  prevPhoto(project);
+                                }}
+                                className="pointer-events-auto p-2 rounded-full bg-black/60 hover:bg-[#D4AF37] hover:text-black text-white border border-white/20 transition-all backdrop-blur-md"
+                                aria-label="Previous Photo"
+                              >
+                                <ChevronLeft className="w-5 h-5" />
+                              </button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  nextPhoto(project);
+                                }}
+                                className="pointer-events-auto p-2 rounded-full bg-black/60 hover:bg-[#D4AF37] hover:text-black text-white border border-white/20 transition-all backdrop-blur-md"
+                                aria-label="Next Photo"
+                              >
+                                <ChevronRight className="w-5 h-5" />
+                              </button>
+                            </div>
+                          )}
+                        </>
+                      )}
+
+                      {/* Header Badges */}
+                      <div className="absolute top-4 left-4 flex gap-2 flex-wrap pointer-events-none">
                         <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md text-[#D4AF37] text-xs font-semibold uppercase tracking-wider border border-white/15">
-                          {currentView === "after" ? "Primary Living & Dining" : "Master Suite & Joinery Detail"}
+                          {project.typology}
                         </span>
-                        <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md text-[#FCF6BA] text-xs font-semibold border border-white/15">
+                        <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md text-white text-xs font-semibold border border-white/15">
                           {project.category}
+                        </span>
+                      </div>
+
+                      {/* Photo Index Badge */}
+                      <div className="absolute bottom-4 right-4 pointer-events-none">
+                        <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-xs font-mono text-[#A1A1AA] border border-white/10">
+                          {isVideoActive
+                            ? "Walkthrough Video"
+                            : `${currentPhotoIdx + 1} / ${project.images.length} Photos`}
                         </span>
                       </div>
                     </div>
 
-                    {/* View Switcher Tabs */}
-                    <div className="flex items-center gap-3 p-1.5 rounded-xl bg-[#121212] border border-white/10">
-                      <button
-                        onClick={() => toggleProjectView(project.id, "after")}
-                        className={`flex-1 py-2.5 rounded-lg text-xs font-semibold transition-all ${
-                          currentView === "after"
-                            ? "bg-[#D4AF37] text-[#050505] shadow-md font-bold"
-                            : "text-[#A1A1AA] hover:text-white"
-                        }`}
-                      >
-                        Living &amp; Lounge Area
-                      </button>
-                      <button
-                        onClick={() => toggleProjectView(project.id, "before")}
-                        className={`flex-1 py-2.5 rounded-lg text-xs font-semibold transition-all ${
-                          currentView === "before"
-                            ? "bg-[#D4AF37] text-[#050505] shadow-md font-bold"
-                            : "text-[#A1A1AA] hover:text-white"
-                        }`}
-                      >
-                        Master Suite &amp; Joinery
-                      </button>
+                    {/* Interactive Thumbnail Gallery Strip */}
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-xs text-[#A1A1AA] px-1">
+                        <span className="font-semibold text-white">
+                          Gallery ({project.images.length} Photos)
+                        </span>
+                        {project.walkthroughVideo && (
+                          <button
+                            onClick={() => toggleVideo(project.id)}
+                            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs font-semibold transition-all ${
+                              isVideoActive
+                                ? "bg-[#D4AF37] text-black border-[#D4AF37]"
+                                : "bg-[#121212] text-[#D4AF37] border-[#D4AF37]/30 hover:border-[#D4AF37]"
+                            }`}
+                          >
+                            <Play className="w-3 h-3 fill-current" />
+                            <span>{isVideoActive ? "View Photos" : "Watch Walkthrough Tour"}</span>
+                          </button>
+                        )}
+                      </div>
+
+                      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-white/20">
+                        {project.images.map((imgSrc, imgIdx) => {
+                          const isSelected = !isVideoActive && currentPhotoIdx === imgIdx;
+                          return (
+                            <button
+                              key={imgIdx}
+                              onClick={() => setPhoto(project.id, imgIdx)}
+                              className={`relative shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${
+                                isSelected
+                                  ? "border-[#D4AF37] scale-105 shadow-md shadow-[#D4AF37]/20"
+                                  : "border-white/10 opacity-60 hover:opacity-100 hover:border-white/30"
+                              }`}
+                              title={`View Photo ${imgIdx + 1}`}
+                            >
+                              <img
+                                src={imgSrc}
+                                alt={`Thumbnail ${imgIdx + 1}`}
+                                loading="lazy"
+                                className="w-full h-full object-cover"
+                              />
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
 
@@ -157,16 +251,17 @@ export default function ProjectsPage() {
                         <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
                           Case Study #{idx + 1}
                         </span>
-                        <span className="text-xs text-[#A1A1AA] font-mono">
-                          {project.timeline} Turnkey Delivery
+                        {/* Typology Badge replaces redundant timeline */}
+                        <span className="text-xs text-[#FCF6BA] font-semibold bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
+                          {project.typology}
                         </span>
                       </div>
-                      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">
+                      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">
                         {project.name}
                       </h2>
                     </div>
 
-                    {/* Specs Grid */}
+                    {/* Specs Grid - Timeline is exclusively placed here */}
                     <div className="grid grid-cols-2 gap-3.5 p-4 rounded-xl bg-[#121212] border border-white/10 text-xs">
                       <div className="flex items-center gap-2.5">
                         <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0" />
@@ -195,7 +290,7 @@ export default function ProjectsPage() {
                       <div className="flex items-center gap-2.5">
                         <Clock className="w-4 h-4 text-[#D4AF37] shrink-0" />
                         <div>
-                          <p className="text-[#A1A1AA]">Timeline</p>
+                          <p className="text-[#A1A1AA]">Turnkey Timeline</p>
                           <p className="text-white font-semibold">{project.timeline}</p>
                         </div>
                       </div>
@@ -211,58 +306,53 @@ export default function ProjectsPage() {
                       </p>
                     </div>
 
-                    {/* Style & Materials */}
-                    <div className="space-y-2 text-xs">
+                    {/* Design Style & Materials */}
+                    <div className="space-y-3 pt-2 border-t border-white/10 text-xs">
                       <div>
                         <span className="text-[#A1A1AA]">Design Style: </span>
                         <span className="text-white font-medium">{project.designStyle}</span>
                       </div>
                       <div>
-                        <span className="text-[#A1A1AA]">Material Palette: </span>
+                        <span className="text-[#A1A1AA]">Key Materials: </span>
                         <div className="flex flex-wrap gap-1.5 mt-1.5">
-                          {project.materialPalette.map((mat, mIdx) => (
+                          {project.materialPalette.map((material, mIdx) => (
                             <span
                               key={mIdx}
-                              className="px-2.5 py-1 rounded-md bg-[#1C1C1C] text-white border border-white/10 text-[11px]"
+                              className="px-2.5 py-1 rounded-md bg-[#18181B] text-[#D4AF37] border border-white/10 text-[11px] font-medium"
                             >
-                              {mat}
+                              {material}
                             </span>
                           ))}
                         </div>
                       </div>
                     </div>
 
-                    {/* Verified Review */}
-                    <div className="p-4 rounded-xl bg-[#1C1C1C] border border-white/10 text-xs italic text-white">
-                      <div className="flex items-center gap-1 text-[#D4AF37] mb-1.5">
-                        {[...Array(project.clientReview.rating)].map((_, i) => (
-                          <Star key={i} className="w-3.5 h-3.5 fill-[#D4AF37]" />
-                        ))}
+                    {/* Client Review Quote */}
+                    {project.clientReview && (
+                      <div className="p-4 rounded-xl bg-[#09090B] border border-[#D4AF37]/20 relative overflow-hidden">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-1 text-[#D4AF37]">
+                            {[...Array(project.clientReview.rating)].map((_, i) => (
+                              <Star key={i} className="w-3.5 h-3.5 fill-[#D4AF37]" />
+                            ))}
+                          </div>
+                          <span className="text-[10px] text-[#A1A1AA] font-mono">
+                            Verified Client Feedback
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#E4E4E7] italic font-light leading-relaxed">
+                          &quot;{project.clientReview.quote}&quot;
+                        </p>
+                        <div className="mt-3 pt-2 border-t border-white/10">
+                          <p className="text-xs font-semibold text-white">
+                            {project.clientReview.name}
+                          </p>
+                          <p className="text-[11px] text-[#A1A1AA]">
+                            {project.clientReview.role}
+                          </p>
+                        </div>
                       </div>
-                      <p>&quot;{project.clientReview.quote}&quot;</p>
-                      <p className="mt-2 text-[#D4AF37] font-semibold not-italic text-[11px]">
-                        — {project.clientReview.name} ({project.clientReview.role})
-                      </p>
-                    </div>
-
-                    {/* Inquire Actions */}
-                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                      <Link
-                        href="/#contact"
-                        className="flex-1 text-center btn-gold-shiny text-xs uppercase tracking-wider py-3 rounded-xl inline-flex items-center justify-center gap-2"
-                      >
-                        <span>Book Similar Project</span>
-                        <ArrowUpRight className="w-3.5 h-3.5" />
-                      </Link>
-                      <a
-                        href={`https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20am%20interested%20in%20a%20project%20similar%20to%20${encodeURIComponent(project.name)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 text-center px-4 py-3 rounded-xl bg-[#121212] text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-semibold hover:bg-[#D4AF37]/10 transition-colors"
-                      >
-                        WhatsApp Inquire
-                      </a>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -270,30 +360,31 @@ export default function ProjectsPage() {
           })}
         </div>
 
-        {/* Bottom Consultation CTA Banner */}
-        <div className="mt-20 rounded-3xl glass-panel p-8 sm:p-12 gold-border-glow text-center space-y-6">
-          <h2 className="font-serif text-2xl sm:text-4xl font-bold text-white">
-            Have A Project In Mind in Mumbai or Alibaug?
-          </h2>
-          <p className="text-xs sm:text-sm text-[#A1A1AA] font-light max-w-2xl mx-auto">
-            Schedule a free site consultation or experience center visit with Principal Architect Ar. Aakhir Choudhary to calculate your itemized BOQ.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <Link
-              href="/#contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider px-8 py-3.5 rounded-full"
-            >
-              <span>Schedule Free Site Consultation</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
-            <a
-              href="tel:+917070704181"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#121212] text-white border border-[#D4AF37]/50 hover:border-[#D4AF37] text-xs font-semibold transition-colors shadow-lg"
-            >
-              <Phone className="w-4 h-4 text-[#D4AF37]" />
-              <span>Direct Studio Line: <strong className="text-[#FCF6BA] font-mono">+91 707070 4181</strong></span>
-            </a>
+        {/* CTA Banner */}
+        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#18181B] via-[#09090B] to-[#18181B] border border-[#D4AF37]/30 text-center relative overflow-hidden">
+          <div className="max-w-2xl mx-auto space-y-4">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+              Want a Similar Handover For <span className="gold-gradient-text">Your Residence?</span>
+            </h2>
+            <p className="text-[#A1A1AA] text-sm font-light">
+              Speak directly with Ar. Aakhir Choudhary to discuss your layout, 3D concept designs, and precise turnkey BOQ.
+            </p>
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/#contact"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider font-bold px-8 py-4 rounded-full"
+              >
+                <span>Book Free Design Consultation</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="tel:+919820000000"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#121212] text-white border border-white/15 text-xs font-semibold hover:border-[#D4AF37] transition-colors"
+              >
+                <Phone className="w-4 h-4 text-[#D4AF37]" />
+                <span>Call Studio Direct</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
