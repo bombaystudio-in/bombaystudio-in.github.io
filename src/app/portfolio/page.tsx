@@ -114,7 +114,7 @@ export default function PortfolioPage() {
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className="group relative h-[380px] rounded-2xl overflow-hidden border border-white/15 bg-[#121212] cursor-pointer hover:border-[#D4AF37] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/15"
+              className="group relative aspect-[4/5] sm:aspect-[3/4] max-h-[44svh] rounded-2xl overflow-hidden border border-white/15 bg-[#121212] cursor-pointer hover:border-[#D4AF37] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/15"
             >
               <img
                 src={item.image}

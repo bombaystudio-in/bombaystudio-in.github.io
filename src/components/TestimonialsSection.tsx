@@ -112,58 +112,25 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-20 sm:py-24 bg-[#050505] relative overflow-hidden"
+      className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
       onTouchEnd={() => setIsPaused(false)}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header with Play/Pause & Arrow Controls */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
             Client <span className="gold-gradient-text">Feedback</span>
           </h2>
-          <p className="text-[#A1A1AA] text-sm max-w-xl font-light mt-2 mx-auto">
+          <p className="text-[#A1A1AA] text-xs sm:text-sm max-w-xl font-light mt-1.5 mx-auto">
             Direct, authentic feedback from homeowners and clients across Mumbai.
           </p>
-
-          {/* Controls Bar */}
-          <div className="flex items-center justify-center gap-3 mt-6 flex-wrap">
-            <button
-              onClick={() => setIsPaused((prev) => !prev)}
-              className={`p-2.5 rounded-full border transition-all ${
-                isPaused
-                  ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
-                  : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
-              }`}
-              title={isPaused ? "Resume Auto-Play" : "Pause Auto-Play"}
-              aria-label={isPaused ? "Resume Auto-Play" : "Pause Auto-Play"}
-            >
-              {isPaused ? <Play className="w-4 h-4 fill-black" /> : <Pause className="w-4 h-4" />}
-            </button>
-
-            <div className="flex items-center gap-1.5">
-              <button
-                onClick={prevTestimonial}
-                className="p-2.5 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-                aria-label="Previous Review"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={nextTestimonial}
-                className="p-2.5 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-                aria-label="Next Review"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Testimonial Card Slider */}
-        <div className="rounded-3xl glass-panel p-6 sm:p-12 border border-white/10 shadow-2xl relative overflow-hidden">
+        <div className="rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-8 border border-white/10 shadow-2xl relative overflow-hidden">
           {!isPaused && (
             <div
               key={currentIndex}
@@ -171,9 +138,9 @@ export default function TestimonialsSection() {
             />
           )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
             {/* Client Portrait */}
-            <div className="lg:col-span-5 relative h-72 sm:h-96 rounded-2xl overflow-hidden border border-white/15 group shadow-xl bg-black">
+            <div className="lg:col-span-4 relative aspect-[3/4] max-h-[30svh] sm:max-h-[35svh] w-auto mx-auto rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 group shadow-xl bg-black flex items-center justify-center">
               <img
                 src={current.image}
                 alt={current.name}
@@ -183,25 +150,25 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Testimonial Quote & Info */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-8 space-y-3 sm:space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-mono text-[#D4AF37]">
+                <span className="text-[10px] sm:text-xs font-mono text-[#D4AF37]">
                   Verified Client Feedback
                 </span>
-                <span className="text-xs font-mono text-[#A1A1AA]">
+                <span className="text-[10px] sm:text-xs font-mono text-[#A1A1AA]">
                   {String(currentIndex + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
                 </span>
               </div>
 
-              <Quote className="w-10 h-10 text-[#D4AF37]/30" />
+              <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-[#D4AF37]/30" />
 
-              <p className="text-base sm:text-lg lg:text-xl text-white font-light leading-relaxed italic">
+              <p className="text-xs sm:text-sm lg:text-base text-white font-light leading-relaxed italic line-clamp-4 sm:line-clamp-none">
                 &quot;{current.text}&quot;
               </p>
 
-              <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
-                  <h3 className="font-serif font-bold text-white text-xl">
+                  <h3 className="font-serif font-bold text-white text-base sm:text-lg">
                     {current.name}
                   </h3>
                 </div>
@@ -212,9 +179,9 @@ export default function TestimonialsSection() {
                     <button
                       key={idx}
                       onClick={() => setCurrentIndex(idx)}
-                      className={`h-2 rounded-full transition-all ${
+                      className={`h-1.5 rounded-full transition-all ${
                         currentIndex === idx
-                          ? "w-6 bg-[#D4AF37]"
+                          ? "w-5 bg-[#D4AF37]"
                           : "w-1.5 bg-white/20 hover:bg-white/40"
                       }`}
                       aria-label={`Jump to review ${idx + 1}`}
@@ -223,6 +190,39 @@ export default function TestimonialsSection() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Carousel Controls Below Section */}
+        <div className="flex items-center justify-center gap-2.5 mt-4 sm:mt-5 flex-wrap">
+          <button
+            onClick={() => setIsPaused((prev) => !prev)}
+            className={`p-2 rounded-full border transition-all ${
+              isPaused
+                ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
+                : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
+            }`}
+            title={isPaused ? "Resume Auto-Play" : "Pause Auto-Play"}
+            aria-label={isPaused ? "Resume Auto-Play" : "Pause Auto-Play"}
+          >
+            {isPaused ? <Play className="w-3.5 h-3.5 fill-black" /> : <Pause className="w-3.5 h-3.5" />}
+          </button>
+
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={prevTestimonial}
+              className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
+              aria-label="Previous Review"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
+              aria-label="Next Review"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </div>

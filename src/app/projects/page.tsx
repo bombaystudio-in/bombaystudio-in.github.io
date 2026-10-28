@@ -124,12 +124,12 @@ export default function ProjectsPage() {
             return (
               <div
                 key={project.id}
-                className="rounded-3xl glass-panel p-6 sm:p-10 border border-white/15 shadow-2xl hover:border-[#D4AF37]/40 transition-all duration-500"
+                className="rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-7 border border-white/15 shadow-2xl hover:border-[#D4AF37]/40 transition-all duration-500"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
                   {/* Left: Interactive Multi-Photo Visualizer */}
-                  <div className="lg:col-span-7 space-y-3.5">
-                    <div className="relative h-[320px] sm:h-[440px] rounded-2xl overflow-hidden border border-white/15 bg-black group select-none">
+                  <div className="lg:col-span-7 space-y-3">
+                    <div className="relative aspect-[16/10] sm:aspect-[16/9] max-h-[36svh] sm:max-h-[44svh] w-full rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 bg-black group select-none">
                       {isVideoActive && project.walkthroughVideo ? (
                         <video
                           src={project.walkthroughVideo}

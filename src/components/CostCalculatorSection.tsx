@@ -66,29 +66,28 @@ export default function CostCalculatorSection() {
   };
 
   return (
-    <section id="calculator" className="py-24 bg-[#050505] relative">
+    <section id="calculator" className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl glass-panel p-8 sm:p-14 gold-border-glow">
+        <div className="rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-8 gold-border-glow">
           {/* Centered Calculator Header */}
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+          <div className="text-center max-w-2xl mx-auto mb-5 sm:mb-6">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
               Estimate Your <span className="gold-gradient-text">Interior Cost</span>
             </h2>
-            <p className="text-[#A1A1AA] text-sm font-light mt-2">
+            <p className="text-[#A1A1AA] text-xs sm:text-sm font-light mt-1.5">
               Select your home layout, carpet area, and desired finish tier to get an instant cost estimate for Mumbai.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/* Left Controls */}
-            <div className="lg:col-span-7 space-y-8">
-
+            <div className="lg:col-span-7 space-y-4">
               {/* BHK Selector */}
               <div>
-                <label className="block text-xs font-bold text-white uppercase tracking-wider mb-3">
+                <label className="block text-[10px] sm:text-xs font-bold text-white uppercase tracking-wider mb-2">
                   1. Select BHK Type
                 </label>
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-4 gap-2">
                   {["1BHK", "2BHK", "3BHK", "4BHK / Villa"].map((type) => (
                     <button
                       key={type}
@@ -99,9 +98,9 @@ export default function CostCalculatorSection() {
                         if (type === "3BHK") setArea(1550);
                         if (type === "4BHK / Villa") setArea(2600);
                       }}
-                      className={`py-3 rounded-xl text-xs font-bold transition-all ${
+                      className={`py-2 rounded-lg text-xs font-bold transition-all ${
                         bhk === type
-                          ? "btn-gold-shiny scale-105"
+                          ? "btn-gold-shiny scale-102"
                           : "bg-[#121212] text-[#A1A1AA] hover:text-white border border-white/10"
                       }`}
                     >
@@ -113,9 +112,9 @@ export default function CostCalculatorSection() {
 
               {/* Area Slider */}
               <div>
-                <div className="flex justify-between text-xs font-bold text-white mb-2">
-                  <span className="uppercase tracking-wider">2. Carpet Area (sq.ft.)</span>
-                  <span className="text-[#FCF6BA] text-base">{area} sq.ft.</span>
+                <div className="flex justify-between text-xs font-bold text-white mb-1.5">
+                  <span className="uppercase tracking-wider text-[10px] sm:text-xs">2. Carpet Area (sq.ft.)</span>
+                  <span className="text-[#FCF6BA] text-sm sm:text-base">{area} sq.ft.</span>
                 </div>
                 <input
                   type="range"
@@ -124,32 +123,32 @@ export default function CostCalculatorSection() {
                   step={50}
                   value={area}
                   onChange={(e) => setArea(Number(e.target.value))}
-                  className="w-full h-2 bg-[#1C1C1C] rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+                  className="w-full h-1.5 bg-[#1C1C1C] rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
                 />
               </div>
 
               {/* Finish Tier */}
               <div>
-                <label className="block text-xs font-bold text-white uppercase tracking-wider mb-3">
+                <label className="block text-[10px] sm:text-xs font-bold text-white uppercase tracking-wider mb-2">
                   3. Select Finish Tier
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                   {[
-                    { id: "standard", label: "Standard Finish", desc: "Commercial Plywood & Matte Laminate" },
-                    { id: "premium", label: "Premium Turnkey", desc: "IS-710 Marine Ply, PU Paint & Quartz" },
-                    { id: "luxury", label: "Ultra Luxury", desc: "Italian Marble, Fluted Veneer & Brass" },
+                    { id: "standard", label: "Standard", desc: "Commercial Ply & Matte Laminate" },
+                    { id: "premium", label: "Premium Turnkey", desc: "IS-710 Marine Ply & PU Paint" },
+                    { id: "luxury", label: "Ultra Luxury", desc: "Italian Marble & Fluted Veneer" },
                   ].map((t) => (
                     <button
                       key={t.id}
                       onClick={() => setTier(t.id as "standard" | "premium" | "luxury")}
-                      className={`p-4 rounded-xl text-left text-xs transition-all ${
+                      className={`p-2.5 sm:p-3 rounded-lg text-left text-xs transition-all ${
                         tier === t.id
                           ? "bg-[#1C1C1C] border-2 border-[#D4AF37] text-white gold-border-glow"
                           : "bg-[#121212] text-[#A1A1AA] border border-white/10 hover:text-white"
                       }`}
                     >
-                      <p className="font-bold text-sm text-white mb-1">{t.label}</p>
-                      <p className="text-[11px] font-light leading-tight">{t.desc}</p>
+                      <p className="font-bold text-xs text-white mb-0.5">{t.label}</p>
+                      <p className="text-[10px] font-light leading-tight">{t.desc}</p>
                     </button>
                   ))}
                 </div>
@@ -157,44 +156,40 @@ export default function CostCalculatorSection() {
             </div>
 
             {/* Right Output Box */}
-            <div className="lg:col-span-5 p-8 rounded-2xl bg-[#121212] border border-white/15 text-center space-y-6 shadow-2xl">
-              <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
+            <div className="lg:col-span-5 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#121212] border border-white/15 text-center space-y-3.5 shadow-2xl">
+              <span className="text-[#D4AF37] text-[10px] sm:text-xs font-semibold uppercase tracking-widest">
                 Estimated Project Budget
               </span>
 
-              <div className="py-4">
-                <span className="font-serif text-4xl sm:text-5xl font-bold text-white">
-                  ₹{formattedEstimate} <span className="text-xl font-sans font-normal text-[#D4AF37]">Lakhs*</span>
+              <div className="py-1">
+                <span className="font-serif text-3xl sm:text-4xl font-bold text-white">
+                  ₹{formattedEstimate} <span className="text-base font-sans font-normal text-[#D4AF37]">Lakhs*</span>
                 </span>
-                <p className="text-xs text-[#A1A1AA] font-light mt-2">
-                  Includes Architectural Planning, Materials, Labor &amp; Site Supervision.
+                <p className="text-[10px] text-[#A1A1AA] font-light mt-1">
+                  Turnkey materials, civil execution &amp; architectural supervision.
                 </p>
               </div>
 
-              <div className="space-y-2 text-xs text-[#A1A1AA] text-left border-y border-white/10 py-4">
-                <p className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" />
-                  <span>Penalty-Backed 60 to 90 Day Handover</span>
+              <div className="space-y-1 text-[11px] text-[#A1A1AA] text-left border-y border-white/10 py-2">
+                <p className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Penalty-Backed Handover</span>
                 </p>
-                <p className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" />
+                <p className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
                   <span>100% Transparent Itemized BOQ</span>
-                </p>
-                <p className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" />
-                  <span>10-Year Structural Warranty</span>
                 </p>
               </div>
 
               {!leadSubmitted ? (
-                <form onSubmit={handleSubmit} className="space-y-3">
+                <form onSubmit={handleSubmit} className="space-y-2">
                   <input
                     type="text"
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 rounded-xl bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#D4AF37]"
+                    className="w-full px-3 py-2 rounded-lg bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#D4AF37]"
                   />
                   <input
                     type="tel"
@@ -202,41 +197,33 @@ export default function CostCalculatorSection() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="WhatsApp Number"
-                    className="w-full px-4 py-3 rounded-xl bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#D4AF37]"
+                    className="w-full px-3 py-2 rounded-lg bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#D4AF37]"
                   />
                   {errorMessage && (
-                    <p className="text-xs text-red-400 text-left">{errorMessage}</p>
+                    <p className="text-[10px] text-red-400 text-left">{errorMessage}</p>
                   )}
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all disabled:opacity-50"
+                    className="w-full flex items-center justify-center gap-1.5 btn-gold-shiny text-xs uppercase tracking-wider py-2.5 rounded-lg transition-all disabled:opacity-50"
                   >
                     {loading ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
                     ) : (
-                      <Download className="w-4 h-4" />
+                      <Download className="w-3.5 h-3.5" />
                     )}
-                    <span>{loading ? "Transmitting..." : "Get Detailed PDF Quote"}</span>
+                    <span>{loading ? "Transmitting..." : "Get Detailed Estimate Breakdown"}</span>
                   </button>
                 </form>
               ) : (
-                <div className="p-5 rounded-xl bg-[#1C1C1C] text-white text-xs space-y-3 border border-[#D4AF37] shadow-xl">
-                  <div className="flex items-center justify-center gap-2 text-[#D4AF37]">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <p className="font-bold text-sm">Quote &amp; Planner Downloaded!</p>
+                <div className="p-3.5 rounded-lg bg-[#1C1C1C] text-white text-xs space-y-2 border border-[#D4AF37] shadow-xl">
+                  <div className="flex items-center justify-center gap-1.5 text-[#D4AF37]">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <p className="font-bold text-xs sm:text-sm">Quote Submitted!</p>
                   </div>
-                  <p className="text-[#A1A1AA] text-center">
-                    Your 2026 Mumbai Interior Budget Planner &amp; Checklist PDF has been downloaded. Our team will also WhatsApp your custom BOQ breakdown shortly.
+                  <p className="text-[10px] text-[#A1A1AA] text-center">
+                    Our team will WhatsApp your custom BOQ breakdown shortly.
                   </p>
-                  <a
-                    href="/mumbai-interior-budget-planner-2026.pdf"
-                    download="mumbai-interior-budget-planner-2026.pdf"
-                    className="inline-flex items-center justify-center gap-2 w-full btn-gold-shiny py-3 rounded-lg font-bold text-xs uppercase tracking-wider"
-                  >
-                    <Download className="w-4 h-4" />
-                    <span>Download PDF Again</span>
-                  </a>
                 </div>
               )}
             </div>

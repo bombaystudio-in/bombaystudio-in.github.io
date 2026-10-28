@@ -19,8 +19,8 @@ export default function Header() {
   return (
     <>
       {/* Announcement Bar */}
-      <div className="bg-[#121212] text-[#D4AF37] text-xs py-2 px-4 text-center font-medium tracking-wide border-b border-white/10 flex items-center justify-center gap-2">
-        <Sparkles className="w-3.5 h-3.5 animate-pulse shrink-0 text-[#FCF6BA]" />
+      <div className="bg-[#121212] text-[#D4AF37] text-[11px] sm:text-xs py-1 sm:py-1.5 px-4 text-center font-medium tracking-wide border-b border-white/10 flex items-center justify-center gap-2">
+        <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-pulse shrink-0 text-[#FCF6BA]" />
         <span className="truncate">Now booking select luxury projects for 2026–27 · Mumbai &amp; Alibaug</span>
         <Link href="/#contact" className="underline hover:text-white transition-colors ml-1 shrink-0 font-semibold">
           Enquire Now ↗
@@ -31,17 +31,17 @@ export default function Header() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#050505]/95 backdrop-blur-md py-3.5 border-b border-white/10 shadow-2xl"
-            : "bg-[#050505]/50 backdrop-blur-sm py-3.5"
+            ? "bg-[#050505]/95 backdrop-blur-md py-2 border-b border-white/10 shadow-2xl"
+            : "bg-[#050505]/60 backdrop-blur-sm py-2 sm:py-2.5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="group shrink-0 flex items-center py-1" aria-label="Bombay Studio Home">
+          <Link href="/" className="group shrink-0 flex items-center" aria-label="Bombay Studio Home">
             <img
               src="/logo.png"
               alt="Bombay Studio"
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain group-hover:opacity-90 transition-opacity"
+              className="h-8 sm:h-9 md:h-10 w-auto object-contain group-hover:opacity-90 transition-opacity"
             />
           </Link>
 

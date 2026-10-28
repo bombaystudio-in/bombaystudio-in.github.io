@@ -42,28 +42,28 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#050505] relative">
+    <section id="contact" className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+        <div className="text-center max-w-3xl mx-auto mb-5 sm:mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
             Let’s Discuss Your <span className="gold-gradient-text">Space</span>
           </h2>
-          <p className="text-[#A1A1AA] text-sm font-light mt-3 max-w-xl mx-auto">
+          <p className="text-[#A1A1AA] text-xs sm:text-sm font-light mt-1.5 max-w-xl mx-auto">
             Visit our experience center in Mumbai or schedule a free site consultation with Principal Architect Ar. Aakhir Choudhary.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
           {/* Contact Information & Map */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="space-y-6 text-sm">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
-                  <MapPin className="w-5 h-5 text-[#D4AF37]" />
+          <div className="lg:col-span-5 space-y-4">
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-3">
+                <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
+                  <MapPin className="w-4 h-4 text-[#D4AF37]" />
                 </div>
                 <div>
-                  <p className="font-bold text-white">Office Address</p>
+                  <p className="font-bold text-white text-xs sm:text-sm">Office Address</p>
                   <p className="text-[#A1A1AA] text-xs font-light">
                     Bombay Studio Design HQ, Suite 402, Trade World B, BKC &amp; Lower Parel, Mumbai, Maharashtra 400013
                   </p>
@@ -71,23 +71,23 @@ export default function ContactSection() {
               </div>
 
               {/* Direct Studio Line (Highlight Primary) */}
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#121212] border border-[#D4AF37]/40 shadow-lg shadow-[#D4AF37]/10">
-                <div className="p-3 rounded-xl bg-[#D4AF37] text-[#050505] shrink-0 font-bold">
-                  <Phone className="w-5 h-5" />
+              <div className="flex items-start gap-3 p-3.5 rounded-xl sm:rounded-2xl bg-[#121212] border border-[#D4AF37]/40 shadow-lg shadow-[#D4AF37]/10">
+                <div className="p-2.5 rounded-xl bg-[#D4AF37] text-[#050505] shrink-0 font-bold">
+                  <Phone className="w-4 h-4" />
                 </div>
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <p className="font-bold text-[#D4AF37] text-xs uppercase tracking-wider">
+                <div className="space-y-0.5">
+                  <div className="flex items-center gap-1.5">
+                    <p className="font-bold text-[#D4AF37] text-[10px] uppercase tracking-wider">
                       DIRECT STUDIO LINE
                     </p>
-                    <span className="text-[10px] bg-[#25D366]/20 text-[#25D366] px-2 py-0.5 rounded-full font-bold">
+                    <span className="text-[9px] bg-[#25D366]/20 text-[#25D366] px-1.5 py-0.2 rounded-full font-bold">
                       Available Now
                     </span>
                   </div>
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 pt-0.5">
+                  <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-0.5">
                     <a
                       href="tel:+917070704181"
-                      className="text-white text-base hover:text-[#FCF6BA] font-serif font-bold whitespace-nowrap shrink-0 tracking-wide"
+                      className="text-white text-sm sm:text-base hover:text-[#FCF6BA] font-serif font-bold whitespace-nowrap shrink-0 tracking-wide"
                     >
                       +91 707070 4181
                     </a>
@@ -95,35 +95,32 @@ export default function ContactSection() {
                       href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[11px] bg-[#25D366] text-black font-bold px-2.5 py-1 rounded-md hover:bg-[#1EBE5D] transition-colors inline-flex items-center gap-1 shrink-0"
+                      className="text-[10px] bg-[#25D366] text-black font-bold px-2 py-0.5 rounded hover:bg-[#1EBE5D] transition-colors inline-flex items-center gap-1 shrink-0"
                     >
-                      <span>WhatsApp Chat ↗</span>
+                      <span>WhatsApp ↗</span>
                     </a>
                   </div>
-                  <p className="text-[#A1A1AA] text-[11px] font-light">
-                    Direct line for quick inquiries, site estimates &amp; architect consultation.
-                  </p>
                 </div>
               </div>
 
               {/* Personal Contact */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
-                  <Phone className="w-5 h-5 text-[#D4AF37]" />
+              <div className="flex items-start gap-3">
+                <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
+                  <Phone className="w-4 h-4 text-[#D4AF37]" />
                 </div>
-                <div className="space-y-1">
-                  <p className="font-bold text-white text-xs uppercase tracking-wider">Principal Architect Personal Line</p>
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                <div className="space-y-0.5">
+                  <p className="font-bold text-white text-[11px] uppercase tracking-wider">Principal Architect Personal Line</p>
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
                     <a
                       href="tel:+919664384181"
                       className="text-[#FCF6BA] text-xs hover:underline font-semibold whitespace-nowrap shrink-0"
                     >
                       +91 966438 4181
                     </a>
-                    <span className="hidden sm:inline text-white/30">•</span>
+                    <span className="text-white/30">•</span>
                     <a
                       href="mailto:aakhir@bombaystudio.in"
-                      className="text-[#A1A1AA] text-xs hover:text-white transition-colors break-all sm:break-normal"
+                      className="text-[#A1A1AA] text-xs hover:text-white transition-colors"
                     >
                       aakhir@bombaystudio.in
                     </a>
@@ -132,30 +129,28 @@ export default function ContactSection() {
               </div>
 
               {/* Studio Email Contact */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
-                  <Mail className="w-5 h-5 text-[#D4AF37]" />
+              <div className="flex items-start gap-3">
+                <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
+                  <Mail className="w-4 h-4 text-[#D4AF37]" />
                 </div>
-                <div className="space-y-1">
-                  <p className="font-bold text-white text-xs uppercase tracking-wider">Studio General Email</p>
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                    <a
-                      href="mailto:info@bombaystudio.in"
-                      className="text-[#A1A1AA] text-xs hover:text-white transition-colors break-all sm:break-normal"
-                    >
-                      info@bombaystudio.in
-                    </a>
-                  </div>
+                <div className="space-y-0.5">
+                  <p className="font-bold text-white text-[11px] uppercase tracking-wider">Studio General Email</p>
+                  <a
+                    href="mailto:info@bombaystudio.in"
+                    className="text-[#A1A1AA] text-xs hover:text-white transition-colors block"
+                  >
+                    info@bombaystudio.in
+                  </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
-                  <Clock className="w-5 h-5 text-[#D4AF37]" />
+              <div className="flex items-start gap-3">
+                <div className="p-2.5 rounded-xl bg-[#1C1C1C] text-[#D4AF37] shrink-0 border border-white/10">
+                  <Clock className="w-4 h-4 text-[#D4AF37]" />
                 </div>
                 <div>
-                  <p className="font-bold text-white">Working Hours</p>
-                  <p className="text-[#A1A1AA] text-xs font-light">
+                  <p className="font-bold text-white text-xs">Working Hours</p>
+                  <p className="text-[#A1A1AA] text-[11px] font-light">
                     Monday – Saturday: 10:00 AM – 7:30 PM (Sunday by Appointment)
                   </p>
                 </div>
@@ -164,19 +159,19 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Lead Form */}
-          <div className="lg:col-span-7 rounded-3xl glass-panel p-8 sm:p-12 gold-border-glow shadow-2xl">
-            <h3 className="font-serif text-2xl font-bold text-white mb-2">
+          <div className="lg:col-span-7 rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-7 gold-border-glow shadow-2xl">
+            <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-1">
               Book Your Free Consultation
             </h3>
-            <p className="text-xs text-[#A1A1AA] font-light mb-8">
+            <p className="text-xs text-[#A1A1AA] font-light mb-4 sm:mb-5">
               Fill out the form below and Ar. Aakhir Choudhary will reach out within 2 working hours.
             </p>
 
             {!formSubmitted ? (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-bold text-white uppercase tracking-wider mb-2">
+                    <label className="block text-[10px] sm:text-xs font-bold text-white uppercase tracking-wider mb-1.5">
                       Full Name *
                     </label>
                     <input
@@ -185,11 +180,11 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Rohan Mehta"
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/50 focus:outline-none focus:border-[#D4AF37]"
+                      className="w-full px-3 py-2.5 rounded-lg bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/50 focus:outline-none focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-white uppercase tracking-wider mb-2">
+                    <label className="block text-[10px] sm:text-xs font-bold text-white uppercase tracking-wider mb-1.5">
                       Phone / WhatsApp *
                     </label>
                     <input

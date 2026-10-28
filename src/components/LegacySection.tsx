@@ -60,32 +60,32 @@ export default function LegacySection() {
   ];
 
   return (
-    <section id="legacy" className="py-24 bg-[#080808] relative overflow-hidden border-t border-white/10">
+    <section id="legacy" className="py-8 sm:py-10 lg:py-12 bg-[#080808] relative overflow-hidden border-t border-white/10">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 -left-40 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 leading-tight">
             From Humble Beginnings to <br />
             <span className="gold-gradient-text">Next-Generation Luxury Living</span>
           </h2>
-          <p className="text-[#A1A1AA] text-base font-light leading-relaxed">
-            Great design is built on real experience. Discover how three decades of civil construction evolved into Bombay Studio—the modern architectural spin-off for the next generation.
+          <p className="text-[#A1A1AA] text-xs sm:text-sm font-light leading-relaxed max-w-2xl mx-auto">
+            Great design is built on real experience. Three decades of civil construction evolved into Bombay Studio.
           </p>
         </div>
 
         {/* The Emotional Origin Story Card with Founder Portrait */}
-        <div className="rounded-3xl glass-panel p-8 sm:p-12 border border-white/15 mb-20 relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="rounded-2xl sm:rounded-3xl glass-panel p-5 sm:p-8 border border-white/15 mb-8 sm:mb-10 relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/* Story & History */}
-            <div className="lg:col-span-7 space-y-5">
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+            <div className="lg:col-span-7 space-y-4">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
                 &quot;He arrived in Bombay with empty pockets—and built a legacy on his word.&quot;
               </h3>
-              <div className="space-y-3 text-sm font-light leading-relaxed">
+              <div className="space-y-2.5 text-xs sm:text-sm font-light leading-relaxed">
                 <p className="text-[#A1A1AA]">
                   In 1992, <span className="text-white font-medium">Mr. Kalamuddin Choudhary</span> founded <strong className="text-white">Noor Engineering Company (NEC)</strong> on uncompromising site precision, civil integrity, and structural mastery across Mumbai.
                 </p>
@@ -95,60 +95,53 @@ export default function LegacySection() {
               </div>
 
               {/* Heritage Stats Strip */}
-              <div className="grid grid-cols-3 gap-3 pt-4 border-t border-white/10 text-center">
-                <div className="p-3 rounded-xl bg-[#121212] border border-white/5">
-                  <p className="font-serif text-xl sm:text-2xl font-bold gold-gradient-text">1992</p>
-                  <p className="text-[10px] sm:text-xs text-[#A1A1AA] uppercase tracking-wider">Est. In Mumbai</p>
+              <div className="grid grid-cols-3 gap-2.5 pt-3 border-t border-white/10 text-center">
+                <div className="p-2 sm:p-2.5 rounded-xl bg-[#121212] border border-white/5">
+                  <p className="font-serif text-lg sm:text-xl font-bold gold-gradient-text">1992</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#A1A1AA] uppercase tracking-wider">Est. In Mumbai</p>
                 </div>
                 <div className="p-3 rounded-xl bg-[#121212] border border-white/5">
-                  <p className="font-serif text-xl sm:text-2xl font-bold text-white">200+</p>
-                  <p className="text-[10px] sm:text-xs text-[#A1A1AA] uppercase tracking-wider">Turnkey Projects</p>
+                  <p className="font-serif text-lg sm:text-xl font-bold text-white">200+</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#A1A1AA] uppercase tracking-wider">Turnkey Projects</p>
                 </div>
                 <div className="p-3 rounded-xl bg-[#121212] border border-white/5">
-                  <p className="font-serif text-xl sm:text-2xl font-bold gold-gradient-text">30+ Yrs</p>
-                  <p className="text-[10px] sm:text-xs text-[#A1A1AA] uppercase tracking-wider">Architectural Legacy</p>
+                  <p className="font-serif text-lg sm:text-xl font-bold gold-gradient-text">30+ Yrs</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#A1A1AA] uppercase tracking-wider">Civil Pedigree</p>
                 </div>
               </div>
             </div>
 
             {/* Mr. Kalamuddin Choudhary Portrait */}
             <div className="lg:col-span-5 relative flex flex-col items-center">
-              <div className="relative w-full h-[460px] sm:h-[520px] rounded-3xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow bg-gradient-to-b from-[#181818] via-[#121212] to-[#0A0A0A] flex items-center justify-center p-2">
+              <div className="relative aspect-[3/4] max-h-[36svh] sm:max-h-[40svh] w-auto rounded-2xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow bg-gradient-to-b from-[#181818] via-[#121212] to-[#0A0A0A] flex items-center justify-center p-2">
                 <img
                   src="/team/kalamuddin-choudhary.png"
                   alt="Mr. Kalamuddin Choudhary - Founder of Noor Engineering Company (Est. 1992)"
                   className="w-full h-full object-contain object-center filter contrast-105"
                 />
               </div>
-              <div className="w-full mt-4 p-4 rounded-2xl bg-[#121212] border border-white/10 space-y-1 text-center">
-                <p className="text-white font-bold text-sm tracking-wide uppercase">MR. KALAMUDDIN CHOUDHARY</p>
-                <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Founder · Noor Engineering Company (1992)</p>
-                <p className="text-[#A1A1AA] text-[11px] font-light italic">&quot;Built on Integrity, Grit &amp; Structural Mastery&quot;</p>
+              <div className="w-full mt-2.5 p-2.5 rounded-xl bg-[#121212] border border-white/10 space-y-0.5 text-center">
+                <p className="text-white font-bold text-xs sm:text-sm tracking-wide uppercase">MR. KALAMUDDIN CHOUDHARY</p>
+                <p className="text-[#D4AF37] text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Founder · Noor Engineering Company (1992)</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Connected & Continued Evolutionary Timeline */}
-        <div className="mb-20">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
-              A Connected Legacy Built Over Three Decades
+        <div className="mb-6 sm:mb-8">
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+            <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-1.5">
+              Evolutionary Timeline
             </h3>
-            <p className="text-xs sm:text-sm text-[#A1A1AA] font-light">
+            <p className="text-xs text-[#A1A1AA] font-light">
               From heavy civil foundations in 1992 to the next-generation modern design studio today.
             </p>
           </div>
 
           {/* Timeline Container with Connected Line */}
           <div className="relative">
-            {/* Horizontal Connection Track (Desktop) */}
-            <div className="hidden md:block absolute top-[52px] left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-[#D4AF37]/30 via-[#D4AF37] to-[#FCF6BA] z-0 shadow-[0_0_12px_rgba(212,175,55,0.4)]" />
-
-            {/* Vertical Connection Track (Mobile) */}
-            <div className="md:hidden absolute top-10 bottom-10 left-6 w-[2px] bg-gradient-to-b from-[#D4AF37] via-[#D4AF37]/60 to-[#FCF6BA] z-0" />
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 relative z-10">
               {timelineMilestones.map((item, idx) => {
                 const IconComponent = item.icon;
                 const isLast = idx === timelineMilestones.length - 1;
@@ -156,17 +149,17 @@ export default function LegacySection() {
                 return (
                   <div
                     key={idx}
-                    className={`relative flex flex-col justify-between p-7 sm:p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-2 ${
+                    className={`relative flex flex-col justify-between p-4 sm:p-5 rounded-xl sm:rounded-2xl transition-all duration-300 group hover:-translate-y-1 ${
                       isLast
-                        ? "bg-[#121212] border-2 border-[#D4AF37]/60 shadow-[0_0_30px_rgba(212,175,55,0.15)]"
+                        ? "bg-[#121212] border-2 border-[#D4AF37]/60 shadow-[0_0_25px_rgba(212,175,55,0.15)]"
                         : "bg-[#101010] border border-white/10 hover:border-[#D4AF37]/40"
                     }`}
                   >
                     {/* Node Circle along the track */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-3">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-2.5">
                         <div
-                          className={`w-11 h-11 rounded-full flex items-center justify-center font-serif font-bold text-sm border-2 shadow-lg transition-transform group-hover:scale-110 ${
+                          className={`w-9 h-9 rounded-full flex items-center justify-center font-serif font-bold text-xs border-2 shadow-md transition-transform group-hover:scale-105 ${
                             isLast
                               ? "bg-[#D4AF37] text-[#050505] border-[#FCF6BA]"
                               : "bg-[#1C1C1C] text-[#D4AF37] border-[#D4AF37]/40"
@@ -175,40 +168,40 @@ export default function LegacySection() {
                           {item.step}
                         </div>
                         <div>
-                          <p className="font-serif text-2xl font-bold text-white">
+                          <p className="font-serif text-lg font-bold text-white leading-tight">
                             {item.year}
                           </p>
-                          <p className="text-[10px] text-[#A1A1AA] uppercase tracking-wider">
+                          <p className="text-[9px] text-[#A1A1AA] uppercase tracking-wider">
                             {item.highlight}
                           </p>
                         </div>
                       </div>
 
                       <div
-                        className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
+                        className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
                           isLast
                             ? "bg-[#D4AF37]/20 text-[#FCF6BA]"
                             : "bg-[#1C1C1C] text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#050505]"
                         }`}
                       >
-                        <IconComponent className="w-5 h-5" />
+                        <IconComponent className="w-4 h-4" />
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="space-y-3 mb-6">
+                    <div className="space-y-2 mb-4">
                       <span
-                        className={`inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full border ${
+                        className={`inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${
                           isLast
                             ? "text-[#FCF6BA] bg-[#D4AF37]/20 border-[#D4AF37]/40"
                             : "text-[#D4AF37] bg-[#D4AF37]/10 border-[#D4AF37]/20"
                         }`}
                       >
-                        {isLast && <Sparkles className="w-3 h-3 text-[#FCF6BA] animate-pulse" />}
+                        {isLast && <Sparkles className="w-2.5 h-2.5 text-[#FCF6BA] animate-pulse" />}
                         <span>{item.badge}</span>
                       </span>
 
-                      <h4 className="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
+                      <h4 className="text-sm font-bold text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
                         {item.title}
                       </h4>
 
@@ -218,58 +211,16 @@ export default function LegacySection() {
                     </div>
 
                     {/* Card Footer Lineage Link */}
-                    <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-medium">
-                      <div className="flex items-center gap-2 text-white/90">
-                        <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" />
+                    <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-medium">
+                      <div className="flex items-center gap-1.5 text-white/90">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
                         <span>{item.stats}</span>
                       </div>
-                      {!isLast && (
-                        <div className="hidden md:flex items-center text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors">
-                          <ChevronRight className="w-4 h-4" />
-                        </div>
-                      )}
                     </div>
                   </div>
                 );
               })}
             </div>
-          </div>
-        </div>
-
-        {/* Why Our Legacy Matters Section */}
-        <div className="rounded-3xl bg-[#121212] border border-white/10 p-8 sm:p-12">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">
-              Why Our Construction Legacy Matters To You
-            </h3>
-            <p className="text-sm text-[#A1A1AA] font-light leading-relaxed">
-              Unlike interior firms that solely produce 3D visual renders, Bombay Studio is the modern spin-off anchored by 30+ years of civil and structural construction knowledge.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {legacyPillars.map((pillar, idx) => (
-              <div key={idx} className="p-5 rounded-xl bg-[#080808] border border-white/10 space-y-2.5">
-                <div className="w-8 h-8 rounded-lg bg-[#1C1C1C] text-[#D4AF37] flex items-center justify-center">
-                  <ShieldCheck className="w-4 h-4" />
-                </div>
-                <h4 className="text-white font-bold text-sm">{pillar.title}</h4>
-                <p className="text-xs text-[#A1A1AA] font-light leading-relaxed">{pillar.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-[#A1A1AA] font-light">
-              30+ Years of Legacy · 200+ Turnkey Projects · Crafted For The Next Generation
-            </p>
-            <Link
-              href="/#contact"
-              className="inline-flex items-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider px-6 py-3 rounded-full font-semibold"
-            >
-              <span>Discuss Your Project With Ar. Aakhir</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
           </div>
         </div>
       </div>

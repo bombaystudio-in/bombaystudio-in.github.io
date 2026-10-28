@@ -27,80 +27,38 @@ export default function PortfolioGallery() {
   const marqueeItems = [...GALLERY_ITEMS, ...GALLERY_ITEMS];
 
   return (
-    <section className="py-16 sm:py-20 bg-[#050505] relative overflow-hidden border-y border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+    <section className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative overflow-hidden border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8">
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+        <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-5">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
             Site <span className="gold-gradient-text">Work &amp; Handovers</span>
           </h2>
-          <p className="text-[#A1A1AA] text-sm font-light mt-2 max-w-2xl mx-auto">
+          <p className="text-[#A1A1AA] text-xs sm:text-sm font-light mt-1.5 max-w-2xl mx-auto">
             Authentic on-site moments: Ar. Aakhir Choudhary conducting material consultations, structural audits, and quality handovers across Mumbai.
           </p>
-
-          {/* Action & Manual Controls */}
-          <div className="flex items-center justify-center gap-3 mt-6 flex-wrap">
-            {/* Play/Pause Toggle */}
-            <button
-              onClick={() => setIsPaused((prev) => !prev)}
-              className={`p-2.5 rounded-full border transition-all ${
-                isPaused
-                  ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
-                  : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
-              }`}
-              title={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
-              aria-label={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
-            >
-              {isPaused ? <Play className="w-4 h-4 fill-black" /> : <Pause className="w-4 h-4" />}
-            </button>
-
-            <div className="hidden sm:flex items-center gap-2">
-              <button
-                onClick={() => scroll("left")}
-                className="p-2.5 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-                aria-label="Scroll Left"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                className="p-2.5 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-                aria-label="Scroll Right"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-
-            <Link
-              href="/portfolio"
-              className="group inline-flex items-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider px-5 py-3 rounded-full"
-            >
-              <span>View Full Gallery ({GALLERY_ITEMS.length}+)</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </Link>
-          </div>
         </div>
       </div>
 
       {/* Horizontal Moving Marquee / Swipe Track */}
       <div className="relative w-full">
         {/* Subtle Edge Fade Gradients */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#050505] via-[#050505]/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-20 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-20 bg-gradient-to-l from-[#050505] via-[#050505]/80 to-transparent z-10" />
 
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto no-scrollbar py-4 px-4 sm:px-8 cursor-grab active:cursor-grabbing"
+          className="flex overflow-x-auto no-scrollbar py-2 px-4 sm:px-8 cursor-grab active:cursor-grabbing"
         >
           <div
-            className="animate-marquee flex gap-6"
+            className="animate-marquee flex gap-4"
             style={{ animationPlayState: isPaused ? "paused" : undefined }}
           >
             {marqueeItems.map((item, idx) => (
               <Link
                 key={`${item.id}-${idx}`}
                 href="/portfolio"
-                className="group relative w-72 sm:w-80 h-96 rounded-2xl overflow-hidden border border-white/15 bg-[#121212] shrink-0 block hover:border-[#D4AF37]/60 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/10"
+                className="group relative w-56 sm:w-64 aspect-[3/4] max-h-[32svh] sm:max-h-[36svh] rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 bg-[#121212] shrink-0 block hover:border-[#D4AF37]/60 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/10"
               >
                 <img
                   src={item.image}
@@ -132,6 +90,48 @@ export default function PortfolioGallery() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Carousel Controls Below Section */}
+      <div className="flex items-center justify-center gap-2.5 mt-4 sm:mt-5 flex-wrap">
+        {/* Play/Pause Toggle */}
+        <button
+          onClick={() => setIsPaused((prev) => !prev)}
+          className={`p-2 rounded-full border transition-all ${
+            isPaused
+              ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
+              : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
+          }`}
+          title={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
+          aria-label={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
+        >
+          {isPaused ? <Play className="w-3.5 h-3.5 fill-black" /> : <Pause className="w-3.5 h-3.5" />}
+        </button>
+
+        <div className="flex items-center gap-1.5">
+          <button
+            onClick={() => scroll("left")}
+            className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
+            aria-label="Scroll Left"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
+            aria-label="Scroll Right"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+
+        <Link
+          href="/portfolio"
+          className="group inline-flex items-center gap-1.5 btn-gold-shiny text-xs uppercase tracking-wider px-4 py-2 rounded-full"
+        >
+          <span>View Full Gallery ({GALLERY_ITEMS.length}+)</span>
+          <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        </Link>
       </div>
 
       {/* Mobile-Friendly Sub-CTA */}

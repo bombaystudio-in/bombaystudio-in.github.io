@@ -75,64 +75,30 @@ export default function AboutSection() {
   const marqueePillars = [...whyUsPillars, ...whyUsPillars];
 
   return (
-    <section id="about" className="py-20 sm:py-24 bg-[#050505] relative overflow-hidden">
+    <section id="about" className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header with Horizontal Scroll Controls */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-5 sm:mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
             Why Choose <span className="gold-gradient-text">Bombay Studio?</span>
           </h2>
-          <p className="text-[#A1A1AA] text-sm font-light mt-2 max-w-xl mx-auto">
+          <p className="text-[#A1A1AA] text-xs sm:text-sm font-light mt-1.5 max-w-xl mx-auto">
             Architectural rigor, certified materials, and fixed BOQ budgets for Mumbai&apos;s most discerning homeowners.
           </p>
-
-          {/* Desktop Arrow Controls & Pause Toggle */}
-          <div className="flex items-center justify-center gap-2 mt-6">
-            {/* Play/Pause Toggle */}
-            <button
-              onClick={() => setIsPaused((prev) => !prev)}
-              className={`p-2.5 rounded-full border transition-all ${
-                isPaused
-                  ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
-                  : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
-              }`}
-              title={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
-              aria-label={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
-            >
-              {isPaused ? <Play className="w-4 h-4 fill-black" /> : <Pause className="w-4 h-4" />}
-            </button>
-
-            <div className="hidden sm:flex items-center gap-2">
-              <button
-                onClick={() => scroll("left")}
-                className="p-2.5 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-                aria-label="Scroll left"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                className="p-2.5 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
-                aria-label="Scroll right"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Automatic Horizontal Moving Pillars Track */}
-        <div className="relative mb-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
           {/* Subtle Edge Fade Gradients */}
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-[#050505] to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#050505] to-transparent z-10" />
 
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto no-scrollbar py-3 cursor-grab active:cursor-grabbing"
+            className="flex overflow-x-auto no-scrollbar py-2 cursor-grab active:cursor-grabbing"
           >
             <div
-              className="animate-marquee flex gap-5"
+              className="animate-marquee flex gap-4"
               style={{ animationPlayState: isPaused ? "paused" : undefined }}
             >
               {marqueePillars.map((pillar, idx) => {
@@ -140,27 +106,27 @@ export default function AboutSection() {
                 return (
                   <div
                     key={idx}
-                    className="w-[280px] sm:w-[340px] shrink-0 p-6 sm:p-7 rounded-2xl bg-[#121212] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-[#D4AF37]/5 flex flex-col justify-between"
+                    className="w-[240px] sm:w-[280px] lg:w-[300px] shrink-0 p-4 sm:p-5 rounded-2xl bg-[#121212] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-[#D4AF37]/5 flex flex-col justify-between"
                   >
                     <div>
-                      <div className="flex items-center justify-between mb-5">
-                        <div className="w-12 h-12 rounded-xl bg-[#1C1C1C] text-[#D4AF37] flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#050505] transition-colors border border-white/5">
-                          <IconComp className="w-6 h-6" />
+                      <div className="flex items-center justify-between mb-3.5">
+                        <div className="w-10 h-10 rounded-xl bg-[#1C1C1C] text-[#D4AF37] flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#050505] transition-colors border border-white/5">
+                          <IconComp className="w-5 h-5" />
                         </div>
-                        <span className="text-[10px] font-mono uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-2 py-0.5 rounded border border-[#D4AF37]/20">
+                        <span className="text-[9px] font-mono uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-2 py-0.5 rounded border border-[#D4AF37]/20">
                           {pillar.tag}
                         </span>
                       </div>
 
-                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#D4AF37] transition-colors">
+                      <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-[#D4AF37] transition-colors">
                         {pillar.title}
                       </h3>
-                      <p className="text-[#A1A1AA] text-xs sm:text-sm leading-relaxed font-light">
+                      <p className="text-[#A1A1AA] text-xs leading-relaxed font-light">
                         {pillar.desc}
                       </p>
                     </div>
 
-                    <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-[#D4AF37] font-semibold">
+                    <div className="pt-3 mt-3 border-t border-white/5 flex items-center justify-between text-[10px] text-[#D4AF37] font-semibold">
                       <span>Pillar #{(idx % whyUsPillars.length) + 1}</span>
                       <span>Guaranteed Standard ✓</span>
                     </div>
@@ -171,52 +137,37 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Founder Feature Banner */}
-        <div className="rounded-3xl glass-panel p-8 sm:p-12 border border-white/10 relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Real Founder Image */}
-            <div className="lg:col-span-5 relative h-80 sm:h-[440px] rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
-              <img
-                src="/team/akhir-chaudhary-founder-portrait.png"
-                alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
-                className="w-full h-full object-cover object-top filter contrast-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent opacity-90" />
-              <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-[#050505]/85 backdrop-blur-md border border-white/10 text-center">
-                <p className="text-white font-bold text-sm">AR. AAKHIR CHOUDHARY</p>
-                <p className="text-[#D4AF37] text-xs font-medium">Principal Architect &amp; Founder</p>
-              </div>
-            </div>
+        {/* Carousel Controls Below Section */}
+        <div className="flex items-center justify-center gap-2 mt-4 sm:mt-5">
+          {/* Play/Pause Toggle */}
+          <button
+            onClick={() => setIsPaused((prev) => !prev)}
+            className={`p-2 rounded-full border transition-all ${
+              isPaused
+                ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-md shadow-[#D4AF37]/20"
+                : "bg-[#121212] text-[#A1A1AA] hover:text-white border-white/10"
+            }`}
+            title={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
+            aria-label={isPaused ? "Resume Auto-Scroll" : "Pause Auto-Scroll"}
+          >
+            {isPaused ? <Play className="w-3.5 h-3.5 fill-black" /> : <Pause className="w-3.5 h-3.5" />}
+          </button>
 
-            {/* Founder Story & Philosophy */}
-            <div className="lg:col-span-7 space-y-6">
-              <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-                Founder&apos;s Vision
-              </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
-                &quot;A home should feel like an exhale—tactile, warm, and entirely your own.&quot;
-              </h3>
-              <p className="text-[#A1A1AA] text-sm leading-relaxed font-light">
-                Backed by 30+ years of construction pedigree dating to 1992, Ar. Aakhir Choudhary leads Bombay Studio with single-point founder oversight and uncompromising turnkey precision.
-              </p>
-              <div className="grid grid-cols-2 gap-4 py-4 border-y border-white/10 text-sm">
-                <div>
-                  <p className="text-[#D4AF37] font-bold text-2xl font-serif">30+ Years</p>
-                  <p className="text-[#A1A1AA] text-xs">Construction Heritage (1992)</p>
-                </div>
-                <div>
-                  <p className="text-[#D4AF37] font-bold text-2xl font-serif">200+</p>
-                  <p className="text-[#A1A1AA] text-xs">Turnkey Luxury Deliveries</p>
-                </div>
-              </div>
-              <Link
-                href="/#legacy"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D4AF37] hover:text-white transition-colors"
-              >
-                <span>Read Our 30-Year Heritage Story</span>
-                <span>→</span>
-              </Link>
-            </div>
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => scroll("left")}
+              className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="p-2 rounded-full bg-[#121212] text-[#A1A1AA] hover:text-white hover:border-[#D4AF37] border border-white/10 transition-colors"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </div>

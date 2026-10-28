@@ -49,43 +49,43 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-24 bg-[#050505] relative">
+    <section id="faq" className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-5 sm:mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
             Frequently Asked <span className="gold-gradient-text">Questions</span>
           </h2>
-          <p className="text-[#A1A1AA] text-sm font-light">
+          <p className="text-[#A1A1AA] text-xs sm:text-sm font-light">
             Everything you need to know about timelines, budgets, material standards, and handover warranties in Mumbai.
           </p>
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-4">
+        <div className="space-y-2 sm:space-y-2.5">
           {FAQ_ITEMS.map((item, idx) => (
             <div
               key={idx}
-              className="rounded-2xl bg-[#121212] border border-white/10 overflow-hidden transition-all duration-300"
+              className="rounded-xl sm:rounded-2xl bg-[#121212] border border-white/10 overflow-hidden transition-all duration-300"
             >
               <button
                 onClick={() => toggleFaq(idx)}
-                className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                className="w-full flex items-center justify-between p-3.5 sm:p-4 text-left focus:outline-none"
               >
-                <span className="font-bold text-white text-base sm:text-lg pr-4">
+                <span className="font-bold text-white text-sm sm:text-base pr-3">
                   {item.question}
                 </span>
                 <div
-                  className={`w-8 h-8 rounded-full bg-[#1C1C1C] text-[#D4AF37] flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                  className={`w-7 h-7 rounded-full bg-[#1C1C1C] text-[#D4AF37] flex items-center justify-center shrink-0 transition-transform duration-300 ${
                     openIndex === idx ? "rotate-180 bg-[#D4AF37] text-[#050505]" : ""
                   }`}
                 >
-                  <ChevronDown className="w-5 h-5" />
+                  <ChevronDown className="w-4 h-4" />
                 </div>
               </button>
 
               {openIndex === idx && (
-                <div className="px-6 pb-6 pt-2 text-xs sm:text-sm text-[#A1A1AA] leading-relaxed border-t border-white/5 font-light">
+                <div className="px-3.5 sm:px-4 pb-3.5 pt-1 text-xs sm:text-sm text-[#A1A1AA] leading-relaxed border-t border-white/5 font-light">
                   {item.answer}
                 </div>
               )}

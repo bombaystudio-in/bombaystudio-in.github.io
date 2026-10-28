@@ -8,30 +8,30 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#050505] border-t border-white/10 text-[#A1A1AA] text-xs pt-16 pb-24 md:pb-12">
+    <footer className="bg-[#050505] border-t border-white/10 text-[#A1A1AA] text-xs pt-8 sm:pt-10 pb-16 md:pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-10">
           {/* Brand Column */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3">
             <Link href="/" className="inline-block" aria-label="Bombay Studio Home">
               <img
                 src="/logo.png"
                 alt="Bombay Studio"
-                className="h-16 sm:h-20 w-auto object-contain"
+                className="h-10 sm:h-12 w-auto object-contain"
               />
             </Link>
             <p className="text-xs font-light leading-relaxed max-w-sm text-[#A1A1AA]">
               Bombay Studio is a premier architectural and interior design firm in Mumbai, led by Principal Architect Ar. Aakhir Choudhary. Specialized in high-end residential apartments, villas, turnkey interiors &amp; boutique commercial spaces.
             </p>
-            <p className="text-[11px] font-serif tracking-widest text-[#D4AF37] uppercase">
+            <p className="text-[10px] font-serif tracking-widest text-[#D4AF37] uppercase">
               &quot;Design. Detail. Delivered.&quot;
             </p>
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center gap-2.5 pt-1">
               <a
                 href="https://www.instagram.com/bombaystudio/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-[#121212] hover:text-[#D4AF37] border border-white/10 transition-colors flex items-center gap-1.5 text-[11px]"
+                className="p-2 rounded-lg bg-[#121212] hover:text-[#D4AF37] border border-white/10 transition-colors flex items-center gap-1.5 text-[11px]"
                 aria-label="Instagram"
               >
                 <Globe className="w-3.5 h-3.5 text-[#D4AF37]" />
@@ -41,7 +41,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/bombay-studio-in/about/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-[#121212] hover:text-[#D4AF37] border border-white/10 transition-colors flex items-center gap-1.5 text-[11px]"
+                className="p-2 rounded-lg bg-[#121212] hover:text-[#D4AF37] border border-white/10 transition-colors flex items-center gap-1.5 text-[11px]"
                 aria-label="LinkedIn"
               >
                 <Share2 className="w-3.5 h-3.5 text-[#D4AF37]" />
@@ -95,12 +95,12 @@ export default function Footer() {
         </div>
 
         {/* Large Full-Width Brand Logo */}
-        <div className="pt-12 pb-16 border-t border-white/10 flex justify-center items-center">
+        <div className="pt-4 pb-6 border-t border-white/10 flex justify-center items-center">
           <Link href="/" className="w-full block group" aria-label="Bombay Studio Home">
             <img
               src="/logo.png"
               alt="Bombay Studio"
-              className="w-full max-h-48 sm:max-h-64 md:max-h-80 lg:max-h-96 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 mx-auto drop-shadow-2xl"
+              className="w-full max-h-16 sm:max-h-20 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 mx-auto drop-shadow-xl"
             />
           </Link>
         </div>
