@@ -1,53 +1,53 @@
 import HeroSection from "@/components/HeroSection";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import ServicesSection from "@/components/ServicesSection";
+import ProjectCategories from "@/components/ProjectCategories";
 import AboutSection from "@/components/AboutSection";
 import LegacySection from "@/components/LegacySection";
-import ServicesSection from "@/components/ServicesSection";
-import FeaturedProjects from "@/components/FeaturedProjects";
-import ProjectCategories from "@/components/ProjectCategories";
 import PortfolioGallery from "@/components/PortfolioGallery";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import TeamPreviewSection from "@/components/TeamPreviewSection";
-import FaqSection from "@/components/FaqSection";
 import CostCalculatorSection from "@/components/CostCalculatorSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
     <div className="space-y-0 overflow-x-hidden">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section - Brand Positioning & Consult CTAs */}
       <HeroSection />
 
-      {/* 2. Featured Projects Case Studies (Photography-led storytelling) */}
+      {/* 2. Featured Projects Teaser - Curated Residences (Links to /projects) */}
       <FeaturedProjects />
 
-      {/* 3. Why Choose Bombay Studio */}
-      <AboutSection />
-
-      {/* 4. The 30-Year Legacy & Evolutionary Timeline (1992 - Today) */}
-      <LegacySection />
-
-      {/* 5. Our Turnkey Services */}
+      {/* 3. Specialized Services Teaser - Turnkey Pillars (Links to /services) */}
       <ServicesSection />
 
-      {/* 6. Project Categories */}
+      {/* 4. Project Typologies Teaser - Categories Carousel (Links to /projects) */}
       <ProjectCategories />
 
-      {/* 7. Craftsmanship & Portfolio Gallery */}
+      {/* 5. Why Choose Bombay Studio - Core Studio Standards */}
+      <AboutSection />
+
+      {/* 6. 30-Year Origin Legacy Teaser (Links to /legacy) */}
+      <LegacySection isTeaser={true} />
+
+      {/* 7. Craftsmanship & Site Work Teaser (Links to /portfolio) */}
       <PortfolioGallery />
 
-      {/* 8. Testimonials & Google Reviews */}
-      <TestimonialsSection />
-
-      {/* 9. Interior Cost Calculator & Lead Capture */}
-      <CostCalculatorSection />
-
-      {/* 10. Studio Hierarchy & Team Preview */}
+      {/* 8. Studio Team & Leadership Teaser (Links to /team) */}
       <TeamPreviewSection />
 
-      {/* 11. Frequently Asked Questions */}
-      <FaqSection />
+      {/* 9. Interior Cost Calculator - Interactive Budget Estimator */}
+      <CostCalculatorSection />
 
-      {/* 12. Direct Contact Section */}
+      {/* 10. Direct Homeowner Stories Teaser (Links to /testimonials) */}
+      <TestimonialsSection />
+
+      {/* 11. FAQ Teaser - Top 3 Key Questions (Links to /faq) */}
+      <FaqSection limit={3} showAllLink={true} />
+
+      {/* 12. Direct Contact Section - Consultation & Studio Line */}
       <ContactSection />
     </div>
   );

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, ArrowRight } from "lucide-react";
 
 export interface FaqItem {
   question: string;
@@ -41,18 +42,25 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
 ];
 
-export default function FaqSection() {
+interface FaqSectionProps {
+  limit?: number;
+  showAllLink?: boolean;
+}
+
+export default function FaqSection({ limit, showAllLink = false }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFaq = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
 
+  const displayedFaqs = limit ? FAQ_ITEMS.slice(0, limit) : FAQ_ITEMS;
+
   return (
-    <section id="faq" className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative">
+    <section id="faq" className="py-12 sm:py-16 lg:py-24 bg-[#050505] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-5 sm:mb-6">
+        <div className="text-center mb-6 sm:mb-8">
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
             Frequently Asked <span className="gold-gradient-text">Questions</span>
           </h2>
@@ -62,21 +70,21 @@ export default function FaqSection() {
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-2 sm:space-y-2.5">
-          {FAQ_ITEMS.map((item, idx) => (
+        <div className="space-y-2.5">
+          {displayedFaqs.map((item, idx) => (
             <div
               key={idx}
-              className="rounded-xl sm:rounded-2xl bg-[#121212] border border-white/10 overflow-hidden transition-all duration-300"
+              className="rounded-2xl bg-[#0F0F0F] border border-white/10 overflow-hidden transition-all duration-300"
             >
               <button
                 onClick={() => toggleFaq(idx)}
-                className="w-full flex items-center justify-between p-3.5 sm:p-4 text-left focus:outline-none"
+                className="w-full flex items-center justify-between p-4 sm:p-5 text-left focus:outline-none"
               >
-                <span className="font-bold text-white text-sm sm:text-base pr-3">
+                <span className="font-bold text-white text-sm sm:text-base pr-3 leading-snug">
                   {item.question}
                 </span>
                 <div
-                  className={`w-7 h-7 rounded-full bg-[#1C1C1C] text-[#D4AF37] flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                  className={`w-7 h-7 rounded-full bg-[#181818] text-[#D4AF37] flex items-center justify-center shrink-0 transition-transform duration-300 ${
                     openIndex === idx ? "rotate-180 bg-[#D4AF37] text-[#050505]" : ""
                   }`}
                 >
@@ -85,13 +93,26 @@ export default function FaqSection() {
               </button>
 
               {openIndex === idx && (
-                <div className="px-3.5 sm:px-4 pb-3.5 pt-1 text-xs sm:text-sm text-[#A1A1AA] leading-relaxed border-t border-white/5 font-light">
+                <div className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-[#A1A1AA] leading-relaxed border-t border-white/5 font-light">
                   {item.answer}
                 </div>
               )}
             </div>
           ))}
         </div>
+
+        {/* Link to Full Dedicated FAQ Page */}
+        {showAllLink && (
+          <div className="text-center pt-8">
+            <Link
+              href="/faq"
+              className="inline-flex items-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider px-7 py-3 rounded-full font-semibold shadow-md"
+            >
+              <span>View All Questions &amp; Answers ({FAQ_ITEMS.length}+)</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

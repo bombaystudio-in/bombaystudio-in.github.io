@@ -1,8 +1,13 @@
 "use client";
 
-import { Hammer, Compass, Award, CheckCircle2, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { Hammer, Compass, Award, CheckCircle2, Sparkles, ArrowRight } from "lucide-react";
 
-export default function LegacySection() {
+interface LegacySectionProps {
+  isTeaser?: boolean;
+}
+
+export default function LegacySection({ isTeaser = false }: LegacySectionProps) {
   const timelineMilestones = [
     {
       step: "01",
@@ -108,101 +113,114 @@ export default function LegacySection() {
           </div>
         </div>
 
-        {/* Connected & Continued Evolutionary Timeline */}
-        <div className="mb-6 sm:mb-8">
-          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-1.5">
-              Evolutionary Timeline
-            </h3>
-            <p className="text-xs text-[#A1A1AA] font-light">
-              From heavy civil foundations in 1992 to the next-generation modern design studio today.
-            </p>
+        {/* If Teaser: Display Direct Call to Action to Dedicated Legacy Page */}
+        {isTeaser ? (
+          <div className="text-center pt-2 pb-2">
+            <Link
+              href="/legacy"
+              className="inline-flex items-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider px-7 py-3 rounded-full font-semibold shadow-md"
+            >
+              <span>Explore Full 30-Year Story &amp; Evolutionary Timeline</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
+        ) : (
+          /* Connected & Continued Evolutionary Timeline on Dedicated Page */
+          <div className="mb-6 sm:mb-8">
+            <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-1.5">
+                Evolutionary Timeline
+              </h3>
+              <p className="text-xs text-[#A1A1AA] font-light">
+                From heavy civil foundations in 1992 to the next-generation modern design studio today.
+              </p>
+            </div>
 
-          {/* Timeline Container with Connected Line */}
-          <div className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 relative z-10">
-              {timelineMilestones.map((item, idx) => {
-                const IconComponent = item.icon;
-                const isLast = idx === timelineMilestones.length - 1;
+            {/* Timeline Container with Connected Line */}
+            <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 relative z-10">
+                {timelineMilestones.map((item, idx) => {
+                  const IconComponent = item.icon;
+                  const isLast = idx === timelineMilestones.length - 1;
 
-                return (
-                  <div
-                    key={idx}
-                    className={`relative flex flex-col justify-between p-4 sm:p-5 rounded-xl sm:rounded-2xl transition-all duration-300 group hover:-translate-y-1 ${
-                      isLast
-                        ? "bg-[#121212] border-2 border-[#D4AF37]/60 shadow-[0_0_25px_rgba(212,175,55,0.15)]"
-                        : "bg-[#101010] border border-white/10 hover:border-[#D4AF37]/40"
-                    }`}
-                  >
-                    {/* Node Circle along the track */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2.5">
+                  return (
+                    <div
+                      key={idx}
+                      className={`relative flex flex-col justify-between p-4 sm:p-5 rounded-xl sm:rounded-2xl transition-all duration-300 group hover:-translate-y-1 ${
+                        isLast
+                          ? "bg-[#121212] border-2 border-[#D4AF37]/60 shadow-[0_0_25px_rgba(212,175,55,0.15)]"
+                          : "bg-[#101010] border border-white/10 hover:border-[#D4AF37]/40"
+                      }`}
+                    >
+                      {/* Node Circle along the track */}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2.5">
+                          <div
+                            className={`w-9 h-9 rounded-full flex items-center justify-center font-serif font-bold text-xs border-2 shadow-md transition-transform group-hover:scale-105 ${
+                              isLast
+                                ? "bg-[#D4AF37] text-[#050505] border-[#FCF6BA]"
+                                : "bg-[#1C1C1C] text-[#D4AF37] border-[#D4AF37]/40"
+                            }`}
+                          >
+                            {item.step}
+                          </div>
+                          <div>
+                            <p className="font-serif text-lg font-bold text-white leading-tight">
+                              {item.year}
+                            </p>
+                            <p className="text-[9px] text-[#A1A1AA] uppercase tracking-wider">
+                              {item.highlight}
+                            </p>
+                          </div>
+                        </div>
+
                         <div
-                          className={`w-9 h-9 rounded-full flex items-center justify-center font-serif font-bold text-xs border-2 shadow-md transition-transform group-hover:scale-105 ${
+                          className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
                             isLast
-                              ? "bg-[#D4AF37] text-[#050505] border-[#FCF6BA]"
-                              : "bg-[#1C1C1C] text-[#D4AF37] border-[#D4AF37]/40"
+                              ? "bg-[#D4AF37]/20 text-[#FCF6BA]"
+                              : "bg-[#1C1C1C] text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#050505]"
                           }`}
                         >
-                          {item.step}
-                        </div>
-                        <div>
-                          <p className="font-serif text-lg font-bold text-white leading-tight">
-                            {item.year}
-                          </p>
-                          <p className="text-[9px] text-[#A1A1AA] uppercase tracking-wider">
-                            {item.highlight}
-                          </p>
+                          <IconComponent className="w-4 h-4" />
                         </div>
                       </div>
 
-                      <div
-                        className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
-                          isLast
-                            ? "bg-[#D4AF37]/20 text-[#FCF6BA]"
-                            : "bg-[#1C1C1C] text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#050505]"
-                        }`}
-                      >
-                        <IconComponent className="w-4 h-4" />
+                      {/* Content */}
+                      <div className="space-y-2 mb-4">
+                        <span
+                          className={`inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${
+                            isLast
+                              ? "text-[#FCF6BA] bg-[#D4AF37]/20 border-[#D4AF37]/40"
+                              : "text-[#D4AF37] bg-[#D4AF37]/10 border-[#D4AF37]/20"
+                          }`}
+                        >
+                          {isLast && <Sparkles className="w-2.5 h-2.5 text-[#FCF6BA] animate-pulse" />}
+                          <span>{item.badge}</span>
+                        </span>
+
+                        <h4 className="text-sm font-bold text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
+                          {item.title}
+                        </h4>
+
+                        <p className="text-xs text-[#A1A1AA] leading-relaxed font-light">
+                          {item.desc}
+                        </p>
+                      </div>
+
+                      {/* Card Footer Lineage Link */}
+                      <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-medium">
+                        <div className="flex items-center gap-1.5 text-white/90">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                          <span>{item.stats}</span>
+                        </div>
                       </div>
                     </div>
-
-                    {/* Content */}
-                    <div className="space-y-2 mb-4">
-                      <span
-                        className={`inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${
-                          isLast
-                            ? "text-[#FCF6BA] bg-[#D4AF37]/20 border-[#D4AF37]/40"
-                            : "text-[#D4AF37] bg-[#D4AF37]/10 border-[#D4AF37]/20"
-                        }`}
-                      >
-                        {isLast && <Sparkles className="w-2.5 h-2.5 text-[#FCF6BA] animate-pulse" />}
-                        <span>{item.badge}</span>
-                      </span>
-
-                      <h4 className="text-sm font-bold text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
-                        {item.title}
-                      </h4>
-
-                      <p className="text-xs text-[#A1A1AA] leading-relaxed font-light">
-                        {item.desc}
-                      </p>
-                    </div>
-
-                    {/* Card Footer Lineage Link */}
-                    <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-medium">
-                      <div className="flex items-center gap-1.5 text-white/90">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
-                        <span>{item.stats}</span>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

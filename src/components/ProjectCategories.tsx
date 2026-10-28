@@ -120,7 +120,7 @@ export default function ProjectCategories() {
 
                   <div className="pt-2.5 border-t border-white/10 flex items-center justify-between">
                     <Link
-                      href="/#contact"
+                      href="/projects"
                       className="inline-flex items-center gap-1 text-[11px] font-bold text-[#D4AF37] group-hover:text-[#FCF6BA] transition-colors"
                     >
                       <span>Explore</span>
@@ -145,8 +145,8 @@ export default function ProjectCategories() {
         onNext={() => scroll("right")}
         prevLabel="Scroll Left"
         nextLabel="Scroll Right"
-        ctaText="Consult On Project"
-        ctaHref="/#contact"
+        ctaText="Explore All Project Typologies"
+        ctaHref="/projects"
       />
     </section>
   );

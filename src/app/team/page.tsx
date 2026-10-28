@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Sparkles, Phone, MessageSquare } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, MessageSquare } from "lucide-react";
 import TeamSection from "@/components/TeamSection";
+import LegacySection from "@/components/LegacySection";
 
 export const metadata: Metadata = {
   title: "Our Team & Studio Hierarchy | Bombay Studio Mumbai",
@@ -35,6 +36,9 @@ export default function TeamPage() {
           </p>
         </div>
       </div>
+
+      {/* 30-Year Origin Legacy & Evolutionary Timeline */}
+      <LegacySection />
 
       {/* The Complete 6-Level Team Section */}
       <TeamSection />

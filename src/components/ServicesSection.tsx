@@ -132,8 +132,8 @@ export default function ServicesSection() {
         onNext={() => scroll("right")}
         prevLabel="Scroll Left"
         nextLabel="Scroll Right"
-        ctaText="Consult On Your Project"
-        ctaHref="/#contact"
+        ctaText="View All Specialized Services"
+        ctaHref="/services"
       />
     </section>
   );
