@@ -113,7 +113,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative overflow-hidden"
+      className="py-12 sm:py-16 lg:py-24 bg-[#050505] relative overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
@@ -151,43 +151,36 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Testimonial Quote & Info */}
-            <div className="lg:col-span-8 space-y-3 sm:space-y-4">
+            <div className="lg:col-span-8 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] sm:text-xs font-mono text-[#D4AF37]">
-                  Verified Client Feedback
+                <span className="text-[11px] font-mono uppercase tracking-wider text-[#D4AF37]">
+                  Verified Homeowner Story
                 </span>
-                <span className="text-[10px] sm:text-xs font-mono text-[#A1A1AA]">
-                  {String(currentIndex + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
-                </span>
+                <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37]">
+                  <span>{String(currentIndex + 1).padStart(2, "0")}</span>
+                  <span className="w-6 h-[1px] bg-[#D4AF37]/40" />
+                  <span className="text-[#A1A1AA]">{String(testimonials.length).padStart(2, "0")}</span>
+                </div>
               </div>
 
               <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-[#D4AF37]/30" />
 
-              <p className="text-xs sm:text-sm lg:text-base text-white font-light leading-relaxed italic line-clamp-4 sm:line-clamp-none">
+              <p className="text-sm sm:text-base lg:text-lg text-white font-light leading-relaxed italic line-clamp-3">
                 &quot;{current.text}&quot;
               </p>
 
-              <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="pt-3 border-t border-white/10 flex items-center justify-between">
                 <div>
                   <h3 className="font-serif font-bold text-white text-base sm:text-lg">
                     {current.name}
                   </h3>
+                  <p className="text-[11px] text-[#A1A1AA]">Completed Residence · Mumbai</p>
                 </div>
 
-                {/* Dot navigation indicators */}
-                <div className="flex items-center gap-1.5 flex-wrap max-w-xs">
-                  {testimonials.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentIndex(idx)}
-                      className={`h-1.5 rounded-full transition-all ${
-                        currentIndex === idx
-                          ? "w-5 bg-[#D4AF37]"
-                          : "w-1.5 bg-white/20 hover:bg-white/40"
-                      }`}
-                      aria-label={`Jump to review ${idx + 1}`}
-                    />
-                  ))}
+                <div className="text-right">
+                  <span className="text-[10px] uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-2.5 py-1 rounded-full border border-[#D4AF37]/20 font-semibold">
+                    Turnkey Handover ✓
+                  </span>
                 </div>
               </div>
             </div>

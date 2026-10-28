@@ -1,7 +1,6 @@
 "use client";
 
-import { Hammer, Compass, Award, ShieldCheck, CheckCircle2, ArrowRight, Sparkles, ChevronRight } from "lucide-react";
-import Link from "next/link";
+import { Hammer, Compass, Award, CheckCircle2, Sparkles } from "lucide-react";
 
 export default function LegacySection() {
   const timelineMilestones = [
@@ -9,58 +8,39 @@ export default function LegacySection() {
       step: "01",
       year: "1992",
       stage: "Genesis & Civil Pedigree",
-      title: "The Foundation of Grit",
-      badge: "Noor Engineering Company (NEC)",
+      title: "The Beginning",
+      badge: "Noor Engineering Co.",
       icon: Hammer,
-      desc: "Arriving in Bombay with empty pockets and unmatched resolve, Mr. Kalamuddin Choudhary founded Noor Engineering Company. Through relentless site work, integrity, and raw precision, he established a trusted powerhouse in civil construction.",
-      stats: "Civil & Structural Roots",
-      highlight: "The Bedrock",
+      desc: "Founded on raw site precision and integrity, laying Mumbai's structural and civil foundations.",
+      stats: "Civil Roots",
+      highlight: "Foundation",
     },
     {
       step: "02",
       year: "2012",
       stage: "Architectural Evolution",
-      title: "Design Meets Structural Rigor",
-      badge: "NEC Studio",
+      title: "Design Meets Engineering",
+      badge: "Architecture Studio",
       icon: Compass,
-      desc: "Having grown up on dusty construction sites learning structural mechanics firsthand, Ar. Aakhir Choudhary expanded the family legacy into architecture and interiors—bridging heavy civil engineering with refined spatial aesthetics.",
-      stats: "Architecture & Interiors",
-      highlight: "The Expansion",
+      desc: "Ar. Aakhir Choudhary bridges heavy civil engineering with refined spatial aesthetics.",
+      stats: "Design Rigor",
+      highlight: "Evolution",
     },
     {
       step: "03",
       year: "Today",
       stage: "Next-Gen Evolution",
-      title: "Modern Spin-Off for the Next Generation",
-      badge: "Bombay Studio (Turnkey & Architecture)",
+      title: "Bombay Studio",
+      badge: "Turnkey Architecture",
       icon: Award,
-      desc: "Bombay Studio is the contemporary, design-forward spin-off tailored to the lifestyle, smart technology, and aesthetic demands of the next generation—merging 30+ years of civil construction heritage with bespoke turnkey luxury.",
-      stats: "200+ Next-Gen Projects",
-      highlight: "The Modern Era",
-    },
-  ];
-
-  const legacyPillars = [
-    {
-      title: "30+ Years of Field Mastery",
-      desc: "Three decades of deep construction knowledge—understanding how buildings are conceived, engineered, and built to last generations.",
-    },
-    {
-      title: "Next-Gen Modern Aesthetics",
-      desc: "Contemporary, minimalist, and smart-living spatial planning designed specifically for today's modern homeowners and tastemakers.",
-    },
-    {
-      title: "Foundation to Finish Accountability",
-      desc: "Unlike studios that only draw blueprints, we execute every masonry, plumbing, electrical, and bespoke joinery detail under one roof.",
-    },
-    {
-      title: "Zero Execution Guesswork",
-      desc: "Our architectural designs are backed by practical civil engineering, eliminating costly site mistakes and structural compromises.",
+      desc: "Bespoke turnkey luxury for modern living, backed by 30+ years of construction pedigree.",
+      stats: "Turnkey Mastery",
+      highlight: "Modern Era",
     },
   ];
 
   return (
-    <section id="legacy" className="py-8 sm:py-10 lg:py-12 bg-[#080808] relative overflow-hidden border-t border-white/10">
+    <section id="legacy" className="py-12 sm:py-16 lg:py-24 bg-[#080808] relative overflow-hidden border-t border-white/10">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 -left-40 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
@@ -87,10 +67,10 @@ export default function LegacySection() {
               </h3>
               <div className="space-y-2.5 text-xs sm:text-sm font-light leading-relaxed">
                 <p className="text-[#A1A1AA]">
-                  In 1992, <span className="text-white font-medium">Mr. Kalamuddin Choudhary</span> founded <strong className="text-white">Noor Engineering Company (NEC)</strong> on uncompromising site precision, civil integrity, and structural mastery across Mumbai.
+                  In 1992, <span className="text-white font-medium">Mr. Kalamuddin Choudhary</span> founded <strong className="text-white">Noor Engineering Company</strong> on uncompromising site precision and structural mastery across Mumbai.
                 </p>
                 <p className="text-[#A1A1AA]">
-                  Trained on active job sites before studying formal architecture, <span className="text-white font-medium">Ar. Aakhir Choudhary</span> expanded this foundation into <strong className="text-[#FCF6BA]">Bombay Studio</strong>—uniting three decades of civil engineering rigor with bespoke turnkey luxury.
+                  Today, <span className="text-white font-medium">Ar. Aakhir Choudhary</span> elevates that 30-year civil pedigree into <strong className="text-[#FCF6BA]">Bombay Studio</strong>—crafting refined, turnkey architectural residences.
                 </p>
               </div>
 

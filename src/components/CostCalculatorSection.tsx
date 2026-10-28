@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Calculator, CheckCircle2, Download, Loader2 } from "lucide-react";
+import { CheckCircle2, Download, Loader2 } from "lucide-react";
 
 export default function CostCalculatorSection() {
   const [bhk, setBhk] = useState<string>("2BHK");
@@ -21,6 +21,27 @@ export default function CostCalculatorSection() {
 
   const estimatedTotal = area * ratePerSqft[tier];
   const formattedEstimate = (estimatedTotal / 100000).toFixed(2);
+
+  const previewData: Record<string, { image: string; title: string }> = {
+    "1BHK": {
+      image: "/projects/vaibhav-beriwal-2bhk-malad/photo-01.jpg",
+      title: "1BHK Compact Luxury",
+    },
+    "2BHK": {
+      image: "/projects/jayant-joshi-2bhk-vileparle/photo-01.jpg",
+      title: "2BHK Turnkey Residence",
+    },
+    "3BHK": {
+      image: "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-01.jpg",
+      title: "3BHK Premium Living",
+    },
+    "4BHK / Villa": {
+      image: "/projects/ajinkya-kamble-4bhk-kandivali/photo-01.jpg",
+      title: "4BHK & Penthouse Villa",
+    },
+  };
+
+  const activePreview = previewData[bhk] || previewData["2BHK"];
 
   const triggerPdfDownload = () => {
     const link = document.createElement("a");
@@ -66,7 +87,7 @@ export default function CostCalculatorSection() {
   };
 
   return (
-    <section id="calculator" className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative">
+    <section id="calculator" className="py-12 sm:py-16 lg:py-24 bg-[#050505] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-8 gold-border-glow">
           {/* Centered Calculator Header */}
@@ -155,41 +176,55 @@ export default function CostCalculatorSection() {
               </div>
             </div>
 
-            {/* Right Output Box */}
-            <div className="lg:col-span-5 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#121212] border border-white/15 text-center space-y-3.5 shadow-2xl">
-              <span className="text-[#D4AF37] text-[10px] sm:text-xs font-semibold uppercase tracking-widest">
-                Estimated Project Budget
-              </span>
+            {/* Right Output Box with Live Project Image Preview */}
+            <div className="lg:col-span-5 p-5 sm:p-6 rounded-2xl bg-[#0F0F0F] border border-white/15 text-center space-y-4 shadow-2xl">
+              {/* Dynamic Project Preview Image */}
+              <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden border border-white/10 bg-black">
+                <img
+                  src={activePreview.image}
+                  alt={activePreview.title}
+                  className="w-full h-full object-cover transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-left">
+                  <span className="text-[11px] font-medium text-white truncate">
+                    {activePreview.title}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-wider text-[#D4AF37] font-semibold bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10 shrink-0">
+                    {tier}
+                  </span>
+                </div>
+              </div>
 
-              <div className="py-1">
+              <div>
+                <span className="text-[#D4AF37] text-[10px] sm:text-xs font-semibold uppercase tracking-widest block mb-1">
+                  Estimated Turnkey Budget
+                </span>
                 <span className="font-serif text-3xl sm:text-4xl font-bold text-white">
                   ₹{formattedEstimate} <span className="text-base font-sans font-normal text-[#D4AF37]">Lakhs*</span>
                 </span>
-                <p className="text-[10px] text-[#A1A1AA] font-light mt-1">
-                  Turnkey materials, civil execution &amp; architectural supervision.
-                </p>
               </div>
 
-              <div className="space-y-1 text-[11px] text-[#A1A1AA] text-left border-y border-white/10 py-2">
+              <div className="grid grid-cols-2 gap-2 text-[11px] text-[#A1A1AA] text-left border-y border-white/10 py-2.5">
                 <p className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>Penalty-Backed Handover</span>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+                  <span>On-Time Handover</span>
                 </p>
                 <p className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>100% Transparent Itemized BOQ</span>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+                  <span>Fixed Itemized BOQ</span>
                 </p>
               </div>
 
               {!leadSubmitted ? (
-                <form onSubmit={handleSubmit} className="space-y-2">
+                <form onSubmit={handleSubmit} className="space-y-2.5">
                   <input
                     type="text"
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Your Name"
-                    className="w-full px-3 py-2 rounded-lg bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#D4AF37]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#D4AF37]"
                   />
                   <input
                     type="tel"
@@ -197,7 +232,7 @@ export default function CostCalculatorSection() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="WhatsApp Number"
-                    className="w-full px-3 py-2 rounded-lg bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#D4AF37]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#050505] border border-white/15 text-white text-xs placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#D4AF37]"
                   />
                   {errorMessage && (
                     <p className="text-[10px] text-red-400 text-left">{errorMessage}</p>
@@ -205,23 +240,23 @@ export default function CostCalculatorSection() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-1.5 btn-gold-shiny text-xs uppercase tracking-wider py-2.5 rounded-lg transition-all disabled:opacity-50"
+                    className="w-full flex items-center justify-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider py-3 rounded-xl transition-all disabled:opacity-50 font-semibold"
                   >
                     {loading ? (
                       <Loader2 className="w-3.5 h-3.5 animate-spin" />
                     ) : (
                       <Download className="w-3.5 h-3.5" />
                     )}
-                    <span>{loading ? "Transmitting..." : "Get Detailed Estimate Breakdown"}</span>
+                    <span>{loading ? "Transmitting..." : "Get Detailed BOQ Breakdown"}</span>
                   </button>
                 </form>
               ) : (
-                <div className="p-3.5 rounded-lg bg-[#1C1C1C] text-white text-xs space-y-2 border border-[#D4AF37] shadow-xl">
+                <div className="p-4 rounded-xl bg-[#181818] text-white text-xs space-y-2 border border-[#D4AF37] shadow-xl">
                   <div className="flex items-center justify-center gap-1.5 text-[#D4AF37]">
                     <CheckCircle2 className="w-4 h-4" />
-                    <p className="font-bold text-xs sm:text-sm">Quote Submitted!</p>
+                    <p className="font-bold text-sm">Quote Submitted!</p>
                   </div>
-                  <p className="text-[10px] text-[#A1A1AA] text-center">
+                  <p className="text-[11px] text-[#A1A1AA] text-center">
                     Our team will WhatsApp your custom BOQ breakdown shortly.
                   </p>
                 </div>

@@ -25,45 +25,38 @@ export default function AboutSection() {
   const whyUsPillars = [
     {
       icon: Sparkles,
-      title: "Design Driven",
-      tag: "Proportion & Light",
-      desc: "Every layout is custom-tailored with architectural proportion, natural light simulation, and bespoke joinery.",
+      title: "Spaces You'll Never Want to Leave",
+      desc: "Custom-tailored spatial flow, natural light simulation, and bespoke joinery crafted for daily joy.",
     },
     {
       icon: ShieldCheck,
-      title: "Premium Materials",
-      tag: "Certified IS-710",
-      desc: "Authentic IS-710 marine plywood, imported Italian marble, Blum soft-close hardware & ICA paints.",
+      title: "Handpicked Luxury Materials",
+      desc: "Authentic IS-710 marine plywood, imported Italian marble, and Blum precision hardware built to last.",
     },
     {
       icon: DollarSign,
-      title: "Transparent Pricing",
-      tag: "Zero Cost Overruns",
-      desc: "Zero hidden costs. Itemized BOQ pricing locked before execution with guaranteed fixed budgets.",
+      title: "Total Price Transparency",
+      desc: "Locked itemized BOQ contracts with guaranteed fixed budgets and zero unexpected cost overruns.",
     },
     {
       icon: Clock,
-      title: "On Time Delivery",
-      tag: "Penalty-Backed",
-      desc: "Strict milestone tracking with penalty-backed handover dates written directly into our contracts.",
+      title: "Move In On Schedule",
+      desc: "Strict milestone tracking with penalty-backed handover dates written directly into your contract.",
     },
     {
       icon: Key,
-      title: "Complete Turnkey Solution",
-      tag: "Single Point Contact",
-      desc: "Single-source responsibility from civil demolition, plumbing & electrical to final furniture styling.",
+      title: "Move In Without the Stress",
+      desc: "Single-source turnkey accountability from initial civil demolition to final styling.",
     },
     {
       icon: UserCheck,
-      title: "Dedicated Founder Oversight",
-      tag: "Ar. Aakhir Choudhary",
-      desc: "Direct oversight on site with daily WhatsApp progress photo updates & architectural quality reports.",
+      title: "Direct Founder Oversight",
+      desc: "Ar. Aakhir Choudhary personally oversees on-site execution with transparent daily progress updates.",
     },
     {
       icon: ShieldCheck,
-      title: "10-Year Warranty",
-      tag: "Post-Handover Care",
-      desc: "Comprehensive 10-year structural warranty and complimentary 1-year periodic maintenance support.",
+      title: "Decade-Long Peace of Mind",
+      desc: "Comprehensive 10-year structural warranty backed by complimentary periodic maintenance.",
     },
   ];
 
@@ -71,14 +64,14 @@ export default function AboutSection() {
   const marqueePillars = [...whyUsPillars, ...whyUsPillars];
 
   return (
-    <section id="about" className="py-8 sm:py-10 lg:py-12 bg-[#050505] relative overflow-hidden">
+    <section id="about" className="py-10 sm:py-14 lg:py-16 bg-[#050505] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-5 sm:mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
             Why Choose <span className="gold-gradient-text">Bombay Studio?</span>
           </h2>
-          <p className="text-[#A1A1AA] text-xs sm:text-sm font-light mt-1.5 max-w-xl mx-auto">
+          <p className="text-[#A1A1AA] text-xs sm:text-sm font-light mt-2 max-w-xl mx-auto">
             Architectural rigor, certified materials, and fixed BOQ budgets for Mumbai&apos;s most discerning homeowners.
           </p>
         </div>
@@ -94,7 +87,7 @@ export default function AboutSection() {
             className="flex overflow-x-auto no-scrollbar py-2 cursor-grab active:cursor-grabbing"
           >
             <div
-              className="animate-marquee flex gap-4"
+              className="animate-marquee flex gap-5"
               style={{ animationPlayState: isPaused ? "paused" : undefined }}
             >
               {marqueePillars.map((pillar, idx) => {
@@ -102,29 +95,19 @@ export default function AboutSection() {
                 return (
                   <div
                     key={idx}
-                    className="w-[240px] sm:w-[280px] lg:w-[300px] shrink-0 p-4 sm:p-5 rounded-2xl bg-[#121212] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-[#D4AF37]/5 flex flex-col justify-between"
+                    className="w-[260px] sm:w-[290px] lg:w-[320px] shrink-0 p-5 sm:p-6 rounded-2xl bg-[#0F0F0F] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-[#D4AF37]/5 flex flex-col justify-between"
                   >
                     <div>
-                      <div className="flex items-center justify-between mb-3.5">
-                        <div className="w-10 h-10 rounded-xl bg-[#1C1C1C] text-[#D4AF37] flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#050505] transition-colors border border-white/5">
-                          <IconComp className="w-5 h-5" />
-                        </div>
-                        <span className="text-[9px] font-mono uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-2 py-0.5 rounded border border-[#D4AF37]/20">
-                          {pillar.tag}
-                        </span>
+                      <div className="w-10 h-10 rounded-xl bg-[#181818] text-[#D4AF37] flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#050505] transition-colors border border-white/5 mb-4">
+                        <IconComp className="w-5 h-5" />
                       </div>
 
-                      <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-[#D4AF37] transition-colors">
+                      <h3 className="text-base font-bold text-white mb-2 group-hover:text-[#D4AF37] transition-colors leading-snug">
                         {pillar.title}
                       </h3>
                       <p className="text-[#A1A1AA] text-xs leading-relaxed font-light">
                         {pillar.desc}
                       </p>
-                    </div>
-
-                    <div className="pt-3 mt-3 border-t border-white/5 flex items-center justify-between text-[10px] text-[#D4AF37] font-semibold">
-                      <span>Pillar #{(idx % whyUsPillars.length) + 1}</span>
-                      <span>Guaranteed Standard ✓</span>
                     </div>
                   </div>
                 );

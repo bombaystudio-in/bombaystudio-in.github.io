@@ -39,7 +39,7 @@ export default function LeadMagnetModal() {
       } else {
         setErrorMessage(data.error || "Something went wrong. Please try again.");
       }
-    } catch (err) {
+    } catch {
       setErrorMessage("Network error. Please check your connection.");
     } finally {
       setLoading(false);

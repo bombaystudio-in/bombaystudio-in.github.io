@@ -17,37 +17,37 @@ export default function Home() {
       {/* 1. Hero Section */}
       <HeroSection />
 
-      {/* 2. About Bombay Studio */}
-      <AboutSection />
-
-      {/* 3. The 30-Year Legacy & Story (1992 - Today) */}
-      <LegacySection />
-
-      {/* 4. Our Services */}
-      <ServicesSection />
-
-      {/* 4. Featured Projects Case Studies */}
+      {/* 2. Featured Projects Case Studies (Photography-led storytelling) */}
       <FeaturedProjects />
 
-      {/* 5. Project Categories */}
+      {/* 3. Why Choose Bombay Studio */}
+      <AboutSection />
+
+      {/* 4. The 30-Year Legacy & Evolutionary Timeline (1992 - Today) */}
+      <LegacySection />
+
+      {/* 5. Our Turnkey Services */}
+      <ServicesSection />
+
+      {/* 6. Project Categories */}
       <ProjectCategories />
 
-      {/* 6. Portfolio Gallery */}
+      {/* 7. Craftsmanship & Portfolio Gallery */}
       <PortfolioGallery />
 
-      {/* 7. Testimonials & Google Reviews */}
+      {/* 8. Testimonials & Google Reviews */}
       <TestimonialsSection />
+
+      {/* 9. Interior Cost Calculator & Lead Capture */}
+      <CostCalculatorSection />
 
       {/* 10. Studio Hierarchy & Team Preview */}
       <TeamPreviewSection />
 
-      {/* 11. Interior Cost Calculator & Lead Capture */}
-      <CostCalculatorSection />
-
-      {/* 12. FAQ */}
+      {/* 11. Frequently Asked Questions */}
       <FaqSection />
 
-      {/* 13. Contact Section */}
+      {/* 12. Direct Contact Section */}
       <ContactSection />
     </div>
   );

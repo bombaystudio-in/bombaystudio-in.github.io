@@ -32,7 +32,7 @@ export default function Header() {
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-[#050505]/95 backdrop-blur-md py-2 border-b border-white/10 shadow-2xl"
-            : "bg-[#050505]/60 backdrop-blur-sm py-2 sm:py-2.5"
+            : "bg-[#050505]/80 backdrop-blur-sm py-2"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -41,59 +41,44 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="Bombay Studio"
-              className="h-8 sm:h-9 md:h-10 w-auto object-contain group-hover:opacity-90 transition-opacity"
+              className="h-9 sm:h-10 md:h-11 w-auto object-contain group-hover:opacity-90 transition-opacity"
             />
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center gap-8 text-xs font-medium tracking-wide text-[#A1A1AA]">
-            <Link href="/#about" className="hover:text-white transition-colors">
-              About
+          {/* Streamlined Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-7 text-xs uppercase tracking-wider font-medium text-[#A1A1AA]">
+            <Link href="/projects" className="hover:text-white transition-colors">
+              Projects
             </Link>
             <Link href="/#services" className="hover:text-white transition-colors">
               Services
             </Link>
-            <Link href="/projects" className="hover:text-white transition-colors">
-              Projects
-            </Link>
-            <Link href="/portfolio" className="hover:text-white transition-colors">
-              Site Work
+            <Link href="/#legacy" className="hover:text-white transition-colors">
+              Legacy
             </Link>
             <Link href="/#calculator" className="hover:text-white transition-colors">
-              Cost Calculator
+              Calculator
             </Link>
-            <Link href="/team" className="hover:text-white transition-colors">
-              Team
+            <Link href="/#about" className="hover:text-white transition-colors">
+              About
             </Link>
-            <Link href="/#faq" className="hover:text-white transition-colors">
-              FAQ
-            </Link>
-            <a
-              href="/bombay-studio-portfolio.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#D4AF37] hover:underline flex items-center gap-1 font-semibold"
-            >
-              <FileText className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span>Brochure PDF</span>
-            </a>
           </nav>
 
-          {/* Header Action CTA */}
+          {/* Single High-Priority Header CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/#contact"
-              className="group flex items-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider px-6 py-2.5 rounded-full"
+              className="group flex items-center gap-1.5 btn-gold-shiny text-xs uppercase tracking-wider px-5 py-2.5 rounded-full font-semibold"
             >
-              <span>Contact Us</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <span>Book Consultation</span>
+              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 rounded-lg text-white hover:bg-[#1C1C1C] transition-colors"
+            className="lg:hidden p-2 rounded-lg text-white hover:bg-[#1C1C1C] transition-colors"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -102,32 +87,26 @@ export default function Header() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="xl:hidden bg-[#050505]/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 transition-all animate-fadeIn">
-            <div className="flex flex-col gap-4 font-medium text-base text-white">
-              <Link href="/#about" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
-                About
+          <div className="lg:hidden bg-[#050505]/98 backdrop-blur-xl border-b border-white/10 px-6 py-6 transition-all animate-fadeIn">
+            <div className="flex flex-col gap-4 font-medium text-sm uppercase tracking-wider text-white">
+              <Link href="/projects" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
+                Projects
               </Link>
-              <Link href="/#services" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
+              <Link href="/#services" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
                 Services
               </Link>
-              <Link href="/projects" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
-                Projects &amp; Case Studies
+              <Link href="/#legacy" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
+                Legacy
               </Link>
-              <Link href="/portfolio" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
-                Site Work &amp; Gallery
-              </Link>
-              <Link href="/#calculator" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
+              <Link href="/#calculator" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
                 Cost Calculator
               </Link>
-              <Link href="/team" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
-                Studio Team
+              <Link href="/#about" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
+                About
               </Link>
-              <Link href="/#faq" onClick={() => setMobileMenuOpen(false)} className="py-1 border-b border-white/5 hover:text-[#D4AF37]">
-                FAQ
-              </Link>
-              <a href="/bombay-studio-portfolio.pdf" target="_blank" rel="noopener noreferrer" className="py-1 border-b border-white/5 text-[#D4AF37] flex items-center gap-1.5 font-semibold">
+              <a href="/bombay-studio-portfolio.pdf" target="_blank" rel="noopener noreferrer" className="py-2 border-b border-white/5 text-[#D4AF37] flex items-center gap-1.5 font-semibold">
                 <FileText className="w-4 h-4 text-[#D4AF37]" />
-                <span>Presentation E-Brochure PDF ↗</span>
+                <span>Portfolio Brochure PDF ↗</span>
               </a>
             </div>
 
@@ -135,15 +114,15 @@ export default function Header() {
               <Link
                 href="/#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center btn-gold-shiny text-sm uppercase py-3 rounded-full"
+                className="w-full text-center btn-gold-shiny text-xs uppercase tracking-wider py-3 rounded-full font-semibold"
               >
-                Contact Us
+                Book Consultation
               </Link>
               <a
                 href="tel:+917070704181"
-                className="w-full text-center flex items-center justify-center gap-2 bg-[#121212] text-white font-semibold text-sm py-3 rounded-full border border-[#D4AF37]/50 shadow-lg shadow-[#D4AF37]/10"
+                className="w-full text-center flex items-center justify-center gap-2 bg-[#121212] text-white font-medium text-xs tracking-wide py-3 rounded-full border border-[#D4AF37]/40"
               >
-                <Phone className="w-4 h-4 text-[#D4AF37]" />
+                <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
                 <span>Direct Studio Line: +91 707070 4181</span>
               </a>
             </div>
