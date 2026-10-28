@@ -6,7 +6,6 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import ProjectCategories from "@/components/ProjectCategories";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import TeamPreviewSection from "@/components/TeamPreviewSection";
 import FaqSection from "@/components/FaqSection";
 import CostCalculatorSection from "@/components/CostCalculatorSection";
@@ -38,9 +37,6 @@ export default function Home() {
 
       {/* 7. Testimonials & Google Reviews */}
       <TestimonialsSection />
-
-      {/* 9. Before After Interactive Slider */}
-      <BeforeAfterSlider />
 
       {/* 10. Studio Hierarchy & Team Preview */}
       <TeamPreviewSection />

@@ -6,22 +6,21 @@ import { PROJECTS_DATA, Project } from "@/data/projects";
 import {
   ArrowLeft,
   MapPin,
-  Maximize2,
-  IndianRupee,
-  Clock,
-  Star,
+  Home,
+  Images,
   ArrowUpRight,
   Phone,
   ChevronLeft,
   ChevronRight,
   Play,
-  Images,
+  Quote,
 } from "lucide-react";
 
 const CATEGORIES = [
   "All",
-  "Luxury Homes",
-  "Apartments",
+  "4BHK",
+  "3BHK",
+  "2BHK",
 ] as const;
 
 export default function ProjectsPage() {
@@ -73,17 +72,17 @@ export default function ProjectsPage() {
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121212] border border-white/10 text-[#D4AF37] text-xs font-semibold uppercase tracking-wider mb-4">
             <Images className="w-3.5 h-3.5" />
-            <span>Complete Work Portfolio</span>
+            <span>Actual Completed Projects</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-            Delivered <span className="gold-gradient-text">Masterpieces</span>
+            Delivered <span className="gold-gradient-text">Residences</span>
           </h1>
           <p className="text-[#A1A1AA] text-base sm:text-lg font-light mt-4 leading-relaxed">
-            Explore authentic completed residences across Mumbai designed &amp; executed by Ar. Aakhir Choudhary and the Bombay Studio execution team.
+            Real photography from completed 2BHK, 3BHK, and 4BHK homes across Mumbai designed &amp; executed by Ar. Aakhir Choudhary and the Bombay Studio execution team.
           </p>
         </div>
 
-        {/* Category Filters */}
+        {/* Category Filters: 4BHK, 3BHK, 2BHK */}
         <div className="flex flex-wrap items-center gap-2.5 mb-12">
           {CATEGORIES.map((category) => {
             const isActive = activeCategory === category;
@@ -120,7 +119,7 @@ export default function ProjectsPage() {
           {filteredProjects.map((project, idx) => {
             const currentPhotoIdx = selectedPhotoIndex[project.id] || 0;
             const isVideoActive = showingVideo[project.id] || false;
-            const activeImageSrc = project.images[currentPhotoIdx] || project.afterImage;
+            const activeImageSrc = project.images[currentPhotoIdx] || project.images[0];
 
             return (
               <div
@@ -130,7 +129,6 @@ export default function ProjectsPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   {/* Left: Interactive Multi-Photo Visualizer */}
                   <div className="lg:col-span-7 space-y-3.5">
-                    {/* Main Active Viewer */}
                     <div className="relative h-[320px] sm:h-[440px] rounded-2xl overflow-hidden border border-white/15 bg-black group select-none">
                       {isVideoActive && project.walkthroughVideo ? (
                         <video
@@ -182,7 +180,7 @@ export default function ProjectsPage() {
                           {project.typology}
                         </span>
                         <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md text-white text-xs font-semibold border border-white/15">
-                          {project.category}
+                          {project.location}
                         </span>
                       </div>
 
@@ -200,7 +198,7 @@ export default function ProjectsPage() {
                     <div className="space-y-2">
                       <div className="flex items-center justify-between text-xs text-[#A1A1AA] px-1">
                         <span className="font-semibold text-white">
-                          Gallery ({project.images.length} Photos)
+                          Handover Gallery ({project.images.length} Photos)
                         </span>
                         {project.walkthroughVideo && (
                           <button
@@ -249,11 +247,10 @@ export default function ProjectsPage() {
                     <div>
                       <div className="flex items-center justify-between">
                         <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-                          Case Study #{idx + 1}
+                          Residence #{idx + 1}
                         </span>
-                        {/* Typology Badge replaces redundant timeline */}
                         <span className="text-xs text-[#FCF6BA] font-semibold bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
-                          {project.typology}
+                          {project.typology} Completed
                         </span>
                       </div>
                       <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">
@@ -261,7 +258,7 @@ export default function ProjectsPage() {
                       </h2>
                     </div>
 
-                    {/* Specs Grid - Timeline is exclusively placed here */}
+                    {/* Factual Specs Grid */}
                     <div className="grid grid-cols-2 gap-3.5 p-4 rounded-xl bg-[#121212] border border-white/10 text-xs">
                       <div className="flex items-center gap-2.5">
                         <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0" />
@@ -272,83 +269,45 @@ export default function ProjectsPage() {
                       </div>
 
                       <div className="flex items-center gap-2.5">
-                        <Maximize2 className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                        <Home className="w-4 h-4 text-[#D4AF37] shrink-0" />
                         <div>
-                          <p className="text-[#A1A1AA]">Carpet Area</p>
-                          <p className="text-white font-semibold">{project.area}</p>
+                          <p className="text-[#A1A1AA]">Typology</p>
+                          <p className="text-white font-semibold">{project.typology}</p>
                         </div>
                       </div>
 
                       <div className="flex items-center gap-2.5">
-                        <IndianRupee className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                        <Images className="w-4 h-4 text-[#D4AF37] shrink-0" />
                         <div>
-                          <p className="text-[#A1A1AA]">Execution Budget</p>
-                          <p className="text-white font-semibold text-[#D4AF37]">{project.budget}</p>
+                          <p className="text-[#A1A1AA]">Gallery</p>
+                          <p className="text-white font-semibold">{project.photoCount} Handover Photos</p>
                         </div>
                       </div>
 
                       <div className="flex items-center gap-2.5">
-                        <Clock className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                        <span className="w-4 h-4 text-[#D4AF37] font-bold shrink-0">✓</span>
                         <div>
-                          <p className="text-[#A1A1AA]">Turnkey Timeline</p>
-                          <p className="text-white font-semibold">{project.timeline}</p>
+                          <p className="text-[#A1A1AA]">Execution</p>
+                          <p className="text-white font-semibold">Completed Site</p>
                         </div>
                       </div>
                     </div>
 
-                    {/* Scope of Work */}
-                    <div className="text-xs space-y-1.5">
-                      <p className="text-[#A1A1AA] font-semibold uppercase tracking-wider text-[10px]">
-                        Scope of Execution
-                      </p>
-                      <p className="text-white font-light leading-relaxed">
-                        {project.scopeOfWork}
-                      </p>
-                    </div>
-
-                    {/* Design Style & Materials */}
-                    <div className="space-y-3 pt-2 border-t border-white/10 text-xs">
-                      <div>
-                        <span className="text-[#A1A1AA]">Design Style: </span>
-                        <span className="text-white font-medium">{project.designStyle}</span>
-                      </div>
-                      <div>
-                        <span className="text-[#A1A1AA]">Key Materials: </span>
-                        <div className="flex flex-wrap gap-1.5 mt-1.5">
-                          {project.materialPalette.map((material, mIdx) => (
-                            <span
-                              key={mIdx}
-                              className="px-2.5 py-1 rounded-md bg-[#18181B] text-[#D4AF37] border border-white/10 text-[11px] font-medium"
-                            >
-                              {material}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Client Review Quote */}
+                    {/* Client Review (Only for clients from folder) */}
                     {project.clientReview && (
                       <div className="p-4 rounded-xl bg-[#09090B] border border-[#D4AF37]/20 relative overflow-hidden">
                         <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center gap-1 text-[#D4AF37]">
-                            {[...Array(project.clientReview.rating)].map((_, i) => (
-                              <Star key={i} className="w-3.5 h-3.5 fill-[#D4AF37]" />
-                            ))}
-                          </div>
-                          <span className="text-[10px] text-[#A1A1AA] font-mono">
-                            Verified Client Feedback
+                          <span className="text-[10px] text-[#D4AF37] font-mono uppercase tracking-wider">
+                            Verified Client Review
                           </span>
                         </div>
+                        <Quote className="w-5 h-5 text-[#D4AF37]/40 mb-1" />
                         <p className="text-xs text-[#E4E4E7] italic font-light leading-relaxed">
                           &quot;{project.clientReview.quote}&quot;
                         </p>
                         <div className="mt-3 pt-2 border-t border-white/10">
                           <p className="text-xs font-semibold text-white">
-                            {project.clientReview.name}
-                          </p>
-                          <p className="text-[11px] text-[#A1A1AA]">
-                            {project.clientReview.role}
+                            — {project.clientReview.name}
                           </p>
                         </div>
                       </div>
@@ -364,10 +323,10 @@ export default function ProjectsPage() {
         <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#18181B] via-[#09090B] to-[#18181B] border border-[#D4AF37]/30 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto space-y-4">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-              Want a Similar Handover For <span className="gold-gradient-text">Your Residence?</span>
+              Planning Interior Work For <span className="gold-gradient-text">Your Mumbai Home?</span>
             </h2>
             <p className="text-[#A1A1AA] text-sm font-light">
-              Speak directly with Ar. Aakhir Choudhary to discuss your layout, 3D concept designs, and precise turnkey BOQ.
+              Connect directly with Ar. Aakhir Choudhary to discuss your layout, material selection, and turnkey execution.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
