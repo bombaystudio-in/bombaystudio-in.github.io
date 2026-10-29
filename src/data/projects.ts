@@ -66,7 +66,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/amey-chavan-3bhk-andheri/photo-07.jpg",
       "/projects/amey-chavan-3bhk-andheri/photo-08.jpg",
       "/projects/amey-chavan-3bhk-andheri/photo-09.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Anchor - Mayuri Malandkar",
+      "image": "/testimonials/anchor-mayuri-malandkar.jpg",
+      "occupation": "Media Anchor",
+      "quote": "Working with Bombay Studio was a very smooth experience. We didn’t have to follow up on every small thing, whether it was material selection, design decisions, or work updates. The team managed everything well and kept things moving on time. It made the entire process stress-free for us, and we’re really happy with the final result!"
+    }
   },
   {
     "id": "amit-ranka-3bhk-vileparle",
@@ -88,7 +94,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/amit-ranka-3bhk-vileparle/photo-10.jpg",
       "/projects/amit-ranka-3bhk-vileparle/photo-11.jpg",
       "/projects/amit-ranka-3bhk-vileparle/photo-12.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Adv. Mitesh Pabari",
+      "image": "/testimonials/adv-mitesh-pabari.jpg",
+      "occupation": "Advocate",
+      "quote": "Choosing Bombay Studio for our interior work was a good decision. The team understood our requirements and made the whole process smooth. Architect Aakhir Choudhary was helpful and guided us whenever we needed support. We are happy with how everything turned out!"
+    }
   },
   {
     "id": "arunima-panchal-4bhk-mulund",
@@ -110,7 +122,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/arunima-panchal-4bhk-mulund/photo-10.jpg",
       "/projects/arunima-panchal-4bhk-mulund/photo-11.jpg",
       "/projects/arunima-panchal-4bhk-mulund/photo-12.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Adv. Praveen Singh",
+      "image": "/testimonials/adv-praveen-singh.jpg",
+      "occupation": "Advocate",
+      "quote": "Bombay Studio did a wonderful job understanding our needs and turning our ideas into reality. The team was helpful, and everything was explained clearly at every stage. Architect Aakhir Choudhary made sure the work was planned well. Overall, a smooth and satisfying experience!"
+    }
   },
   {
     "id": "ashwini-dingare-4bhk-sewri",
@@ -136,7 +154,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/ashwini-dingare-4bhk-sewri/photo-14.jpg",
       "/projects/ashwini-dingare-4bhk-sewri/photo-15.jpg",
       "/projects/ashwini-dingare-4bhk-sewri/photo-16.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Actress - Isha & Vikas Talwar",
+      "image": "/testimonials/actress-isha-vikas-talwar.jpg",
+      "occupation": "Celebrity Homeowners",
+      "quote": "Honestly, the whole experience with Bombay Studio was quite smooth. We had a lot of things to manage, but the team took care of most of the details, from selecting materials to getting the work done. We didn’t have to keep chasing people for updates, which made things much easier for us. We’re really happy with our home and the way everything came together!"
+    }
   },
   {
     "id": "dr-sunil-mhatre-3bhk-wadala",
@@ -171,7 +195,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/dr-sunil-mhatre-3bhk-wadala/photo-23.jpg",
       "/projects/dr-sunil-mhatre-3bhk-wadala/photo-24.jpg",
       "/projects/dr-sunil-mhatre-3bhk-wadala/photo-25.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Actress Adrija Sinha",
+      "image": "/testimonials/actress-adrija-sinha.jpg",
+      "occupation": "Actress",
+      "quote": "Bombay Studio made our home look beautiful and comfortable, just the way we wanted. The team was patient with our suggestions and helped us make the right choices. The overall experience was smooth, and we are really happy with the final outcome!"
+    }
   },
   {
     "id": "gautam-trivedi-3bhk-bandra",
@@ -199,7 +229,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/gautam-trivedi-3bhk-bandra/photo-16.jpg",
       "/projects/gautam-trivedi-3bhk-bandra/photo-17.jpg",
       "/projects/gautam-trivedi-3bhk-bandra/photo-18.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Swaraj Singh",
+      "image": "/testimonials/swaraj-singh-producer.jpg",
+      "occupation": "Film Producer",
+      "quote": "Bombay Studio did a great job with our interiors. The team was friendly, understood our requirements, and was always ready to help with our suggestions. The work was done with good attention to detail, and we are really happy with how our space has turned out!"
+    }
   },
   {
     "id": "jayant-joshi-2bhk-vileparle",
@@ -249,7 +285,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/nitin-pendbhaje-3bhk-goregaon/photo-11.jpg",
       "/projects/nitin-pendbhaje-3bhk-goregaon/photo-12.jpg",
       "/projects/nitin-pendbhaje-3bhk-goregaon/photo-13.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Chintan Shah",
+      "image": "/testimonials/chintan-shah.jpg",
+      "occupation": "Homeowner",
+      "quote": "Bombay Studio made the entire interior work much easier for us. From planning and material selection to the final finishing, everything was handled in a well-organised way. We didn’t have to get involved in every small detail, and the team kept things moving smoothly. Overall, it was a great experience working with them!"
+    }
   },
   {
     "id": "ujesh-shetty-3bhk-hiranandani-powai",
@@ -267,7 +309,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-06.jpg",
       "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-07.jpg",
       "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-08.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Dharmesh Dixit",
+      "image": "/testimonials/dharmesh-dixit.jpg",
+      "occupation": "Homeowner",
+      "quote": "One thing we really liked about working with Bombay Studio was the timely handover. The team planned the work properly and kept things moving without unnecessary delays. Whenever we had any questions, they were available to help. The entire process was well managed, and we’re happy with the quality of the work!"
+    }
   },
   {
     "id": "vaibhav-beriwal-2bhk-malad",
@@ -290,7 +338,13 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/vaibhav-beriwal-2bhk-malad/photo-11.jpg",
       "/projects/vaibhav-beriwal-2bhk-malad/photo-12.jpg",
       "/projects/vaibhav-beriwal-2bhk-malad/photo-13.jpg"
-    ]
+    ],
+    "clientReview": {
+      "name": "Hardit Malhi",
+      "image": "/testimonials/hardit-malhi.jpg",
+      "occupation": "Homeowner",
+      "quote": "Really happy with the work done by Bombay Studio. The team was supportive, easy to communicate with, and always ready to help with our ideas. They paid attention to the small details and made the space look beautiful. Overall, a very good experience!"
+    }
   },
   {
     "id": "yash-jain-3bhk-charni-road",
@@ -308,10 +362,15 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/yash-jain-3bhk-charni-road/photo-06.jpg",
       "/projects/yash-jain-3bhk-charni-road/photo-07.jpg"
     ],
-    "walkthroughVideo": "/projects/yash-jain-3bhk-charni-road/walkthrough.mp4"
+    "walkthroughVideo": "/projects/yash-jain-3bhk-charni-road/walkthrough.mp4",
+    "clientReview": {
+      "name": "Rohit Pathak",
+      "image": "/testimonials/rohit-pathak.jpg",
+      "occupation": "Homeowner",
+      "quote": "What I liked most about Bombay Studio was the way they handled the entire project. We got proper guidance at every stage, and the team helped us make decisions without any confusion. The work was well coordinated, and the finishing was done nicely. Overall, a smooth experience and a result we’re happy with!"
+    }
   }
 ];
-
 
 export function getProjectById(id: string): Project | undefined {
   return PROJECTS_DATA.find((p) => p.id === id);
