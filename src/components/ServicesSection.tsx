@@ -91,34 +91,28 @@ export default function ServicesSection() {
             style={{ animationPlayState: isPaused ? "paused" : undefined }}
           >
             {marqueeServices.map((service, index) => (
-              <div
+              <Link
                 key={`${service.id}-${index}`}
-                className="w-[250px] sm:w-[280px] lg:w-[300px] shrink-0 p-5 rounded-2xl bg-[#0F0F0F] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1 hover:shadow-xl hover:shadow-[#D4AF37]/10"
+                href={`/services/${service.id}`}
+                className="w-[200px] sm:w-[220px] lg:w-[240px] shrink-0 p-5 rounded-2xl bg-[#0F0F0F] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1 hover:shadow-xl hover:shadow-[#D4AF37]/10"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#181818] text-[#D4AF37] flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#050505] transition-colors border border-white/5 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#181818] text-[#D4AF37] flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#050505] transition-colors border border-white/5 mb-3.5">
                     {getIcon(service.iconName)}
                   </div>
 
-                  <h3 className="text-base font-bold text-white mb-2 group-hover:text-[#D4AF37] transition-colors leading-snug">
+                  <h3 className="text-base font-bold text-white group-hover:text-[#D4AF37] transition-colors leading-snug">
                     {service.title}
                   </h3>
-
-                  <p className="text-[#A1A1AA] text-xs leading-relaxed font-light line-clamp-3">
-                    {service.shortDesc}
-                  </p>
                 </div>
 
-                <div className="pt-4 mt-3 border-t border-white/5">
-                  <Link
-                    href="/#contact"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4AF37] group-hover:text-[#FCF6BA] transition-colors"
-                  >
-                    <span>Enquire On Service</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Link>
+                <div className="pt-3 mt-4 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-xs font-semibold text-[#D4AF37] group-hover:text-[#FCF6BA] transition-colors">
+                    Explore Service
+                  </span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:text-[#FCF6BA] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

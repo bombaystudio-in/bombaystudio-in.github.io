@@ -170,3 +170,20 @@
   scrollbar-width: none;
 }
 
+/* Auto-advancing Section Timer Progress Bar */
+@keyframes timerProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.animate-timer-progress {
+  transform-origin: left;
+  animation: timerProgress var(--progress-duration, 4000ms) linear forwards;
+  will-change: transform;
+}
+
+

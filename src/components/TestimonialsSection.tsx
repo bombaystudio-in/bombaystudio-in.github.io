@@ -53,12 +53,16 @@ export default function TestimonialsSection() {
 
         {/* Testimonial Card Slider */}
         <div className="rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-8 border border-white/10 shadow-2xl relative overflow-hidden">
-          {!isPaused && (
+          <div className="absolute top-0 left-0 right-0 h-1 bg-white/10 z-20 overflow-hidden">
             <div
               key={currentIndex}
-              className="absolute top-0 left-0 h-1 bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] animate-timer-progress w-full opacity-85 z-20 shadow-[0_0_8px_#D4AF37]"
+              className="h-full bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] w-full animate-timer-progress opacity-90 shadow-[0_0_10px_#D4AF37]"
+              style={{
+                "--progress-duration": "6500ms",
+                animationPlayState: isPaused ? "paused" : "running",
+              } as React.CSSProperties}
             />
-          )}
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
             {/* Client Portrait */}

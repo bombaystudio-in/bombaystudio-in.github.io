@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, CheckCircle2, Building2, Compass, KeyRound, Sun, Hammer, Home, Briefcase, Armchair, Eye, ClipboardCheck, BarChart3 } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  CheckCircle2,
+  Building2,
+  Compass,
+  KeyRound,
+  Sun,
+  Hammer,
+  Home,
+  Briefcase,
+  Armchair,
+  Eye,
+  ClipboardCheck,
+  BarChart3,
+} from "lucide-react";
 import { SERVICES_DATA } from "@/data/services";
 
 export const metadata: Metadata = {
@@ -84,12 +99,14 @@ export default function ServicesPage() {
                   </span>
                 </div>
 
-                <h2 className="text-lg sm:text-xl font-serif font-bold text-white mb-2.5 group-hover:text-[#D4AF37] transition-colors">
-                  {service.title}
-                </h2>
+                <Link href={`/services/${service.id}`}>
+                  <h2 className="text-lg sm:text-xl font-serif font-bold text-white mb-2.5 group-hover:text-[#D4AF37] transition-colors">
+                    {service.title}
+                  </h2>
+                </Link>
 
                 <p className="text-xs sm:text-sm text-[#A1A1AA] font-light leading-relaxed mb-6">
-                  {service.fullDesc}
+                  {service.tagline}
                 </p>
 
                 <div className="space-y-2 mb-6 border-t border-white/5 pt-4">
@@ -102,13 +119,20 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/10">
+              <div className="pt-4 border-t border-white/10 flex items-center gap-2.5">
+                <Link
+                  href={`/services/${service.id}`}
+                  className="flex-1 text-center py-2.5 rounded-xl bg-[#D4AF37] hover:bg-white text-black text-xs font-bold uppercase tracking-wider transition-colors inline-flex items-center justify-center gap-1.5 shadow-md shadow-[#D4AF37]/10"
+                >
+                  <span>Explore Service</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
                 <Link
                   href="/#contact"
-                  className="w-full text-center py-2.5 rounded-xl bg-[#181818] hover:bg-[#D4AF37] text-white hover:text-[#050505] text-xs font-semibold uppercase tracking-wider transition-colors inline-flex items-center justify-center gap-1.5"
+                  className="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white text-xs font-semibold uppercase tracking-wider transition-colors inline-flex items-center justify-center border border-white/10"
+                  title="Enquire directly"
                 >
-                  <span>Consult On This Service</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  Enquire
                 </Link>
               </div>
             </div>

@@ -80,14 +80,16 @@ export default function FeaturedProjects() {
 
         {/* Highlighted Master Project Case Study */}
         <div className="mb-6 rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-8 border border-white/15 shadow-2xl relative overflow-hidden">
-          {!isPaused && (
-            <div className="absolute top-0 left-0 right-0 h-1 bg-white/5 z-20">
-              <div
-                key={`${currentIndex}-${activePhotoIdx}`}
-                className="h-full bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] w-full animate-timer-progress opacity-85 shadow-[0_0_8px_#D4AF37]"
-              />
-            </div>
-          )}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-white/10 z-20 overflow-hidden">
+            <div
+              key={`${currentIndex}-${activePhotoIdx}`}
+              className="h-full bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] w-full animate-timer-progress opacity-90 shadow-[0_0_10px_#D4AF37]"
+              style={{
+                "--progress-duration": "4000ms",
+                animationPlayState: isPaused ? "paused" : "running",
+              } as React.CSSProperties}
+            />
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             {/* Visual Viewer - Maximum View without default image clutter */}
