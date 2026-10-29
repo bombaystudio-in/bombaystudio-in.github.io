@@ -1,43 +1,68 @@
 export interface FaqItem {
   question: string;
   answer: string;
-  category: "General" | "Cost & Payment" | "Process & Timeline" | "Materials";
+  category: "Pricing & BOQ" | "Process & Timeline" | "Materials & Warranty" | "Civil & Approvals";
 }
 
 export const FAQS_DATA: FaqItem[] = [
   {
-    category: "Cost & Payment",
-    question: "How does Bombay Studio charge for design & execution?",
-    answer: "We offer transparent, fixed-price contracts. For design-only packages, we charge per sq.ft. For Turnkey projects, we provide an itemized BOQ (Bill of Quantities) with guaranteed zero hidden costs.",
+    category: "Pricing & BOQ",
+    question: "What is the typical per-sq.ft. cost of turnkey interior design and execution in Mumbai?",
+    answer:
+      "Turnkey interior design and build execution in Mumbai typically ranges from ₹1,400 to ₹3,500+ per sq.ft. of carpet area depending on material specifications. Standard premium 2BHKs range from ₹14L to ₹18L, while luxury 3BHKs and 4BHKs featuring Italian marble, fluted veneer joinery, and smart automation range from ₹22L to ₹45L+. All projects receive an itemized, line-by-line quote before site work begins.",
+  },
+  {
+    category: "Pricing & BOQ",
+    question: "How does your itemized BOQ prevent mid-project price escalations?",
+    answer:
+      "The most common pain point in Mumbai interior execution is cost overrun. Bombay Studio eliminates this through our locked Bill of Quantities (BOQ). Every material grade, hardware brand, square footage, and rate is documented and contractually frozen before civil demolition begins. We adhere to a strict Zero Unforeseen Escalation commitment: the price you sign is the price you pay.",
   },
   {
     category: "Process & Timeline",
-    question: "What is the typical project execution timeline?",
-    answer: "A typical 2BHK takes 60 to 90 days from site approval, while 3BHKs and Luxury Villas take 90 to 150 days. We commit to a penalty-backed on-time handover policy.",
+    question: "How long does a complete interior project take, and what is your penalty policy?",
+    answer:
+      "Average execution timelines are 60–75 working days for a 2BHK and 75–90 working days for a 3BHK or 4BHK apartment from 3D design freeze. Because delays cost you rent and double EMIs, our contracts include milestone penalty clauses: if we delay handover without client-approved scope changes, we compensate you contractually for each day of delay.",
   },
   {
-    category: "Cost & Payment",
-    question: "What is the payment schedule for Turnkey Interior projects?",
-    answer: "Payments are divided into milestone stages: 10% Booking & 3D Design, 30% Factory Material Order, 30% Site Masonry/Electrical completion, 25% Modular Cabinet Assembly, and 5% Final Quality Audit Handover.",
+    category: "Process & Timeline",
+    question: "How can busy homeowners or NRI clients monitor daily site progress remotely?",
+    answer:
+      "You never have to run to the site. We establish a dedicated studio WhatsApp group and digital dashboard for your residence. Your dedicated project head uploads high-resolution 360° photos and milestone video walkthroughs daily, alongside weekly Gantt chart progress reports. Senior architectural decisions and material selections can be signed off digitally from anywhere in the world.",
   },
   {
-    category: "General",
-    question: "Do you offer a post-completion warranty?",
-    answer: "Yes! We provide a 10-Year Structural & Modular Warranty alongside complimentary 12-month routine maintenance checkups.",
+    category: "Materials & Warranty",
+    question: "How do you protect modular carpentry from Mumbai's humidity, monsoon moisture, and termites?",
+    answer:
+      "Mumbai's coastal air and heavy monsoons cause inferior commercial plywood to warp and rot within 24 months. We strictly mandate IS-710 certified Boiling Water Proof (BWP) calibrated marine plywood for all carcass cabinetry, anti-termite chemical soil & wall barriers, and water-resistant synthetic edge banding. Kitchen base units and vanity cabinets receive marine-grade stone or composite pedestals to guard against floor wash moisture.",
   },
   {
-    category: "Materials",
-    question: "Which wood and hardware brands do you use?",
-    answer: "We exclusively use Greenlam / Century 710 BWP Marine Plywood, Hafele / Blum soft-close German hardware, and Asian Paints PU / ICA Italian lacquer finishes.",
+    category: "Materials & Warranty",
+    question: "Which specific wood, hardware, and paint brands do you specify in your agreements?",
+    answer:
+      "We partner only with globally certified Tier-1 manufacturers: Greenlam / CenturyPly IS-710 BWP Marine Plywood, Austrian Blum (Tandembox & Aventos) and German Hafele soft-close architectural hardware, Saint-Gobain extra-clear glass, and Asian Paints Royale Aspira or Italian ICA zero-VOC polyurethane finishes. All manufacturer invoices and authenticity certificates are handed over to you on key handover.",
   },
   {
-    category: "General",
-    question: "Can Bombay Studio handle partial or full home renovation?",
-    answer: "Absolutely. We specialize in gut renovations—demolishing old layouts, updating plumbing & electrical, soundproofing, and delivering brand-new luxury interiors.",
+    category: "Civil & Approvals",
+    question: "Do you handle civil demolition, plumbing, electrical, and society NOC approvals?",
+    answer:
+      "Yes. As a full-service design-build architecture studio, we handle complete single-source civil execution: layout reconfigurations, non-loadbearing wall demolitions, concealed copper wiring (Polycab/Finolex), PPR/CPVC plumbing overhaul, tile waterproofing, and gypsum false ceilings. We also assist you with housing society documentation, architectural drawings for society NOCs, and municipal compliance.",
   },
   {
-    category: "General",
-    question: "Do you take on projects outside Mumbai?",
-    answer: "Yes, we handle select luxury residential and hospitality projects across Thane, Navi Mumbai, Alibaug, Pune, Goa, and major Indian metro cities.",
+    category: "Civil & Approvals",
+    question: "Are your architectural layouts compliant with 5-element Vastu Shastra principles?",
+    answer:
+      "Yes. Principal Architect Ar. Aakhir Choudhary integrates scientific 5-element Vastu principles (Brahmasthan clearance, kitchen fire element placement in the South-East, master bed alignment, and natural daylight flow) directly into the preliminary architectural CAD space planning, harmonizing traditional energy balance with contemporary luxury aesthetics.",
+  },
+  {
+    category: "Materials & Warranty",
+    question: "What exactly is covered under your 10-Year Structural Warranty?",
+    answer:
+      "We provide a 10-Year Comprehensive Structural Warranty covering marine plywood delamination, core bonding failures, termite damage, and structural false ceiling integrity, alongside manufacturer warranties on all Blum/Hafele hardware. Every project also includes complimentary 6-month and 12-month post-handover routine maintenance checkups.",
+  },
+  {
+    category: "Process & Timeline",
+    question: "Do you execute commercial workspaces and private villas outside Mumbai?",
+    answer:
+      "Yes. While Mumbai is our primary operational base, we frequently execute private countryside villas in Alibaug and Lonavala, high-end residential duplexes in Thane and Navi Mumbai, and corporate executive headquarters across Western India with dedicated on-site project management squads.",
   },
 ];

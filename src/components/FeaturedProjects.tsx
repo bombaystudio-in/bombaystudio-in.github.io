@@ -7,7 +7,9 @@ import {
   MapPin,
   Home,
   ArrowUpRight,
-  Quote,
+  ChevronLeft,
+  ChevronRight,
+  Images,
 } from "lucide-react";
 import CarouselControls from "./CarouselControls";
 
@@ -28,16 +30,33 @@ export default function FeaturedProjects() {
     setActivePhotoIdx(0);
   }, []);
 
+  // Auto-cycle through the project's photos, advancing to next project on completion
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
-      nextProject();
-    }, 6500);
+      setActivePhotoIdx((prev) => {
+        if (prev + 1 >= selectedProject.images.length) {
+          nextProject();
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, [isPaused, nextProject]);
+  }, [isPaused, selectedProject.images.length, nextProject]);
 
   const activeImage = selectedProject.images[activePhotoIdx] || selectedProject.images[0];
+
+  const nextPhoto = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setActivePhotoIdx((prev) => (prev + 1) % selectedProject.images.length);
+  };
+
+  const prevPhoto = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setActivePhotoIdx((prev) => (prev - 1 + selectedProject.images.length) % selectedProject.images.length);
+  };
 
   return (
     <section
@@ -50,81 +69,101 @@ export default function FeaturedProjects() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-5 sm:mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
-            Featured <span className="gold-gradient-text">Residences</span>
+            Featured <span className="gold-gradient-text">Projects</span>
           </h2>
           <p className="text-[#A1A1AA] text-xs sm:text-sm max-w-xl font-light mt-1.5 mx-auto">
-            Authentic completed homes across Mumbai from our active project portfolio.
+            Authentic turnkey projects delivered across Mumbai by Ar. Aakhir Choudhary and team.
           </p>
         </div>
 
         {/* Highlighted Master Project Case Study */}
-        <div className="mb-5 sm:mb-6 rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-7 border border-white/15 shadow-2xl relative overflow-hidden">
+        <div className="mb-6 rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-8 border border-white/15 shadow-2xl relative overflow-hidden">
           {!isPaused && (
-            <div className="absolute top-0 left-0 right-0 h-1 bg-white/5">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-white/5 z-20">
               <div
-                key={currentIndex}
-                className="h-full bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#D4AF37] w-full animate-timer-progress opacity-70"
+                key={`${currentIndex}-${activePhotoIdx}`}
+                className="h-full bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] w-full animate-timer-progress opacity-85 shadow-[0_0_8px_#D4AF37]"
               />
             </div>
           )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
-            {/* Visual Viewer */}
-            <div className="lg:col-span-7 space-y-3">
-              <div className="relative aspect-[16/10] sm:aspect-[16/9] max-h-[40svh] sm:max-h-[46svh] w-full rounded-2xl overflow-hidden border border-white/10 bg-black shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            {/* Visual Viewer - Maximum View without default image clutter */}
+            <div className="lg:col-span-7">
+              <div className="relative aspect-[16/10] sm:aspect-[16/9] max-h-[46svh] sm:max-h-[52svh] w-full rounded-2xl overflow-hidden border border-white/10 bg-black shadow-xl group select-none">
                 <img
                   src={activeImage}
                   alt={selectedProject.name}
                   className="w-full h-full object-cover transition-all duration-700 filter contrast-105"
                 />
-                <div className="absolute top-3 left-3 flex gap-2">
-                  <span className="px-3 py-1 rounded-full bg-[#050505]/80 backdrop-blur-md text-[#D4AF37] text-[10px] sm:text-xs font-semibold uppercase tracking-wider border border-white/10">
-                    {selectedProject.typology}
-                  </span>
-                  <span className="px-3 py-1 rounded-full bg-[#050505]/80 backdrop-blur-md text-white text-[10px] sm:text-xs font-medium border border-white/10">
-                    {selectedProject.location}
-                  </span>
-                </div>
-                <div className="absolute bottom-3 right-3">
-                  <span className="px-2.5 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-[#A1A1AA] border border-white/10">
-                    Photo {activePhotoIdx + 1} of {selectedProject.images.length}
-                  </span>
-                </div>
-              </div>
 
-              {/* Photo selector thumbnails */}
-              <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin scrollbar-thumb-white/20">
-                {selectedProject.images.map((img, pIdx) => (
-                  <button
-                    key={pIdx}
-                    onClick={() => setActivePhotoIdx(pIdx)}
-                    className={`relative shrink-0 w-12 h-12 rounded-xl overflow-hidden border transition-all cursor-pointer ${
-                      activePhotoIdx === pIdx
-                        ? "border-[#D4AF37] scale-105 shadow-md shadow-[#D4AF37]/20"
-                        : "border-white/10 opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
-                  </button>
-                ))}
+                {/* Left/Right Navigation Chevrons inside image */}
+                {selectedProject.images.length > 1 && (
+                  <div className="absolute inset-y-0 inset-x-3 flex items-center justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button
+                      onClick={prevPhoto}
+                      className="pointer-events-auto p-2 rounded-full bg-black/70 hover:bg-[#D4AF37] hover:text-black text-white border border-white/20 transition-all backdrop-blur-md cursor-pointer"
+                      aria-label="Previous Photo"
+                    >
+                      <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </button>
+                    <button
+                      onClick={nextPhoto}
+                      className="pointer-events-auto p-2 rounded-full bg-black/70 hover:bg-[#D4AF37] hover:text-black text-white border border-white/20 transition-all backdrop-blur-md cursor-pointer"
+                      aria-label="Next Photo"
+                    >
+                      <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </button>
+                  </div>
+                )}
+
+                {/* Clean Photo Count Badge */}
+                <div className="absolute bottom-3 right-3 pointer-events-none">
+                  <span className="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-[10px] font-mono text-[#D4AF37] border border-white/10">
+                    {activePhotoIdx + 1} / {selectedProject.images.length} Photos
+                  </span>
+                </div>
+
+                {/* Progressive Disclosure: Floating Preview Dock (Revealed ONLY on hover) */}
+                <div className="absolute bottom-3 left-3 right-24 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+                  <div className="flex items-center gap-1.5 overflow-x-auto p-1 rounded-xl bg-black/85 backdrop-blur-md border border-white/15 scrollbar-none max-w-fit">
+                    {selectedProject.images.map((img, pIdx) => (
+                      <button
+                        key={pIdx}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setActivePhotoIdx(pIdx);
+                        }}
+                        className={`relative shrink-0 w-8 h-8 rounded-lg overflow-hidden border transition-all cursor-pointer ${
+                          activePhotoIdx === pIdx
+                            ? "border-[#D4AF37] scale-110 shadow-sm shadow-[#D4AF37]/30"
+                            : "border-white/10 opacity-60 hover:opacity-100"
+                        }`}
+                        title={`View photo ${pIdx + 1}`}
+                      >
+                        <img src={img} alt="" className="w-full h-full object-cover" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Project Details */}
-            <div className="lg:col-span-5 space-y-4">
+            <div className="lg:col-span-5 space-y-5">
               <div>
                 <span className="text-[#D4AF37] text-[11px] font-semibold uppercase tracking-widest">
-                  Featured Residence · Mumbai
+                  Featured Project · Mumbai
                 </span>
                 <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">
                   {selectedProject.name}
                 </h3>
               </div>
 
-              {/* Verified Specs Grid */}
-              <div className="grid grid-cols-2 gap-3 p-3.5 rounded-2xl bg-[#101010] border border-white/10 text-xs">
+              {/* Verified Specs Grid (Primary information source, not duplicated on image) */}
+              <div className="grid grid-cols-2 gap-3.5 p-4 rounded-2xl bg-[#101010] border border-white/10 text-xs">
                 <div className="flex items-center gap-2.5">
                   <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0" />
                   <div>
@@ -140,28 +179,31 @@ export default function FeaturedProjects() {
                     <p className="text-white font-medium text-xs">{selectedProject.typology}</p>
                   </div>
                 </div>
+
+                <div className="flex items-center gap-2.5">
+                  <Images className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                  <div>
+                    <p className="text-[#A1A1AA] text-[10px] uppercase tracking-wider">Gallery</p>
+                    <p className="text-white font-medium text-xs">{selectedProject.photoCount} Actual Photos</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2.5">
+                  <span className="w-4 h-4 text-[#D4AF37] font-bold shrink-0">✓</span>
+                  <div>
+                    <p className="text-[#A1A1AA] text-[10px] uppercase tracking-wider">Execution</p>
+                    <p className="text-white font-medium text-xs">Turnkey Completed</p>
+                  </div>
+                </div>
               </div>
 
-              {/* Verified Client Review (if present) */}
-              {selectedProject.clientReview && (
-                <div className="p-3.5 rounded-2xl bg-[#09090B] border border-white/10 relative">
-                  <Quote className="w-4 h-4 text-[#D4AF37]/50 mb-1" />
-                  <p className="text-xs text-[#E4E4E7] italic font-light line-clamp-2 leading-relaxed">
-                    &quot;{selectedProject.clientReview.quote}&quot;
-                  </p>
-                  <p className="mt-1.5 text-[11px] font-semibold text-[#D4AF37]">
-                    — {selectedProject.clientReview.name}
-                  </p>
-                </div>
-              )}
-
-              {/* Direct Action Link */}
-              <div className="pt-1">
+              {/* Direct Action Link to Dedicated Case Study */}
+              <div className="pt-2">
                 <Link
-                  href="/projects"
-                  className="w-full text-center btn-gold-shiny text-xs uppercase tracking-wider py-3 rounded-full inline-flex items-center justify-center gap-2 font-semibold shadow-md"
+                  href={`/projects/${selectedProject.id}`}
+                  className="w-full text-center btn-gold-shiny text-xs uppercase tracking-wider py-3.5 rounded-full inline-flex items-center justify-center gap-2 font-semibold shadow-md"
                 >
-                  <span>View Case Study &amp; Gallery</span>
+                  <span>View Project &amp; Full Gallery</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -192,9 +234,6 @@ export default function FeaturedProjects() {
                     alt={project.name}
                     className="w-full h-full object-cover"
                   />
-                  <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[9px] font-semibold bg-black/80 text-[#D4AF37] border border-white/10">
-                    {project.typology}
-                  </span>
                 </div>
                 <h4 className="text-[11px] sm:text-xs font-semibold text-white truncate">{project.name}</h4>
                 <p className="text-[10px] text-[#A1A1AA] flex items-center gap-1 mt-0.5 truncate">
@@ -212,9 +251,9 @@ export default function FeaturedProjects() {
           onTogglePause={() => setIsPaused((prev) => !prev)}
           onPrev={prevProject}
           onNext={nextProject}
-          prevLabel="Previous Residence"
-          nextLabel="Next Residence"
-          ctaText="View All 12 Residences"
+          prevLabel="Previous Project"
+          nextLabel="Next Project"
+          ctaText="See All Projects"
           ctaHref="/projects"
         />
       </div>

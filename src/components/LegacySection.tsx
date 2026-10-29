@@ -44,6 +44,54 @@ export default function LegacySection({ isTeaser = false }: LegacySectionProps) 
     },
   ];
 
+  if (isTeaser) {
+    return (
+      <section id="legacy" className="py-12 sm:py-16 bg-[#080808] relative overflow-hidden border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="rounded-2xl sm:rounded-3xl glass-panel p-6 sm:p-10 border border-white/15 max-w-4xl mx-auto text-center space-y-6">
+            <span className="text-[#D4AF37] text-xs font-mono uppercase tracking-widest font-semibold">
+              Heritage &amp; Civil Pedigree
+            </span>
+
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-white">
+              About <span className="gold-gradient-text">Bombay Studio</span>
+            </h2>
+
+            <p className="text-[#A1A1AA] text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto">
+              Founded in 1992 by Mr. Kalamuddin Choudhary as Noor Engineering Company and elevated by Principal Architect Ar. Aakhir Choudhary, Bombay Studio bridges three decades of structural site precision with bespoke turnkey luxury interior design.
+            </p>
+
+            {/* Heritage Stats Strip */}
+            <div className="grid grid-cols-3 gap-3 max-w-lg mx-auto pt-2">
+              <div className="p-3 rounded-2xl bg-[#121212] border border-white/5">
+                <p className="font-serif text-xl sm:text-2xl font-bold gold-gradient-text">1992</p>
+                <p className="text-[10px] text-[#A1A1AA] uppercase tracking-wider font-mono">Est. In Mumbai</p>
+              </div>
+              <div className="p-3 rounded-2xl bg-[#121212] border border-white/5">
+                <p className="font-serif text-xl sm:text-2xl font-bold text-white">200+</p>
+                <p className="text-[10px] text-[#A1A1AA] uppercase tracking-wider font-mono">Completed Sites</p>
+              </div>
+              <div className="p-3 rounded-2xl bg-[#121212] border border-white/5">
+                <p className="font-serif text-xl sm:text-2xl font-bold gold-gradient-text">30+ Yrs</p>
+                <p className="text-[10px] text-[#A1A1AA] uppercase tracking-wider font-mono">Civil Pedigree</p>
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider px-8 py-3.5 rounded-full font-semibold shadow-md"
+              >
+                <span>Read Full Studio Story &amp; Founder Legacy</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="legacy" className="py-12 sm:py-16 lg:py-24 bg-[#080808] relative overflow-hidden border-t border-white/10">
       {/* Background ambient lighting */}

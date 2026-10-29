@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Quote } from "lucide-react";
+import Link from "next/link";
+import { Quote, ArrowUpRight } from "lucide-react";
 import CarouselControls from "./CarouselControls";
 import { TESTIMONIALS_DATA } from "@/data/testimonials";
 
@@ -55,7 +56,7 @@ export default function TestimonialsSection() {
           {!isPaused && (
             <div
               key={currentIndex}
-              className="absolute top-0 left-0 h-1 bg-gradient-to-r from-[#D4AF37] to-[#FCF6BA] animate-timer-progress w-full opacity-60"
+              className="absolute top-0 left-0 h-1 bg-gradient-to-r from-[#D4AF37] via-[#FCF6BA] to-[#D4AF37] animate-timer-progress w-full opacity-85 z-20 shadow-[0_0_8px_#D4AF37]"
             />
           )}
 
@@ -91,16 +92,32 @@ export default function TestimonialsSection() {
 
               <div className="pt-3 border-t border-white/10 flex items-center justify-between">
                 <div>
-                  <h3 className="font-serif font-bold text-white text-base sm:text-lg">
-                    {current.name}
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-serif font-bold text-white text-base sm:text-lg">
+                      {current.name}
+                    </h3>
+                    {current.occupation && (
+                      <span className="text-[10px] font-mono text-[#D4AF37] border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-2 py-0.5 rounded-full">
+                        {current.occupation}
+                      </span>
+                    )}
+                  </div>
                   <p className="text-[11px] text-[#A1A1AA]">Completed Residence · Mumbai</p>
                 </div>
 
-                <div className="text-right">
+                <div className="text-right flex flex-col items-end gap-1.5">
                   <span className="text-[10px] uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-2.5 py-1 rounded-full border border-[#D4AF37]/20 font-semibold">
                     Turnkey Handover ✓
                   </span>
+                  {current.projectId && (
+                    <Link
+                      href={`/projects/${current.projectId}`}
+                      className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#FCF6BA] hover:text-[#D4AF37] transition-colors group/link"
+                    >
+                      <span>View Delivered Project</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

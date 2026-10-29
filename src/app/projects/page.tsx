@@ -2,18 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { PROJECTS_DATA, Project } from "@/data/projects";
+import { PROJECTS_DATA } from "@/data/projects";
 import {
   ArrowLeft,
   MapPin,
-  Home,
   Images,
   ArrowUpRight,
   Phone,
-  ChevronLeft,
-  ChevronRight,
   Play,
-  Quote,
+  CheckCircle2,
 } from "lucide-react";
 
 const CATEGORIES = [
@@ -25,34 +22,11 @@ const CATEGORIES = [
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<Record<string, number>>({});
-  const [showingVideo, setShowingVideo] = useState<Record<string, boolean>>({});
 
   const filteredProjects =
     activeCategory === "All"
       ? PROJECTS_DATA
       : PROJECTS_DATA.filter((p) => p.category === activeCategory);
-
-  const setPhoto = (projectId: string, index: number) => {
-    setShowingVideo((prev) => ({ ...prev, [projectId]: false }));
-    setSelectedPhotoIndex((prev) => ({ ...prev, [projectId]: index }));
-  };
-
-  const nextPhoto = (project: Project) => {
-    const current = selectedPhotoIndex[project.id] || 0;
-    const nextIdx = (current + 1) % project.images.length;
-    setPhoto(project.id, nextIdx);
-  };
-
-  const prevPhoto = (project: Project) => {
-    const current = selectedPhotoIndex[project.id] || 0;
-    const prevIdx = (current - 1 + project.images.length) % project.images.length;
-    setPhoto(project.id, prevIdx);
-  };
-
-  const toggleVideo = (projectId: string) => {
-    setShowingVideo((prev) => ({ ...prev, [projectId]: !prev[projectId] }));
-  };
 
   return (
     <main className="min-h-screen bg-[#050505] text-white pt-10 pb-24">
@@ -72,18 +46,18 @@ export default function ProjectsPage() {
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121212] border border-white/10 text-[#D4AF37] text-xs font-semibold uppercase tracking-wider mb-4">
             <Images className="w-3.5 h-3.5" />
-            <span>Actual Completed Projects</span>
+            <span>Turnkey Portfolio</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-            Delivered <span className="gold-gradient-text">Residences</span>
+            Delivered <span className="gold-gradient-text">Projects</span>
           </h1>
           <p className="text-[#A1A1AA] text-base sm:text-lg font-light mt-4 leading-relaxed">
-            Real photography from completed 2BHK, 3BHK, and 4BHK homes across Mumbai designed &amp; executed by Ar. Aakhir Choudhary and the Bombay Studio execution team.
+            Real photography from completed residential and commercial projects across Mumbai. Select a project below to view its dedicated photo gallery and verified handover details.
           </p>
         </div>
 
         {/* Category Filters: 4BHK, 3BHK, 2BHK */}
-        <div className="flex flex-wrap items-center gap-2.5 mb-12">
+        <div className="flex flex-wrap items-center gap-2.5 mb-10">
           {CATEGORIES.map((category) => {
             const isActive = activeCategory === category;
             const count =
@@ -103,7 +77,7 @@ export default function ProjectsPage() {
               >
                 <span>{category}</span>
                 <span
-                  className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono ${
                     isActive ? "bg-black/20 text-[#050505]" : "bg-white/10 text-[#A1A1AA]"
                   }`}
                 >
@@ -114,216 +88,79 @@ export default function ProjectsPage() {
           })}
         </div>
 
-        {/* Projects Detailed List */}
-        <div className="space-y-14">
-          {filteredProjects.map((project, idx) => {
-            const currentPhotoIdx = selectedPhotoIndex[project.id] || 0;
-            const isVideoActive = showingVideo[project.id] || false;
-            const activeImageSrc = project.images[currentPhotoIdx] || project.images[0];
+        {/* Projects Catalog Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {filteredProjects.map((project) => (
+            <Link
+              key={project.id}
+              href={`/projects/${project.id}`}
+              className="group rounded-2xl bg-[#0F0F0F] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 overflow-hidden flex flex-col justify-between hover:-translate-y-1.5 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/10"
+            >
+              {/* Cover Image Container - Clean Maximum View Without Redundant Overlays */}
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-black">
+                <img
+                  src={project.images[0]}
+                  alt={project.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
-            return (
-              <div
-                key={project.id}
-                className="rounded-2xl sm:rounded-3xl glass-panel p-4 sm:p-6 lg:p-7 border border-white/15 shadow-2xl hover:border-[#D4AF37]/40 transition-all duration-500"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-                  {/* Left: Interactive Multi-Photo Visualizer */}
-                  <div className="lg:col-span-7 space-y-3">
-                    <div className="relative aspect-[16/10] sm:aspect-[16/9] max-h-[36svh] sm:max-h-[44svh] w-full rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 bg-black group select-none">
-                      {isVideoActive && project.walkthroughVideo ? (
-                        <video
-                          src={project.walkthroughVideo}
-                          controls
-                          autoPlay
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <>
-                          <img
-                            src={activeImageSrc}
-                            alt={`${project.name} - Photo ${currentPhotoIdx + 1}`}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition-all duration-500 filter contrast-105"
-                          />
-
-                          {/* Navigation Chevrons on Main Image */}
-                          {project.images.length > 1 && (
-                            <div className="absolute inset-y-0 inset-x-2 flex items-center justify-between pointer-events-none">
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  prevPhoto(project);
-                                }}
-                                className="pointer-events-auto p-2 rounded-full bg-black/60 hover:bg-[#D4AF37] hover:text-black text-white border border-white/20 transition-all backdrop-blur-md"
-                                aria-label="Previous Photo"
-                              >
-                                <ChevronLeft className="w-5 h-5" />
-                              </button>
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  nextPhoto(project);
-                                }}
-                                className="pointer-events-auto p-2 rounded-full bg-black/60 hover:bg-[#D4AF37] hover:text-black text-white border border-white/20 transition-all backdrop-blur-md"
-                                aria-label="Next Photo"
-                              >
-                                <ChevronRight className="w-5 h-5" />
-                              </button>
-                            </div>
-                          )}
-                        </>
-                      )}
-
-                      {/* Header Badges */}
-                      <div className="absolute top-4 left-4 flex gap-2 flex-wrap pointer-events-none">
-                        <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md text-[#D4AF37] text-xs font-semibold uppercase tracking-wider border border-white/15">
-                          {project.typology}
-                        </span>
-                        <span className="px-3 py-1 rounded-full bg-[#050505]/90 backdrop-blur-md text-white text-xs font-semibold border border-white/15">
-                          {project.location}
-                        </span>
-                      </div>
-
-                      {/* Photo Index Badge */}
-                      <div className="absolute bottom-4 right-4 pointer-events-none">
-                        <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-xs font-mono text-[#A1A1AA] border border-white/10">
-                          {isVideoActive
-                            ? "Walkthrough Video"
-                            : `${currentPhotoIdx + 1} / ${project.images.length} Photos`}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Interactive Thumbnail Gallery Strip */}
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-xs text-[#A1A1AA] px-1">
-                        <span className="font-semibold text-white">
-                          Handover Gallery ({project.images.length} Photos)
-                        </span>
-                        {project.walkthroughVideo && (
-                          <button
-                            onClick={() => toggleVideo(project.id)}
-                            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs font-semibold transition-all ${
-                              isVideoActive
-                                ? "bg-[#D4AF37] text-black border-[#D4AF37]"
-                                : "bg-[#121212] text-[#D4AF37] border-[#D4AF37]/30 hover:border-[#D4AF37]"
-                            }`}
-                          >
-                            <Play className="w-3 h-3 fill-current" />
-                            <span>{isVideoActive ? "View Photos" : "Watch Walkthrough Tour"}</span>
-                          </button>
-                        )}
-                      </div>
-
-                      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-white/20">
-                        {project.images.map((imgSrc, imgIdx) => {
-                          const isSelected = !isVideoActive && currentPhotoIdx === imgIdx;
-                          return (
-                            <button
-                              key={imgIdx}
-                              onClick={() => setPhoto(project.id, imgIdx)}
-                              className={`relative shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${
-                                isSelected
-                                  ? "border-[#D4AF37] scale-105 shadow-md shadow-[#D4AF37]/20"
-                                  : "border-white/10 opacity-60 hover:opacity-100 hover:border-white/30"
-                              }`}
-                              title={`View Photo ${imgIdx + 1}`}
-                            >
-                              <img
-                                src={imgSrc}
-                                alt={`Thumbnail ${imgIdx + 1}`}
-                                loading="lazy"
-                                className="w-full h-full object-cover"
-                              />
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
+                {/* Subtle Video Tour Pill (Only shown if video exists) */}
+                {project.walkthroughVideo && (
+                  <div className="absolute top-3 left-3 pointer-events-none">
+                    <span className="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-white text-[11px] font-semibold border border-white/15 flex items-center gap-1.5">
+                      <Play className="w-3 h-3 fill-current text-[#D4AF37]" />
+                      <span>Video Tour</span>
+                    </span>
                   </div>
+                )}
 
-                  {/* Right: Detailed Specifications & Review */}
-                  <div className="lg:col-span-5 space-y-6">
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-[#D4AF37] text-xs font-semibold uppercase tracking-widest">
-                          Residence #{idx + 1}
-                        </span>
-                        <span className="text-xs text-[#FCF6BA] font-semibold bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
-                          {project.typology} Completed
-                        </span>
-                      </div>
-                      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">
-                        {project.name}
-                      </h2>
-                    </div>
-
-                    {/* Factual Specs Grid */}
-                    <div className="grid grid-cols-2 gap-3.5 p-4 rounded-xl bg-[#121212] border border-white/10 text-xs">
-                      <div className="flex items-center gap-2.5">
-                        <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                        <div>
-                          <p className="text-[#A1A1AA]">Location</p>
-                          <p className="text-white font-semibold">{project.location}</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2.5">
-                        <Home className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                        <div>
-                          <p className="text-[#A1A1AA]">Typology</p>
-                          <p className="text-white font-semibold">{project.typology}</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2.5">
-                        <Images className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                        <div>
-                          <p className="text-[#A1A1AA]">Gallery</p>
-                          <p className="text-white font-semibold">{project.photoCount} Handover Photos</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2.5">
-                        <span className="w-4 h-4 text-[#D4AF37] font-bold shrink-0">✓</span>
-                        <div>
-                          <p className="text-[#A1A1AA]">Execution</p>
-                          <p className="text-white font-semibold">Completed Site</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Client Review (Only for clients from folder) */}
-                    {project.clientReview && (
-                      <div className="p-4 rounded-xl bg-[#09090B] border border-[#D4AF37]/20 relative overflow-hidden">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-[10px] text-[#D4AF37] font-mono uppercase tracking-wider">
-                            Verified Client Review
-                          </span>
-                        </div>
-                        <Quote className="w-5 h-5 text-[#D4AF37]/40 mb-1" />
-                        <p className="text-xs text-[#E4E4E7] italic font-light leading-relaxed">
-                          &quot;{project.clientReview.quote}&quot;
-                        </p>
-                        <div className="mt-3 pt-2 border-t border-white/10">
-                          <p className="text-xs font-semibold text-white">
-                            — {project.clientReview.name}
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                {/* Photo Count Tag */}
+                <div className="absolute bottom-3 right-3 pointer-events-none">
+                  <span className="text-[10px] font-mono text-[#D4AF37] bg-black/80 px-2.5 py-1 rounded-full border border-white/10 backdrop-blur-md">
+                    {project.photoCount} Photos
+                  </span>
                 </div>
               </div>
-            );
-          })}
+
+              {/* Card Body - Single Source of Truth for Project Metadata */}
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2 text-[11px] text-[#A1A1AA] uppercase tracking-wider font-mono">
+                    <span className="text-[#D4AF37] font-semibold">{project.typology}</span>
+                    <span>·</span>
+                    <span className="flex items-center gap-1">
+                      <MapPin className="w-3 h-3 text-[#D4AF37]" />
+                      <span>{project.location}</span>
+                    </span>
+                  </div>
+
+                  <h2 className="font-serif font-bold text-lg sm:text-xl text-white group-hover:text-[#D4AF37] transition-colors pt-0.5">
+                    {project.name}
+                  </h2>
+                </div>
+
+                <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-[#D4AF37]">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                    <span className="text-white/80 font-normal">Turnkey Handover</span>
+                  </span>
+                  <span className="group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span>View Project</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
 
         {/* CTA Banner */}
         <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#18181B] via-[#09090B] to-[#18181B] border border-[#D4AF37]/30 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto space-y-4">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-              Planning Interior Work For <span className="gold-gradient-text">Your Mumbai Home?</span>
+              Planning Work For <span className="gold-gradient-text">Your Next Project?</span>
             </h2>
             <p className="text-[#A1A1AA] text-sm font-light">
               Connect directly with Ar. Aakhir Choudhary to discuss your layout, material selection, and turnkey execution.

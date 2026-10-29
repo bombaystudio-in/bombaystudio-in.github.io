@@ -66,11 +66,27 @@ export default function TestimonialsPage() {
                     className="w-full h-full object-cover object-top filter contrast-105"
                   />
                 </div>
-                <div>
-                  <h2 className="font-serif font-bold text-white text-sm sm:text-base group-hover:text-[#D4AF37] transition-colors">
-                    {item.name}
-                  </h2>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h2 className="font-serif font-bold text-white text-sm sm:text-base group-hover:text-[#D4AF37] transition-colors">
+                      {item.name}
+                    </h2>
+                    {item.occupation && (
+                      <span className="text-[10px] font-mono text-[#D4AF37] border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-2 py-0.5 rounded-full">
+                        {item.occupation}
+                      </span>
+                    )}
+                  </div>
                   <p className="text-[11px] text-[#A1A1AA]">Completed Residence · Mumbai</p>
+                  {item.projectId && (
+                    <Link
+                      href={`/projects/${item.projectId}`}
+                      className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#FCF6BA] hover:text-[#D4AF37] transition-colors mt-1.5"
+                    >
+                      <span>View Delivered Project</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

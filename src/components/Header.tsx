@@ -7,17 +7,41 @@ import { Phone, Menu, X, ArrowUpRight, Sparkles, FileText } from "lucide-react";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    let lastY = window.scrollY;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      const currentY = window.scrollY;
+      setScrolled(currentY > 40);
+
+      // Keep visible if mobile menu is open
+      if (mobileMenuOpen) {
+        setIsVisible(true);
+        return;
+      }
+
+      // Hide when scrolling down past 80px, show when scrolling up
+      if (currentY > 80 && currentY > lastY + 8) {
+        setIsVisible(false);
+      } else if (currentY < lastY - 8 || currentY <= 80) {
+        setIsVisible(true);
+      }
+
+      lastY = currentY;
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [mobileMenuOpen]);
 
   return (
-    <>
+    <div
+      className={`sticky top-0 z-50 transition-transform duration-300 ease-in-out ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       {/* Announcement Bar */}
       <div className="bg-[#121212] text-[#D4AF37] text-[11px] sm:text-xs py-1 sm:py-1.5 px-4 text-center font-medium tracking-wide border-b border-white/10 flex items-center justify-center gap-2">
         <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-pulse shrink-0 text-[#FCF6BA]" />
@@ -29,7 +53,7 @@ export default function Header() {
 
       {/* Main Navigation Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`w-full transition-all duration-300 ${
           scrolled
             ? "bg-[#050505]/95 backdrop-blur-md py-2 border-b border-white/10 shadow-2xl"
             : "bg-[#050505]/80 backdrop-blur-sm py-2"
@@ -56,8 +80,8 @@ export default function Header() {
             <Link href="/portfolio" className="hover:text-white transition-colors">
               Site Work
             </Link>
-            <Link href="/legacy" className="hover:text-white transition-colors">
-              Legacy
+            <Link href="/about" className="hover:text-white transition-colors">
+              About
             </Link>
             <Link href="/team" className="hover:text-white transition-colors">
               Team
@@ -104,8 +128,8 @@ export default function Header() {
               <Link href="/portfolio" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
                 Site Work &amp; Gallery
               </Link>
-              <Link href="/legacy" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
-                30-Year Origin Legacy
+              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
+                About &amp; 30-Year Legacy
               </Link>
               <Link href="/team" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-white/5 hover:text-[#D4AF37]">
                 Studio Hierarchy &amp; Team
@@ -144,6 +168,6 @@ export default function Header() {
           </div>
         )}
       </header>
-    </>
+    </div>
   );
 }

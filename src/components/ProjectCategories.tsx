@@ -25,36 +25,42 @@ export default function ProjectCategories() {
 
   const categories = [
     {
+      slug: "luxury-residences",
       name: "Luxury Residences",
       icon: Home,
       count: "Turnkey Execution",
       desc: "Bespoke high-end residences, duplexes and penthouses across Mumbai.",
     },
     {
+      slug: "modern-apartments",
       name: "Modern Apartments",
       icon: Building,
       count: "2BHK · 3BHK · 4BHK",
       desc: "Complete interior transformations tailored to high-rise urban living.",
     },
     {
+      slug: "private-villas",
       name: "Private Villas",
       icon: Home,
       count: "Architecture & Build",
       desc: "Expansive private seaside and countryside estates across Mumbai & Alibaug.",
     },
     {
+      slug: "corporate-spaces",
       name: "Corporate Spaces",
       icon: Briefcase,
       count: "Commercial Fitouts",
       desc: "Acoustic corporate executive offices and modern workspace hubs.",
     },
     {
+      slug: "retail-boutiques",
       name: "Retail Boutiques",
       icon: Store,
       count: "Experiential Design",
       desc: "High-end retail showrooms, flagship studios, and bespoke boutiques.",
     },
     {
+      slug: "hospitality-dining",
       name: "Hospitality & Dining",
       icon: Utensils,
       count: "Atmospheric Interiors",
@@ -120,10 +126,10 @@ export default function ProjectCategories() {
 
                   <div className="pt-2.5 border-t border-white/10 flex items-center justify-between">
                     <Link
-                      href="/projects"
+                      href={`/typologies/${cat.slug}`}
                       className="inline-flex items-center gap-1 text-[11px] font-bold text-[#D4AF37] group-hover:text-[#FCF6BA] transition-colors"
                     >
-                      <span>Explore</span>
+                      <span>Explore Typology</span>
                       <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <span className="text-[9px] text-[#A1A1AA] uppercase tracking-wider font-mono">

@@ -17,32 +17,32 @@ export default function Home() {
       {/* 1. Hero Section - Brand Positioning & Consult CTAs */}
       <HeroSection />
 
-      {/* 2. Featured Projects Teaser - Curated Residences (Links to /projects) */}
+      {/* 2. Direct Client Feedback & Verified Homeowner Stories (Links to /testimonials) */}
+      <TestimonialsSection />
+
+      {/* 3. Featured Projects Teaser - Curated Portfolio (Links to /projects) */}
       <FeaturedProjects />
 
-      {/* 3. Specialized Services Teaser - Turnkey Pillars (Links to /services) */}
+      {/* 4. Specialized Services Teaser - Turnkey Pillars (Links to /services) */}
       <ServicesSection />
 
-      {/* 4. Project Typologies Teaser - Categories Carousel (Links to /projects) */}
+      {/* 5. Project Typologies Teaser - Categories Carousel (Links to /projects) */}
       <ProjectCategories />
 
-      {/* 5. Why Choose Bombay Studio - Core Studio Standards */}
+      {/* 6. Why Choose Bombay Studio - Core Studio Standards */}
       <AboutSection />
 
-      {/* 6. 30-Year Origin Legacy Teaser (Links to /legacy) */}
+      {/* 7. 30-Year Origin Legacy Teaser (Links to /legacy) */}
       <LegacySection isTeaser={true} />
 
-      {/* 7. Craftsmanship & Site Work Teaser (Links to /portfolio) */}
+      {/* 8. Craftsmanship & Site Work Teaser (Links to /portfolio) */}
       <PortfolioGallery />
 
-      {/* 8. Studio Team & Leadership Teaser (Links to /team) */}
+      {/* 9. Studio Team & Leadership Teaser (Links to /team) */}
       <TeamPreviewSection />
 
-      {/* 9. Interior Cost Calculator - Interactive Budget Estimator */}
+      {/* 10. Interior Cost Calculator - Interactive Budget Estimator */}
       <CostCalculatorSection />
-
-      {/* 10. Direct Homeowner Stories Teaser (Links to /testimonials) */}
-      <TestimonialsSection />
 
       {/* 11. FAQ Teaser - Top 3 Key Questions (Links to /faq) */}
       <FaqSection limit={3} showAllLink={true} />

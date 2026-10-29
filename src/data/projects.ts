@@ -10,6 +10,8 @@ export interface Project {
   clientReview?: {
     name: string;
     quote: string;
+    image?: string;
+    occupation?: string;
   };
 }
 
@@ -42,6 +44,8 @@ export const PROJECTS_DATA: Project[] = [
     ],
     "clientReview": {
       "name": "Ajinkya Kamble",
+      "image": "/testimonials/ajinkya-kamble.jpg",
+      "occupation": "Verified Homeowner",
       "quote": "Bombay Studio did a great job with our home interiors. The team was helpful, listened to our ideas, and made sure everything was done properly. Architect Aakhir Choudhary guided us well throughout the process. Really happy with the final result!"
     }
   },
@@ -219,6 +223,8 @@ export const PROJECTS_DATA: Project[] = [
     ],
     "clientReview": {
       "name": "Jayant Joshi",
+      "image": "/testimonials/jayant-joshi.jpg",
+      "occupation": "Verified Homeowner",
       "quote": "Had a really good experience with Bombay Studio. The team understood what we wanted and helped us at every step. The work was completed nicely, and the final result looks even better than we expected. Happy with the overall experience!"
     }
   },
@@ -305,3 +311,12 @@ export const PROJECTS_DATA: Project[] = [
     "walkthroughVideo": "/projects/yash-jain-3bhk-charni-road/walkthrough.mp4"
   }
 ];
+
+
+export function getProjectById(id: string): Project | undefined {
+  return PROJECTS_DATA.find((p) => p.id === id);
+}
+
+export function getAllProjectIds(): string[] {
+  return PROJECTS_DATA.map((p) => p.id);
+}

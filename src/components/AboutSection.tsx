@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Link from "next/link";
 import {
   Sparkles,
   ShieldCheck,
@@ -8,6 +9,7 @@ import {
   Clock,
   Key,
   UserCheck,
+  ArrowUpRight,
 } from "lucide-react";
 import CarouselControls from "./CarouselControls";
 
@@ -24,36 +26,43 @@ export default function AboutSection() {
 
   const whyUsPillars = [
     {
+      slug: "spatial-flow",
       icon: Sparkles,
       title: "Spaces You'll Never Want to Leave",
       desc: "Custom-tailored spatial flow, natural light simulation, and bespoke joinery crafted for daily joy.",
     },
     {
+      slug: "luxury-materials",
       icon: ShieldCheck,
       title: "Handpicked Luxury Materials",
       desc: "Authentic IS-710 marine plywood, imported Italian marble, and Blum precision hardware built to last.",
     },
     {
+      slug: "price-transparency",
       icon: DollarSign,
       title: "Total Price Transparency",
       desc: "Locked itemized BOQ contracts with guaranteed fixed budgets and zero unexpected cost overruns.",
     },
     {
+      slug: "on-time-handover",
       icon: Clock,
       title: "Move In On Schedule",
       desc: "Strict milestone tracking with penalty-backed handover dates written directly into your contract.",
     },
     {
+      slug: "stress-free-turnkey",
       icon: Key,
       title: "Move In Without the Stress",
       desc: "Single-source turnkey accountability from initial civil demolition to final styling.",
     },
     {
+      slug: "founder-oversight",
       icon: UserCheck,
       title: "Direct Founder Oversight",
       desc: "Ar. Aakhir Choudhary personally oversees on-site execution with transparent daily progress updates.",
     },
     {
+      slug: "decade-long-warranty",
       icon: ShieldCheck,
       title: "Decade-Long Peace of Mind",
       desc: "Comprehensive 10-year structural warranty backed by complimentary periodic maintenance.",
@@ -109,6 +118,19 @@ export default function AboutSection() {
                         {pillar.desc}
                       </p>
                     </div>
+
+                    <div className="pt-3 mt-4 border-t border-white/10 flex items-center justify-between">
+                      <Link
+                        href={`/why-us/${pillar.slug}`}
+                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#D4AF37] group-hover:text-[#FCF6BA] transition-colors"
+                      >
+                        <span>Read Standard</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </Link>
+                      <span className="text-[10px] text-[#A1A1AA] font-mono">
+                        Pillar #{(idx % whyUsPillars.length) + 1}
+                      </span>
+                    </div>
                   </div>
                 );
               })}
@@ -124,6 +146,8 @@ export default function AboutSection() {
           onNext={() => scroll("right")}
           prevLabel="Scroll Left"
           nextLabel="Scroll Right"
+          ctaText="Explore Our Standards"
+          ctaHref="/about"
         />
       </div>
     </section>
