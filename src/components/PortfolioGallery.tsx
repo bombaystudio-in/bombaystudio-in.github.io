@@ -12,7 +12,7 @@ export default function PortfolioGallery() {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = direction === "left" ? -400 : 400;
+      const scrollAmount = direction === "left" ? -450 : 450;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -52,7 +52,7 @@ export default function PortfolioGallery() {
               <Link
                 key={`${item.id}-${idx}`}
                 href="/portfolio"
-                className="group relative w-56 sm:w-64 aspect-[3/4] max-h-[32svh] sm:max-h-[36svh] rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 bg-[#121212] shrink-0 block hover:border-[#D4AF37]/60 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/10"
+                className="group relative w-72 sm:w-80 md:w-96 aspect-[4/5] sm:aspect-[3/4] max-h-[50svh] sm:max-h-[56svh] rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 bg-[#121212] shrink-0 block hover:border-[#D4AF37]/60 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/10"
               >
                 <img
                   src={item.image}

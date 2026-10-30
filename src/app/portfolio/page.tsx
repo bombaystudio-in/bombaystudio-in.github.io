@@ -53,7 +53,7 @@ export default function PortfolioPage() {
 
   return (
     <main className="min-h-screen bg-[#050505] text-white pt-10 pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Navigation Breadcrumb / Back Link */}
         <div className="mb-8">
           <Link
@@ -109,12 +109,12 @@ export default function PortfolioPage() {
         </div>
 
         {/* Immersive Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredItems.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className="group relative aspect-[4/5] sm:aspect-[3/4] max-h-[44svh] rounded-2xl overflow-hidden border border-white/15 bg-[#121212] cursor-pointer hover:border-[#D4AF37] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/15"
+              className="group relative aspect-[4/5] sm:aspect-[3/4] rounded-2xl overflow-hidden border border-white/15 bg-[#121212] cursor-pointer hover:border-[#D4AF37] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/15"
             >
               <img
                 src={item.image}
@@ -206,12 +206,12 @@ export default function PortfolioPage() {
           </button>
 
           {/* Lightbox Content Container */}
-          <div className="relative max-w-4xl w-full rounded-3xl glass-panel border border-[#D4AF37]/40 overflow-hidden shadow-2xl bg-[#0A0A0A]">
-            <div className="relative max-h-[65vh] w-full bg-black flex items-center justify-center overflow-hidden">
+          <div className="relative max-w-6xl w-full rounded-3xl glass-panel border border-[#D4AF37]/40 overflow-hidden shadow-2xl bg-[#0A0A0A]">
+            <div className="relative max-h-[75vh] w-full bg-black flex items-center justify-center overflow-hidden">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
-                className="max-h-[65vh] w-full object-contain"
+                className="max-h-[75vh] w-full object-contain"
               />
             </div>
 

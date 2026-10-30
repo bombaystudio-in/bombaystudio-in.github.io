@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#050505] border-t border-white/10 text-[#A1A1AA] text-xs pt-8 sm:pt-10 pb-16 md:pb-8">
+    <footer className="bg-[#050505] border-t border-white/10 text-[#A1A1AA] text-xs pt-10 sm:pt-14 pb-28 sm:pb-32 md:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-10">
           {/* Brand Column */}
@@ -17,7 +17,7 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt="Bombay Studio"
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-12 sm:h-16 w-auto object-contain"
               />
             </Link>
             <p className="text-xs font-light leading-relaxed max-w-sm text-[#A1A1AA]">
@@ -95,26 +95,33 @@ export default function Footer() {
         </div>
 
         {/* Large Full-Width Brand Logo */}
-        <div className="pt-4 pb-6 border-t border-white/10 flex justify-center items-center">
+        <div className="py-10 sm:py-16 md:py-20 border-t border-white/10 flex justify-center items-center overflow-hidden">
           <Link href="/" className="w-full block group" aria-label="Bombay Studio Home">
             <img
               src="/logo.png"
               alt="Bombay Studio"
-              className="w-full max-h-16 sm:max-h-20 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 mx-auto drop-shadow-xl"
+              className="w-full max-h-36 sm:max-h-52 md:max-h-64 lg:max-h-80 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 mx-auto drop-shadow-2xl"
             />
           </Link>
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px]">
-          <p>© {currentYear} Bombay Studio. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+        <div className="pt-8 border-t border-white/10 flex flex-col items-center justify-center gap-3.5 text-center text-[11px]">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[#A1A1AA]">
             <Link href="/#contact" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span className="text-white/20 hidden sm:inline">·</span>
             <Link href="/#contact" className="hover:text-white transition-colors">Terms of Service</Link>
-            <a href="https://nordible.co/" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">
+            <span className="text-white/20 hidden sm:inline">·</span>
+            <a
+              href="https://nordible.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D4AF37] hover:text-[#FCF6BA] font-medium transition-colors"
+            >
               Developed in Germany by Nordible ↗
             </a>
           </div>
+          <p className="text-[#71717A]">© {currentYear} Bombay Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>
