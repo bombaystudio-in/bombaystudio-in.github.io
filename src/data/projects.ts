@@ -238,6 +238,33 @@ export const PROJECTS_DATA: Project[] = [
     }
   },
   {
+    "id": "heena-khan-3bhk-miraroad",
+    "name": "Heena Khan Residence",
+    "typology": "3BHK",
+    "category": "3BHK",
+    "location": "Mira Road, Mumbai",
+    "photoCount": 11,
+    "images": [
+      "/projects/heena-khan-3bhk-miraroad/photo-01.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-02.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-03.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-04.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-05.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-06.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-07.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-08.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-09.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-10.png",
+      "/projects/heena-khan-3bhk-miraroad/photo-11.png"
+    ],
+    "clientReview": {
+      "name": "Satish Pawar",
+      "image": "/testimonials/satish-pawar.png",
+      "occupation": "Verified Homeowner",
+      "quote": "My experience with Bombay Studio was really good. The team was helpful, understood our needs, and made sure the work was done properly. They were always available to discuss our ideas and suggestions. Overall, happy with the work and the way everything was handled!"
+    }
+  },
+  {
     "id": "jayant-joshi-2bhk-vileparle",
     "name": "Jayant Joshi Residence",
     "typology": "2BHK",

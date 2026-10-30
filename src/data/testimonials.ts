@@ -113,6 +113,13 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     projectId: "yash-jain-3bhk-charni-road",
   },
   {
+    name: "Satish Pawar",
+    occupation: "Verified Homeowner",
+    text: "My experience with Bombay Studio was really good. The team was helpful, understood our needs, and made sure the work was done properly. They were always available to discuss our ideas and suggestions. Overall, happy with the work and the way everything was handled!",
+    image: "/testimonials/satish-pawar.png",
+    projectId: "heena-khan-3bhk-miraroad",
+  },
+  {
     name: "Swaraj Singh",
     occupation: "Film Producer",
     text: "Bombay Studio did a great job with our interiors. The team was friendly, understood our requirements, and was always ready to help with our suggestions. The work was done with good attention to detail, and we are really happy with how our space has turned out!",
