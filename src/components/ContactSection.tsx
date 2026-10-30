@@ -164,7 +164,7 @@ export default function ContactSection() {
               Book Your Free Consultation
             </h3>
             <p className="text-xs text-[#A1A1AA] font-light mb-4 sm:mb-5">
-              Fill out the form below and Ar. Aakhir Choudhary will reach out within 2 working hours.
+              Fill out the form below and our team will reach out within 2 working hours.
             </p>
 
             {!formSubmitted ? (
@@ -267,7 +267,7 @@ export default function ContactSection() {
                   Consultation Request Received!
                 </h4>
                 <p className="text-xs text-[#A1A1AA] font-light max-w-md mx-auto">
-                  Thank you! Ar. Aakhir Choudhary will reach out to you within 2 working hours.
+                  Thank you! Our team will reach out to you within 2 working hours.
                 </p>
               </div>
             )}
