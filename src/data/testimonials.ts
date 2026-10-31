@@ -7,6 +7,13 @@ export interface TestimonialItem {
 }
 
 export const TESTIMONIALS_DATA: TestimonialItem[] = [
+  // Tier 1: Celebrities & Public Figures (Highest Social Proof & Popularity)
+  {
+    name: "Actress Adrija Sinha",
+    occupation: "Actress",
+    text: "Bombay Studio made our home look beautiful and comfortable, just the way we wanted. The team was patient with our suggestions and helped us make the right choices. The overall experience was smooth, and we are really happy with the final outcome!",
+    image: "/testimonials/actress-adrija-sinha.jpg",
+  },
   {
     name: "Actress - Isha & Vikas Talwar",
     occupation: "Celebrity Homeowners",
@@ -14,11 +21,19 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     image: "/testimonials/actress-isha-vikas-talwar.jpg",
   },
   {
-    name: "Actress Adrija Sinha",
-    occupation: "Actress",
-    text: "Bombay Studio made our home look beautiful and comfortable, just the way we wanted. The team was patient with our suggestions and helped us make the right choices. The overall experience was smooth, and we are really happy with the final outcome!",
-    image: "/testimonials/actress-adrija-sinha.jpg",
+    name: "Swaraj Singh",
+    occupation: "Film Producer",
+    text: "Bombay Studio did a great job with our interiors. The team was friendly, understood our requirements, and was always ready to help with our suggestions. The work was done with good attention to detail, and we are really happy with how our space has turned out!",
+    image: "/testimonials/swaraj-singh-producer.jpg",
   },
+  {
+    name: "Anchor - Mayuri Malandkar",
+    occupation: "Media Anchor",
+    text: "Working with Bombay Studio was a very smooth experience. We didn’t have to follow up on every small thing, whether it was material selection, design decisions, or work updates. The team managed everything well and kept things moving on time. It made the entire process stress-free for us, and we’re really happy with the final result!",
+    image: "/testimonials/anchor-mayuri-malandkar.jpg",
+  },
+
+  // Tier 2: Legal Professionals (High Integrity & Public Esteem)
   {
     name: "Adv. Mitesh Pabari",
     occupation: "Advocate",
@@ -31,6 +46,8 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     text: "Bombay Studio did a wonderful job understanding our needs and turning our ideas into reality. The team was helpful, and everything was explained clearly at every stage. Architect Aakhir Choudhary made sure the work was planned well. Overall, a smooth and satisfying experience!",
     image: "/testimonials/adv-praveen-singh.jpg",
   },
+
+  // Tier 3: Verified Homeowners with Delivered Flagship Projects
   {
     name: "Ajinkya Kamble",
     occupation: "Verified Homeowner",
@@ -39,11 +56,20 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     projectId: "ajinkya-kamble-4bhk-kandivali",
   },
   {
-    name: "Anchor - Mayuri Malandkar",
-    occupation: "Media Anchor",
-    text: "Working with Bombay Studio was a very smooth experience. We didn’t have to follow up on every small thing, whether it was material selection, design decisions, or work updates. The team managed everything well and kept things moving on time. It made the entire process stress-free for us, and we’re really happy with the final result!",
-    image: "/testimonials/anchor-mayuri-malandkar.jpg",
+    name: "Jayant Joshi",
+    occupation: "Verified Homeowner",
+    text: "Had a really good experience with Bombay Studio. The team understood what we wanted and helped us at every step. The work was completed nicely, and the final result looks even better than we expected. Happy with the overall experience!",
+    image: "/testimonials/jayant-joshi.jpg",
+    projectId: "jayant-joshi-2bhk-vileparle",
   },
+  {
+    name: "Satish Pawar",
+    occupation: "Verified Homeowner",
+    text: "My experience with Bombay Studio was really good. The team was helpful, understood our needs, and made sure the work was done properly. They were always available to discuss our ideas and suggestions. Overall, happy with the work and the way everything was handled!",
+    image: "/testimonials/satish-pawar.png",
+  },
+
+  // Tier 4: Residential Homeowners across Mumbai
   {
     name: "Chintan Shah",
     occupation: "Homeowner",
@@ -57,17 +83,10 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     image: "/testimonials/dharmesh-dixit.jpg",
   },
   {
-    name: "Hardit Malhi",
+    name: "Paulomi Sarkar",
     occupation: "Homeowner",
-    text: "Really happy with the work done by Bombay Studio. The team was supportive, easy to communicate with, and always ready to help with our ideas. They paid attention to the small details and made the space look beautiful. Overall, a very good experience!",
-    image: "/testimonials/hardit-malhi.jpg",
-  },
-  {
-    name: "Jayant Joshi",
-    occupation: "Verified Homeowner",
-    text: "Had a really good experience with Bombay Studio. The team understood what we wanted and helped us at every step. The work was completed nicely, and the final result looks even better than we expected. Happy with the overall experience!",
-    image: "/testimonials/jayant-joshi.jpg",
-    projectId: "jayant-joshi-2bhk-vileparle",
+    text: "Had a lovely experience with Bombay Studio. The team understood my ideas and helped me make the right choices for my home. Architect Aakhir Choudhary was supportive throughout the process, and the team paid attention to the little details. Really happy with the final outcome!",
+    image: "/testimonials/paulomi-sarkar.jpg",
   },
   {
     name: "Kirti Sakhpara",
@@ -76,22 +95,10 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     image: "/testimonials/kirti-sakhpara.jpg",
   },
   {
-    name: "Kishore Vichare",
+    name: "Hardit Malhi",
     occupation: "Homeowner",
-    text: "What I liked about Bombay Studio was that the team took care of things without making us run around for every small detail. They helped us with material choices, gave practical suggestions, and kept the work organised. Communication was good, and the overall experience was smooth. Happy with the work done by the team!",
-    image: "/testimonials/kishore-vichare.jpg",
-  },
-  {
-    name: "Paulomi Sarkar",
-    occupation: "Homeowner",
-    text: "Had a lovely experience with Bombay Studio. The team understood my ideas and helped me make the right choices for my home. Architect Aakhir Choudhary was supportive throughout the process, and the team paid attention to the little details. Really happy with the final outcome!",
-    image: "/testimonials/paulomi-sarkar.jpg",
-  },
-  {
-    name: "Prakash Desai",
-    occupation: "Homeowner",
-    text: "Right from the beginning, the team at Bombay Studio was easy to work with. They understood our requirements, suggested good options, and helped us stay within our budget. We were kept informed about the progress, and whenever we needed anything, the team was there to help. Overall, a very satisfying experience!",
-    image: "/testimonials/prakash-desai.jpg",
+    text: "Really happy with the work done by Bombay Studio. The team was supportive, easy to communicate with, and always ready to help with our ideas. They paid attention to the small details and made the space look beautiful. Overall, a very good experience!",
+    image: "/testimonials/hardit-malhi.jpg",
   },
   {
     name: "Rohit Pathak",
@@ -100,15 +107,15 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     image: "/testimonials/rohit-pathak.jpg",
   },
   {
-    name: "Satish Pawar",
-    occupation: "Verified Homeowner",
-    text: "My experience with Bombay Studio was really good. The team was helpful, understood our needs, and made sure the work was done properly. They were always available to discuss our ideas and suggestions. Overall, happy with the work and the way everything was handled!",
-    image: "/testimonials/satish-pawar.png",
+    name: "Prakash Desai",
+    occupation: "Homeowner",
+    text: "Right from the beginning, the team at Bombay Studio was easy to work with. They understood our requirements, suggested good options, and helped us stay within our budget. We were kept informed about the progress, and whenever we needed anything, the team was there to help. Overall, a very satisfying experience!",
+    image: "/testimonials/prakash-desai.jpg",
   },
   {
-    name: "Swaraj Singh",
-    occupation: "Film Producer",
-    text: "Bombay Studio did a great job with our interiors. The team was friendly, understood our requirements, and was always ready to help with our suggestions. The work was done with good attention to detail, and we are really happy with how our space has turned out!",
-    image: "/testimonials/swaraj-singh-producer.jpg",
+    name: "Kishore Vichare",
+    occupation: "Homeowner",
+    text: "What I liked about Bombay Studio was that the team took care of things without making us run around for every small detail. They helped us with material choices, gave practical suggestions, and kept the work organised. Communication was good, and the overall experience was smooth. Happy with the work done by the team!",
+    image: "/testimonials/kishore-vichare.jpg",
   },
 ];

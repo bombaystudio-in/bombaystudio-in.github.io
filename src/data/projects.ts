@@ -16,6 +16,9 @@ export interface Project {
 }
 
 export const PROJECTS_DATA: Project[] = [
+  // =========================================================================
+  // 4BHK LUXURY RESIDENCES (Bigger Projects First)
+  // =========================================================================
   {
     "id": "ajinkya-kamble-4bhk-kandivali",
     "name": "Ajinkya Kamble Residence",
@@ -50,69 +53,6 @@ export const PROJECTS_DATA: Project[] = [
     }
   },
   {
-    "id": "amey-chavan-3bhk-andheri",
-    "name": "Amey Chavan Residence",
-    "typology": "3BHK",
-    "category": "3BHK",
-    "location": "Andheri, Mumbai",
-    "photoCount": 9,
-    "images": [
-      "/projects/amey-chavan-3bhk-andheri/photo-01.jpg",
-      "/projects/amey-chavan-3bhk-andheri/photo-02.jpg",
-      "/projects/amey-chavan-3bhk-andheri/photo-03.jpg",
-      "/projects/amey-chavan-3bhk-andheri/photo-04.jpg",
-      "/projects/amey-chavan-3bhk-andheri/photo-05.jpg",
-      "/projects/amey-chavan-3bhk-andheri/photo-06.jpg",
-      "/projects/amey-chavan-3bhk-andheri/photo-07.jpg",
-      "/projects/amey-chavan-3bhk-andheri/photo-08.jpg",
-      "/projects/amey-chavan-3bhk-andheri/photo-09.jpg"
-    ]
-  },
-  {
-    "id": "amit-ranka-3bhk-vileparle",
-    "name": "Amit Ranka Residence",
-    "typology": "3BHK",
-    "category": "3BHK",
-    "location": "Vile Parle, Mumbai",
-    "photoCount": 12,
-    "images": [
-      "/projects/amit-ranka-3bhk-vileparle/photo-01.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-02.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-03.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-04.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-05.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-06.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-07.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-08.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-09.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-10.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-11.jpg",
-      "/projects/amit-ranka-3bhk-vileparle/photo-12.jpg"
-    ]
-  },
-  {
-    "id": "arunima-panchal-4bhk-mulund",
-    "name": "Arunima Panchal Residence",
-    "typology": "4BHK",
-    "category": "4BHK",
-    "location": "Mulund, Mumbai",
-    "photoCount": 12,
-    "images": [
-      "/projects/arunima-panchal-4bhk-mulund/photo-01.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-02.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-03.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-04.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-05.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-06.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-07.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-08.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-09.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-10.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-11.jpg",
-      "/projects/arunima-panchal-4bhk-mulund/photo-12.jpg"
-    ]
-  },
-  {
     "id": "ashwini-dingare-4bhk-sewri",
     "name": "Ashwini Dingare Residence",
     "typology": "4BHK",
@@ -137,6 +77,50 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/ashwini-dingare-4bhk-sewri/photo-15.jpg",
       "/projects/ashwini-dingare-4bhk-sewri/photo-16.jpg"
     ]
+  },
+  {
+    "id": "arunima-panchal-4bhk-mulund",
+    "name": "Arunima Panchal Residence",
+    "typology": "4BHK",
+    "category": "4BHK",
+    "location": "Mulund, Mumbai",
+    "photoCount": 12,
+    "images": [
+      "/projects/arunima-panchal-4bhk-mulund/photo-01.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-02.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-03.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-04.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-05.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-06.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-07.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-08.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-09.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-10.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-11.jpg",
+      "/projects/arunima-panchal-4bhk-mulund/photo-12.jpg"
+    ]
+  },
+
+  // =========================================================================
+  // 3BHK PREMIUM RESIDENCES
+  // =========================================================================
+  {
+    "id": "yash-jain-3bhk-charni-road",
+    "name": "Yash Jain Residence",
+    "typology": "3BHK",
+    "category": "3BHK",
+    "location": "Charni Road, Mumbai",
+    "photoCount": 7,
+    "images": [
+      "/projects/yash-jain-3bhk-charni-road/photo-01.jpg",
+      "/projects/yash-jain-3bhk-charni-road/photo-02.jpg",
+      "/projects/yash-jain-3bhk-charni-road/photo-03.jpg",
+      "/projects/yash-jain-3bhk-charni-road/photo-04.jpg",
+      "/projects/yash-jain-3bhk-charni-road/photo-05.jpg",
+      "/projects/yash-jain-3bhk-charni-road/photo-06.jpg",
+      "/projects/yash-jain-3bhk-charni-road/photo-07.jpg"
+    ],
+    "walkthroughVideo": "/projects/yash-jain-3bhk-charni-road/walkthrough.mp4"
   },
   {
     "id": "dr-sunil-mhatre-3bhk-wadala",
@@ -202,6 +186,51 @@ export const PROJECTS_DATA: Project[] = [
     ]
   },
   {
+    "id": "nitin-pendbhaje-3bhk-goregaon",
+    "name": "Nitin Pendbhaje Residence",
+    "typology": "3BHK",
+    "category": "3BHK",
+    "location": "Goregaon, Mumbai",
+    "photoCount": 13,
+    "images": [
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-01.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-02.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-03.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-04.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-05.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-06.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-07.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-08.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-09.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-10.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-11.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-12.jpg",
+      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-13.jpg"
+    ]
+  },
+  {
+    "id": "amit-ranka-3bhk-vileparle",
+    "name": "Amit Ranka Residence",
+    "typology": "3BHK",
+    "category": "3BHK",
+    "location": "Vile Parle, Mumbai",
+    "photoCount": 12,
+    "images": [
+      "/projects/amit-ranka-3bhk-vileparle/photo-01.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-02.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-03.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-04.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-05.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-06.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-07.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-08.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-09.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-10.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-11.jpg",
+      "/projects/amit-ranka-3bhk-vileparle/photo-12.jpg"
+    ]
+  },
+  {
     "id": "heena-khan-3bhk-miraroad",
     "name": "Heena Khan Residence",
     "typology": "3BHK",
@@ -222,6 +251,47 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/heena-khan-3bhk-miraroad/photo-11.png"
     ]
   },
+  {
+    "id": "amey-chavan-3bhk-andheri",
+    "name": "Amey Chavan Residence",
+    "typology": "3BHK",
+    "category": "3BHK",
+    "location": "Andheri, Mumbai",
+    "photoCount": 9,
+    "images": [
+      "/projects/amey-chavan-3bhk-andheri/photo-01.jpg",
+      "/projects/amey-chavan-3bhk-andheri/photo-02.jpg",
+      "/projects/amey-chavan-3bhk-andheri/photo-03.jpg",
+      "/projects/amey-chavan-3bhk-andheri/photo-04.jpg",
+      "/projects/amey-chavan-3bhk-andheri/photo-05.jpg",
+      "/projects/amey-chavan-3bhk-andheri/photo-06.jpg",
+      "/projects/amey-chavan-3bhk-andheri/photo-07.jpg",
+      "/projects/amey-chavan-3bhk-andheri/photo-08.jpg",
+      "/projects/amey-chavan-3bhk-andheri/photo-09.jpg"
+    ]
+  },
+  {
+    "id": "ujesh-shetty-3bhk-hiranandani-powai",
+    "name": "Ujesh Shetty Residence",
+    "typology": "3BHK",
+    "category": "3BHK",
+    "location": "Hiranandani Powai, Mumbai",
+    "photoCount": 8,
+    "images": [
+      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-01.jpg",
+      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-02.jpg",
+      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-03.jpg",
+      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-04.jpg",
+      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-05.jpg",
+      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-06.jpg",
+      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-07.jpg",
+      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-08.jpg"
+    ]
+  },
+
+  // =========================================================================
+  // 2BHK RESIDENCES
+  // =========================================================================
   {
     "id": "jayant-joshi-2bhk-vileparle",
     "name": "Jayant Joshi Residence",
@@ -250,47 +320,6 @@ export const PROJECTS_DATA: Project[] = [
     }
   },
   {
-    "id": "nitin-pendbhaje-3bhk-goregaon",
-    "name": "Nitin Pendbhaje Residence",
-    "typology": "3BHK",
-    "category": "3BHK",
-    "location": "Goregaon, Mumbai",
-    "photoCount": 13,
-    "images": [
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-01.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-02.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-03.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-04.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-05.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-06.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-07.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-08.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-09.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-10.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-11.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-12.jpg",
-      "/projects/nitin-pendbhaje-3bhk-goregaon/photo-13.jpg"
-    ]
-  },
-  {
-    "id": "ujesh-shetty-3bhk-hiranandani-powai",
-    "name": "Ujesh Shetty Residence",
-    "typology": "3BHK",
-    "category": "3BHK",
-    "location": "Hiranandani Powai, Mumbai",
-    "photoCount": 8,
-    "images": [
-      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-01.jpg",
-      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-02.jpg",
-      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-03.jpg",
-      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-04.jpg",
-      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-05.jpg",
-      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-06.jpg",
-      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-07.jpg",
-      "/projects/ujesh-shetty-3bhk-hiranandani-powai/photo-08.jpg"
-    ]
-  },
-  {
     "id": "vaibhav-beriwal-2bhk-malad",
     "name": "Vaibhav Beriwal Residence",
     "typology": "2BHK",
@@ -312,24 +341,6 @@ export const PROJECTS_DATA: Project[] = [
       "/projects/vaibhav-beriwal-2bhk-malad/photo-12.jpg",
       "/projects/vaibhav-beriwal-2bhk-malad/photo-13.jpg"
     ]
-  },
-  {
-    "id": "yash-jain-3bhk-charni-road",
-    "name": "Yash Jain Residence",
-    "typology": "3BHK",
-    "category": "3BHK",
-    "location": "Charni Road, Mumbai",
-    "photoCount": 7,
-    "images": [
-      "/projects/yash-jain-3bhk-charni-road/photo-01.jpg",
-      "/projects/yash-jain-3bhk-charni-road/photo-02.jpg",
-      "/projects/yash-jain-3bhk-charni-road/photo-03.jpg",
-      "/projects/yash-jain-3bhk-charni-road/photo-04.jpg",
-      "/projects/yash-jain-3bhk-charni-road/photo-05.jpg",
-      "/projects/yash-jain-3bhk-charni-road/photo-06.jpg",
-      "/projects/yash-jain-3bhk-charni-road/photo-07.jpg"
-    ],
-    "walkthroughVideo": "/projects/yash-jain-3bhk-charni-road/walkthrough.mp4"
   }
 ];
 
