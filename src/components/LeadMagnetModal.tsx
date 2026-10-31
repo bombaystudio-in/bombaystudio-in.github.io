@@ -21,26 +21,34 @@ export default function LeadMagnetModal() {
     return () => clearTimeout(timer);
   }, []);
 
+  const triggerDirectDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/bombay-studio-portfolio.pdf";
+    link.download = "bombay-studio-portfolio.pdf";
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setErrorMessage("");
 
+    // 1. Immediately trigger the direct file download for zero-friction gratification
+    triggerDirectDownload();
+    setSubmitted(true);
+
+    // 2. Register lead with backend (resilient, non-blocking)
     try {
-      const res = await fetch("/api/lead-magnet", {
+      await fetch("/api/lead-magnet", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-
-      const data = await res.json();
-      if (res.ok && data.success) {
-        setSubmitted(true);
-      } else {
-        setErrorMessage(data.error || "Something went wrong. Please try again.");
-      }
     } catch {
-      setErrorMessage("Network error. Please check your connection.");
+      // Non-blocking background catch
     } finally {
       setLoading(false);
     }
@@ -63,11 +71,14 @@ export default function LeadMagnetModal() {
         </div>
 
         <div>
-          <h3 className="font-serif text-2xl font-bold text-white">
-            2026 Mumbai Interior Budget Planner &amp; Checklist PDF
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[#D4AF37]">
+            Official Monograph (12 Pages)
+          </span>
+          <h3 className="font-serif text-2xl font-bold text-white mt-1">
+            2026 Architectural Portfolio Monograph PDF
           </h3>
-          <p className="text-xs text-[#A1A1AA] font-light mt-2">
-            Get our complete material rate card, BOQ checklist, and 15 questions to ask any contractor before signing.
+          <p className="text-xs text-[#A1A1AA] font-light mt-2 leading-relaxed">
+            Get our complete 12-page portfolio brochure featuring delivered luxury residences, turnkey material specs, and itemized BOQ estimates.
           </p>
         </div>
 
@@ -94,14 +105,27 @@ export default function LeadMagnetModal() {
               ) : (
                 <Download className="w-4 h-4" />
               )}
-              <span>{loading ? "Sending..." : "Download PDF Guide Free"}</span>
+              <span>{loading ? "Preparing..." : "Download Portfolio Brochure PDF ↗"}</span>
             </button>
           </form>
         ) : (
-          <div className="p-4 rounded-xl bg-[#1C1C1C] text-white text-xs space-y-2 border border-[#D4AF37]">
-            <CheckCircle2 className="w-6 h-6 text-[#D4AF37] mx-auto" />
-            <p className="font-bold text-white">Download Link Sent!</p>
-            <p className="text-[#A1A1AA]">Check your email inbox for your PDF Budget Planner.</p>
+          <div className="p-5 rounded-2xl bg-[#1C1C1C] text-white text-xs space-y-3 border border-[#D4AF37]/50 shadow-xl">
+            <CheckCircle2 className="w-8 h-8 text-[#D4AF37] mx-auto" />
+            <div>
+              <p className="font-serif font-bold text-white text-base">Download Started!</p>
+              <p className="text-[#A1A1AA] text-xs mt-1">
+                Your 12-page Bombay Studio Architectural Monograph is downloading.
+              </p>
+            </div>
+            <a
+              href="/bombay-studio-portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#D4AF37]/20 hover:bg-[#D4AF37]/30 text-[#FCF6BA] border border-[#D4AF37]/40 text-xs font-semibold transition-colors"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Click here if download didn&apos;t start automatically ↗</span>
+            </a>
           </div>
         )}
       </div>
