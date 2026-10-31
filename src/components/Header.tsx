@@ -92,6 +92,16 @@ export default function Header() {
             <Link href="/faq" className="hover:text-white transition-colors">
               FAQ
             </Link>
+            <a
+              href="/bombay-studio-portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D4AF37] hover:text-[#FCF6BA] transition-colors flex items-center gap-1 font-semibold"
+              title="Download Official Branded Portfolio Monograph (PDF)"
+            >
+              <span>Brochure PDF</span>
+              <ArrowUpRight className="w-3 h-3 text-[#D4AF37]" />
+            </a>
           </nav>
 
           {/* Single High-Priority Header CTA */}

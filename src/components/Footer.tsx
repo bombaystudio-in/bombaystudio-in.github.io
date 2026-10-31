@@ -58,6 +58,7 @@ export default function Footer() {
               <li><Link href="/#services" className="hover:text-white transition-colors">Our Services</Link></li>
               <li><Link href="/projects" className="hover:text-white transition-colors">All Projects &amp; Case Studies</Link></li>
               <li><Link href="/portfolio" className="hover:text-[#D4AF37] transition-colors font-medium">Site Work &amp; Gallery</Link></li>
+              <li><a href="/bombay-studio-portfolio.pdf" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:text-[#FCF6BA] transition-colors font-semibold">Download Portfolio PDF ↗</a></li>
               <li><Link href="/#calculator" className="hover:text-white transition-colors">Cost Calculator</Link></li>
               <li><Link href="/team" className="hover:text-white transition-colors">Studio Team &amp; Leadership</Link></li>
               <li><Link href="/#faq" className="hover:text-white transition-colors">FAQ</Link></li>

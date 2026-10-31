@@ -148,6 +148,16 @@ export default function LiteModePage() {
               <span>Instant WhatsApp Booking ↗</span>
             </a>
           </div>
+          <div className="pt-1">
+            <a
+              href="/bombay-studio-portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block text-center py-2.5 rounded-full bg-[#1A1A1A] text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-semibold hover:border-[#D4AF37]"
+            >
+              <span>Download Offline Monograph PDF (14 MB) ↗</span>
+            </a>
+          </div>
         </section>
 
         {/* Footer */}

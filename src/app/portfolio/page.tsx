@@ -11,6 +11,7 @@ import {
   MapPin,
   Phone,
   ArrowUpRight,
+  FileText,
 } from "lucide-react";
 import { GALLERY_ITEMS, GalleryItem } from "@/data/gallery";
 
@@ -77,6 +78,18 @@ export default function PortfolioPage() {
           <p className="text-[#A1A1AA] text-sm sm:text-base font-light leading-relaxed">
             Every home we design is backed by rigorous on-site supervision. Explore real, unedited photographs of our craftsmen, material showroom audits, joinery installations, and final handovers across Mumbai.
           </p>
+          <div className="pt-2 flex justify-center">
+            <a
+              href="/bombay-studio-portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#121212] border border-[#D4AF37]/50 hover:border-[#D4AF37] text-white text-xs font-semibold hover:bg-[#1A1A1A] transition-all shadow-md group"
+            >
+              <FileText className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <span>Download Official Portfolio Monograph (PDF)</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+          </div>
         </div>
 
         {/* Category Filters */}
