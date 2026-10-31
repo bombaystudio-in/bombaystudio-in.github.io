@@ -55,9 +55,6 @@ const mulund02 = getBase64Image('projects/arunima-panchal-4bhk-mulund/photo-03.j
 const charni01 = getBase64Image('projects/yash-jain-3bhk-charni-road/photo-01.jpg');
 const wadala01 = getBase64Image('projects/dr-sunil-mhatre-3bhk-wadala/photo-01.jpg');
 const bandra01 = getBase64Image('projects/gautam-trivedi-3bhk-bandra/photo-01.jpg');
-const goregaon01 = getBase64Image('projects/nitin-pendbhaje-3bhk-goregaon/photo-01.jpg');
-const vileparle01 = getBase64Image('projects/amit-ranka-3bhk-vileparle/photo-01.jpg');
-const powai01 = getBase64Image('projects/ujesh-shetty-3bhk-hiranandani-powai/photo-01.jpg');
 const joshi01 = getBase64Image('projects/jayant-joshi-2bhk-vileparle/photo-01.jpg');
 const malad01 = getBase64Image('projects/vaibhav-beriwal-2bhk-malad/photo-01.jpg');
 
@@ -120,7 +117,7 @@ const htmlContent = `<!DOCTYPE html>
 
     /* Fonts identical to bombaystudio.in */
     .font-serif {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: Georgia, ui-serif, Cambria, 'Times New Roman', serif;
     }
     .font-sans {
       font-family: 'DM Sans', sans-serif;
@@ -129,9 +126,17 @@ const htmlContent = `<!DOCTYPE html>
     .gold { color: #D4AF37; }
     .gold-light { color: #FCF6BA; }
     .gold-gradient-text {
-      background: linear-gradient(135deg, #D4AF37 0%, #FCF6BA 50%, #D4AF37 100%);
+      background: linear-gradient(
+        135deg,
+        #FFFFFF 0%,
+        #FCF6BA 20%,
+        #FBF5B7 40%,
+        #D4AF37 60%,
+        #AA771C 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
 
     .card {
@@ -186,7 +191,7 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     .section-title {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: Georgia, ui-serif, Cambria, 'Times New Roman', serif;
       font-size: 18pt;
       font-weight: 700;
       color: #FFFFFF;
@@ -248,11 +253,11 @@ const htmlContent = `<!DOCTYPE html>
   <div class="page" style="background: radial-gradient(circle at 80% 20%, #1A170A 0%, #080808 70%); justify-content: space-between;">
     <div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3mm;">
-        ${logoImg ? `<img src="${logoImg}" style="height: 42px; object-fit: contain;" alt="Bombay Studio">` : `<h1 class="font-serif" style="font-size: 22pt; color: #fff; margin:0;">BOMBAY STUDIO</h1>`}
+        ${logoImg ? `<img src="${logoImg}" style="height: 42px; object-fit: contain;" alt="Bombay Studio">` : `<h1 class="font-serif" style="font-size: 22pt; color: #fff; margin:0; font-weight: 700;">BOMBAY STUDIO</h1>`}
         <span class="pill" style="font-size: 7.5pt; padding: 4px 10px;">Architectural Monograph 2026</span>
       </div>
-      <h2 class="font-serif" style="font-size: 20pt; color: #FFFFFF; margin: 3mm 0 1mm 0; line-height: 1.15;">
-        Three Decades of Architectural Craftsmanship
+      <h2 class="font-serif" style="font-size: 21pt; color: #FFFFFF; margin: 3mm 0 1mm 0; line-height: 1.15; font-weight: 700;">
+        Three Decades of <span class="gold-gradient-text">Architectural Craftsmanship</span>
       </h2>
       <p style="font-size: 9.5pt; letter-spacing: 2px; text-transform: uppercase; color: #D4AF37; margin: 0; font-weight: 600;">
         Designing Timeless Spaces Across Mumbai · Est. 1992
@@ -306,7 +311,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 6mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Est. 1992 · Noor Engineering Co.</span>
-        <h2 class="section-title">A 30-Year Architectural Journey</h2>
+        <h2 class="section-title">A 30-Year <span class="gold-gradient-text">Architectural Journey</span></h2>
         <p style="color: #D4D4D8; font-size: 9.5pt; line-height: 1.6; margin-bottom: 5mm;">
           Founded in 1992 by civil patriarch <strong>Mr. Kalamuddin Choudhary</strong> as Noor Engineering Company, Bombay Studio was built on three uncompromising principles: structural truth, artisan craftsmanship, and zero-compromise engineering. Today, under the creative leadership of <strong>Principal Architect Ar. Aakhir Choudhary</strong>, the practice brings modern spatial elegance and turnkey execution to Mumbai’s prime residences.
         </p>
@@ -386,7 +391,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 6mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">The Bombay Studio Difference</span>
-        <h2 class="section-title">The Four Pillars of Architectural Integrity</h2>
+        <h2 class="section-title">The Four Pillars of <span class="gold-gradient-text">Architectural Integrity</span></h2>
         <p style="font-size: 9.5pt; color: #A1A1AA; margin-bottom: 6mm;">
           Every residence designed by Bombay Studio is executed in accordance with our scientific four-pillar framework, eliminating common renovation hazards such as material substitution, cost overruns, and timeline delays.
         </p>
@@ -456,7 +461,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Client Social Proof</span>
-        <h2 class="section-title">Trusted by Mumbai’s Prominent Personalities</h2>
+        <h2 class="section-title">Client Feedback &amp; <span class="gold-gradient-text">Celebrity Trust</span></h2>
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
@@ -576,7 +581,7 @@ const htmlContent = `<!DOCTYPE html>
         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3mm;">
           <div>
             <span class="pill">Flagship 4BHK · Kandivali, Mumbai</span>
-            <h2 class="section-title" style="margin-top: 2mm;">Ajinkya Kamble Residence</h2>
+            <h2 class="section-title" style="margin-top: 2mm;">Ajinkya Kamble <span class="gold-gradient-text">Residence</span></h2>
           </div>
           <div style="text-align: right; font-size: 8pt; color: #A1A1AA;">
             <strong class="gold" style="font-size: 11pt;">17 Handover Photographs</strong><br>
@@ -631,7 +636,7 @@ const htmlContent = `<!DOCTYPE html>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2mm;">
           <div>
             <span class="pill">4BHK · Sewri, South-Central Mumbai</span>
-            <h3 class="font-serif" style="font-size: 13pt; color: #fff; margin: 2px 0;">Ashwini Dingare Residence</h3>
+            <h3 class="font-serif" style="font-size: 13pt; color: #fff; margin: 2px 0; font-weight: 700;">Ashwini Dingare <span class="gold-gradient-text">Residence</span></h3>
           </div>
           <span style="font-size: 7.5pt; color: #A1A1AA;">16 Photos Documented</span>
         </div>
@@ -693,7 +698,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Signature 3BHK &amp; 2BHK Portfolio</span>
-        <h2 class="section-title">Urban Elegance Across Mumbai</h2>
+        <h2 class="section-title">Urban Elegance Across <span class="gold-gradient-text">Mumbai</span></h2>
       </div>
 
       <!-- 3BHK Highlights -->
@@ -777,7 +782,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Comprehensive Architectural Services</span>
-        <h2 class="section-title">Specialized Turnkey Capabilities</h2>
+        <h2 class="section-title">Specialized Turnkey <span class="gold-gradient-text">Capabilities</span></h2>
       </div>
 
       <!-- 6 Services Grid -->
@@ -854,7 +859,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Real Site Evidence</span>
-        <h2 class="section-title">Site Work &amp; Artisan Execution</h2>
+        <h2 class="section-title">Site Work &amp; <span class="gold-gradient-text">Artisan Execution</span></h2>
         <p style="font-size: 8.5pt; color: #A1A1AA; margin-bottom: 5mm;">
           Every home we design is backed by rigorous on-site supervision. Explore real, unedited photographs of our craftsmen, material showroom audits, joinery installations, and final handovers across Mumbai.
         </p>
@@ -863,7 +868,7 @@ const htmlContent = `<!DOCTYPE html>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 4mm;">
         <div class="card" style="padding: 8px;">
           <div style="height: 52mm; border-radius: 6px; overflow: hidden; margin-bottom: 6px;">
-            <img src="${siteCarpentry}" style="width: 100%; height: 100%; object-fit: cover;" alt="Carpentry Crew">
+            <img src="${siteCarpentry}" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;" alt="Carpentry Crew">
           </div>
           <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 0 0 2px 0;">IS 710 Marine Wood Framing</h4>
           <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.3; margin: 0;">Joinery fabrication on-site with boiling water proof marine plywood.</p>
@@ -871,7 +876,7 @@ const htmlContent = `<!DOCTYPE html>
 
         <div class="card" style="padding: 8px;">
           <div style="height: 52mm; border-radius: 6px; overflow: hidden; margin-bottom: 6px;">
-            <img src="${siteConsult}" style="width: 100%; height: 100%; object-fit: cover;" alt="Material Selection">
+            <img src="${siteConsult}" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" alt="Material Selection">
           </div>
           <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 0 0 2px 0;">Material &amp; Veneer Showroom Audits</h4>
           <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.3; margin: 0;">Personal client showroom walkthroughs to select marble and veneers.</p>
@@ -879,7 +884,7 @@ const htmlContent = `<!DOCTYPE html>
 
         <div class="card" style="padding: 8px;">
           <div style="height: 52mm; border-radius: 6px; overflow: hidden; margin-bottom: 6px;">
-            <img src="${siteDrawing}" style="width: 100%; height: 100%; object-fit: cover;" alt="Drawing Review">
+            <img src="${siteDrawing}" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%;" alt="Drawing Review">
           </div>
           <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 0 0 2px 0;">Architectural Drawing Coordination</h4>
           <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.3; margin: 0;">Ar. Aakhir Choudhary reviewing MEP and electrical ceiling plans on-site.</p>
@@ -887,7 +892,7 @@ const htmlContent = `<!DOCTYPE html>
 
         <div class="card" style="padding: 8px;">
           <div style="height: 52mm; border-radius: 6px; overflow: hidden; margin-bottom: 6px;">
-            <img src="${siteInspection}" style="width: 100%; height: 100%; object-fit: cover;" alt="Wall Panel Inspection">
+            <img src="${siteInspection}" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%;" alt="Wall Panel Inspection">
           </div>
           <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 0 0 2px 0;">Fluted Panel &amp; Joinery Quality Sign-Off</h4>
           <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.3; margin: 0;">Multi-stage quality checkpoints before final coat PU polishing.</p>
@@ -917,7 +922,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Studio Structure</span>
-        <h2 class="section-title">The Multidisciplinary Architectural Team</h2>
+        <h2 class="section-title">The Multidisciplinary <span class="gold-gradient-text">Architectural Team</span></h2>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 4mm;">
@@ -1007,7 +1012,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Cost Transparency</span>
-        <h2 class="section-title">Turnkey Investment &amp; Timelines</h2>
+        <h2 class="section-title">Estimate Turnkey <span class="gold-gradient-text">Investment &amp; Timelines</span></h2>
         <p style="font-size: 8.5pt; color: #A1A1AA; margin-bottom: 5mm;">
           Clear, all-inclusive budgets based on genuine high-grade materials and verified artisan craftsmanship across Mumbai.
         </p>
@@ -1087,7 +1092,7 @@ const htmlContent = `<!DOCTYPE html>
     <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Client FAQs</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <h2 class="section-title">Frequently Asked <span class="gold-gradient-text">Questions</span></h2>
         
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 5mm;">
           <div class="card" style="padding: 10px;">
@@ -1110,8 +1115,8 @@ const htmlContent = `<!DOCTYPE html>
 
         <!-- Consultation Booking Card -->
         <div class="gold-box" style="padding: 16px; text-align: center;">
-          <h3 class="font-serif" style="font-size: 14pt; color: #FFFFFF; margin: 0 0 4px 0;">
-            Schedule an Architectural Walkthrough
+          <h3 class="font-serif" style="font-size: 14pt; color: #FFFFFF; margin: 0 0 4px 0; font-weight: 700;">
+            Schedule an <span class="gold-gradient-text">Architectural Walkthrough</span>
           </h3>
           <p style="font-size: 8.5pt; color: #E4E4E7; max-width: 440px; margin: 0 auto 10px auto; line-height: 1.4;">
             Book a site assessment, layout discussion, and transparent turnkey BOQ estimate with Principal Architect Ar. Aakhir Choudhary.
