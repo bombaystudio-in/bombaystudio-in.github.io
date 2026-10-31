@@ -108,9 +108,13 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col items-center justify-center gap-3.5 text-center text-[11px]">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[#A1A1AA]">
-            <Link href="/#contact" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span className="text-white/20 hidden sm:inline">·</span>
-            <Link href="/#contact" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <span className="text-white/20 hidden sm:inline">·</span>
+            <Link href="/lite" className="hover:text-white transition-colors">Lite Mode (Fast 2G/3G)</Link>
+            <span className="text-white/20 hidden sm:inline">·</span>
+            <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">AI Context (llms.txt)</a>
             <span className="text-white/20 hidden sm:inline">·</span>
             <a
               href="https://nordible.co/"
@@ -118,7 +122,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-[#D4AF37] hover:text-[#FCF6BA] font-medium transition-colors"
             >
-              Developed in Germany by Nordible ↗
+              Developed in Germany 🇩🇪 by Nordible ↗
             </a>
           </div>
           <p className="text-[#71717A]">© {currentYear} Bombay Studio. All rights reserved.</p>

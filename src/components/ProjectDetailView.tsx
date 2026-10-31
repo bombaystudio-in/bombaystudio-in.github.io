@@ -265,8 +265,8 @@ export default function ProjectDetailView({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             {/* Left: Client Portrait & Credentials */}
             <div className="lg:col-span-4 flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
-              <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-br from-[#D4AF37] to-[#FCF6BA]/40 shadow-xl">
-                <div className="w-full h-full rounded-full overflow-hidden bg-black">
+              <div className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-2xl p-1 bg-gradient-to-br from-[#D4AF37] to-[#FCF6BA]/40 shadow-xl shrink-0">
+                <div className="w-full h-full rounded-xl overflow-hidden bg-black">
                   {project.clientReview.image ? (
                     <img
                       src={project.clientReview.image}
@@ -425,7 +425,7 @@ export default function ProjectDetailView({
             <ArrowUpRight className="w-4 h-4" />
           </Link>
           <a
-            href="tel:+919820000000"
+            href="tel:+917070704181"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#121212] text-white border border-white/15 text-xs font-semibold hover:border-[#D4AF37] transition-colors"
           >
             <Phone className="w-4 h-4 text-[#D4AF37]" />

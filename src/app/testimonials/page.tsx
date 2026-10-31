@@ -43,52 +43,63 @@ export default function TestimonialsPage() {
           {TESTIMONIALS_DATA.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-7 rounded-2xl bg-[#0F0F0F] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/5"
+              className="p-6 sm:p-7 rounded-3xl bg-[#0F0F0F] border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/10"
             >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <Quote className="w-6 h-6 text-[#D4AF37]/40 group-hover:text-[#D4AF37] transition-colors" />
-                  <span className="text-[10px] uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-2.5 py-0.5 rounded-full border border-[#D4AF37]/20 font-semibold">
-                    Turnkey Handover ✓
-                  </span>
-                </div>
+              {/* Client Face & Profile Header */}
+              <div>
+                <div className="flex items-start gap-4 mb-4">
+                  {/* High-visibility Customer Portrait */}
+                  <div className="relative w-20 h-24 sm:w-24 sm:h-28 rounded-2xl overflow-hidden shrink-0 bg-black border border-white/15 group-hover:border-[#D4AF37]/60 shadow-md transition-colors">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover object-top filter contrast-105 group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                  </div>
 
-                <p className="text-xs sm:text-sm text-white/90 font-light leading-relaxed italic">
-                  &quot;{item.text}&quot;
-                </p>
-              </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between gap-2 mb-1.5">
+                      <span className="text-[10px] uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-2.5 py-0.5 rounded-full border border-[#D4AF37]/20 font-semibold truncate">
+                        Turnkey Handover ✓
+                      </span>
+                    </div>
 
-              <div className="pt-5 mt-5 border-t border-white/10 flex items-center gap-3.5">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-black shrink-0 border border-white/15">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-full object-cover object-top filter contrast-105"
-                  />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <h2 className="font-serif font-bold text-white text-sm sm:text-base group-hover:text-[#D4AF37] transition-colors">
+                    <h2 className="font-serif font-bold text-white text-base sm:text-lg group-hover:text-[#D4AF37] transition-colors leading-tight">
                       {item.name}
                     </h2>
+
                     {item.occupation && (
-                      <span className="text-[10px] font-mono text-[#D4AF37] border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-2 py-0.5 rounded-full">
+                      <p className="text-[11px] font-mono text-[#D4AF37] mt-1">
                         {item.occupation}
-                      </span>
+                      </p>
                     )}
+
+                    <p className="text-[11px] text-[#A1A1AA] mt-1">Completed Residence · Mumbai</p>
                   </div>
-                  <p className="text-[11px] text-[#A1A1AA]">Completed Residence · Mumbai</p>
-                  {item.projectId && (
-                    <Link
-                      href={`/projects/${item.projectId}`}
-                      className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#FCF6BA] hover:text-[#D4AF37] transition-colors mt-1.5"
-                    >
-                      <span>View Delivered Project</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </Link>
-                  )}
+                </div>
+
+                {/* Testimonial Quote */}
+                <div className="pt-3 border-t border-white/10 space-y-2">
+                  <Quote className="w-5 h-5 text-[#D4AF37]/40 group-hover:text-[#D4AF37] transition-colors" />
+                  <p className="text-xs sm:text-sm text-white/90 font-light leading-relaxed italic">
+                    &quot;{item.text}&quot;
+                  </p>
                 </div>
               </div>
+
+              {/* Optional Project CTA */}
+              {item.projectId && (
+                <div className="pt-4 mt-4 border-t border-white/5">
+                  <Link
+                    href={`/projects/${item.projectId}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#FCF6BA] hover:text-[#D4AF37] transition-colors group/link"
+                  >
+                    <span>View Delivered Project</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                  </Link>
+                </div>
+              )}
             </div>
           ))}
         </div>
