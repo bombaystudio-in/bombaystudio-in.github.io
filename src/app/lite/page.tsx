@@ -165,7 +165,7 @@ export default function LiteModePage() {
           <p>
             Developed in Germany 🇩🇪 by{" "}
             <a href="https://nordible.co/" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37]">
-              Nordible ↗
+              Nordible Technologies ↗
             </a>
           </p>
           <div className="flex justify-center gap-4 text-xs text-[#A1A1AA]">

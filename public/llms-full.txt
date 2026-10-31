@@ -3,11 +3,12 @@
 ## Studio Profile
 - Entity: Bombay Studio (formerly Noor Engineering, est. 1992)
 - Founder / Principal Architect: Ar. Aakhir Choudhary
-- Headquarters: Mumbai, Maharashtra, India
-- Development Partner: Nordible (Germany)
+- Headquarters & Studio Address: 111, Evershine Mall, Chincholi Bunder Mindspace, Malad West, Mumbai - 64, Maharashtra, India
+- Development Partner: Nordible Technologies (Germany, https://nordible.co/)
 - Website: https://bombaystudio.in
 - Phone / WhatsApp: +91 707070 4181
 - Email: info@bombaystudio.in
+- Founder Digital vCard: https://bombaystudio.in/vcard (.vcf download at https://bombaystudio.in/founder-vcard.vcf)
 
 ## Material Specifications & Quality Standards
 - Carcass & Framework: IS 710 Boiling Water Proof (BWP) Marine Plywood with calibrated thickness.

@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Choudhary;Aakhir;;Ar.;
+FN:Ar. Aakhir Choudhary
+ORG:Bombay Studio
+TITLE:Founder & Principal Architect
+TEL;TYPE=CELL,VOICE,PREF:+917070704181
+TEL;TYPE=WORK,VOICE:+919664384181
+EMAIL;TYPE=WORK,INTERNET:aakhir@bombaystudio.in
+EMAIL;TYPE=PREF,INTERNET:info@bombaystudio.in
+URL:https://bombaystudio.in
+ADR;TYPE=WORK:;;111, Evershine Mall, Chincholi Bunder Mindspace;Malad West, Mumbai;Maharashtra;400064;India
+X-SOCIALPROFILE;type=instagram:https://www.instagram.com/bombaystudio/
+X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/company/bombay-studio-in/
+NOTE:Bombay Studio — Architecture & Luxury Turnkey Interiors. Est. 1992.
+END:VCARD

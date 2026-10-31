@@ -61,6 +61,7 @@ export default function Footer() {
               <li><a href="/bombay-studio-portfolio.pdf" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:text-[#FCF6BA] transition-colors font-semibold">Download Portfolio PDF ↗</a></li>
               <li><Link href="/#calculator" className="hover:text-white transition-colors">Cost Calculator</Link></li>
               <li><Link href="/team" className="hover:text-white transition-colors">Studio Team &amp; Leadership</Link></li>
+              <li><Link href="/vcard" className="text-[#D4AF37] hover:text-[#FCF6BA] transition-colors">Founder Digital vCard</Link></li>
               <li><Link href="/#faq" className="hover:text-white transition-colors">FAQ</Link></li>
               <li><Link href="/#contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
@@ -123,7 +124,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-[#D4AF37] hover:text-[#FCF6BA] font-medium transition-colors"
             >
-              Developed in Germany 🇩🇪 by Nordible ↗
+              Developed in Germany 🇩🇪 by Nordible Technologies ↗
             </a>
           </div>
           <p className="text-[#71717A]">© {currentYear} Bombay Studio. All rights reserved.</p>

@@ -65,7 +65,7 @@ export default function ContactSection() {
                 <div>
                   <p className="font-bold text-white text-xs sm:text-sm">Office Address</p>
                   <p className="text-[#A1A1AA] text-xs font-light">
-                    Bombay Studio Design HQ, Suite 402, Trade World B, BKC &amp; Lower Parel, Mumbai, Maharashtra 400013
+                    111, Evershine Mall, Chincholi Bunder Mindspace, Malad West, Mumbai - 64
                   </p>
                 </div>
               </div>
@@ -123,6 +123,14 @@ export default function ContactSection() {
                       className="text-[#A1A1AA] text-xs hover:text-white transition-colors"
                     >
                       aakhir@bombaystudio.in
+                    </a>
+                    <span className="text-white/30">•</span>
+                    <a
+                      href="/founder-vcard.vcf"
+                      download="Ar-Aakhir-Choudhary-Bombay-Studio.vcf"
+                      className="text-[#D4AF37] hover:text-[#FCF6BA] text-xs font-semibold whitespace-nowrap"
+                    >
+                      Save vCard ↗
                     </a>
                   </div>
                 </div>

@@ -28,6 +28,7 @@ console.log("Compiling Comprehensive 12-Page Bombay Studio Architectural Monogra
 
 // Assets
 const logoImg = getBase64Image('logo.png');
+const vcardQrImg = getBase64Image('founder-vcard-qr.png');
 const founderImg = getBase64Image('team/akhir-chaudhary-founder-portrait.png');
 const kalamuddinImg = getBase64Image('team/kalamuddin-choudhary.png');
 
@@ -252,11 +253,11 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page" style="background: radial-gradient(circle at 80% 20%, #1A170A 0%, #080808 70%); justify-content: space-between;">
     <div>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3mm;">
-        ${logoImg ? `<img src="${logoImg}" style="height: 42px; object-fit: contain;" alt="Bombay Studio">` : `<h1 class="font-serif" style="font-size: 22pt; color: #fff; margin:0; font-weight: 700;">BOMBAY STUDIO</h1>`}
-        <span class="pill" style="font-size: 7.5pt; padding: 4px 10px;">Architectural Monograph 2026</span>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4mm;">
+        ${logoImg ? `<img src="${logoImg}" style="height: 78px; max-width: 330px; object-fit: contain;" alt="Bombay Studio">` : `<h1 class="font-serif" style="font-size: 26pt; color: #fff; margin:0; font-weight: 700;">BOMBAY STUDIO</h1>`}
+        <span class="pill" style="font-size: 8pt; padding: 6px 14px;">Architectural Monograph 2026</span>
       </div>
-      <h2 class="font-serif" style="font-size: 21pt; color: #FFFFFF; margin: 3mm 0 1mm 0; line-height: 1.15; font-weight: 700;">
+      <h2 class="font-serif" style="font-size: 21pt; color: #FFFFFF; margin: 2mm 0 1mm 0; line-height: 1.15; font-weight: 700;">
         Three Decades of <span class="gold-gradient-text">Architectural Craftsmanship</span>
       </h2>
       <p style="font-size: 9.5pt; letter-spacing: 2px; text-transform: uppercase; color: #D4AF37; margin: 0; font-weight: 600;">
@@ -265,7 +266,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div>
-      <img src="${ajinkya01}" style="width: 100%; height: 126mm; object-fit: cover; border-radius: 14px; border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 20px 40px rgba(0,0,0,0.85);" alt="Flagship Handover">
+      <img src="${ajinkya01}" style="width: 100%; height: 118mm; object-fit: cover; border-radius: 14px; border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 20px 40px rgba(0,0,0,0.85);" alt="Flagship Handover">
     </div>
 
     <div>
@@ -301,9 +302,12 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Architectural Monograph</div>
+        </div>
       </div>
       <div class="header-meta">Section 01 · Origin Legacy &amp; Leadership</div>
     </div>
@@ -370,7 +374,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 02</div>
     </div>
@@ -381,9 +385,12 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Architectural Monograph</div>
+        </div>
       </div>
       <div class="header-meta">Section 02 · Core Studio Standards</div>
     </div>
@@ -440,7 +447,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 03</div>
     </div>
@@ -451,114 +458,150 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Client Stories &amp; Testimonials</div>
+        </div>
       </div>
       <div class="header-meta">Section 03 · Popularity &amp; Client Trust</div>
     </div>
 
-    <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
+    <div style="flex: 1; padding: 4mm 0 2mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Client Social Proof</span>
         <h2 class="section-title">Client Feedback &amp; <span class="gold-gradient-text">Celebrity Trust</span></h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-        <!-- Actress Adrija Sinha -->
-        <div class="card" style="padding: 10px; display: flex; gap: 10px; align-items: flex-start;">
-          <img src="${adrijaImg}" style="width: 48px; height: 58px; border-radius: 6px; object-fit: cover; object-position: top; border: 1px solid rgba(212,175,55,0.4); flex-shrink: 0;" alt="Adrija Sinha">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <h4 class="font-serif" style="font-size: 9pt; color: #fff; margin: 0;">Actress Adrija Sinha</h4>
-              <span class="pill" style="font-size: 6pt;">Celebrity</span>
-            </div>
-            <p style="font-size: 7.2pt; color: #D4D4D8; margin-top: 3px; line-height: 1.35;">
-              &ldquo;Bombay Studio made our home look beautiful and comfortable, just the way we wanted. The team was patient with our suggestions and helped us make the right choices.&rdquo;
-            </p>
-          </div>
-        </div>
-
-        <!-- Actress Isha & Vikas Talwar -->
-        <div class="card" style="padding: 10px; display: flex; gap: 10px; align-items: flex-start;">
-          <img src="${ishaImg}" style="width: 48px; height: 58px; border-radius: 6px; object-fit: cover; object-position: top; border: 1px solid rgba(212,175,55,0.4); flex-shrink: 0;" alt="Isha Talwar">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <h4 class="font-serif" style="font-size: 9pt; color: #fff; margin: 0;">Isha &amp; Vikas Talwar</h4>
-              <span class="pill" style="font-size: 6pt;">Celebrity</span>
-            </div>
-            <p style="font-size: 7.2pt; color: #D4D4D8; margin-top: 3px; line-height: 1.35;">
-              &ldquo;We didn’t have to keep chasing people for updates. We’re really happy with our home and the way everything came together!&rdquo;
-            </p>
-          </div>
-        </div>
-
-        <!-- Swaraj Singh -->
-        <div class="card" style="padding: 10px; display: flex; gap: 10px; align-items: flex-start;">
-          <img src="${swarajImg}" style="width: 48px; height: 58px; border-radius: 6px; object-fit: cover; object-position: top; border: 1px solid rgba(212,175,55,0.4); flex-shrink: 0;" alt="Swaraj Singh">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <h4 class="font-serif" style="font-size: 9pt; color: #fff; margin: 0;">Swaraj Singh</h4>
-              <span class="pill" style="font-size: 6pt;">Film Producer</span>
-            </div>
-            <p style="font-size: 7.2pt; color: #D4D4D8; margin-top: 3px; line-height: 1.35;">
-              &ldquo;The work was done with good attention to detail, and we are really happy with how our space has turned out!&rdquo;
-            </p>
-          </div>
-        </div>
-
-        <!-- Mayuri Malandkar -->
-        <div class="card" style="padding: 10px; display: flex; gap: 10px; align-items: flex-start;">
-          <img src="${mayuriImg}" style="width: 48px; height: 58px; border-radius: 6px; object-fit: cover; object-position: top; border: 1px solid rgba(212,175,55,0.4); flex-shrink: 0;" alt="Mayuri Malandkar">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <h4 class="font-serif" style="font-size: 9pt; color: #fff; margin: 0;">Mayuri Malandkar</h4>
-              <span class="pill" style="font-size: 6pt;">Media Anchor</span>
-            </div>
-            <p style="font-size: 7.2pt; color: #D4D4D8; margin-top: 3px; line-height: 1.35;">
-              &ldquo;We didn’t have to follow up on every small thing. The team managed everything well and kept things moving on time.&rdquo;
-            </p>
-          </div>
-        </div>
-
-        <!-- Adv. Mitesh Pabari -->
-        <div class="card" style="padding: 10px; display: flex; gap: 10px; align-items: flex-start;">
-          <img src="${miteshImg}" style="width: 48px; height: 58px; border-radius: 6px; object-fit: cover; object-position: top; border: 1px solid rgba(212,175,55,0.4); flex-shrink: 0;" alt="Adv. Mitesh Pabari">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <h4 class="font-serif" style="font-size: 9pt; color: #fff; margin: 0;">Adv. Mitesh Pabari</h4>
-              <span class="pill" style="font-size: 6pt;">Advocate</span>
-            </div>
-            <p style="font-size: 7.2pt; color: #D4D4D8; margin-top: 3px; line-height: 1.35;">
-              &ldquo;Architect Aakhir Choudhary was helpful and guided us whenever we needed support. We are happy with the outcome!&rdquo;
-            </p>
-          </div>
-        </div>
-
-        <!-- Adv. Praveen Singh -->
-        <div class="card" style="padding: 10px; display: flex; gap: 10px; align-items: flex-start;">
-          <img src="${praveenImg}" style="width: 48px; height: 58px; border-radius: 6px; object-fit: cover; object-position: top; border: 1px solid rgba(212,175,55,0.4); flex-shrink: 0;" alt="Adv. Praveen Singh">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <h4 class="font-serif" style="font-size: 9pt; color: #fff; margin: 0;">Adv. Praveen Singh</h4>
-              <span class="pill" style="font-size: 6pt;">Advocate</span>
-            </div>
-            <p style="font-size: 7.2pt; color: #D4D4D8; margin-top: 3px; line-height: 1.35;">
-              &ldquo;Everything was explained clearly at every stage. Architect Aakhir Choudhary made sure the work was planned well.&rdquo;
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="gold-box" style="padding: 10px;">
-        <p style="font-size: 7.5pt; color: #FCF6BA; margin: 0; text-align: center;">
-          Over <strong>200+ homeowners</strong> have entrusted Bombay Studio with their turnkey handovers across Mumbai.
+        <p style="font-size: 8.5pt; color: #A1A1AA; margin: 0 0 4mm 0; line-height: 1.45;">
+          Mumbai’s prominent artists, film producers, and senior advocates choose Bombay Studio for our discreet turnkey execution, architectural precision, and uncompromising craftsmanship.
         </p>
+
+        <!-- Social Proof Metrics Bar -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 5mm;">
+          <div class="card" style="padding: 10px; text-align: center;">
+            <strong class="gold" style="font-size: 14pt; font-family: monospace;">200+</strong>
+            <p style="font-size: 7pt; color: #A1A1AA; margin: 2px 0 0 0; text-transform: uppercase;">Homes Delivered</p>
+          </div>
+          <div class="card" style="padding: 10px; text-align: center;">
+            <strong class="gold" style="font-size: 14pt; font-family: monospace;">4.9 / 5</strong>
+            <p style="font-size: 7pt; color: #A1A1AA; margin: 2px 0 0 0; text-transform: uppercase;">Client Rating</p>
+          </div>
+          <div class="card" style="padding: 10px; text-align: center;">
+            <strong class="gold" style="font-size: 14pt; font-family: monospace;">100%</strong>
+            <p style="font-size: 7pt; color: #A1A1AA; margin: 2px 0 0 0; text-transform: uppercase;">On-Time Track Record</p>
+          </div>
+          <div class="card" style="padding: 10px; text-align: center;">
+            <strong class="gold" style="font-size: 14pt; font-family: monospace;">30+ Yrs</strong>
+            <p style="font-size: 7pt; color: #A1A1AA; margin: 2px 0 0 0; text-transform: uppercase;">Mumbai Heritage</p>
+          </div>
+        </div>
+
+        <!-- 6 Enhanced Testimonial Cards -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 4mm;">
+          <!-- Actress Adrija Sinha -->
+          <div class="card" style="padding: 14px; display: flex; gap: 14px; align-items: flex-start;">
+            <img src="${adrijaImg}" style="width: 82px; height: 104px; border-radius: 8px; object-fit: cover; object-position: top; border: 1.5px solid rgba(212,175,55,0.45); flex-shrink: 0;" alt="Adrija Sinha">
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Actress Adrija Sinha</h4>
+                <span class="pill" style="font-size: 6.5pt;">Celebrity</span>
+              </div>
+              <p style="font-size: 7.2pt; color: #D4AF37; margin: 0 0 6px 0; font-family: monospace;">Film &amp; Television Actress</p>
+              <p style="font-size: 8.2pt; color: #D4D4D8; margin: 0; line-height: 1.48;">
+                &ldquo;Bombay Studio made our home look beautiful and comfortable, just the way we wanted. The team was patient with our suggestions and helped us make the right choices without any stress.&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <!-- Actress Isha & Vikas Talwar -->
+          <div class="card" style="padding: 14px; display: flex; gap: 14px; align-items: flex-start;">
+            <img src="${ishaImg}" style="width: 82px; height: 104px; border-radius: 8px; object-fit: cover; object-position: top; border: 1.5px solid rgba(212,175,55,0.45); flex-shrink: 0;" alt="Isha Talwar">
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Isha &amp; Vikas Talwar</h4>
+                <span class="pill" style="font-size: 6.5pt;">Celebrity</span>
+              </div>
+              <p style="font-size: 7.2pt; color: #D4AF37; margin: 0 0 6px 0; font-family: monospace;">Indian Cinema &amp; Media</p>
+              <p style="font-size: 8.2pt; color: #D4D4D8; margin: 0; line-height: 1.48;">
+                &ldquo;We didn’t have to keep chasing people for updates. We’re really happy with our home and the way everything came together! Execution was seamless and delivered on time.&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <!-- Swaraj Singh -->
+          <div class="card" style="padding: 14px; display: flex; gap: 14px; align-items: flex-start;">
+            <img src="${swarajImg}" style="width: 82px; height: 104px; border-radius: 8px; object-fit: cover; object-position: top; border: 1.5px solid rgba(212,175,55,0.45); flex-shrink: 0;" alt="Swaraj Singh">
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Swaraj Singh</h4>
+                <span class="pill" style="font-size: 6.5pt;">Film Producer</span>
+              </div>
+              <p style="font-size: 7.2pt; color: #D4AF37; margin: 0 0 6px 0; font-family: monospace;">Creative Director &amp; Producer</p>
+              <p style="font-size: 8.2pt; color: #D4D4D8; margin: 0; line-height: 1.48;">
+                &ldquo;The work was done with exceptional attention to detail, and we are really happy with how our space has turned out! The joinery and mood lighting exceeded our expectations.&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <!-- Mayuri Malandkar -->
+          <div class="card" style="padding: 14px; display: flex; gap: 14px; align-items: flex-start;">
+            <img src="${mayuriImg}" style="width: 82px; height: 104px; border-radius: 8px; object-fit: cover; object-position: top; border: 1.5px solid rgba(212,175,55,0.45); flex-shrink: 0;" alt="Mayuri Malandkar">
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Mayuri Malandkar</h4>
+                <span class="pill" style="font-size: 6.5pt;">Media Anchor</span>
+              </div>
+              <p style="font-size: 7.2pt; color: #D4AF37; margin: 0 0 6px 0; font-family: monospace;">Television Presenter &amp; Anchor</p>
+              <p style="font-size: 8.2pt; color: #D4D4D8; margin: 0; line-height: 1.48;">
+                &ldquo;We didn’t have to follow up on every small thing. The team managed everything well and kept things moving on time. Truly professional single-point coordination.&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <!-- Adv. Mitesh Pabari -->
+          <div class="card" style="padding: 14px; display: flex; gap: 14px; align-items: flex-start;">
+            <img src="${miteshImg}" style="width: 82px; height: 104px; border-radius: 8px; object-fit: cover; object-position: top; border: 1.5px solid rgba(212,175,55,0.45); flex-shrink: 0;" alt="Mitesh Pabari">
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Adv. Mitesh Pabari</h4>
+                <span class="pill" style="font-size: 6.5pt;">Advocate</span>
+              </div>
+              <p style="font-size: 7.2pt; color: #D4AF37; margin: 0 0 6px 0; font-family: monospace;">High Court Practitioner</p>
+              <p style="font-size: 8.2pt; color: #D4D4D8; margin: 0; line-height: 1.48;">
+                &ldquo;Architect Aakhir Choudhary was helpful and guided us whenever we needed support. We are happy with the outcome! 100% pure marine ply and transparent billing.&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <!-- Adv. Praveen Singh -->
+          <div class="card" style="padding: 14px; display: flex; gap: 14px; align-items: flex-start;">
+            <img src="${praveenImg}" style="width: 82px; height: 104px; border-radius: 8px; object-fit: cover; object-position: top; border: 1.5px solid rgba(212,175,55,0.45); flex-shrink: 0;" alt="Praveen Singh">
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Adv. Praveen Singh</h4>
+                <span class="pill" style="font-size: 6.5pt;">Advocate</span>
+              </div>
+              <p style="font-size: 7.2pt; color: #D4AF37; margin: 0 0 6px 0; font-family: monospace;">Senior Legal Counsel</p>
+              <p style="font-size: 8.2pt; color: #D4D4D8; margin: 0; line-height: 1.48;">
+                &ldquo;Everything was explained clearly at every stage. Architect Aakhir Choudhary made sure the work was planned well and finished on schedule. Highly recommended!&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Trust Note -->
+      <div class="gold-box" style="padding: 12px 16px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <strong style="color: #FCF6BA; font-size: 9pt;">Watch Video Testimonials &amp; Site Walkthroughs</strong>
+          <p style="font-size: 7.5pt; color: #A1A1AA; margin: 2px 0 0 0;">Explore full video walkthrough interviews on our official website.</p>
+        </div>
+        <span class="pill" style="font-size: 7.5pt; padding: 5px 12px;">bombaystudio.in/testimonials ↗</span>
       </div>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 04</div>
     </div>
@@ -569,9 +612,12 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Delivered Flagship Residences</div>
+        </div>
       </div>
       <div class="header-meta">Section 04 · 4BHK Grand Residence</div>
     </div>
@@ -612,7 +658,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 05</div>
     </div>
@@ -623,9 +669,12 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Delivered Flagship Residences</div>
+        </div>
       </div>
       <div class="header-meta">Section 04 · 4BHK Luxury Residences</div>
     </div>
@@ -677,7 +726,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 06</div>
     </div>
@@ -688,9 +737,12 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Delivered 3BHK &amp; 2BHK Residences</div>
+        </div>
       </div>
       <div class="header-meta">Section 04 · 3BHK &amp; 2BHK Handovers</div>
     </div>
@@ -761,7 +813,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 07</div>
     </div>
@@ -772,73 +824,148 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Turnkey Capabilities</div>
+        </div>
       </div>
       <div class="header-meta">Section 05 · Services &amp; Typologies</div>
     </div>
 
-    <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
+    <div style="flex: 1; padding: 5mm 0 2mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Comprehensive Architectural Services</span>
         <h2 class="section-title">Specialized Turnkey <span class="gold-gradient-text">Capabilities</span></h2>
-      </div>
+        <p style="font-size: 8.8pt; color: #A1A1AA; margin: 0 0 4mm 0; line-height: 1.5;">
+          From raw shell to bespoke turnkey handover, Bombay Studio manages every trade under single-point architectural responsibility. We eliminate contractor disputes, material substitution, and timeline uncertainty across Mumbai.
+        </p>
 
-      <!-- 6 Services Grid -->
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 5mm;">
-        <div class="card" style="padding: 10px;">
-          <span class="gold" style="font-size: 7pt; font-family: monospace;">01</span>
-          <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 2px 0;">Turnkey Architecture</h4>
-          <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.35; margin: 0;">End-to-end design, civil contracting, joinery, and key delivery.</p>
+        <!-- 6 In-Depth Service Cards (2 Columns x 3 Rows) -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 4mm;">
+          <!-- 01 -->
+          <div class="card" style="padding: 12px; border-left: 3px solid #D4AF37;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Turnkey Architectural Design</h4>
+              <span class="gold" style="font-size: 8pt; font-family: monospace; font-weight: bold;">01</span>
+            </div>
+            <p style="font-size: 7.8pt; color: #A1A1AA; line-height: 1.45; margin: 0 0 5px 0;">
+              End-to-end management spanning spatial concept, civil alterations, bespoke carpentry, electrical conduits, and final handover with 0% unapproved escalation.
+            </p>
+            <div style="display: flex; gap: 5px;">
+              <span class="pill">Single-Point Accountability</span>
+              <span class="pill">Guaranteed Handover</span>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="card" style="padding: 12px; border-left: 3px solid #D4AF37;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">2D Space Planning &amp; Vastu</h4>
+              <span class="gold" style="font-size: 8pt; font-family: monospace; font-weight: bold;">02</span>
+            </div>
+            <p style="font-size: 7.8pt; color: #A1A1AA; line-height: 1.45; margin: 0 0 5px 0;">
+              Scientific circulation analysis, furniture ergonomic layouts, natural ventilation mapping, and Vastu-compliant room orientations tailored to your family's lifestyle.
+            </p>
+            <div style="display: flex; gap: 5px;">
+              <span class="pill">Ergonomic Circulation</span>
+              <span class="pill">Vastu Compliance</span>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="card" style="padding: 12px; border-left: 3px solid #D4AF37;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">3D Photorealistic CGI &amp; VR</h4>
+              <span class="gold" style="font-size: 8pt; font-family: monospace; font-weight: bold;">03</span>
+            </div>
+            <p style="font-size: 7.8pt; color: #A1A1AA; line-height: 1.45; margin: 0 0 5px 0;">
+              Cinema-grade 3D visualization matching exact material finishes, veneer grain, lighting angles, and walkthrough video animations before construction begins.
+            </p>
+            <div style="display: flex; gap: 5px;">
+              <span class="pill">Photorealistic CGI</span>
+              <span class="pill">Video Walkthroughs</span>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="card" style="padding: 12px; border-left: 3px solid #D4AF37;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Modular &amp; Bespoke Kitchens</h4>
+              <span class="gold" style="font-size: 8pt; font-family: monospace; font-weight: bold;">04</span>
+            </div>
+            <p style="font-size: 7.8pt; color: #A1A1AA; line-height: 1.45; margin: 0 0 5px 0;">
+              Precision German Blum and Hafele hardware, anti-scratch acrylics, quartz / Italian marble counter slabs, and moisture-proof IS 710 marine framing.
+            </p>
+            <div style="display: flex; gap: 5px;">
+              <span class="pill">Blum / Hafele Hardware</span>
+              <span class="pill">Anti-Scratch Acrylic</span>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="card" style="padding: 12px; border-left: 3px solid #D4AF37;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">Civil Alterations &amp; MEP</h4>
+              <span class="gold" style="font-size: 8pt; font-family: monospace; font-weight: bold;">05</span>
+            </div>
+            <p style="font-size: 7.8pt; color: #A1A1AA; line-height: 1.45; margin: 0 0 5px 0;">
+              Concealed Finolex/Polycab wiring, Gyproc false ceilings, structural load-bearing checks, plumbing rerouting, and society liaisoning across Mumbai towers.
+            </p>
+            <div style="display: flex; gap: 5px;">
+              <span class="pill">FRLS Fire-Grade Wiring</span>
+              <span class="pill">Structural Approvals</span>
+            </div>
+          </div>
+
+          <!-- 06 -->
+          <div class="card" style="padding: 12px; border-left: 3px solid #D4AF37;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0; font-weight: bold;">BOQ &amp; Factory Procurement</h4>
+              <span class="gold" style="font-size: 8pt; font-family: monospace; font-weight: bold;">06</span>
+            </div>
+            <p style="font-size: 7.8pt; color: #A1A1AA; line-height: 1.45; margin: 0 0 5px 0;">
+              Direct quarry and factory-level procurement for marble, veneers, and sanitary fixtures. Clients receive transparent itemized rate cards with 0% hidden markups.
+            </p>
+            <div style="display: flex; gap: 5px;">
+              <span class="pill">Itemized Transparency</span>
+              <span class="pill">Direct Mill Rates</span>
+            </div>
+          </div>
         </div>
 
-        <div class="card" style="padding: 10px;">
-          <span class="gold" style="font-size: 7pt; font-family: monospace;">02</span>
-          <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 2px 0;">2D Space Planning</h4>
-          <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.35; margin: 0;">Ergonomic circulation layout, Vastu compliance, and storage mapping.</p>
+        <!-- Project Typologies Card -->
+        <div class="gold-box" style="margin-bottom: 3.5mm;">
+          <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0 0 4px 0; font-weight: bold;">Residential &amp; Commercial Typologies Handled</h4>
+          <p style="font-size: 7.8pt; color: #D4D4D8; line-height: 1.4; margin: 0 0 6px 0;">
+            Every typology is engineered for optimum usable carpet area, acoustic insulation, and timeless aesthetics.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="pill">4BHK Luxury Residences (2,200–4,500 sq.ft)</span>
+            <span class="pill">3BHK High-Rise Apartments (1,400–2,100 sq.ft)</span>
+            <span class="pill">2BHK Precision Urban Homes (750–1,100 sq.ft)</span>
+            <span class="pill">Penthouses &amp; Sea-Facing Duplexes</span>
+            <span class="pill">Executive Studios &amp; Boutique Commercial Suites</span>
+          </div>
         </div>
 
-        <div class="card" style="padding: 10px;">
-          <span class="gold" style="font-size: 7pt; font-family: monospace;">03</span>
-          <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 2px 0;">3D Photorealistic CGI</h4>
-          <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.35; margin: 0;">High-fidelity 3D visualization and walkthrough video animation.</p>
-        </div>
-
-        <div class="card" style="padding: 10px;">
-          <span class="gold" style="font-size: 7pt; font-family: monospace;">04</span>
-          <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 2px 0;">Modular Kitchens</h4>
-          <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.35; margin: 0;">German Blum/Hafele hardware, quartz countertops, anti-scratch finishes.</p>
-        </div>
-
-        <div class="card" style="padding: 10px;">
-          <span class="gold" style="font-size: 7pt; font-family: monospace;">05</span>
-          <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 2px 0;">Civil Demolition &amp; MEP</h4>
-          <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.35; margin: 0;">Structural alterations, plumbing conduits, and Finolex electrical ducting.</p>
-        </div>
-
-        <div class="card" style="padding: 10px;">
-          <span class="gold" style="font-size: 7pt; font-family: monospace;">06</span>
-          <h4 class="font-serif" style="font-size: 9.5pt; color: #fff; margin: 2px 0;">BOQ &amp; Procurement</h4>
-          <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.35; margin: 0;">Direct factory procurement, itemized pricing, and material authenticity audit.</p>
-        </div>
-      </div>
-
-      <!-- Project Typologies Banner -->
-      <div class="gold-box" style="padding: 12px;">
-        <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 0 0 4px 0;">Residential &amp; Commercial Typologies Handled</h4>
-        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
-          <span class="pill">4BHK Luxury Residences</span>
-          <span class="pill">3BHK High-Rise Apartments</span>
-          <span class="pill">2BHK Urban Precision Homes</span>
-          <span class="pill">Penthouses &amp; Sea-Facing Duplexes</span>
-          <span class="pill">Executive Studios &amp; Boutique Offices</span>
+        <!-- Standards Banner -->
+        <div class="card" style="padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; background: #141414;">
+          <div style="display: flex; gap: 15px; align-items: center;">
+            <span class="gold" style="font-size: 18pt;">★</span>
+            <div>
+              <p style="font-size: 8pt; color: #fff; margin: 0; font-weight: bold;">The Bombay Studio Guarantee</p>
+              <p style="font-size: 7.2pt; color: #A1A1AA; margin: 0;">10-Year Plywood Warranty · Zero Contractor Substitution · Daily Photographic Site Reporting</p>
+            </div>
+          </div>
+          <span class="pill" style="font-size: 7pt; padding: 4px 10px;">100% In-House Craftsmen</span>
         </div>
       </div>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 08</div>
     </div>
@@ -849,9 +976,12 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Craftsmanship &amp; Execution</div>
+        </div>
       </div>
       <div class="header-meta">Section 06 · Site Work &amp; Behind the Scenes</div>
     </div>
@@ -901,7 +1031,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 09</div>
     </div>
@@ -912,86 +1042,154 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Team &amp; Leadership</div>
+        </div>
       </div>
       <div class="header-meta">Section 07 · Organizational Hierarchy</div>
     </div>
 
-    <div style="flex: 1; padding: 5mm 0; display: flex; flex-direction: column; justify-content: space-between;">
+    <div style="flex: 1; padding: 4mm 0 2mm 0; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <span class="section-badge">Studio Structure</span>
         <h2 class="section-title">The Multidisciplinary <span class="gold-gradient-text">Architectural Team</span></h2>
-      </div>
+        <p style="font-size: 8.5pt; color: #A1A1AA; margin: 0 0 3.5mm 0; line-height: 1.45;">
+          Every residence is executed by an in-house team of architects, structural specialists, and site supervisors under the direct oversight of Principal Architect Ar. Aakhir Choudhary.
+        </p>
 
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 4mm;">
-        <!-- Level 01: Kalamuddin -->
-        <div class="card" style="padding: 8px; text-align: center;">
-          <img src="${kalamuddinImg}" style="width: 60px; height: 75px; object-fit: contain; background: #000; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(212,175,55,0.3);" alt="Kalamuddin">
-          <p class="font-serif" style="font-size: 8.5pt; color: #fff; margin: 0; font-weight: bold;">Mr. Kalamuddin</p>
-          <p style="font-size: 6.5pt; color: #D4AF37; margin: 0;">Founder Emeritus</p>
+        <!-- Tier 1: Practice Leadership & Founder (2 Columns) -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 3.5mm;">
+          <!-- Kalamuddin -->
+          <div class="card" style="padding: 12px; display: flex; gap: 14px; align-items: center; border: 1px solid rgba(212,175,55,0.35); background: #131313;">
+            <img src="${kalamuddinImg}" style="width: 88px; height: 112px; border-radius: 8px; object-fit: contain; background: #000; border: 1.5px solid rgba(212,175,55,0.4); flex-shrink: 0;" alt="Kalamuddin">
+            <div>
+              <span class="pill" style="font-size: 6.5pt;">Level 01 · 1992 Founder</span>
+              <h4 class="font-serif" style="font-size: 11.5pt; color: #fff; margin: 3px 0 1px 0; font-weight: bold;">Mr. Kalamuddin</h4>
+              <p style="font-size: 7.2pt; color: #D4AF37; margin: 0 0 4px 0; font-family: monospace;">Founder Emeritus</p>
+              <p style="font-size: 7.4pt; color: #A1A1AA; line-height: 1.35; margin: 0;">Civil contractor &amp; founder of Noor Engineering Company. Established the 30-year structural foundation across Mumbai.</p>
+            </div>
+          </div>
+
+          <!-- Aakhir -->
+          <div class="card" style="padding: 10px 12px; display: flex; gap: 12px; align-items: center; border: 1.5px solid rgba(212,175,55,0.45); background: #131313;">
+            <img src="${founderImg}" style="width: 80px; height: 104px; border-radius: 8px; object-fit: cover; object-position: top; border: 1.5px solid rgba(212,175,55,0.4); flex-shrink: 0;" alt="Aakhir">
+            <div style="flex: 1; min-width: 0;">
+              <span class="pill" style="font-size: 6.5pt;">Level 02 · Principal Architect</span>
+              <h4 class="font-serif" style="font-size: 11pt; color: #fff; margin: 2px 0 1px 0; font-weight: bold;">Ar. Aakhir Choudhary</h4>
+              <p style="font-size: 7pt; color: #D4AF37; margin: 0 0 3px 0; font-family: monospace;">Principal Architect &amp; Founder</p>
+              <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.3; margin: 0 0 3px 0;">Turnkey architecture, spatial ergonomics, client consultations &amp; quality audits.</p>
+              <p style="font-size: 6.8pt; color: #FCF6BA; margin: 0; font-family: monospace;">+91 707070 4181 · aakhir@bombaystudio.in</p>
+            </div>
+            <div style="text-align: center; flex-shrink: 0; padding-left: 8px; border-left: 1px solid rgba(255,255,255,0.12);">
+              <img src="${vcardQrImg}" style="width: 52px; height: 52px; border-radius: 6px; background: white; padding: 2px; border: 1px solid #D4AF37;" alt="Founder vCard QR">
+              <div style="font-size: 5.5pt; color: #D4AF37; margin-top: 2px; font-weight: 600; text-transform: uppercase;">Scan vCard ↗</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Level 02: Aakhir -->
-        <div class="card" style="padding: 8px; text-align: center;">
-          <img src="${founderImg}" style="width: 60px; height: 75px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(212,175,55,0.3);" alt="Aakhir">
-          <p class="font-serif" style="font-size: 8.5pt; color: #fff; margin: 0; font-weight: bold;">Ar. Aakhir Choudhary</p>
-          <p style="font-size: 6.5pt; color: #D4AF37; margin: 0;">Principal Architect</p>
+        <!-- Tier 2: Senior Architectural & Operations Leadership (2 Columns) -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 3.5mm;">
+          <!-- Razzak -->
+          <div class="card" style="padding: 10px 12px; display: flex; gap: 12px; align-items: center;">
+            <img src="${razzakImg}" style="width: 78px; height: 96px; border-radius: 6px; object-fit: cover; object-position: top; border: 1px solid rgba(255,255,255,0.15); flex-shrink: 0;" alt="Razzak">
+            <div>
+              <span class="pill" style="font-size: 6pt;">Level 03 · Execution</span>
+              <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 2px 0 1px 0; font-weight: bold;">Razzak Khan</h4>
+              <p style="font-size: 7pt; color: #D4AF37; margin: 0 0 3px 0; font-family: monospace;">Associate Lead · Operations</p>
+              <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.3; margin: 0;">Managing turnkey site contractors, factory plywood logistics, and structural milestone deliveries.</p>
+            </div>
+          </div>
+
+          <!-- Arpita -->
+          <div class="card" style="padding: 10px 12px; display: flex; gap: 12px; align-items: center;">
+            <img src="${arpitaImg}" style="width: 78px; height: 96px; border-radius: 6px; object-fit: cover; object-position: top; border: 1px solid rgba(255,255,255,0.15); flex-shrink: 0;" alt="Arpita">
+            <div>
+              <span class="pill" style="font-size: 6pt;">Level 04 · Architecture</span>
+              <h4 class="font-serif" style="font-size: 10.5pt; color: #fff; margin: 2px 0 1px 0; font-weight: bold;">Arpita Kanojia</h4>
+              <p style="font-size: 7pt; color: #D4AF37; margin: 0 0 3px 0; font-family: monospace;">Senior Architect</p>
+              <p style="font-size: 7.2pt; color: #A1A1AA; line-height: 1.3; margin: 0;">Leading 2D technical working drawings, electrical layouts, and client showroom walkthroughs.</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Level 03: Razzak -->
-        <div class="card" style="padding: 8px; text-align: center;">
-          <img src="${razzakImg}" style="width: 60px; height: 75px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(255,255,255,0.1);" alt="Razzak">
-          <p class="font-serif" style="font-size: 8.5pt; color: #fff; margin: 0; font-weight: bold;">Razzak Khan</p>
-          <p style="font-size: 6.5pt; color: #D4AF37; margin: 0;">Associate Lead</p>
+        <!-- Tier 3: Design, 3D Visualization & Site Supervisors (6 Columns with Larger Portraits) -->
+        <div style="margin-bottom: 3.5mm;">
+          <p style="font-size: 7pt; color: #D4AF37; text-transform: uppercase; font-family: monospace; letter-spacing: 1.5px; margin: 0 0 4px 0;">Design &amp; Site Supervision Team</p>
+          <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 7px;">
+            <div class="card" style="padding: 8px 6px; text-align: center;">
+              <img src="${arshiyaImg}" style="width: 70px; height: 88px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(255,255,255,0.1);" alt="Arshiya">
+              <p style="font-size: 8pt; color: #fff; margin: 0; font-weight: bold;">Arshiya</p>
+              <p style="font-size: 6.8pt; color: #D4AF37; margin: 0;">Interior Design</p>
+            </div>
+
+            <div class="card" style="padding: 8px 6px; text-align: center;">
+              <img src="${varshaImg}" style="width: 70px; height: 88px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(255,255,255,0.1);" alt="Varsha">
+              <p style="font-size: 8pt; color: #fff; margin: 0; font-weight: bold;">Varsha</p>
+              <p style="font-size: 6.8pt; color: #D4AF37; margin: 0;">Interior Design</p>
+            </div>
+
+            <div class="card" style="padding: 8px 6px; text-align: center;">
+              <img src="${azharImg}" style="width: 70px; height: 88px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(255,255,255,0.1);" alt="Azhar">
+              <p style="font-size: 8pt; color: #fff; margin: 0; font-weight: bold;">Azhar</p>
+              <p style="font-size: 6.8pt; color: #D4AF37; margin: 0;">3D Visualization</p>
+            </div>
+
+            <div class="card" style="padding: 8px 6px; text-align: center;">
+              <img src="${sunilImg}" style="width: 70px; height: 88px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(255,255,255,0.1);" alt="Sunil">
+              <p style="font-size: 8pt; color: #fff; margin: 0; font-weight: bold;">Sunil</p>
+              <p style="font-size: 6.8pt; color: #D4AF37; margin: 0;">Project Head</p>
+            </div>
+
+            <div class="card" style="padding: 8px 6px; text-align: center;">
+              <img src="${rajeshImg}" style="width: 70px; height: 88px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(255,255,255,0.1);" alt="Rajesh">
+              <p style="font-size: 8pt; color: #fff; margin: 0; font-weight: bold;">Rajesh</p>
+              <p style="font-size: 6.8pt; color: #D4AF37; margin: 0;">Site Coordinator</p>
+            </div>
+
+            <div class="card" style="padding: 8px 6px; text-align: center;">
+              <img src="${merajImg}" style="width: 70px; height: 88px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(255,255,255,0.1);" alt="Meraj">
+              <p style="font-size: 8pt; color: #fff; margin: 0; font-weight: bold;">Meraj</p>
+              <p style="font-size: 6.8pt; color: #D4AF37; margin: 0;">Site Coordinator</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Level 04: Arpita -->
-        <div class="card" style="padding: 8px; text-align: center;">
-          <img src="${arpitaImg}" style="width: 60px; height: 75px; object-fit: cover; object-position: top; border-radius: 6px; margin: 0 auto 4px auto; border: 1px solid rgba(255,255,255,0.1);" alt="Arpita">
-          <p class="font-serif" style="font-size: 8.5pt; color: #fff; margin: 0; font-weight: bold;">Arpita Kanojia</p>
-          <p style="font-size: 6.5pt; color: #D4AF37; margin: 0;">Senior Architect</p>
+        <!-- Studio Capabilities Grid -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 3.5mm;">
+          <div class="card" style="padding: 8px; text-align: center; background: #131313;">
+            <p class="font-serif" style="font-size: 8.5pt; color: #fff; margin: 0 0 2px 0; font-weight: bold;">3D CGI &amp; VR</p>
+            <p style="font-size: 6.8pt; color: #A1A1AA; margin: 0; line-height: 1.3;">Unreal Engine 4K architectural visual walkthroughs</p>
+          </div>
+          <div class="card" style="padding: 8px; text-align: center; background: #131313;">
+            <p class="font-serif" style="font-size: 8.5pt; color: #fff; margin: 0 0 2px 0; font-weight: bold;">Structural Engineering</p>
+            <p style="font-size: 6.8pt; color: #A1A1AA; margin: 0; line-height: 1.3;">Load-bearing assessments &amp; society approvals</p>
+          </div>
+          <div class="card" style="padding: 8px; text-align: center; background: #131313;">
+            <p class="font-serif" style="font-size: 8.5pt; color: #fff; margin: 0 0 2px 0; font-weight: bold;">Factory Joinery</p>
+            <p style="font-size: 6.8pt; color: #A1A1AA; margin: 0; line-height: 1.3;">Direct mill veneer pressing &amp; PU polishing</p>
+          </div>
+          <div class="card" style="padding: 8px; text-align: center; background: #131313;">
+            <p class="font-serif" style="font-size: 8.5pt; color: #fff; margin: 0 0 2px 0; font-weight: bold;">Daily Supervision</p>
+            <p style="font-size: 6.8pt; color: #A1A1AA; margin: 0; line-height: 1.3;">Full-time on-site quality audit &amp; client reporting</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Design & Site Coordinators Row -->
-      <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px;">
-        <div class="card" style="padding: 6px; text-align: center;">
-          <img src="${arshiyaImg}" style="width: 48px; height: 58px; object-fit: cover; object-position: top; border-radius: 4px; margin: 0 auto 3px auto;" alt="Arshiya">
-          <p style="font-size: 7pt; color: #fff; margin: 0; font-weight: bold;">Arshiya</p>
-          <p style="font-size: 6pt; color: #A1A1AA; margin: 0;">Interior Design</p>
-        </div>
-        <div class="card" style="padding: 6px; text-align: center;">
-          <img src="${varshaImg}" style="width: 48px; height: 58px; object-fit: cover; object-position: top; border-radius: 4px; margin: 0 auto 3px auto;" alt="Varsha">
-          <p style="font-size: 7pt; color: #fff; margin: 0; font-weight: bold;">Varsha</p>
-          <p style="font-size: 6pt; color: #A1A1AA; margin: 0;">Interior Design</p>
-        </div>
-        <div class="card" style="padding: 6px; text-align: center;">
-          <img src="${azharImg}" style="width: 48px; height: 58px; object-fit: cover; object-position: top; border-radius: 4px; margin: 0 auto 3px auto;" alt="Azhar">
-          <p style="font-size: 7pt; color: #fff; margin: 0; font-weight: bold;">Azhar</p>
-          <p style="font-size: 6pt; color: #A1A1AA; margin: 0;">3D Visualization</p>
-        </div>
-        <div class="card" style="padding: 6px; text-align: center;">
-          <img src="${sunilImg}" style="width: 48px; height: 58px; object-fit: cover; object-position: top; border-radius: 4px; margin: 0 auto 3px auto;" alt="Sunil">
-          <p style="font-size: 7pt; color: #fff; margin: 0; font-weight: bold;">Sunil</p>
-          <p style="font-size: 6pt; color: #A1A1AA; margin: 0;">Project Head</p>
-        </div>
-        <div class="card" style="padding: 6px; text-align: center;">
-          <img src="${rajeshImg}" style="width: 48px; height: 58px; object-fit: cover; object-position: top; border-radius: 4px; margin: 0 auto 3px auto;" alt="Rajesh">
-          <p style="font-size: 7pt; color: #fff; margin: 0; font-weight: bold;">Rajesh</p>
-          <p style="font-size: 6pt; color: #A1A1AA; margin: 0;">Site Coord.</p>
-        </div>
-        <div class="card" style="padding: 6px; text-align: center;">
-          <img src="${merajImg}" style="width: 48px; height: 58px; object-fit: cover; object-position: top; border-radius: 4px; margin: 0 auto 3px auto;" alt="Meraj">
-          <p style="font-size: 7pt; color: #fff; margin: 0; font-weight: bold;">Meraj</p>
-          <p style="font-size: 6pt; color: #A1A1AA; margin: 0;">Site Coord.</p>
+        <!-- In-House Artisan Guarantee Banner -->
+        <div class="gold-box" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px;">
+          <div>
+            <strong style="color: #FCF6BA; font-size: 8.5pt;">Zero Third-Party Brokerage Guarantee</strong>
+            <p style="font-size: 7.2pt; color: #A1A1AA; margin: 2px 0 0 0;">All architects, 3D visualizers, and site engineers are permanent in-house professionals.</p>
+          </div>
+          <span class="pill" style="font-size: 7pt; padding: 4px 10px;">Direct Single-Point Accountability</span>
         </div>
       </div>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 10</div>
     </div>
@@ -1002,9 +1200,12 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">Turnkey Cost Estimates</div>
+        </div>
       </div>
       <div class="header-meta">Section 08 · Transparent BOQ Pricing</div>
     </div>
@@ -1071,7 +1272,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 11</div>
     </div>
@@ -1082,9 +1283,12 @@ const htmlContent = `<!DOCTYPE html>
   <!-- ======================================================================= -->
   <div class="page">
     <div class="doc-header">
-      <div>
-        <div class="brand-title">BOMBAY STUDIO</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="${logoImg}" style="height: 30px; max-width: 130px; object-fit: contain;" alt="Bombay Studio">
+        <div style="border-left: 1px solid rgba(212,175,55,0.35); padding-left: 10px;">
+          <div class="brand-title" style="font-size: 11pt; line-height: 1.1;">BOMBAY STUDIO</div>
         <div class="brand-sub">FAQ &amp; Architectural Walkthrough</div>
+        </div>
       </div>
       <div class="header-meta">Section 09 · Inquiries &amp; Consultations</div>
     </div>
@@ -1115,6 +1319,7 @@ const htmlContent = `<!DOCTYPE html>
 
         <!-- Consultation Booking Card -->
         <div class="gold-box" style="padding: 16px; text-align: center;">
+          <img src="${logoImg}" style="height: 48px; object-fit: contain; margin: 0 auto 8px auto; display: block;" alt="Bombay Studio">
           <h3 class="font-serif" style="font-size: 14pt; color: #FFFFFF; margin: 0 0 4px 0; font-weight: 700;">
             Schedule an <span class="gold-gradient-text">Architectural Walkthrough</span>
           </h3>
@@ -1135,15 +1340,35 @@ const htmlContent = `<!DOCTYPE html>
         </div>
       </div>
 
-      <div style="text-align: center; font-size: 7.5pt; color: #A1A1AA;">
-        <p style="margin: 0;"><strong>BOMBAY STUDIO ARCHITECTURAL OFFICE</strong></p>
-        <p style="margin: 2px 0;">Studio 4B, Western Heights, Link Road, Andheri West, Mumbai 400053, Maharashtra, India</p>
-        <p style="margin: 2px 0; color: #D4AF37;">Website: https://bombaystudio.in</p>
+      <!-- Founder vCard & Studio Headquarters Card -->
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 7.5pt; color: #A1A1AA; background: #0E0E0E; border: 1.5px solid rgba(212,175,55,0.35); border-radius: 12px; padding: 12px 18px; margin-top: 8px;">
+        <div style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 3px;">
+            <img src="${logoImg}" style="height: 28px; object-fit: contain;" alt="Bombay Studio">
+            <div>
+              <p style="margin: 0; color: #FCF6BA; font-weight: bold; font-size: 8.5pt;">BOMBAY STUDIO · AR. AAKHIR CHOUDHARY</p>
+              <p style="margin: 0; color: #D4AF37; font-size: 6.8pt; text-transform: uppercase; font-family: monospace;">Founder &amp; Principal Architect</p>
+            </div>
+          </div>
+          <p style="margin: 3px 0 2px 0; color: #E4E4E7; font-size: 7.2pt;"><strong>Studio Address:</strong> 111, Evershine Mall, Chincholi Bunder Mindspace, Malad West, Mumbai - 64</p>
+          <p style="margin: 0 0 2px 0; color: #A1A1AA; font-size: 7.2pt;"><strong>Direct Lines:</strong> +91 707070 4181 · +91 96643 84181 · <strong>Email:</strong> aakhir@bombaystudio.in</p>
+          <p style="margin: 0; color: #D4AF37; font-size: 7.2pt;">
+            <strong>Channels:</strong> Instagram: <a href="https://www.instagram.com/bombaystudio/" style="color: #FCF6BA; text-decoration: none;">@bombaystudio ↗</a> · LinkedIn: <a href="https://www.linkedin.com/company/bombay-studio-in/" style="color: #FCF6BA; text-decoration: none;">Bombay Studio ↗</a>
+          </p>
+        </div>
+        <div style="height: 60px; width: 1px; background: rgba(255,255,255,0.15); flex-shrink: 0;"></div>
+        <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+          <img src="${vcardQrImg}" style="width: 58px; height: 58px; border-radius: 6px; background: white; padding: 2px; border: 1.5px solid #D4AF37;" alt="Founder vCard QR">
+          <div style="text-align: left; max-width: 110px;">
+            <div style="font-size: 7.2pt; font-weight: bold; color: #FCF6BA; line-height: 1.2;">Automatic Contact Save</div>
+            <div style="font-size: 6.2pt; color: #A1A1AA; line-height: 1.25; margin-top: 2px;">Scan with phone camera to save business &amp; founder card</div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="doc-footer">
-      <div>Developed in Germany 🇩🇪 by Nordible ↗</div>
+      <div><a href="https://nordible.co/" style="color: inherit; text-decoration: none;">Developed in Germany 🇩🇪 by Nordible Technologies ↗</a></div>
       <div>bombaystudio.in · +91 707070 4181</div>
       <div>Page 12 (Conclusion)</div>
     </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, MessageSquare } from "lucide-react";
 import TeamSection from "@/components/TeamSection";
 import LegacySection from "@/components/LegacySection";
+import FounderVCard from "@/components/FounderVCard";
 
 export const metadata: Metadata = {
   title: "Our Team & Studio Hierarchy | Bombay Studio Mumbai",
@@ -42,6 +43,22 @@ export default function TeamPage() {
 
       {/* The Complete 6-Level Team Section */}
       <TeamSection />
+
+      {/* Interactive Founder Digital vCard Section */}
+      <section id="vcard" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16 scroll-mt-24">
+        <div className="text-center max-w-xl mx-auto mb-8 space-y-2">
+          <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold">
+            Direct Founder Access
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+            Save Contact <span className="gold-gradient-text">&amp; Social Channels</span>
+          </h2>
+          <p className="text-[#A1A1AA] text-xs sm:text-sm font-light">
+            Scan to save Ar. Aakhir Choudhary&apos;s verified business card directly to your mobile address book.
+          </p>
+        </div>
+        <FounderVCard />
+      </section>
 
       {/* Conversion Banner at Bottom of Team Page */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">

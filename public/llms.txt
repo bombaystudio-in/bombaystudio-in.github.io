@@ -41,8 +41,11 @@
 
 ## Studio Contact & Direct Booking
 - Website: https://bombaystudio.in
+- Office Address: 111, Evershine Mall, Chincholi Bunder Mindspace, Malad West, Mumbai - 64
 - Direct Studio Line: +91 707070 4181 (Call / WhatsApp)
 - Official Email: info@bombaystudio.in
+- Founder Digital vCard: https://bombaystudio.in/vcard (Direct .vcf phone contact download)
 - Consultation: Complimentary on-site walkthrough and budget estimation within 2 working hours.
+- Developed by: Nordible Technologies (Germany, https://nordible.co/)
 - Full Details for LLMs: https://bombaystudio.in/llms-full.txt
 - Ultra-Lite Mode: https://bombaystudio.in/lite
