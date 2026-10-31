@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Quote, ArrowUpRight } from "lucide-react";
 import CarouselControls from "./CarouselControls";
 import { TESTIMONIALS_DATA } from "@/data/testimonials";
@@ -66,13 +67,15 @@ export default function TestimonialsSection() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
             {/* Client Portrait */}
-            <div className="lg:col-span-4 relative aspect-[3/4] max-h-[30svh] sm:max-h-[35svh] w-auto mx-auto rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 group shadow-xl bg-black flex items-center justify-center">
-              <img
+            <div className="lg:col-span-4 relative aspect-[3/4] h-[240px] sm:h-[280px] w-auto mx-auto rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 group shadow-xl bg-black flex items-center justify-center">
+              <Image
                 src={current.image}
                 alt={current.name}
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+                fill
+                sizes="(max-width: 1024px) 240px, 280px"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 pointer-events-none" />
             </div>
 
             {/* Testimonial Quote & Info */}

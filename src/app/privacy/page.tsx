@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Bombay Studio Mumbai",

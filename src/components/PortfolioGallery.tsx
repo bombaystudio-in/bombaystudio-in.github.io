@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin } from "lucide-react";
 import CarouselControls from "./CarouselControls";
 import { GALLERY_ITEMS } from "@/data/gallery";
@@ -54,13 +55,14 @@ export default function PortfolioGallery() {
                 href="/portfolio"
                 className="group relative w-72 sm:w-80 md:w-96 aspect-[4/5] sm:aspect-[3/4] max-h-[50svh] sm:max-h-[56svh] rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 bg-[#121212] shrink-0 block hover:border-[#D4AF37]/60 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/10"
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+                  fill
+                  sizes="(max-width: 640px) 288px, (max-width: 768px) 320px, 384px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity pointer-events-none" />
 
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
                   <span className="px-2.5 py-1 rounded-full bg-[#050505]/80 backdrop-blur-md border border-white/15 text-[#D4AF37] text-[10px] font-bold uppercase tracking-wider">

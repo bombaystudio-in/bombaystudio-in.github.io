@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Star, ShieldCheck, Clock, Award, ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
@@ -42,13 +43,16 @@ export default function HeroSection() {
 
           {/* Right Main Image Showcase - Photography Dominance */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
-            <div className="relative aspect-[3/4] max-h-[46svh] sm:max-h-[52svh] w-auto rounded-3xl overflow-hidden gold-border-glow group shadow-2xl">
-              <img
+            <div className="relative aspect-[3/4] h-[320px] sm:h-[380px] lg:h-[420px] w-auto rounded-3xl overflow-hidden gold-border-glow group shadow-2xl">
+              <Image
                 src="/team/akhir-chaudhary-founder-portrait.png"
                 alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+                fill
+                priority
+                sizes="(max-width: 1024px) 320px, 420px"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent opacity-85" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent opacity-85 pointer-events-none" />
 
               {/* Minimal Clean Label */}
               <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-[#050505]/80 backdrop-blur-md border border-white/10 text-center shadow-lg">

@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 import { Project } from "@/data/projects";
 import {
   ArrowLeft,
@@ -117,10 +119,13 @@ export default function ProjectDetailView({
             />
           ) : (
             <>
-              <img
+              <Image
                 src={activeImage}
                 alt={`${project.name} - Photo ${activePhotoIdx + 1}`}
-                className="w-full h-full object-cover cursor-pointer transition-all duration-700 filter contrast-105"
+                fill
+                priority
+                sizes="(max-width: 1280px) 100vw, 1280px"
+                className="object-cover cursor-pointer transition-all duration-700 filter contrast-105"
                 onClick={() => setIsLightboxOpen(true)}
               />
 
@@ -187,7 +192,7 @@ export default function ProjectDetailView({
                       }`}
                       title={`Jump to photo ${imgIdx + 1}`}
                     >
-                      <img src={imgSrc} alt="" className="w-full h-full object-cover" />
+                      <Image src={imgSrc} alt="" fill sizes="48px" className="object-cover" />
                     </button>
                   ))}
                 </div>
@@ -266,12 +271,14 @@ export default function ProjectDetailView({
             {/* Left: Client Portrait & Credentials */}
             <div className="lg:col-span-4 flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
               <div className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-2xl p-1 bg-gradient-to-br from-[#D4AF37] to-[#FCF6BA]/40 shadow-xl shrink-0">
-                <div className="w-full h-full rounded-xl overflow-hidden bg-black">
+                <div className="relative w-full h-full rounded-xl overflow-hidden bg-black">
                   {project.clientReview.image ? (
-                    <img
+                    <Image
                       src={project.clientReview.image}
                       alt={project.clientReview.name}
-                      className="w-full h-full object-cover object-top filter contrast-105"
+                      fill
+                      sizes="128px"
+                      className="object-cover object-top filter contrast-105"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-[#18181B] text-[#D4AF37] font-serif text-2xl font-bold">
@@ -401,7 +408,7 @@ export default function ProjectDetailView({
                     : "border-white/10 opacity-50 hover:opacity-100"
                 }`}
               >
-                <img src={thumb} alt="" className="w-full h-full object-cover" />
+                <Image src={thumb} alt="" fill sizes="48px" className="object-cover" />
               </button>
             ))}
           </div>
@@ -419,6 +426,7 @@ export default function ProjectDetailView({
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/#contact"
+            onClick={() => trackEvent("click_consultation", "lead_action", "project_detail_bottom")}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 btn-gold-shiny text-xs uppercase tracking-wider font-bold px-8 py-4 rounded-full"
           >
             <span>Book Design Consultation</span>
@@ -426,6 +434,7 @@ export default function ProjectDetailView({
           </Link>
           <a
             href="tel:+917070704181"
+            onClick={() => trackEvent("click_call", "lead_action", "project_detail_bottom")}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#121212] text-white border border-white/15 text-xs font-semibold hover:border-[#D4AF37] transition-colors"
           >
             <Phone className="w-4 h-4 text-[#D4AF37]" />

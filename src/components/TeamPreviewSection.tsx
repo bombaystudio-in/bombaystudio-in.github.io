@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function TeamPreviewSection() {
@@ -42,12 +43,14 @@ export default function TeamPreviewSection() {
             {teamPhotos.map((member, idx) => (
               <div
                 key={idx}
-                className="shrink-0 w-14 sm:w-auto sm:flex-1 aspect-[3/4] rounded-lg overflow-hidden bg-[#141414] border border-white/10"
+                className="relative shrink-0 w-14 sm:w-auto sm:flex-1 aspect-[3/4] rounded-lg overflow-hidden bg-[#141414] border border-white/10"
               >
-                <img
+                <Image
                   src={member.img}
                   alt={member.name}
-                  className="w-full h-full object-cover object-top grayscale opacity-75 contrast-105"
+                  fill
+                  sizes="80px"
+                  className="object-cover object-top grayscale opacity-75 contrast-105"
                 />
               </div>
             ))}

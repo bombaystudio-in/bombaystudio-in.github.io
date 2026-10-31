@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowLeft,
   X,
@@ -31,13 +32,16 @@ export default function PortfolioPage() {
       ? GALLERY_ITEMS
       : GALLERY_ITEMS.filter((item) => item.category === activeCategory);
 
-  const navigateLightbox = (dir: number) => {
-    if (!selectedItem) return;
-    const currentIndex = filteredItems.findIndex((i) => i.id === selectedItem.id);
-    if (currentIndex === -1) return;
-    const nextIndex = (currentIndex + dir + filteredItems.length) % filteredItems.length;
-    setSelectedItem(filteredItems[nextIndex]);
-  };
+  const navigateLightbox = useCallback(
+    (dir: number) => {
+      if (!selectedItem) return;
+      const currentIndex = filteredItems.findIndex((i) => i.id === selectedItem.id);
+      if (currentIndex === -1) return;
+      const nextIndex = (currentIndex + dir + filteredItems.length) % filteredItems.length;
+      setSelectedItem(filteredItems[nextIndex]);
+    },
+    [selectedItem, filteredItems]
+  );
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -49,7 +53,7 @@ export default function PortfolioPage() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedItem, filteredItems]);
+  }, [selectedItem, navigateLightbox]);
 
   return (
     <main className="min-h-screen bg-[#050505] text-white pt-10 pb-24">
@@ -116,11 +120,12 @@ export default function PortfolioPage() {
               onClick={() => setSelectedItem(item)}
               className="group relative aspect-[4/5] sm:aspect-[3/4] rounded-2xl overflow-hidden border border-white/15 bg-[#121212] cursor-pointer hover:border-[#D4AF37] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/15"
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
 

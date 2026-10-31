@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Award, ShieldCheck } from "lucide-react";
 
 export default function MeetFounderSection() {
@@ -11,12 +12,14 @@ export default function MeetFounderSection() {
             {/* Real Image */}
             <div className="lg:col-span-5 relative">
               <div className="relative h-[480px] sm:h-[540px] w-full rounded-3xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow">
-                <img
+                <Image
                   src="/team/akhir-chaudhary-founder-portrait.png"
                   alt="Ar. Aakhir Choudhary - Principal Architect & Founder of Bombay Studio"
-                  className="w-full h-full object-cover object-top filter contrast-105"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 480px"
+                  className="object-cover object-top filter contrast-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/25 to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/25 to-transparent opacity-90 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#050505]/85 backdrop-blur-md border border-white/15 space-y-1 text-center shadow-xl">
                   <p className="text-white font-bold text-sm tracking-wide uppercase">AR. AAKHIR CHOUDHARY</p>
                   <p className="text-[#D4AF37] text-xs font-semibold uppercase tracking-wider">Principal Architect &amp; Founder</p>

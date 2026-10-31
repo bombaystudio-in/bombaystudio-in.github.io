@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Quote, ArrowUpRight } from "lucide-react";
 import { TESTIMONIALS_DATA } from "@/data/testimonials";
 
@@ -50,12 +51,14 @@ export default function TestimonialsPage() {
                 <div className="flex items-start gap-4 mb-4">
                   {/* High-visibility Customer Portrait */}
                   <div className="relative w-20 h-24 sm:w-24 sm:h-28 rounded-2xl overflow-hidden shrink-0 bg-black border border-white/15 group-hover:border-[#D4AF37]/60 shadow-md transition-colors">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover object-top filter contrast-105 group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 640px) 80px, 96px"
+                      className="object-cover object-top filter contrast-105 group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 pointer-events-none" />
                   </div>
 
                   <div className="flex-1 min-w-0">

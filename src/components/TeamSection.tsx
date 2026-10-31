@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 
 interface TeamMember {
@@ -108,10 +109,12 @@ export default function TeamSection() {
               {/* Clean Image Box: Synced 3:4 aspect ratio, zero text inside */}
               <div className="lg:col-span-5 flex justify-center">
                 <div className="relative w-full max-w-[240px] aspect-[3/4] rounded-xl overflow-hidden bg-[#141414] border border-white/10">
-                  <img
+                  <Image
                     src={level01.image}
                     alt={level01.name}
-                    className="w-full h-full object-cover object-top"
+                    fill
+                    sizes="240px"
+                    className="object-cover object-top"
                   />
                 </div>
               </div>
@@ -155,10 +158,12 @@ export default function TeamSection() {
               {/* Clean Image Box: Synced 3:4 aspect ratio, zero text inside */}
               <div className="lg:col-span-5 flex justify-center">
                 <div className="relative w-full max-w-[240px] aspect-[3/4] rounded-xl overflow-hidden bg-[#141414] border border-white/10">
-                  <img
+                  <Image
                     src={level02.image}
                     alt={level02.name}
-                    className="w-full h-full object-cover object-top"
+                    fill
+                    sizes="240px"
+                    className="object-cover object-top"
                   />
                 </div>
               </div>
@@ -195,11 +200,13 @@ export default function TeamSection() {
             </div>
 
             <div className="rounded-2xl glass-panel p-5 border border-white/10 flex flex-col sm:flex-row gap-5 items-center">
-              <div className="w-full max-w-[240px] sm:w-[240px] shrink-0 aspect-[3/4] rounded-xl overflow-hidden bg-[#141414] border border-white/10 mx-auto sm:mx-0">
-                <img
+              <div className="relative w-full max-w-[240px] sm:w-[240px] shrink-0 aspect-[3/4] rounded-xl overflow-hidden bg-[#141414] border border-white/10 mx-auto sm:mx-0">
+                <Image
                   src={level03.image}
                   alt={level03.name}
-                  className="w-full h-full object-cover object-top"
+                  fill
+                  sizes="240px"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="space-y-1 text-center sm:text-left">
@@ -220,11 +227,13 @@ export default function TeamSection() {
             </div>
 
             <div className="rounded-2xl glass-panel p-5 border border-white/10 flex flex-col sm:flex-row gap-5 items-center">
-              <div className="w-full max-w-[240px] sm:w-[240px] shrink-0 aspect-[3/4] rounded-xl overflow-hidden bg-[#141414] border border-white/10 mx-auto sm:mx-0">
-                <img
+              <div className="relative w-full max-w-[240px] sm:w-[240px] shrink-0 aspect-[3/4] rounded-xl overflow-hidden bg-[#141414] border border-white/10 mx-auto sm:mx-0">
+                <Image
                   src={level04.image}
                   alt={level04.name}
-                  className="w-full h-full object-cover object-top"
+                  fill
+                  sizes="240px"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="space-y-1 text-center sm:text-left">
@@ -254,11 +263,13 @@ export default function TeamSection() {
                 className="rounded-2xl glass-panel p-4 border border-white/10 text-center"
               >
                 {/* 100% clean image box - no text overlays */}
-                <div className="w-full max-w-[240px] aspect-[3/4] mx-auto rounded-xl overflow-hidden bg-[#141414] border border-white/10 mb-3">
-                  <img
+                <div className="relative w-full max-w-[240px] aspect-[3/4] mx-auto rounded-xl overflow-hidden bg-[#141414] border border-white/10 mb-3">
+                  <Image
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
+                    fill
+                    sizes="240px"
+                    className="object-cover object-top"
                   />
                 </div>
                 {/* Text below */}
@@ -294,11 +305,13 @@ export default function TeamSection() {
                   key={member.name}
                   className="rounded-2xl glass-panel p-4 border border-white/10 text-center"
                 >
-                  <div className="w-full max-w-[240px] aspect-[3/4] mx-auto rounded-xl overflow-hidden bg-[#141414] border border-white/10 mb-3">
-                    <img
+                  <div className="relative w-full max-w-[240px] aspect-[3/4] mx-auto rounded-xl overflow-hidden bg-[#141414] border border-white/10 mb-3">
+                    <Image
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover object-top"
+                      fill
+                      sizes="240px"
+                      className="object-cover object-top"
                     />
                   </div>
                   <h5 className="font-serif text-base font-bold text-white">{member.name}</h5>
@@ -321,11 +334,13 @@ export default function TeamSection() {
                   key={member.name}
                   className="rounded-2xl glass-panel p-4 border border-white/10 text-center"
                 >
-                  <div className="w-full max-w-[240px] aspect-[3/4] mx-auto rounded-xl overflow-hidden bg-[#141414] border border-white/10 mb-3">
-                    <img
+                  <div className="relative w-full max-w-[240px] aspect-[3/4] mx-auto rounded-xl overflow-hidden bg-[#141414] border border-white/10 mb-3">
+                    <Image
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover object-top"
+                      fill
+                      sizes="240px"
+                      className="object-cover object-top"
                     />
                   </div>
                   <h5 className="font-serif text-base font-bold text-white">{member.name}</h5>

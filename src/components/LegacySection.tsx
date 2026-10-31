@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Hammer, Compass, Award, CheckCircle2, Sparkles, ArrowRight } from "lucide-react";
 
 interface LegacySectionProps {
@@ -146,11 +147,13 @@ export default function LegacySection({ isTeaser = false }: LegacySectionProps) 
 
             {/* Mr. Kalamuddin Choudhary Portrait */}
             <div className="lg:col-span-5 relative flex flex-col items-center">
-              <div className="relative aspect-[3/4] max-h-[36svh] sm:max-h-[40svh] w-auto rounded-2xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow bg-gradient-to-b from-[#181818] via-[#121212] to-[#0A0A0A] flex items-center justify-center p-2">
-                <img
+              <div className="relative aspect-[3/4] h-[280px] sm:h-[320px] w-auto max-w-[240px] rounded-2xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow bg-gradient-to-b from-[#181818] via-[#121212] to-[#0A0A0A] flex items-center justify-center p-2">
+                <Image
                   src="/team/kalamuddin-choudhary.png"
                   alt="Mr. Kalamuddin Choudhary - Founder of Noor Engineering Company (Est. 1992)"
-                  className="w-full h-full object-contain object-center filter contrast-105"
+                  fill
+                  sizes="240px"
+                  className="object-contain object-center filter contrast-105 p-2"
                 />
               </div>
               <div className="w-full mt-2.5 p-2.5 rounded-xl bg-[#121212] border border-white/10 space-y-0.5 text-center">

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   WHY_US_DATA,
   getAllWhyUsSlugs,
@@ -91,12 +92,15 @@ export default async function WhyUsDetailPage({ params }: Props) {
         {/* Hero Banner with Cinematic Background */}
         <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-black p-8 sm:p-14 mb-16 shadow-2xl">
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               src={pillar.bgImage}
               alt={pillar.title}
-              className="w-full h-full object-cover filter brightness-[0.25] contrast-110"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover filter brightness-[0.25] contrast-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent pointer-events-none" />
           </div>
 
           <div className="relative z-10 max-w-3xl space-y-4">

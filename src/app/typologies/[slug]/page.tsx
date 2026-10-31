@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   TYPOLOGIES_DATA,
   getAllTypologySlugs,
@@ -99,12 +100,15 @@ export default async function TypologyDetailPage({ params }: Props) {
         {/* Hero Banner with Cinematic Background */}
         <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-black p-8 sm:p-14 mb-16 shadow-2xl">
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               src={item.heroImage}
               alt={item.name}
-              className="w-full h-full object-cover filter brightness-[0.28] contrast-110"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover filter brightness-[0.28] contrast-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent pointer-events-none" />
           </div>
 
           <div className="relative z-10 max-w-3xl space-y-4">
@@ -248,12 +252,14 @@ export default async function TypologyDetailPage({ params }: Props) {
                   className="group rounded-2xl bg-[#0F0F0F] border border-white/10 hover:border-[#D4AF37]/50 overflow-hidden transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-black">
-                    <img
+                    <Image
                       src={project.images[0]}
                       alt={project.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 pointer-events-none" />
                     <span className="absolute bottom-3 right-3 text-[10px] font-mono text-[#D4AF37] bg-black/80 px-2 py-0.5 rounded-full border border-white/10">
                       {project.photoCount} Photos
                     </span>

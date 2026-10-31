@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { PROJECTS_DATA, Project } from "@/data/projects";
 import {
   MapPin,
@@ -95,10 +96,12 @@ export default function FeaturedProjects() {
             {/* Visual Viewer - Maximum View without default image clutter */}
             <div className="lg:col-span-7">
               <div className="relative aspect-[16/10] sm:aspect-[16/9] max-h-[46svh] sm:max-h-[52svh] w-full rounded-2xl overflow-hidden border border-white/10 bg-black shadow-xl group select-none">
-                <img
+                <Image
                   src={activeImage}
                   alt={selectedProject.name}
-                  className="w-full h-full object-cover transition-all duration-700 filter contrast-105"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover transition-all duration-700 filter contrast-105"
                 />
 
                 {/* Left/Right Navigation Chevrons inside image */}
@@ -145,7 +148,7 @@ export default function FeaturedProjects() {
                         }`}
                         title={`View photo ${pIdx + 1}`}
                       >
-                        <img src={img} alt="" className="w-full h-full object-cover" />
+                        <Image src={img} alt="" fill sizes="32px" className="object-cover" />
                       </button>
                     ))}
                   </div>
@@ -231,10 +234,12 @@ export default function FeaturedProjects() {
                 }`}
               >
                 <div className="relative aspect-[16/10] rounded-lg overflow-hidden mb-2 bg-black">
-                  <img
+                  <Image
                     src={project.images[0]}
                     alt={project.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="160px"
+                    className="object-cover"
                   />
                 </div>
                 <h4 className="text-[11px] sm:text-xs font-semibold text-white truncate">{project.name}</h4>

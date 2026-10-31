@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { MoveHorizontal, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { MoveHorizontal } from "lucide-react";
 
 export default function BeforeAfterSlider() {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -26,10 +27,12 @@ export default function BeforeAfterSlider() {
         {/* Interactive Comparison Container */}
         <div className="relative max-w-5xl mx-auto h-[350px] sm:h-[500px] rounded-3xl overflow-hidden border border-white/15 shadow-2xl select-none">
           {/* AFTER Image (Background Base) */}
-          <img
+          <Image
             src="/projects/ajinkya-kamble-4bhk-kandivali/photo-01.jpg"
             alt="Completed Luxury Living Room Handover"
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="object-cover"
           />
           <span className="absolute bottom-6 right-6 px-4 py-2 rounded-full bg-[#050505]/90 backdrop-blur-md text-[#D4AF37] text-xs font-bold uppercase tracking-wider border border-white/15">
             After Handover

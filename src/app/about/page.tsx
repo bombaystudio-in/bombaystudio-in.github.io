@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowUpRight, Award, Compass, Hammer, Sparkles, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -114,11 +115,13 @@ export default function AboutPage() {
 
             {/* Mr. Kalamuddin Choudhary Portrait */}
             <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="relative aspect-[3/4] max-h-[38svh] sm:max-h-[44svh] w-auto rounded-2xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow bg-gradient-to-b from-[#181818] via-[#121212] to-[#0A0A0A] flex items-center justify-center p-2">
-                <img
+              <div className="relative aspect-[3/4] h-[320px] sm:h-[380px] w-auto max-w-[280px] rounded-2xl overflow-hidden border border-white/15 shadow-2xl gold-border-glow bg-gradient-to-b from-[#181818] via-[#121212] to-[#0A0A0A] flex items-center justify-center p-2">
+                <Image
                   src="/team/kalamuddin-choudhary.png"
                   alt="Mr. Kalamuddin Choudhary - Founder of Noor Engineering Company (Est. 1992)"
-                  className="w-full h-full object-contain object-center filter contrast-105"
+                  fill
+                  sizes="280px"
+                  className="object-contain object-center filter contrast-105 p-2"
                 />
               </div>
               <div className="w-full max-w-[280px] mt-3 p-3 rounded-xl bg-[#121212] border border-white/10 space-y-0.5 text-center shadow-lg">

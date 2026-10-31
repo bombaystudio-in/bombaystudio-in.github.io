@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   SERVICES_DATA,
   getAllServiceIds,
@@ -128,12 +129,15 @@ export default async function ServiceDetailPage({ params }: Props) {
         {/* Hero Banner with Cinematic Background */}
         <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-black p-8 sm:p-14 mb-16 shadow-2xl">
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               src={service.bgImage}
               alt={service.title}
-              className="w-full h-full object-cover filter brightness-[0.22] contrast-115"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover filter brightness-[0.22] contrast-115"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/75 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/75 to-transparent pointer-events-none" />
           </div>
 
           <div className="relative z-10 max-w-3xl space-y-5">

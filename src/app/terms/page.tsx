@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, FileText, Phone, Mail, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, FileText, Phone, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Bombay Studio Mumbai",

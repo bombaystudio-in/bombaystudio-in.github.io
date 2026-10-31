@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { PROJECTS_DATA } from "@/data/projects";
 import {
   ArrowLeft,
@@ -98,11 +99,12 @@ export default function ProjectsPage() {
             >
               {/* Cover Image Container - Clean Maximum View Without Redundant Overlays */}
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-black">
-                <img
+                <Image
                   src={project.images[0]}
                   alt={project.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 

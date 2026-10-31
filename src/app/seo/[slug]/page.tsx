@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
 import { SEO_KEYWORD_PAGES } from "@/data/seoKeywords";
-import { CheckCircle2, ArrowRight, Phone, MessageSquare } from "lucide-react";
+import { CheckCircle2, MessageSquare } from "lucide-react";
 import ContactSection from "@/components/ContactSection";
 import CostCalculatorSection from "@/components/CostCalculatorSection";
 
