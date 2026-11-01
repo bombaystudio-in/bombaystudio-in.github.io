@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowUpRight, MessageSquare } from "lucide-react";
 import TeamSection from "@/components/TeamSection";
 import LegacySection from "@/components/LegacySection";
 import FounderVCard from "@/components/FounderVCard";
+import { contactConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Our Team & Studio Hierarchy | Bombay Studio Mumbai",
@@ -81,7 +82,7 @@ export default function TeamPage() {
               <ArrowUpRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/919930492191?text=Hello%20Bombay%20Studio%20Team%2C%20I%20would%20like%20to%20consult%20for%20my%20project."
+              href={contactConfig.whatsapp.getLink("Hello Bombay Studio Team, I would like to consult for my project.")}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3.5 rounded-full bg-[#121212] hover:bg-[#1c1c1c] text-white text-xs uppercase tracking-wider border border-white/15 inline-flex items-center gap-2 transition-colors"

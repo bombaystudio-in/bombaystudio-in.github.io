@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Phone, Menu, X, ArrowUpRight, Sparkles, FileText } from "lucide-react";
+import { contactConfig } from "@/lib/config";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -168,11 +169,11 @@ export default function Header() {
                 Book Consultation
               </Link>
               <a
-                href="tel:+917070704181"
+                href={contactConfig.phone.studio.href}
                 className="w-full text-center flex items-center justify-center gap-2 bg-[#121212] text-white font-medium text-xs tracking-wide py-3 rounded-full border border-[#D4AF37]/40"
               >
                 <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
-                <span>Direct Studio Line: +91 707070 4181</span>
+                <span>Direct Studio Line: {contactConfig.phone.studio.display}</span>
               </a>
             </div>
           </div>

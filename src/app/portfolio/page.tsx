@@ -14,6 +14,7 @@ import {
   FileText,
 } from "lucide-react";
 import { GALLERY_ITEMS, GalleryItem } from "@/data/gallery";
+import { contactConfig } from "@/lib/config";
 
 const CATEGORIES = [
   "All",
@@ -185,11 +186,11 @@ export default function PortfolioPage() {
               <ArrowUpRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:+917070704181"
+              href={contactConfig.phone.studio.href}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#121212] text-white border border-[#D4AF37]/50 hover:border-[#D4AF37] text-xs font-semibold transition-colors shadow-lg"
             >
               <Phone className="w-4 h-4 text-[#D4AF37]" />
-              <span>Direct Studio Line: <strong className="text-[#FCF6BA] font-mono">+91 707070 4181</strong></span>
+              <span>Direct Studio Line: <strong className="text-[#FCF6BA] font-mono">{contactConfig.phone.studio.display}</strong></span>
             </a>
           </div>
         </div>
@@ -261,7 +262,7 @@ export default function PortfolioPage() {
                   Book Free Consultation
                 </Link>
                 <a
-                  href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20saw%20your%20site%20execution%20portfolio%20and%20want%20to%20inquire"
+                  href={contactConfig.whatsapp.getLink("Hi Bombay Studio, I saw your site execution portfolio and want to inquire")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full text-center px-4 py-2.5 rounded-xl bg-[#050505] text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-semibold hover:bg-[#D4AF37]/10 transition-colors"

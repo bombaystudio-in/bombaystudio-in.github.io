@@ -66,20 +66,27 @@ export default function TestimonialsSection() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
-            {/* Client Portrait */}
-            <div className="lg:col-span-4 relative aspect-[3/4] h-[240px] sm:h-[280px] w-auto mx-auto rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 group shadow-xl bg-black flex items-center justify-center">
+            {/* Client Portrait & Photo */}
+            <div className="lg:col-span-5 relative w-full max-w-[340px] sm:max-w-[420px] lg:max-w-none aspect-[4/3] sm:aspect-[4/3] lg:aspect-[4/3] mx-auto rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 group shadow-xl bg-black flex items-center justify-center">
+              <Image
+                src={current.image}
+                alt=""
+                fill
+                aria-hidden="true"
+                className="object-cover blur-xl opacity-35 scale-110 pointer-events-none"
+              />
               <Image
                 src={current.image}
                 alt={current.name}
                 fill
-                sizes="(max-width: 1024px) 240px, 280px"
-                className="object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+                sizes="(max-width: 640px) 340px, (max-width: 1024px) 420px, 400px"
+                className="object-contain relative z-10 p-1 group-hover:scale-105 transition-transform duration-700 filter contrast-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 pointer-events-none" />
+              <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#050505]/70 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Testimonial Quote & Info */}
-            <div className="lg:col-span-8 space-y-4">
+            <div className="lg:col-span-7 space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-[#D4AF37]">
                   Verified Homeowner Story
@@ -93,7 +100,7 @@ export default function TestimonialsSection() {
 
               <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-[#D4AF37]/30" />
 
-              <p className="text-sm sm:text-base lg:text-lg text-white font-light leading-relaxed italic line-clamp-3">
+              <p className="text-sm sm:text-base lg:text-lg text-white font-light leading-relaxed italic">
                 &quot;{current.text}&quot;
               </p>
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Loader2 } from "lucide-react";
+import { contactConfig } from "@/lib/config";
 
 export default function ContactSection() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -86,13 +87,13 @@ export default function ContactSection() {
                   </div>
                   <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-0.5">
                     <a
-                      href="tel:+917070704181"
+                      href={contactConfig.phone.studio.href}
                       className="text-white text-sm sm:text-base hover:text-[#FCF6BA] font-serif font-bold whitespace-nowrap shrink-0 tracking-wide"
                     >
-                      +91 707070 4181
+                      {contactConfig.phone.studio.display}
                     </a>
                     <a
-                      href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
+                      href={contactConfig.whatsapp.getLink("Hi Bombay Studio, I want to book a free interior consultation")}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[10px] bg-[#25D366] text-black font-bold px-2 py-0.5 rounded hover:bg-[#1EBE5D] transition-colors inline-flex items-center gap-1 shrink-0"
@@ -112,10 +113,10 @@ export default function ContactSection() {
                   <p className="font-bold text-white text-[11px] uppercase tracking-wider">Principal Architect Personal Line</p>
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
                     <a
-                      href="tel:+919664384181"
+                      href={contactConfig.phone.founder.href}
                       className="text-[#FCF6BA] text-xs hover:underline font-semibold whitespace-nowrap shrink-0"
                     >
-                      +91 966438 4181
+                      {contactConfig.phone.founder.display}
                     </a>
                     <span className="text-white/30">•</span>
                     <a

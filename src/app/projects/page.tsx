@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { PROJECTS_DATA } from "@/data/projects";
+import { contactConfig } from "@/lib/config";
 import {
   ArrowLeft,
   MapPin,
@@ -176,11 +177,11 @@ export default function ProjectsPage() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+919820000000"
+                href={contactConfig.phone.studio.href}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#121212] text-white border border-white/15 text-xs font-semibold hover:border-[#D4AF37] transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#D4AF37]" />
-                <span>Call Studio Direct</span>
+                <span>Call Studio Direct ({contactConfig.phone.studio.display})</span>
               </a>
             </div>
           </div>

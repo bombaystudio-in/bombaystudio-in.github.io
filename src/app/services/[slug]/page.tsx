@@ -7,6 +7,7 @@ import {
   getAllServiceIds,
   getServiceById,
 } from "@/data/services";
+import { contactConfig } from "@/lib/config";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -167,11 +168,11 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+918076295595"
+                href={contactConfig.phone.studio.href}
                 className="px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white text-xs font-bold uppercase tracking-wider transition-all border border-white/15 inline-flex items-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#D4AF37]" />
-                <span>+91 80762 95595</span>
+                <span>{contactConfig.phone.studio.display}</span>
               </a>
             </div>
           </div>

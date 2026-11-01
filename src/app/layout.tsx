@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMobileBar from "@/components/FloatingMobileBar";
 import LeadMagnetModal from "@/components/LeadMagnetModal";
-import { config } from "@/lib/config";
+import { config, contactConfig } from "@/lib/config";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -134,15 +134,15 @@ export default function RootLayout({
                 "Malad",
                 "Alibaug",
               ],
-              telephone: ["+917070704181", "+919664384181"],
+              telephone: [contactConfig.phone.studio.raw, contactConfig.phone.founder.raw],
               priceRange: "₹₹₹₹",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "111, Evershine Mall, Chincholi Bunder Mindspace, Malad West",
-                addressLocality: "Mumbai",
-                addressRegion: "Maharashtra",
-                postalCode: "400064",
-                addressCountry: "IN",
+                streetAddress: contactConfig.address.street,
+                addressLocality: contactConfig.address.city,
+                addressRegion: contactConfig.address.state,
+                postalCode: contactConfig.address.postalCode,
+                addressCountry: contactConfig.address.countryCode,
               },
             }),
           }}

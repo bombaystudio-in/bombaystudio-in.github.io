@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Phone, MessageSquare, Zap, ArrowLeft, ArrowUpRight, CheckCircle2, Shield } from "lucide-react";
 import { PROJECTS_DATA } from "@/data/projects";
+import { contactConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Fast Lite Mode (Slow Networks) | Bombay Studio Mumbai",
@@ -41,15 +42,15 @@ export default function LiteModePage() {
         {/* Immediate Emergency / Direct Actions for Slow Connections */}
         <div className="grid grid-cols-2 gap-3">
           <a
-            href="tel:+917070704181"
+            href={contactConfig.phone.studio.href}
             className="flex flex-col items-center justify-center text-center p-3.5 rounded-xl bg-[#141414] border border-[#D4AF37]/50 text-white hover:bg-[#1E1E1E] transition-colors"
           >
             <Phone className="w-5 h-5 text-[#D4AF37] mb-1" />
             <span className="text-xs font-bold">Call Studio</span>
-            <span className="text-[10px] text-[#A1A1AA]">+91 707070 4181</span>
+            <span className="text-[10px] text-[#A1A1AA]">{contactConfig.phone.studio.display}</span>
           </a>
           <a
-            href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20am%20using%20Lite%20Mode%20and%20want%20to%20book%20a%20free%20consultation"
+            href={contactConfig.whatsapp.getLink("Hi Bombay Studio, I am using Lite Mode and want to book a free consultation")}
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center justify-center text-center p-3.5 rounded-xl bg-[#141414] border border-[#25D366]/50 text-white hover:bg-[#1E1E1E] transition-colors"
@@ -142,7 +143,7 @@ export default function LiteModePage() {
           </p>
           <div className="pt-2">
             <a
-              href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20please%20contact%20me%20for%20a%20site%20consultation"
+              href={contactConfig.whatsapp.getLink("Hi Bombay Studio, please contact me for a site consultation")}
               className="w-full btn-gold-shiny text-xs uppercase tracking-wider py-3 rounded-full flex items-center justify-center gap-2 font-bold"
             >
               <span>Instant WhatsApp Booking ↗</span>

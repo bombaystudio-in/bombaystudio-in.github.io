@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Phone, Mail, MapPin, Globe, Share2, Download, QrCode, MessageCircle, ExternalLink } from "lucide-react";
+import { contactConfig } from "@/lib/config";
 
 export default function FounderVCard() {
   const contactDetails = {
@@ -10,20 +11,20 @@ export default function FounderVCard() {
     firm: "Bombay Studio",
     tagline: "Design. Detail. Delivered. — Est. 1992",
     phones: [
-      { label: "Studio Direct", number: "+91 707070 4181", href: "tel:+917070704181", isPrimary: true },
-      { label: "Architect Personal", number: "+91 96643 84181", href: "tel:+919664384181" },
+      { label: "Studio Direct", number: contactConfig.phone.studio.display, href: contactConfig.phone.studio.href, isPrimary: true },
+      { label: "Architect Personal", number: contactConfig.phone.founder.display, href: contactConfig.phone.founder.href },
     ],
     emails: [
       { label: "Direct Email", address: "aakhir@bombaystudio.in", href: "mailto:aakhir@bombaystudio.in" },
-      { label: "Studio Inquiries", address: "info@bombaystudio.in", href: "mailto:info@bombaystudio.in" },
+      { label: "Studio Inquiries", address: contactConfig.email.address, href: contactConfig.email.href },
     ],
-    address: "111, Evershine Mall, Chincholi Bunder Mindspace, Malad West, Mumbai - 64",
+    address: contactConfig.address.display,
     website: "https://bombaystudio.in",
     socials: [
       {
         name: "Instagram",
         handle: "@bombaystudio",
-        href: "https://www.instagram.com/bombaystudio/",
+        href: contactConfig.social.instagram,
         icon: Globe,
       },
       {
@@ -35,7 +36,7 @@ export default function FounderVCard() {
       {
         name: "WhatsApp",
         handle: "Direct Chat",
-        href: "https://wa.me/917070704181?text=Hi%20Ar.%20Aakhir,%20I%20would%20like%20to%20discuss%20an%20interior%20architecture%20project.",
+        href: contactConfig.whatsapp.getLink("Hi Ar. Aakhir, I would like to discuss an interior architecture project."),
         icon: MessageCircle,
       },
     ],

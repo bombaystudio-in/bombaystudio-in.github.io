@@ -7,6 +7,7 @@ import {
   getAllWhyUsSlugs,
   getWhyUsBySlug,
 } from "@/data/whyUs";
+import { contactConfig } from "@/lib/config";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -257,11 +258,11 @@ export default async function WhyUsDetailPage({ params }: Props) {
               <ArrowUpRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:+917070704181"
+              href={contactConfig.phone.studio.href}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#121212] text-white border border-white/15 text-xs font-semibold hover:border-[#D4AF37] transition-colors"
             >
               <Phone className="w-4 h-4 text-[#D4AF37]" />
-              <span>Call Direct Studio Line</span>
+              <span>Call Direct Studio Line ({contactConfig.phone.studio.display})</span>
             </a>
           </div>
         </div>

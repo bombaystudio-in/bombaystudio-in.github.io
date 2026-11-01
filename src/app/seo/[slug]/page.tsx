@@ -5,6 +5,7 @@ import { SEO_KEYWORD_PAGES } from "@/data/seoKeywords";
 import { CheckCircle2, MessageSquare } from "lucide-react";
 import ContactSection from "@/components/ContactSection";
 import CostCalculatorSection from "@/components/CostCalculatorSection";
+import { contactConfig } from "@/lib/config";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -62,7 +63,7 @@ export default async function SeoPage({ params }: Props) {
                 Book Free Consultation ↗
               </Link>
               <a
-                href="https://wa.me/917070704181?text=Hi%20Bombay%20Studio,%20I%20want%20to%20book%20a%20free%20interior%20consultation"
+                href={contactConfig.whatsapp.getLink("Hi Bombay Studio, I want to book a free interior consultation")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#121212] hover:bg-[#1C1C1C] text-white font-semibold text-xs px-6 py-3.5 rounded-full border border-white/15 transition-all flex items-center gap-2"
@@ -161,10 +162,10 @@ export default async function SeoPage({ params }: Props) {
                 </Link>
 
                 <a
-                  href="tel:+917070704181"
+                  href={contactConfig.phone.studio.href}
                   className="w-full text-center block bg-[#1C1C1C] text-white font-semibold text-xs py-3.5 rounded-xl border border-[#D4AF37]/40 hover:bg-[#262626]"
                 >
-                  Direct Studio Line: <span className="text-[#FCF6BA] font-mono font-bold">+91 707070 4181</span>
+                  Direct Studio Line: <span className="text-[#FCF6BA] font-mono font-bold">{contactConfig.phone.studio.display}</span>
                 </a>
               </div>
             </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import FaqSection from "@/components/FaqSection";
+import { contactConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions & Project Guide | Bombay Studio Mumbai",
@@ -58,10 +59,10 @@ export default function FaqPage() {
               <ArrowUpRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:+917070704181"
+              href={contactConfig.phone.studio.href}
               className="bg-[#181818] hover:bg-[#222] border border-white/15 text-white text-xs uppercase tracking-wider px-7 py-3.5 rounded-full inline-flex items-center gap-2 font-semibold transition-colors"
             >
-              <span>Call: +91 707070 4181</span>
+              <span>Call: {contactConfig.phone.studio.display}</span>
             </a>
           </div>
         </div>

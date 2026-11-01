@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone } from "lucide-react";
+import { contactConfig } from "@/lib/config";
 
 interface DirectStudioLineCardProps {
   showAnnotation?: boolean;
@@ -15,9 +16,9 @@ export default function DirectStudioLineCard({
     <div className={`relative inline-flex flex-col items-center sm:items-start ${className}`}>
       {/* Neon Glowing Gold Pill Card */}
       <a
-        href="tel:+917070704181"
+        href={contactConfig.phone.studio.href}
         className="group relative flex items-center gap-3 sm:gap-4 bg-[#080808]/90 backdrop-blur-xl px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl sm:rounded-[24px] border border-[#D4AF37]/80 shadow-[0_0_25px_rgba(212,175,55,0.35)] hover:shadow-[0_0_40px_rgba(212,175,55,0.65)] hover:scale-[1.02] transition-all duration-300 cursor-pointer"
-        aria-label="Direct Studio Line: +91 707070 4181"
+        aria-label={`Direct Studio Line: ${contactConfig.phone.studio.display}`}
       >
         {/* Solid Gold Circular Call Icon */}
         <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#FCF6BA] text-[#050505] flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">

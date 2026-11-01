@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ShieldCheck, Mail, Phone } from "lucide-react";
+import { contactConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Bombay Studio Mumbai",
@@ -98,18 +99,18 @@ export default function PrivacyPolicyPage() {
             <p>For any privacy inquiries, data deletion requests, or formal communications, contact our team:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <a
-                href="mailto:info@bombaystudio.in"
+                href={contactConfig.email.href}
                 className="p-4 rounded-xl bg-[#121212] border border-white/10 hover:border-[#D4AF37] transition-colors flex items-center gap-3 text-xs"
               >
                 <Mail className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span className="truncate">info@bombaystudio.in</span>
+                <span className="truncate">{contactConfig.email.address}</span>
               </a>
               <a
-                href="tel:+917070704181"
+                href={contactConfig.phone.studio.href}
                 className="p-4 rounded-xl bg-[#121212] border border-white/10 hover:border-[#D4AF37] transition-colors flex items-center gap-3 text-xs"
               >
                 <Phone className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>+91 707070 4181</span>
+                <span>{contactConfig.phone.studio.display}</span>
               </a>
             </div>
           </section>
